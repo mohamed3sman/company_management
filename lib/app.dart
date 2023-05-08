@@ -21,6 +21,9 @@ class fingerPrint extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
+          create: (context) => getIt<LocaleCubit>()..getSavedLang(),
+        ),
+        BlocProvider(
           create: (context) {
             return FeaturedBooksCubit(
               FetchFeaturedBooksUseCase(
@@ -44,6 +47,7 @@ class fingerPrint extends StatelessWidget {
             previousState != currentState,
         builder: (_, localeState) {
           return MaterialApp(
+            locale: localeState.locale,
             onGenerateRoute: AppRoutes.onGenerateRoute,
             supportedLocales: AppLocalizationsSetup.supportedLocales,
             localeResolutionCallback:

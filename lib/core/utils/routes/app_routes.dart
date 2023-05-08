@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/home/presentation/views/introduction_screen.dart';
+import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
@@ -20,8 +21,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const HomeView());
       case kBookDetailsScreen:
         return MaterialPageRoute(builder: (_) => const BookDetailsView());
-    // case kIntroScreen:
-    //     return MaterialPageRoute(builder: (_) => const IntroScreen());
+      // case kIntroScreen:
+      //     return MaterialPageRoute(builder: (_) => const IntroScreen());
+      case kBookLanguageScreen:
+        return MaterialPageRoute(builder: (_) => const LanguageScreen());
 
       default:
         return null;

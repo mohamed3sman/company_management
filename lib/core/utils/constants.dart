@@ -10,7 +10,7 @@ const String kHomeScreen = '/homeScreen';
 const String kBookDetailsScreen = '/bookDetailsScreen';
 const String kSearchScreen = '/searchScreen';
 const String kIntroScreen = '/introScreen';
-
+const String kBookLanguageScreen = '/bookLanguageScreen';
 
 // saved sharedprefernces
 const String locale = 'locale';
