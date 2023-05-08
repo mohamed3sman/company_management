@@ -1,3 +1,4 @@
+import 'package:fingerPrint/Features/home/presentation/views/introduction_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
@@ -13,12 +14,14 @@ class AppRoutes {
     switch (routeSettings.name) {
       case initialRoute:
         return MaterialPageRoute(builder: (_) => const SplashView());
-      case kSearchView:
+      case kSearchScreen:
         return MaterialPageRoute(builder: (_) => const SearchView());
-      case kHomeView:
+      case kHomeScreen:
         return MaterialPageRoute(builder: (_) => const HomeView());
-      case kBookDetailsView:
+      case kBookDetailsScreen:
         return MaterialPageRoute(builder: (_) => const BookDetailsView());
+    case kIntroScreen:
+        return MaterialPageRoute(builder: (_) => const IntroScreen());
 
       default:
         return null;
