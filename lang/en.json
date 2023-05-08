@@ -1,5 +1,7 @@
 {
   "app_name": "Alrajhi Steel",
+  "arabic":"arabic",
+  "english":"english",
   "head_title": "Hello, this is a translated text.",
   "app_bar_title": "Translation",
   "sorry..no_internet_connection": "Sorry...No Internet Connection",

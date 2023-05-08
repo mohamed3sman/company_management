@@ -1,5 +1,7 @@
 {
   "app_name": "الراجحي ستيل",
+  "arabic":"العربي",
+  "english":"الانجليزي",
   "head_title": "مرحبا, هذا نص مترجم.",
   "app_bar_title": "ترجمة",
   "sorry..no_internet_connection": "عفواً ... لايوجد اتصال بالإنترنت",

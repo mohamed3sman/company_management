@@ -1,3 +1,4 @@
+import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/locale_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -38,18 +39,25 @@ class fingerPrint extends StatelessWidget {
           },
         )
       ],
-      child: MaterialApp(
-        onGenerateRoute: AppRoutes.onGenerateRoute,
-        supportedLocales: AppLocalizationsSetup.supportedLocales,
-        localeResolutionCallback:
-            AppLocalizationsSetup.localeResolutionCallback,
-        localizationsDelegates: AppLocalizationsSetup.localizationsDelegates,
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: kPrimaryColor,
-          textTheme:
-              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
-        ),
+      child: BlocBuilder<LocaleCubit, LocaleState>(
+        buildWhen: (previousState, currentState) =>
+            previousState != currentState,
+        builder: (_, localeState) {
+          return MaterialApp(
+            onGenerateRoute: AppRoutes.onGenerateRoute,
+            supportedLocales: AppLocalizationsSetup.supportedLocales,
+            localeResolutionCallback:
+                AppLocalizationsSetup.localeResolutionCallback,
+            localizationsDelegates:
+                AppLocalizationsSetup.localizationsDelegates,
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData.dark().copyWith(
+              scaffoldBackgroundColor: kPrimaryColor,
+              textTheme:
+                  GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+            ),
+          );
+        },
       ),
     );
   }
