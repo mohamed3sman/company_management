@@ -1,4 +1,5 @@
-import '../../../../../core/utils/app_router.dart';
+import 'package:fingerPrint/core/utils/routes/app_routes.dart';
+
 import '../../../../../core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,7 +16,8 @@ class BookListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsView);
+        //AppRouter.kBookDetailsView
+        Navigator.pushReplacementNamed(context, kBookDetailsScreen);
       },
       child: SizedBox(
         height: 125,

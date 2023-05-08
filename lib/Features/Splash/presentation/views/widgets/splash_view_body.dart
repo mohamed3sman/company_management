@@ -71,7 +71,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
 
         //   GoRouter.of(context).push(AppRouter.kHomeView);
 
-        Navigator.pushReplacementNamed(context, kHomeView);
+        Navigator.pushReplacementNamed(context, kIntroScreen);
       },
     );
   }
