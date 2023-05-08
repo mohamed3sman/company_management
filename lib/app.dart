@@ -55,11 +55,18 @@ class fingerPrint extends StatelessWidget {
             localizationsDelegates:
                 AppLocalizationsSetup.localizationsDelegates,
             debugShowCheckedModeBanner: false,
-            theme: ThemeData.dark().copyWith(
-              scaffoldBackgroundColor: kPrimaryColor,
-              textTheme:
-                  GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+              fontFamily: localeState.locale.languageCode == "ar"
+                  ? 'Hacen Tunisia'
+                  : "Cairo-Bold",
             ),
+
+            // ThemeData.dark().copyWith(
+            //   scaffoldBackgroundColor: kPrimaryColor,
+            //   textTheme:
+            //       GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+            // ),
           );
         },
       ),
