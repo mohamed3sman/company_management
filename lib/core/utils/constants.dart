@@ -11,7 +11,7 @@ const String kBookDetailsScreen = '/bookDetailsScreen';
 const String kSearchScreen = '/searchScreen';
 const String kIntroScreen = '/introScreen';
 const String kBookLanguageScreen = '/bookLanguageScreen';
-
+const String kLoginScreenForm="/loginScreenForm";
 // saved sharedprefernces
 const String locale = 'locale';
 const String english = 'en';
@@ -19,7 +19,7 @@ const String arabic = 'ar';
 
 //color
 const kPrimaryColor = Color(0xb87350cb);
-const kSecondColor = Color(0xff100B20);
+const kSecondaryColor = Color(0xff3816a2);
 
 const kTranstionDuration = Duration(milliseconds: 250);
 const kGtSectraFine = 'GT Sectra Fine';

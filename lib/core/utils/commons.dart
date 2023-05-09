@@ -66,6 +66,7 @@ class Commons {
   static void showToast(BuildContext context,
       {required String message, Color? color, ToastGravity? gravity}) {
     Fluttertoast.showToast(
+      
       msg: message,
       toastLength: Toast.LENGTH_LONG,
       gravity: gravity ?? ToastGravity.BOTTOM,
