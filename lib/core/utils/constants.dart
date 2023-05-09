@@ -12,6 +12,8 @@ const String kSearchScreen = '/searchScreen';
 const String kIntroScreen = '/introScreen';
 const String kBookLanguageScreen = '/bookLanguageScreen';
 const String kLoginScreenForm="/loginScreenForm";
+const String KBottomNav = '/KBottomNav';
+
 // saved sharedprefernces
 const String locale = 'locale';
 const String english = 'en';

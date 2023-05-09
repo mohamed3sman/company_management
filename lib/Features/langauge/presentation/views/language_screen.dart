@@ -3,6 +3,7 @@ import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/assets.dart';
 import 'package:fingerPrint/core/utils/commons.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
+import 'package:fingerPrint/core/utils/text_Form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,6 +20,7 @@ class LanguageScreen extends StatefulWidget {
 
 class _LanguageScreenState extends State<LanguageScreen> {
   late AppLocalizations locale;
+  final _phoneNumberController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

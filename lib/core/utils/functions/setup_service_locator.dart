@@ -6,6 +6,7 @@ import 'package:fingerPrint/Features/Splash/domain/repositories/language_reposit
 import 'package:fingerPrint/Features/Splash/domain/usecases/change_locale_use_case.dart';
 import 'package:fingerPrint/Features/Splash/domain/usecases/get_saved_lang_use_case.dart';
 import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/locale_cubit.dart';
+import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../../Features/home/data/data_sources/home_local_data_source.dart';
@@ -43,6 +44,7 @@ Future<void> init() async {
   getIt.registerLazySingleton<LanguageLocalDataSource>(
     () => LanguageLocalDataSourceImpl(sharedPreferences: getIt()),
   );
+  getIt.registerFactory<BottomNavCubit>(() => BottomNavCubit());
 
   //! External
   final sharedPreferences = await SharedPreferences.getInstance();
