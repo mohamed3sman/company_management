@@ -1,3 +1,4 @@
+import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/home/presentation/views/introduction_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SplashView());
       case kSearchScreen:
         return MaterialPageRoute(builder: (_) => const SearchView());
+      case KBottomNav:
+        return MaterialPageRoute(builder: (_) => const BottomNav());
       case kHomeScreen:
         return MaterialPageRoute(builder: (_) => const HomeView());
       case kBookDetailsScreen:

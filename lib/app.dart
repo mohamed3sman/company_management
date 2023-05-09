@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/locale_cubit.dart';
+import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,6 +21,9 @@ class fingerPrint extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider(
+          create: (_) => getIt<BottomNavCubit>(),
+        ),
         BlocProvider(
           create: (context) => getIt<LocaleCubit>()..getSavedLang(),
         ),
