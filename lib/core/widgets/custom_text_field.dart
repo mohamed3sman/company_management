@@ -53,7 +53,7 @@ class CustomTextField extends StatelessWidget {
                   vertical: sizeOfTextField, horizontal: 10), // space of text
               border: OutlineInputBorder(
                 borderSide: const BorderSide(width: 0.5),
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(16),
               ),
             )),
       ),

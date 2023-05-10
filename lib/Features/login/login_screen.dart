@@ -1,4 +1,3 @@
-import 'package:fingerPrint/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import '../../core/widgets/custom_button.dart';
 
@@ -53,8 +52,8 @@ class _LoginViewFormState extends State<LoginViewForm> {
           const SizedBox(
             height: 40,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, top: 20),
+          const Padding(
+            padding: EdgeInsets.only(left: 20.0, top: 20),
             child: Align(
               alignment: Alignment.bottomLeft,
               child: Text(

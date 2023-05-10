@@ -50,5 +50,19 @@
   "reload_screen" :  "Reload Screen",
   "want_to_logout" : "Do you want to logout ?",
   "logout" : "Logout",
-  "company_name_validation" : "Please enter company name"
+  "company_name_validation" : "Please enter company name",
+  "contact_with_us" : "Contact with us",
+  "name": "Name",
+  "email": "Email",
+  "title_of_message": "Title of message",
+  "message": "Message",
+  "send": "send",
+  "modify_the_account" : "Modify the account",
+  "phone": "Phone",
+  "id_number": "ID Number",
+  "password": "Password",
+  "confirm_password": "Confirm password",
+  "confirm": "confirm",
+
+
 }

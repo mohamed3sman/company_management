@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -14,6 +15,8 @@ class EditProfileScreen extends StatefulWidget {
 class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -25,58 +28,58 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             color: Colors.black,
             onPressed: () {}),
         backgroundColor: Colors.white,
-        title: const Center(
+        title:  Center(
           child: Text(
-            "تعديل الحساب",
-            style: TextStyle(color: Colors.black, fontSize: 20),
+            locale.translate('modify_the_account')!,
+            style: const TextStyle(color: Colors.black, fontSize: 20),
           ),
         ),
       ),
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height * .8,
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
             child: Column(
               children: [
-                CustomTextField(
-                    stringInTextField: "الاسم",
+                 CustomTextField(
+                    stringInTextField:locale.translate('name')!,
                     textInputType: TextInputType.text,
                     obscureText: false,
-                    sizeOfTextField: 10),
-                CustomTextField(
-                    stringInTextField: "رقم الجوال ",
+                    sizeOfTextField: 6),
+                 CustomTextField(
+                    stringInTextField: locale.translate('phone')!,
                     textInputType: TextInputType.phone,
                     obscureText: false,
-                    sizeOfTextField: 10),
-                CustomTextField(
-                    stringInTextField: "رقم الهوية",
+                    sizeOfTextField: 6),
+                 CustomTextField(
+                    stringInTextField: locale.translate('id_number')!,
                     textInputType: TextInputType.number,
                     obscureText: false,
-                    sizeOfTextField: 10),
-                CustomTextField(
-                    stringInTextField: "البريد الإلكتروني",
+                    sizeOfTextField: 6),
+                 CustomTextField(
+                    stringInTextField:  locale.translate('email')!,
                     textInputType: TextInputType.emailAddress,
                     obscureText: false,
-                    sizeOfTextField: 10),
-                CustomTextField(
-                    stringInTextField: " كلمة المرور ",
+                    sizeOfTextField: 6),
+                 CustomTextField(
+                    stringInTextField: locale.translate('password')!,
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
-                    sizeOfTextField: 10),
-                CustomTextField(
-                    stringInTextField: "تأكيد كلمة المرور",
+                    sizeOfTextField: 6),
+                 CustomTextField(
+                    stringInTextField: locale.translate('confirm_password')!,
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
-                    sizeOfTextField: 10),
-                SizedBox(
+                    sizeOfTextField: 6),
+                 const SizedBox(
                   height: 40,
                 ),
                 CustomButton(
-                    buttonText: "تأكيد",
+                    buttonText:  locale.translate('confirm')!,
                     buttonTapHandler: () {},
                     screenWidth: MediaQuery.of(context).size.width * .6),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
               ],

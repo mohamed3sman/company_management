@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -12,8 +13,11 @@ class ContactUsScreen extends StatefulWidget {
 }
 
 class _ContactUsScreenState extends State<ContactUsScreen> {
+
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -25,15 +29,15 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
             icon: const FaIcon(FontAwesomeIcons.arrowLeft),
             color: Colors.black,
             onPressed: () {}),
-        title: const Center(
+        title:  Center(
           child: Text(
-            "تواصل معنا",
-            style: TextStyle(
+            locale.translate('english')!,
+            style: const TextStyle(
                 color: Colors.black, fontFamily: "Amiri", fontSize: 25),
           ),
         ),
       ),
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height * .8,
         child: SingleChildScrollView(
           child: Column(
@@ -43,33 +47,33 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 height: MediaQuery.of(context).size.height * .3,
                 'assets/images/mention_bro.png',
               ),
-              const CustomTextField(
-                  stringInTextField: "الاسم",
+               CustomTextField(
+                  stringInTextField: locale.translate('name')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
                   sizeOfTextField: 6),
-              const CustomTextField(
-                  stringInTextField: "البريد الإلكتروني ",
+               CustomTextField(
+                  stringInTextField:  locale.translate('email')!,
                   textInputType: TextInputType.emailAddress,
                   obscureText: false,
                   sizeOfTextField: 6),
-              const CustomTextField(
-                  stringInTextField: " عنوان الرسالة",
+               CustomTextField(
+                  stringInTextField:  locale.translate('title_of_message')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
                   sizeOfTextField: 6),
-              const CustomTextField(
-                  stringInTextField: "الرسالة",
+               CustomTextField(
+                  stringInTextField:  locale.translate('message')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
                   sizeOfTextField: 30),
-              const SizedBox(
+               const SizedBox(
                 height: 40,
               ),
               CustomButton(
-                  buttonText: "ارسال",
+                  buttonText:locale.translate('send')!,
                   buttonTapHandler: () {},
-                  screenWidth: MediaQuery.of(context).size.width * .3),
+                  screenWidth: MediaQuery.of(context).size.width * .6),
               const SizedBox(
                 height: 40,
               ),

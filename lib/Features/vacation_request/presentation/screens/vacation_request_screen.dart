@@ -10,8 +10,7 @@ class VacationRequestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        
+      body: SizedBox(
         height: MediaQuery.of(context).size.height * .87,
         child: SingleChildScrollView(
           child: Column(children: [
@@ -35,23 +34,23 @@ class VacationRequestScreen extends StatelessWidget {
                         print("List tile");
                       },
                       // selectedColor: Colors.red,
-                      title: Text(
+                      title: const Text(
                         "أهلا وسهلا",
                         style:
                             TextStyle(color: Color(0xff9d9d9e), fontSize: 13),
                       ),
-                      leading: Icon(Icons.person_pin),
+                      leading: const Icon(Icons.person_pin),
                       trailing: IconButton(
                         onPressed: () {
                           print("new notification");
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.notifications_none_rounded,
                           size: 30,
                           color: Color(0xff707070),
                         ),
                       ),
-                      subtitle: Text(
+                      subtitle: const Text(
                         "أحمد محمد عبدالرحمن",
                         style:
                             TextStyle(color: Color(0xff1d1d1d), fontSize: 15),
@@ -62,14 +61,14 @@ class VacationRequestScreen extends StatelessWidget {
               ],
             ),
             Gaps.vGap8,
-            Text("طلب إجازة",
+            const Text("طلب إجازة",
                 style: TextStyle(
                   color: Color(0xff000000),
                   fontSize: 25,
                   fontWeight: FontWeight.w400,
                 )),
-                CustomOrdersRawIcon(rawText: "نوع الإجازة",rawIcon: Icon(Icons.abc)),
-                CustomDropDownList()
+                const CustomOrdersRawIcon(rawText: "نوع الإجازة",rawIcon: Icon(Icons.abc)),
+                const CustomDropDownList()
           ]),
         ),
       ),
