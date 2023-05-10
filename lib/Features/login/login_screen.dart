@@ -29,11 +29,13 @@ class _LoginViewFormState extends State<LoginViewForm> {
             height: 50,
           ),
           const Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: CustomTextField(
-                  stringInTextField: "stringInTextField", obscureText: false)
-              // CustomTextField(hintTextField: 'رقم الجوال'),
-              ),
+            padding: EdgeInsets.only(right: 20.0),
+            // child:
+            // CustomTextField(
+
+            //  stringInTextField: "stringInTextField", obscureText: false)
+            // CustomTextField(hintTextField: 'رقم الجوال'),
+          ),
           const SizedBox(
             height: 50,
           ),

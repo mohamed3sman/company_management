@@ -11,10 +11,12 @@ const String kBookDetailsScreen = '/bookDetailsScreen';
 const String kSearchScreen = '/searchScreen';
 const String kIntroScreen = '/introScreen';
 const String kLanguageScreen = '/bookLanguageScreen';
-const String kLoginScreenForm="/loginScreenForm";
+const String kLoginScreenForm = "/loginScreenForm";
 const String KBottomNav = '/KBottomNav';
 const String kMyOrdersScreen = '/kMyOrdersScreen';
-
+const String kContactUsScreen = '/kContactUsScreen';
+const String kEditProfileScreen = '/kEditProfileScreen';
+const String kVacationRquestScreen = '/kVacationRquestScreen';
 
 // saved sharedprefernces
 const String locale = 'locale';

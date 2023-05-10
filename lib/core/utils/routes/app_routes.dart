@@ -1,7 +1,9 @@
 import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
+import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/login/login_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
+import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
@@ -38,6 +40,19 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const MyOrdersScreen(),
         );
+                  case kContactUsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const MyOrdersScreen(),
+        );
+          case kEditProfileScreen:
+        return MaterialPageRoute(
+          builder: (_) => const EditProfileScreen(),
+        );
+           case kVacationRquestScreen:
+        return MaterialPageRoute(
+          builder: (_) => const VacationRequestScreen(),
+        );
+        
       default:
         return null;
     }

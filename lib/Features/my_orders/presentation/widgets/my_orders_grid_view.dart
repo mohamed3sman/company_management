@@ -21,7 +21,8 @@ class MyOrdersGridView extends StatelessWidget {
         itemCount: 6,
         itemBuilder: (context, index) {
           return MyOrdersGridViewItem(
-            gridImagePath: MyOrdersGridDummtData().DUMMYGRIDDATA[index]["imagePath"],
+            gridImagePath: MyOrdersGridDummtData().DUMMYGRIDDATA[index]
+                ["imagePath"],
             gridItemTapHandler: () {},
             gridText: MyOrdersGridDummtData().DUMMYGRIDDATA[index]["gridText"],
           );

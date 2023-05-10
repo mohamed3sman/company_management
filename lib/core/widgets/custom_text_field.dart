@@ -4,11 +4,12 @@ class CustomTextField extends StatelessWidget {
   final String stringInTextField;
   final bool obscureText;
   final TextInputType textInputType;
+  final double sizeOfTextField;
   const CustomTextField({
     Key? key,
     required this.stringInTextField,
-     this.textInputType=TextInputType.text,
-     this.obscureText=false,
+    required this.textInputType,
+    required this.obscureText, required this.sizeOfTextField,
   }) : super(key: key);
 
   @override
@@ -38,7 +39,7 @@ class CustomTextField extends StatelessWidget {
                 stringInTextField,
                 style: const TextStyle(
                     color: Color(0xff9d9d9e),
-                    fontFamily: "Amiri",
+                    
                     fontWeight: FontWeight.w600,
                     fontSize: 20),
               ),
@@ -47,14 +48,15 @@ class CustomTextField extends StatelessWidget {
               disabledBorder: InputBorder.none,
               errorBorder: InputBorder.none,
               focusedErrorBorder: InputBorder.none,
-              contentPadding: const EdgeInsets.symmetric(
-                  vertical: 12, horizontal: 15), // space of text
+              contentPadding:
+               EdgeInsets.symmetric(
+                  vertical: sizeOfTextField, horizontal: 10), // space of text
               border: OutlineInputBorder(
                 borderSide: const BorderSide(width: 0.5),
                 borderRadius: BorderRadius.circular(10),
               ),
-            ),),
-     ),
-);
-}
+            )),
+      ),
+    );
+  }
 }
