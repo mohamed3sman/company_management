@@ -20,7 +20,7 @@ class _IntroScreenState extends State<IntroScreen> {
       body: Stack(
         children: [
           ClipPath(
-            clipper: RoundedClipper(screenSize.height - 170),
+            clipper: RoundedClipper(screenSize.height - 140),
             child: AnimatedContainer(
               duration: const Duration(seconds: 3),
               height: screenSize.height - 80,
@@ -29,15 +29,11 @@ class _IntroScreenState extends State<IntroScreen> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 40),
-            child: SizedBox(
-              width: 400,
-              height:400,
-              child: Image.asset(
-                imagePath,
-                fit: BoxFit.cover,
-                height:screenSize.height * .5,
+            child: Image.asset(
+              imagePath,
+              fit: BoxFit.cover,
+              height:screenSize.height * .5,
 
-              ),
             ),
           ),
           Positioned(
