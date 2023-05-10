@@ -16,7 +16,7 @@ const String KBottomNav = '/KBottomNav';
 const String kMyOrdersScreen = '/kMyOrdersScreen';
 const String kContactUsScreen = '/kContactUsScreen';
 const String kEditProfileScreen = '/kEditProfileScreen';
-const String kVacationRequestScreen = '/kVacationRquestScreen';
+const String kVacationRquestScreen = '/kVacationRquestScreen';
 
 // saved sharedprefernces
 const String locale = 'locale';
@@ -24,7 +24,7 @@ const String english = 'en';
 const String arabic = 'ar';
 
 //color
-const kPrimaryColor = Color(0xb87350cb);
+const kPrimaryColor = Color(0xff5c4db4);
 const kSecondaryColor = Color(0xff3816a2);
 
 const kTranstionDuration = Duration(milliseconds: 250);

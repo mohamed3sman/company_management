@@ -48,7 +48,7 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const EditProfileScreen(),
         );
-      case kVacationRequestScreen:
+      case kVacationRquestScreen:
         return MaterialPageRoute(
           builder: (_) => const VacationRequestScreen(),
         );
