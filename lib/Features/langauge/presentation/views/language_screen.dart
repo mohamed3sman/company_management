@@ -2,8 +2,6 @@ import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/loc
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/assets.dart';
 import 'package:fingerPrint/core/utils/commons.dart';
-import 'package:fingerPrint/core/utils/gaps.dart';
-import 'package:fingerPrint/core/utils/text_Form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +18,6 @@ class LanguageScreen extends StatefulWidget {
 
 class _LanguageScreenState extends State<LanguageScreen> {
   late AppLocalizations locale;
-  final _phoneNumberController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +28,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
         ClipPath(
           clipper: RoundedClipper(screenSize.height * .6),
           child: AnimatedContainer(
-            duration: Duration(seconds: 3),
+            duration: const Duration(seconds: 3),
             height: screenSize.height * .5,
             color: kPrimaryColor,
           ),
@@ -49,12 +46,12 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 SizedBox(
                   height: screenSize.height * .07,
                 ),
-                Text(
+                const Text(
                   "اختر اللغة",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: kPrimaryColor,
+                    color: Color(0xff7350cb),
                   ),
                 ),
                 SizedBox(
@@ -77,10 +74,10 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             decoration: locale.isEnLocale
                                 ? BoxDecoration(
                                     border: Border.all(
-                                        color: Color(0xff7350cb), width: 2),
+                                        color: const Color(0xff7350cb), width: 2),
                                     borderRadius: BorderRadius.circular(5))
                                 : null,
-                            padding: EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(20),
                             width: screenSize.width * .3,
                             height: screenSize.height * .18,
                             child: Column(
@@ -89,7 +86,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                                 Image.asset(
                                   AssetsData.usFlagImage,
                                 ),
-                                Text("English")
+                                const Text("English")
                               ],
                             ),
                           ),
@@ -107,10 +104,10 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             decoration: !locale.isEnLocale
                                 ? BoxDecoration(
                                     border: Border.all(
-                                        color: Color(0xff7350cb), width: 2),
+                                        color: const Color(0xff7350cb), width: 2),
                                     borderRadius: BorderRadius.circular(5))
                                 : null,
-                            padding: EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(20),
                             alignment: Alignment.center,
                             // margin: EdgeInsets.only(right: 10),
                             width: screenSize.width * .3,
@@ -121,7 +118,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                                 Image.asset(
                                   AssetsData.saudiFlagImage,
                                 ),
-                                Text("عربي")
+                                const Text("عربي")
                               ],
                             ),
                           ),
@@ -140,7 +137,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 SizedBox(
                   height: screenSize.height * .01,
                 ),
-                Text("You can change language from settings"),
+                const Text("You can change language from settings"),
                 SizedBox(
                   height: screenSize.height * .04,
                 ),

@@ -35,23 +35,23 @@ class MyOrdersScreen extends StatelessWidget {
                       title: Text(
                         "أهلا وسهلا",
                         style:
-                            TextStyle(color: Color(0xff9d9d9e), fontSize: 13),
+                            TextStyle(color: Color(0xff9d9d9e), fontSize: 15),
                       ),
-                      leading: Icon(Icons.person_pin),
+                      leading: Icon(Icons.person_pin,size: 45,),
                       trailing: IconButton(
                         onPressed: () {
                           print("new notification");
                         },
                         icon: Icon(
                           Icons.notifications_none_rounded,
-                          size: 30,
+                          size: 32,
                           color: Color(0xff707070),
                         ),
                       ),
                       subtitle: Text(
                         "أحمد محمد عبدالرحمن",
                         style:
-                            TextStyle(color: Color(0xff1d1d1d), fontSize: 15),
+                            TextStyle(color: Color(0xff1d1d1d), fontSize: 17),
                       ),
                     ),
                   ),

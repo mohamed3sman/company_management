@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../../../core/utils/constants.dart';
 import '../../../core/widgets/custom_circle_clipper.dart';
-import 'dart:async';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -22,18 +20,24 @@ class _IntroScreenState extends State<IntroScreen> {
       body: Stack(
         children: [
           ClipPath(
-            clipper: RoundedClipper(screenSize.height - 150),
+            clipper: RoundedClipper(screenSize.height - 170),
             child: AnimatedContainer(
               duration: const Duration(seconds: 3),
-              height: screenSize.height - 100,
+              height: screenSize.height - 80,
               color: Colors.white,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 100),
-            child: Image.asset(
-              imagePath,
-              fit: BoxFit.cover,
+            padding: const EdgeInsets.only(top: 40),
+            child: SizedBox(
+              width: 400,
+              height:400,
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+                height:screenSize.height * .5,
+
+              ),
             ),
           ),
           Positioned(
@@ -43,6 +47,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 textDirection: TextDirection.ltr,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
+                  const SizedBox(height: 50,),
                   const Text(
                     "نظام بصمتك",
                     style: TextStyle(color: Colors.white, fontSize: 20),
@@ -53,7 +58,7 @@ class _IntroScreenState extends State<IntroScreen> {
                       title,
                       textAlign: TextAlign.right,
                       softWrap: true,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ),
                 ]),
@@ -69,7 +74,7 @@ class _IntroScreenState extends State<IntroScreen> {
     return IntroductionScreen(
       dotsDecorator: const DotsDecorator(
           activeSize: Size(12, 12),
-          spacing: EdgeInsets.only(left: 2, right: 0),
+          spacing: EdgeInsets.only(left: 2, right: 3),
           color: Colors.white,
           size: Size(12, 12),
           activeColor: kSecondaryColor),
@@ -78,11 +83,11 @@ class _IntroScreenState extends State<IntroScreen> {
       resizeToAvoidBottomInset: false,
       next: const Text(
         "تخطي",
-        style: TextStyle(color: Colors.white, fontSize: 25),
+        style: TextStyle(color: Colors.white, fontSize: 23),
       ),
       done: const Text(
         "تخطي",
-        style: TextStyle(color: Colors.white, fontSize: 25),
+        style: TextStyle(color: Colors.white, fontSize: 23),
       ),
       nextFlex: 5,
       doneStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
