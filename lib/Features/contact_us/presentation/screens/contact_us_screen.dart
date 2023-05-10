@@ -28,8 +28,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
         title: const Center(
           child: Text(
             "تواصل معنا",
-            style: TextStyle(
-                color: Colors.black, fontFamily: "Amiri", fontSize: 25),
+            style: TextStyle(color: Colors.black, fontSize: 20),
           ),
         ),
       ),
@@ -44,25 +43,25 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 'assets/images/mention_bro.png',
               ),
               const CustomTextField(
-                  stringInTextField: "الاسم",
-                  textInputType: TextInputType.text,
-                  obscureText: false,
-                  sizeOfTextField: 6),
+                stringInTextField: "الاسم",
+                textInputType: TextInputType.text,
+                obscureText: false,
+              ),
               const CustomTextField(
-                  stringInTextField: "البريد الإلكتروني ",
-                  textInputType: TextInputType.emailAddress,
-                  obscureText: false,
-                  sizeOfTextField: 6),
+                stringInTextField: "البريد الإلكتروني ",
+                textInputType: TextInputType.emailAddress,
+                obscureText: false,
+              ),
               const CustomTextField(
-                  stringInTextField: " عنوان الرسالة",
-                  textInputType: TextInputType.text,
-                  obscureText: false,
-                  sizeOfTextField: 6),
+                stringInTextField: " عنوان الرسالة",
+                textInputType: TextInputType.text,
+                obscureText: false,
+              ),
               const CustomTextField(
                   stringInTextField: "الرسالة",
                   textInputType: TextInputType.text,
                   obscureText: false,
-                  sizeOfTextField: 30),
+                  height: 100),
               const SizedBox(
                 height: 40,
               ),
