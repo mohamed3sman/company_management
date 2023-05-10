@@ -19,18 +19,18 @@ class _SplashViewbodyState extends State<SplashViewbody>
   Future checkFirstSeen() async {
     print("checking");
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool _seen = (prefs.getBool('seen') ?? false);
+    bool seen = (prefs.getBool('seen') ?? false);
 
-    if (_seen) {
+    if (seen) {
       // print("seen");
-      Navigator.pushNamed(context, KBottomNav);
+      Navigator.pushReplacementNamed(context, KBottomNav);
       // Navigator.of(context).pushReplacement(
       //     new MaterialPageRoute(builder: (context) => new Home()));
     } else {
       await prefs.setBool('seen', true);
       //  print("first time");
-      Future.delayed(Duration(seconds: 2));
-      Navigator.pushNamed(context, kIntroScreen);
+      Future.delayed(const Duration(seconds: 2));
+      Navigator.pushReplacementNamed(context, kIntroScreen);
 
       // Navigator.of(context).pushReplacement(
       //     new MaterialPageRoute(builder: (context) => new IntroScreen()));

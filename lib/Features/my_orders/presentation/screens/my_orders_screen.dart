@@ -28,27 +28,27 @@ class MyOrdersScreen extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                     //   color: Colors.red,
                     child: ListTile(
-                      onTap: () {
-                        print("List tile");
-                      },
                       // selectedColor: Colors.red,
-                      title: Text(
+                      title: const Text(
                         "أهلا وسهلا",
                         style:
                             TextStyle(color: Color(0xff9d9d9e), fontSize: 15),
                       ),
-                      leading: Icon(Icons.person_pin,size: 45,),
+                      leading: const Icon(
+                        Icons.person_pin,
+                        size: 45,
+                      ),
                       trailing: IconButton(
                         onPressed: () {
                           print("new notification");
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.notifications_none_rounded,
                           size: 32,
                           color: Color(0xff707070),
                         ),
                       ),
-                      subtitle: Text(
+                      subtitle: const Text(
                         "أحمد محمد عبدالرحمن",
                         style:
                             TextStyle(color: Color(0xff1d1d1d), fontSize: 17),
@@ -59,13 +59,14 @@ class MyOrdersScreen extends StatelessWidget {
               ],
             ),
             Gaps.vGap15,
-            Text("طلباتي",
+            const Text("طلباتي",
                 style: TextStyle(
                   color: Color(0xff000000),
                   fontSize: 25,
                   fontWeight: FontWeight.w400,
-                )), Gaps.vGap15,
-            MyOrdersGridView(),
+                )),
+            Gaps.vGap15,
+            const MyOrdersGridView(),
           ],
         ),
       ),

@@ -12,7 +12,7 @@ final Icon rawIcon;
         rawIcon,
         Text(rawText,
             style: const TextStyle(
-                color: const Color(0xff828282),
+                color: Color(0xff828282),
                 fontWeight: FontWeight.w700,
                 fontStyle: FontStyle.normal,
                 fontSize: 16.0))

@@ -33,7 +33,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           ),
         ),
       ),
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height * .8,
         child: SingleChildScrollView(
           child: Column(

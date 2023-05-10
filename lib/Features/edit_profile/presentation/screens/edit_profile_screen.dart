@@ -32,51 +32,51 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           ),
         ),
       ),
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height * .8,
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
             child: Column(
               children: [
-                CustomTextField(
+                const CustomTextField(
                     stringInTextField: "الاسم",
                     textInputType: TextInputType.text,
                     obscureText: false,
                     sizeOfTextField: 10),
-                CustomTextField(
+                const CustomTextField(
                     stringInTextField: "رقم الجوال ",
                     textInputType: TextInputType.phone,
                     obscureText: false,
                     sizeOfTextField: 10),
-                CustomTextField(
+                const CustomTextField(
                     stringInTextField: "رقم الهوية",
                     textInputType: TextInputType.number,
                     obscureText: false,
                     sizeOfTextField: 10),
-                CustomTextField(
+                const CustomTextField(
                     stringInTextField: "البريد الإلكتروني",
                     textInputType: TextInputType.emailAddress,
                     obscureText: false,
                     sizeOfTextField: 10),
-                CustomTextField(
+                const CustomTextField(
                     stringInTextField: " كلمة المرور ",
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
                     sizeOfTextField: 10),
-                CustomTextField(
+                const CustomTextField(
                     stringInTextField: "تأكيد كلمة المرور",
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
                     sizeOfTextField: 10),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 CustomButton(
                     buttonText: "تأكيد",
                     buttonTapHandler: () {},
                     screenWidth: MediaQuery.of(context).size.width * .6),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
               ],

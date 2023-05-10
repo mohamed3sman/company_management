@@ -37,17 +37,16 @@ class Commons {
               ),
               actions: <Widget>[
                 TextButton(
-                    child: Text(AppLocalizations.of(context)!.translate('ok')!),
                     style: TextButton.styleFrom(
-                        primary: Colors.black,
-                        textStyle: TextStyle(
+                        foregroundColor: Colors.black, textStyle: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontFamily: GoogleFonts.tajawal().fontFamily,
                             fontSize: MediaQuery.of(context).orientation ==
                                     Orientation.portrait
                                 ? 17.sp
                                 : 25.sp)),
-                    onPressed: () => Navigator.of(context).pop()),
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: Text(AppLocalizations.of(context)!.translate('ok')!)),
               ],
             ));
   }

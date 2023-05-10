@@ -1,5 +1,4 @@
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
-import 'package:fingerPrint/Features/home/presentation/views/home_view.dart';
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
@@ -28,7 +27,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
 
   ListQueue<int> navigationQueue = ListQueue();
 
-  void upadateBottomNavIndex(int value) {
+  void updateBottomNavIndex(int value) {
     emit(BottomNavInitial());
     bottomNavIndex = value;
     emit(BottomNavIsChanging());
