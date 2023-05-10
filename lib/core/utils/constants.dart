@@ -16,7 +16,7 @@ const String KBottomNav = '/KBottomNav';
 const String kMyOrdersScreen = '/kMyOrdersScreen';
 const String kContactUsScreen = '/kContactUsScreen';
 const String kEditProfileScreen = '/kEditProfileScreen';
-const String kVacationRquestScreen = '/kVacationRquestScreen';
+const String kVacationRequestScreen = '/kVacationRquestScreen';
 
 // saved sharedprefernces
 const String locale = 'locale';

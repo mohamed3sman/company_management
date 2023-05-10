@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton(
-      {required this.screenWidth,
+      {super.key,
+      required this.screenWidth,
       required this.buttonTapHandler,
       required this.buttonText});
-  var screenWidth;
+  var screenWidth = 0.0;
   Function buttonTapHandler;
   String buttonText;
 
@@ -20,7 +21,7 @@ class CustomButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [
+            gradient: const LinearGradient(colors: [
               kPrimaryColor,
               kSecondaryColor,
             ]),
@@ -29,7 +30,7 @@ class CustomButton extends StatelessWidget {
         width: screenWidth,
         child: Text(
           buttonText,
-          style: TextStyle(fontSize: 16, color: Colors.white),
+          style: const TextStyle(fontSize: 16, color: Colors.white),
         ),
       ),
     );

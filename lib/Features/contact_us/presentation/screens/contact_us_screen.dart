@@ -51,29 +51,26 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                   stringInTextField: locale.translate('name')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
-                  sizeOfTextField: 6),
+                ) ,
                CustomTextField(
                   stringInTextField:  locale.translate('email')!,
                   textInputType: TextInputType.emailAddress,
                   obscureText: false,
-                  sizeOfTextField: 6),
+              ),
                CustomTextField(
                   stringInTextField:  locale.translate('title_of_message')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
-                  sizeOfTextField: 6),
+             ),
                CustomTextField(
                   stringInTextField:  locale.translate('message')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
-                  sizeOfTextField: 30),
-               const SizedBox(
-                height: 40,
-              ),
-              CustomButton(
-                  buttonText:locale.translate('send')!,
-                  buttonTapHandler: () {},
-                  screenWidth: MediaQuery.of(context).size.width * .6),
+                  height: 100),
+            
+          
+           
+           
               const SizedBox(
                 height: 40,
               ),

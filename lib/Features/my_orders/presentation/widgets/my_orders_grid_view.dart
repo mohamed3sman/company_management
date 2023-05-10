@@ -4,13 +4,13 @@ import '../../data/my_orders_grid_dummy_data.dart';
 import 'my_orders_grid_view_item.dart';
 
 class MyOrdersGridView extends StatelessWidget {
-  MyOrdersGridView({super.key});
+  const MyOrdersGridView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: GridView.builder(
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(

@@ -132,7 +132,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 ),
                 Text(
                   "يمكنك تغيير اللغة من قائمة الاعدادات",
-                  style: Theme.of(context).textTheme.headline1,
+                  style: Theme.of(context).textTheme.displayLarge,
                 ),
                 SizedBox(
                   height: screenSize.height * .01,

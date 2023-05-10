@@ -46,32 +46,32 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     stringInTextField:locale.translate('name')!,
                     textInputType: TextInputType.text,
                     obscureText: false,
-                    sizeOfTextField: 6),
+                  ),
                  CustomTextField(
                     stringInTextField: locale.translate('phone')!,
                     textInputType: TextInputType.phone,
                     obscureText: false,
-                    sizeOfTextField: 6),
+                   ),
                  CustomTextField(
                     stringInTextField: locale.translate('id_number')!,
                     textInputType: TextInputType.number,
                     obscureText: false,
-                    sizeOfTextField: 6),
+                  ),
                  CustomTextField(
                     stringInTextField:  locale.translate('email')!,
                     textInputType: TextInputType.emailAddress,
                     obscureText: false,
-                    sizeOfTextField: 6),
+              ),
                  CustomTextField(
                     stringInTextField: locale.translate('password')!,
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
-                    sizeOfTextField: 6),
+              ),
                  CustomTextField(
                     stringInTextField: locale.translate('confirm_password')!,
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
-                    sizeOfTextField: 6),
+                ),
                  const SizedBox(
                   height: 40,
                 ),

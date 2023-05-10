@@ -36,23 +36,23 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const LoginViewForm(),
         );
-          case kMyOrdersScreen:
+      case kMyOrdersScreen:
         return MaterialPageRoute(
           builder: (_) => const MyOrdersScreen(),
         );
-                  case kContactUsScreen:
+      case kContactUsScreen:
         return MaterialPageRoute(
           builder: (_) => const MyOrdersScreen(),
         );
-          case kEditProfileScreen:
+      case kEditProfileScreen:
         return MaterialPageRoute(
           builder: (_) => const EditProfileScreen(),
         );
-           case kVacationRquestScreen:
+      case kVacationRequestScreen:
         return MaterialPageRoute(
           builder: (_) => const VacationRequestScreen(),
         );
-        
+
       default:
         return null;
     }

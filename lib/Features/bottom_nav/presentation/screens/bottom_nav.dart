@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/hex_color.dart';
@@ -18,7 +17,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav>
     with SingleTickerProviderStateMixin {
-  final _autoSizeGroup = AutoSizeGroup();
+  // final _autoSizeGroup = AutoSizeGroup();
   late AnimationController _animationController;
   late Animation<double> _animation;
   late CurvedAnimation _curve;
@@ -73,7 +72,7 @@ class _BottomNavState extends State<BottomNav>
             if (BlocProvider.of<BottomNavCubit>(context)
                 .navigationQueue
                 .isEmpty) return true;
-            BlocProvider.of<BottomNavCubit>(context).upadateBottomNavIndex(
+            BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(
                 BlocProvider.of<BottomNavCubit>(context).navigationQueue.last);
             BlocProvider.of<BottomNavCubit>(context)
                 .navigationQueue
@@ -103,7 +102,7 @@ class _BottomNavState extends State<BottomNav>
                         _animationController.reset();
                         _animationController.forward();
                         BlocProvider.of<BottomNavCubit>(context)
-                            .upadateBottomNavIndex(4);
+                            .updateBottomNavIndex(4);
                       },
                     )
                   : const SizedBox(),
@@ -168,7 +167,7 @@ class _BottomNavState extends State<BottomNav>
                           .addLast(BlocProvider.of<BottomNavCubit>(context)
                               .bottomNavIndex);
                       BlocProvider.of<BottomNavCubit>(context)
-                          .upadateBottomNavIndex(index);
+                          .updateBottomNavIndex(index);
                     })
                 : const SizedBox(),
           ),

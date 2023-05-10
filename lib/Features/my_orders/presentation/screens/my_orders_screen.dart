@@ -28,16 +28,16 @@ class MyOrdersScreen extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                     //   color: Colors.red,
                     child: ListTile(
-                      onTap: () {
-                        print("List tile");
-                      },
                       // selectedColor: Colors.red,
                       title: const Text(
                         "أهلا وسهلا",
                         style:
                             TextStyle(color: Color(0xff9d9d9e), fontSize: 15),
                       ),
-                      leading: const Icon(Icons.person_pin,size: 45,),
+                      leading: const Icon(
+                        Icons.person_pin,
+                        size: 45,
+                      ),
                       trailing: IconButton(
                         onPressed: () {
                           print("new notification");
@@ -64,8 +64,9 @@ class MyOrdersScreen extends StatelessWidget {
                   color: Color(0xff000000),
                   fontSize: 25,
                   fontWeight: FontWeight.w400,
-                )), Gaps.vGap15,
-            MyOrdersGridView(),
+                )),
+            Gaps.vGap15,
+            const MyOrdersGridView(),
           ],
         ),
       ),
