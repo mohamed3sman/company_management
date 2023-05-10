@@ -1,8 +1,11 @@
-
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+
 class CustomButton extends StatelessWidget {
-  CustomButton({required this.screenWidth, required this.buttonTapHandler,required this.buttonText});
+  CustomButton(
+      {required this.screenWidth,
+      required this.buttonTapHandler,
+      required this.buttonText});
   var screenWidth;
   Function buttonTapHandler;
   String buttonText;
@@ -11,7 +14,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         buttonTapHandler();
       },
       child: Container(
@@ -25,7 +28,7 @@ class CustomButton extends StatelessWidget {
         height: screenSize.height * .06,
         width: screenWidth,
         child: Text(
-         buttonText,
+          buttonText,
           style: TextStyle(fontSize: 16, color: Colors.white),
         ),
       ),

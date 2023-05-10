@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/constants.dart';
 import 'sliding_text.dart';
@@ -16,13 +16,35 @@ class _SplashViewbodyState extends State<SplashViewbody>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
+  Future checkFirstSeen() async {
+    print("checking");
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool _seen = (prefs.getBool('seen') ?? false);
+
+    if (_seen) {
+      // print("seen");
+      Navigator.pushNamed(context, KBottomNav);
+      // Navigator.of(context).pushReplacement(
+      //     new MaterialPageRoute(builder: (context) => new Home()));
+    } else {
+      await prefs.setBool('seen', true);
+      //  print("first time");
+      Future.delayed(Duration(seconds: 2));
+      Navigator.pushNamed(context, kIntroScreen);
+
+      // Navigator.of(context).pushReplacement(
+      //     new MaterialPageRoute(builder: (context) => new IntroScreen()));
+    }
+  }
 
   @override
+  // void afterFirstLayout(BuildContext context) => checkFirstSeen();
+
   void initState() {
     super.initState();
     initSlidingAnimation();
-
-    navigateToHome();
+    checkFirstSeen();
+    // navigateToHome();
   }
 
   @override
@@ -60,19 +82,19 @@ class _SplashViewbodyState extends State<SplashViewbody>
     animationController.forward();
   }
 
-  void navigateToHome() {
-    Future.delayed(
-      const Duration(seconds: 2),
-      () {
-        // Get.to(() => const HomeView(),
-        //     // calculations
-        //     transition: Transition.fade,
-        //     duration: kTranstionDuration);
+  // void navigateToHome() {
+  //   Future.delayed(
+  //     const Duration(seconds: 2),
+  //     () {
+  //       // Get.to(() => const HomeView(),
+  //       //     // calculations
+  //       //     transition: Transition.fade,
+  //       //     duration: kTranstionDuration);
 
-        //   GoRouter.of(context).push(AppRouter.kHomeView);
+  //       //   GoRouter.of(context).push(AppRouter.kHomeView);
 
-        Navigator.pushReplacementNamed(context, KBottomNav);
-      },
-    );
-  }
+  //       Navigator.pushReplacementNamed(context, kIntroScreen);
+  //     },
+  //   );
+  // }
 }

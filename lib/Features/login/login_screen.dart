@@ -1,4 +1,4 @@
-import 'package:fingerPrint/Features/home/presentation/views/widgets/custom_text_field.dart';
+import 'package:fingerPrint/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import '../../core/widgets/custom_button.dart';
 
@@ -29,18 +29,18 @@ class _LoginViewFormState extends State<LoginViewForm> {
             height: 50,
           ),
           const Padding(
-            padding: EdgeInsets.only(right: 20.0),
-             child:
-             CustomTextField(stringInTextField: "stringInTextField", obscureText: false)
-           // CustomTextField(hintTextField: 'رقم الجوال'),
-          ),
+              padding: EdgeInsets.only(right: 20.0),
+              child: CustomTextField(
+                  stringInTextField: "stringInTextField", obscureText: false)
+              // CustomTextField(hintTextField: 'رقم الجوال'),
+              ),
           const SizedBox(
             height: 50,
           ),
           CustomButton(
-            buttonTapHandler: (){},
+            buttonTapHandler: () {},
             buttonText: "تسجيل الدخول",
-            screenWidth:20 ,
+            screenWidth: 20,
             // text: 'تسجيل الدخول',
             // function: () {
             //   Navigator.push(context, MaterialPageRoute(builder: (context) {

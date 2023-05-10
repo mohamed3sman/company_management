@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../../../core/utils/constants.dart';
+import '../../../core/widgets/custom_circle_clipper.dart';
+import 'dart:async';
 
-import '../../core/utils/constants.dart';
-import '../home/presentation/views/widgets/custom_intro_clipper.dart';
-
-class IntroScreen extends StatelessWidget {
+class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
+
+  @override
+  State<IntroScreen> createState() => _IntroScreenState();
+}
+
+class _IntroScreenState extends State<IntroScreen> {
   Widget getIntroPages(
       {required String imagePath,
       required Size screenSize,
@@ -81,7 +88,7 @@ class IntroScreen extends StatelessWidget {
       doneStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       nextStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       onDone: () {
-        Navigator.pushReplacementNamed(context, kBookLanguageScreen);
+        Navigator.pushReplacementNamed(context, kLanguageScreen);
       },
       showDoneButton: true,
       showNextButton: true,
