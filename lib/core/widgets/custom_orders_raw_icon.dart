@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 
 class CustomOrdersRawIcon extends StatelessWidget {
@@ -10,6 +11,7 @@ final Icon rawIcon;
       padding: const EdgeInsets.only(left: 50, right: 50, bottom: 6),
       child: Row(children: [
         rawIcon,
+      Gaps.hGap12,
         Text(rawText,
             style: const TextStyle(
                 color: Color(0xff828282),
