@@ -24,11 +24,11 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         // centerTitle: true,
 
         leading: IconButton(
-            icon: const FaIcon(FontAwesomeIcons.arrowRight),
+            icon: const FaIcon(FontAwesomeIcons.arrowLeft),
             color: Colors.black,
             onPressed: () {}),
         backgroundColor: Colors.white,
-        title:  Center(
+        title: Center(
           child: Text(
             locale.translate('modify_the_account')!,
             style: const TextStyle(color: Colors.black, fontSize: 20),
@@ -42,41 +42,41 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
             child: Column(
               children: [
-                 CustomTextField(
-                    stringInTextField:locale.translate('name')!,
-                    textInputType: TextInputType.text,
-                    obscureText: false,
-                  ),
-                 CustomTextField(
-                    stringInTextField: locale.translate('phone')!,
-                    textInputType: TextInputType.phone,
-                    obscureText: false,
-                   ),
-                 CustomTextField(
-                    stringInTextField: locale.translate('id_number')!,
-                    textInputType: TextInputType.number,
-                    obscureText: false,
-                  ),
-                 CustomTextField(
-                    stringInTextField:  locale.translate('email')!,
-                    textInputType: TextInputType.emailAddress,
-                    obscureText: false,
-              ),
-                 CustomTextField(
-                    stringInTextField: locale.translate('password')!,
-                    textInputType: TextInputType.visiblePassword,
-                    obscureText: true,
-              ),
-                 CustomTextField(
-                    stringInTextField: locale.translate('confirm_password')!,
-                    textInputType: TextInputType.visiblePassword,
-                    obscureText: true,
+                CustomTextField(
+                  stringInTextField: locale.translate('name')!,
+                  textInputType: TextInputType.text,
+                  obscureText: false,
                 ),
-                 const SizedBox(
+                CustomTextField(
+                  stringInTextField: locale.translate('phone')!,
+                  textInputType: TextInputType.phone,
+                  obscureText: false,
+                ),
+                CustomTextField(
+                  stringInTextField: locale.translate('id_number')!,
+                  textInputType: TextInputType.number,
+                  obscureText: false,
+                ),
+                CustomTextField(
+                  stringInTextField: locale.translate('email')!,
+                  textInputType: TextInputType.emailAddress,
+                  obscureText: false,
+                ),
+                CustomTextField(
+                  stringInTextField: locale.translate('password')!,
+                  textInputType: TextInputType.visiblePassword,
+                  obscureText: true,
+                ),
+                CustomTextField(
+                  stringInTextField: locale.translate('confirm_password')!,
+                  textInputType: TextInputType.visiblePassword,
+                  obscureText: true,
+                ),
+                const SizedBox(
                   height: 40,
                 ),
                 CustomButton(
-                    buttonText:  locale.translate('confirm')!,
+                    buttonText: locale.translate('confirm')!,
                     buttonTapHandler: () {},
                     screenWidth: MediaQuery.of(context).size.width * .6),
                 const SizedBox(

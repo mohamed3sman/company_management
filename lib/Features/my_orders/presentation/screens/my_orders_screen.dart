@@ -62,11 +62,11 @@ class MyOrdersScreen extends StatelessWidget {
             const Text("طلباتي",
                 style: TextStyle(
                   color: Color(0xff000000),
-                  fontSize: 25,
+                  fontSize: 20,
                   fontWeight: FontWeight.w400,
                 )),
-            Gaps.vGap15,
-            const MyOrdersGridView(),
+            
+             MyOrdersGridView(),
           ],
         ),
       ),

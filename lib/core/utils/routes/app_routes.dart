@@ -3,6 +3,7 @@ import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_prof
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/login/login_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
+import 'package:fingerPrint/Features/permission_request/presentation/screens/permission_request_screen.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SplashView());
       case kSearchScreen:
         return MaterialPageRoute(builder: (_) => const SearchView());
-      case KBottomNav:
+      case kBottomNav:
         return MaterialPageRoute(builder: (_) => const BottomNav());
       case kHomeScreen:
         return MaterialPageRoute(builder: (_) => const HomeView());
@@ -51,6 +52,10 @@ class AppRoutes {
       case kVacationRquestScreen:
         return MaterialPageRoute(
           builder: (_) => const VacationRequestScreen(),
+        );
+      case kPermissionRquestScreen:
+        return MaterialPageRoute(
+          builder: (_) => const PermissinRequestScreen(),
         );
 
       default:

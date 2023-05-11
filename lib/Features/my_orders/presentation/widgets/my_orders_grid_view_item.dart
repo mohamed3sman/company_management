@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 
 class MyOrdersGridViewItem extends StatelessWidget {
-  const MyOrdersGridViewItem({super.key, 
+  const MyOrdersGridViewItem({
+    super.key,
     required this.gridItemTapHandler,
     required this.gridText,
     required this.gridImagePath,
+    required this.navScreenIndex,
   });
   final Function gridItemTapHandler;
   final String gridText;
   final String gridImagePath;
+  final String navScreenIndex;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).pushNamed(navScreenIndex);
+      },
       child: Tooltip(
-        decoration: const BoxDecoration(color: Colors.white),
+        decoration: const BoxDecoration(color: Colors.black),
         // textStyle: ,
         message: "icon messege",
         child: Container(
@@ -32,14 +37,17 @@ class MyOrdersGridViewItem extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * .12,
               ),
               SizedBox(
-                  //height: 40,
-                  child: Text(
-                gridText,
-                maxLines: 1,
-                softWrap: true,
-                textAlign: TextAlign.end,
-                style: const TextStyle(fontSize: 17, color: Color(0xff403f3f)),
-              )),
+                //height: 40,
+                child: Text(
+                  gridText,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  softWrap: true,
+                  textAlign: TextAlign.center,
+                  style:
+                      const TextStyle(fontSize: 14, color: Color(0xff403f3f)),
+                ),
+              ),
             ],
           ),
         ),

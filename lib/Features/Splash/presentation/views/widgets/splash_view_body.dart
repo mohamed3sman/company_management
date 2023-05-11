@@ -23,14 +23,14 @@ class _SplashViewbodyState extends State<SplashViewbody>
 
     if (seen) {
       // print("seen");
-      Navigator.pushReplacementNamed(context, KBottomNav);
+      Navigator.pushReplacementNamed(context, kBottomNav);
       // Navigator.of(context).pushReplacement(
       //     new MaterialPageRoute(builder: (context) => new Home()));
     } else {
       await prefs.setBool('seen', true);
       //  print("first time");
       Future.delayed(const Duration(seconds: 2));
-      Navigator.pushReplacementNamed(context, kIntroScreen);
+      Navigator.pushReplacementNamed(context, kLanguageScreen);
 
       // Navigator.of(context).pushReplacement(
       //     new MaterialPageRoute(builder: (context) => new IntroScreen()));

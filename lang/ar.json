@@ -63,6 +63,8 @@
   "password": "كلمة المرور",
   "confirm_password": "تأكيد كلمة المرور",
   "confirm": "تاكيد",
-  "to_manage_human_resources_in_an_integrated_manner": "لإدارة الموارد البشرية بشكل متكامل"
+  "to_manage_human_resources_in_an_integrated_manner": "لإدارة الموارد البشرية بشكل متكامل",
+  "order_vacation":"طلب إجازة",
+  "permission_request":"طلب إذن"
 
 }

@@ -1,7 +1,10 @@
+import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/widgets/custom_drop_down_list.dart';
+import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-
+import '../../../../core/locale/app_localizations.dart';
 import '../../../../core/utils/gaps.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../widgets/custom_date_picker.dart';
 
@@ -10,75 +13,105 @@ class VacationRequestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+        late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Scaffold(
-      body: Container(
-        height: MediaQuery.of(context).size.height * .87,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  //ASK ENG ASMAA WHICH IS BETTER ?
-                  // IconButton(
-                  //   onPressed: () {},
-                  //   icon: Icon(
-                  //     Icons.notifications_none_rounded,
-                  //     size: 30,
-                  //   ),
-                  // ),
-                  Expanded(
-                    child: Directionality(
-                      textDirection: TextDirection.rtl,
-                      //   color: Colors.red,
-                      child: ListTile(
-                        onTap: () {
-                          print("List tile");
-                        },
-                        // selectedColor: Colors.red,
-                        title: Text(
-                          "أهلا وسهلا",
-                          style:
-                              TextStyle(color: Color(0xff9d9d9e), fontSize: 13),
+      body: SafeArea(
+        bottom: false,
+        child: Container(
+          padding:const EdgeInsets.only(left: 20, right: 20),
+         // height: MediaQuery.of(context).size.height * .87,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+           const   CustomAppBar(),
+                Gaps.vGap8,
+                 Text(
+                  locale.translate('order_vacation')!,
+                  style:const TextStyle(
+                    color: Color(0xff000000),
+                    fontSize: 25,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const CustomOrdersRawIcon(
+                    rawText: "نوع الإجازة",
+                    iconImagePath: "assets/icons/vacation_icon.png"),
+                 CustomDropDownList(hintText: "نوع الإجازة"),
+                const CustomOrdersRawIcon(
+                    rawText: "تاريخ بداية الإجازة",
+                    iconImagePath: "assets/icons/calender_icon.png"),
+                CustomDatePicker(CustomDatePickerText: "من تاريخ"),
+                const CustomOrdersRawIcon(
+                    rawText: "تاريخ نهاية الإجازة",
+                    iconImagePath: "assets/icons/calender_icon.png"),
+                CustomDatePicker(CustomDatePickerText: "إلى تاريخ"),
+                const CustomOrdersRawIcon(
+                  rawText: "مرفقات",
+                  iconImagePath: "assets/icons/attach_icon.png",
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Card(
+                        elevation: 6,
+                        child: SizedBox(
+                          height: MediaQuery.of(context).size.height * .12,
+                          width: MediaQuery.of(context).size.width * .87,
                         ),
-                        leading: Icon(Icons.person_pin),
-                        trailing: IconButton(
-                          onPressed: () {
-                            print("new notification");
-                          },
-                          icon: Icon(
-                            Icons.notifications_none_rounded,
-                            size: 30,
-                            color: Color(0xff707070),
-                          ),
+                      ),
+                      Center(
+                        child: Image.asset(
+                          "assets/images/upload_cloud.png",
+                          alignment: Alignment.center,
+                          width: 50,
+                          height: 50,
+                          //  MediaQuery.of(context).size.width * 1
                         ),
-                        subtitle: Text(
-                          "أحمد محمد عبدالرحمن",
-                          style:
-                              TextStyle(color: Color(0xff1d1d1d), fontSize: 15),
-                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const CustomOrdersRawIcon(
+                  rawText: "ملاحظات",
+                  iconImagePath: "assets/icons/notes_icon.png",
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * .1,
+                  width: MediaQuery.of(context).size.width * .87,
+                  child: const Card(
+                    elevation: 6,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        focusedBorder: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        disabledBorder: InputBorder.none,
+                        errorBorder: InputBorder.none,
+                        focusedErrorBorder: InputBorder.none,
                       ),
                     ),
                   ),
-                ],
-              ),
-              Gaps.vGap8,
-              Text(
-                "طلب إجازة",
-                style: TextStyle(
-                  color: Color(0xff000000),
-                  fontSize: 25,
-                  fontWeight: FontWeight.w400,
                 ),
-              ),
-              CustomOrdersRawIcon(
-                  rawText: "نوع الإجازة", rawIcon: Icon(Icons.holiday_village)),
-              CustomDropDownList(),
-              CustomOrdersRawIcon(
-                  rawText: "تاريخ بداية الإجازة",
-                  rawIcon: Icon(Icons.holiday_village)),
-              CustomDatePicker(),
-            ],
+                Gaps.vGap15,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CustomButton(
+                        screenWidth: MediaQuery.of(context).size.width * .3,
+                        buttonTapHandler: () {},
+                        buttonText: "تأكيد"),
+                    CustomButton(
+                        buttonBackGroundColor: Colors.white,
+                        screenWidth: MediaQuery.of(context).size.width * .3,
+                        buttonTapHandler: () {},
+                        buttonText: "إلغاء")
+                  ],
+                ),
+           // BottomNav()
+              ],
+            ),
           ),
         ),
       ),

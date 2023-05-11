@@ -1,42 +1,43 @@
 import 'package:flutter/material.dart';
 
 class CustomDropDownList extends StatefulWidget {
-  const CustomDropDownList({super.key});
-
+   CustomDropDownList({super.key,required this.hintText});
+  String hintText;
   @override
   State<CustomDropDownList> createState() => _CustomDropDownListState();
+  
+
 }
 
 class _CustomDropDownListState extends State<CustomDropDownList> {
-  List<String> items = [];
+  List<String> items = ["1", "2"];
+  String? selectedItem;
 
-  String? selectedItem = "item1";
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.white,
       elevation: 4,
       child: DropdownButtonFormField<String>(
+        borderRadius: BorderRadius.circular(10),
         iconSize: 50,
-        hint: const Text("نوع الإجازة", style: TextStyle(
-  
-    color: Color(0xffababac),
-    fontSize: 13,
-    fontWeight: FontWeight.w400,
-    fontStyle: FontStyle.normal,
-    
-    
-    )),
+        //elevation: 12,
+        hint:  Text(widget.hintText,
+            style: TextStyle(
+              color: Color(0xffababac),
+              fontSize: 13,
+              fontWeight: FontWeight.w400,
+              fontStyle: FontStyle.normal,
+            )),
         value: selectedItem,
-        decoration: InputDecoration(
-       //   hintText: "dfdfd",
-          contentPadding: const EdgeInsets.only(right: 10, left: 10),
-          enabledBorder: InputBorder.none,
-          constraints: BoxConstraints.loose(
-            Size(MediaQuery.of(context).size.width * .85,
-                MediaQuery.of(context).size.height*.2),
-          ),
+        decoration: const InputDecoration(
+          border: OutlineInputBorder(),
+          contentPadding: EdgeInsets.only(right: 10, left: 10),
+
+          // constraints: BoxConstraints.loose(
+          //   Size(MediaQuery.of(context).size.width * .85,
+          //       MediaQuery.of(context).size.height*.2),
+          // ),
         ),
         items: items.map((item) {
           return DropdownMenuItem(
@@ -48,7 +49,6 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
           setState(() {
             selectedItem = value;
           });
-          print(selectedItem);
         },
       ),
     );
