@@ -21,14 +21,22 @@ const String kCurrentTapScreen = "/currenttapscreen";
 const String kAttendanceScreen = "/attendancescreen";
 const String KBottomNav = '/KBottomNav';
 
+const String kLanguageScreen = '/bookLanguageScreen';
+//const String kLoginScreenForm = "/loginScreenForm";
+const String kBottomNav = '/KBottomNav';
+const String kMyOrdersScreen = '/kMyOrdersScreen';
+const String kContactUsScreen = '/kContactUsScreen';
+const String kEditProfileScreen = '/kEditProfileScreen';
+const String kVacationRquestScreen = '/kVacationRquestScreen';
+const String kPermissionRquestScreen = '/kPermissionRquestScreen';
 // saved sharedprefernces
 const String locale = 'locale';
 const String english = 'en';
 const String arabic = 'ar';
 
 //color
-const kPrimaryColor = Color(0xb87350cb);
-const kSecondaryColor = Color(0xff3816a2);
+const Color kPrimaryColor = Color(0xff5C4DB1);
+const Color kSecondaryColor = Color(0xff3816a2);
 
 const kTranstionDuration = Duration(milliseconds: 250);
 const kGtSectraFine = 'GT Sectra Fine';

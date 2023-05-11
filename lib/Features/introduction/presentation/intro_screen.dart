@@ -1,11 +1,17 @@
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import '../../../core/utils/constants.dart';
+import '../../../core/widgets/custom_circle_clipper.dart';
 
-import '../../core/utils/constants.dart';
-import '../home/presentation/views/widgets/custom_intro_clipper.dart';
-
-class IntroScreen extends StatelessWidget {
+class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
+
+  @override
+  State<IntroScreen> createState() => _IntroScreenState();
+}
+
+class _IntroScreenState extends State<IntroScreen> {
   Widget getIntroPages(
       {required String imagePath,
       required Size screenSize,
@@ -13,29 +19,34 @@ class IntroScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: Stack(
+        alignment: Alignment.topCenter,
         children: [
           ClipPath(
-            clipper: RoundedClipper(screenSize.height - 150),
+            clipper: RoundedClipper(screenSize.height - 140),
             child: AnimatedContainer(
               duration: const Duration(seconds: 3),
-              height: screenSize.height - 100,
+              height: screenSize.height - 80,
               color: Colors.white,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.only(top: 40),
             child: Image.asset(
               imagePath,
-              fit: BoxFit.cover,
+              //fit: BoxFit.cover,
+              alignment: Alignment.center,
+              height: screenSize.height * .5,
+              width: screenSize.width * .8,
             ),
           ),
           Positioned(
-            top: screenSize.height * .7,
+            top: screenSize.height * .65,
             right: screenSize.width * .07,
             child: Column(
                 textDirection: TextDirection.ltr,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
+                  Gaps.vGap50,
                   const Text(
                     "نظام بصمتك",
                     style: TextStyle(color: Colors.white, fontSize: 20),
@@ -46,7 +57,7 @@ class IntroScreen extends StatelessWidget {
                       title,
                       textAlign: TextAlign.right,
                       softWrap: true,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ),
                 ]),
@@ -60,28 +71,27 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
     return IntroductionScreen(
-      dotsDecorator: const DotsDecorator(
-          activeSize: Size(12, 12),
-          spacing: EdgeInsets.only(left: 2, right: 0),
+      dotsDecorator: DotsDecorator(
+          // spacing: EdgeInsets.only(left: 2, right: 3),
           color: Colors.white,
-          size: Size(12, 12),
+          size: Size(screenSize.width * .025, screenSize.height * .025),
           activeColor: kSecondaryColor),
-      //  dotsContainerDecorator: BoxDecoration(color: Colors.white),
+      //  dotsContainerDecorator: BoxDecoration(color: Colors.red),
       rtl: true,
-      resizeToAvoidBottomInset: false,
+      // resizeToAvoidBottomInset: true,
       next: const Text(
         "تخطي",
-        style: TextStyle(color: Colors.white, fontSize: 25),
+        style: TextStyle(color: Colors.white, fontSize: 20),
       ),
       done: const Text(
         "تخطي",
-        style: TextStyle(color: Colors.white, fontSize: 25),
+        style: TextStyle(color: Colors.white, fontSize: 20),
       ),
-      nextFlex: 5,
+      nextFlex: (screenSize.width * .0111).toInt(),
       doneStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       nextStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       onDone: () {
-        Navigator.pushReplacementNamed(context, kBookLanguageScreen);
+        Navigator.pushReplacementNamed(context, kBottomNav);
       },
       showDoneButton: true,
       showNextButton: true,

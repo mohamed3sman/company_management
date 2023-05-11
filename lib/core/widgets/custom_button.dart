@@ -3,12 +3,15 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton(
-      {required this.screenWidth,
+      {super.key,
+      this.buttonBackGroundColor,
+      required this.screenWidth,
       required this.buttonTapHandler,
       required this.buttonText});
-  var screenWidth;
+  var screenWidth = 0.0;
   Function buttonTapHandler;
   String buttonText;
+  Color? buttonBackGroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +23,23 @@ class CustomButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [
-              kPrimaryColor,
-              kSecondaryColor,
-            ]),
+            border: Border.all(width: 2, color: kPrimaryColor),
+            gradient: buttonBackGroundColor == null
+                ? LinearGradient(colors: [
+                    kPrimaryColor,
+                    kSecondaryColor,
+                  ])
+                : LinearGradient(
+                    colors: [buttonBackGroundColor!, buttonBackGroundColor!]),
             borderRadius: BorderRadius.circular(15)),
         height: screenSize.height * .06,
         width: 150.0,
         child: Text(
           buttonText,
-          style: TextStyle(fontSize: 16, color: Colors.white),
+          style: TextStyle(
+            fontSize: 16,
+            color: buttonBackGroundColor == null ? Colors.white : kPrimaryColor,
+          ),
         ),
       ),
     );
