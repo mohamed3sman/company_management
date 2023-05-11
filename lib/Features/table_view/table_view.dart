@@ -1,3 +1,5 @@
+import 'package:fingerPrint/Features/table_view/widget/table_page_app_bar.dart';
+import 'package:fingerPrint/Features/table_view/widget/table_page_app_bar_actions.dart';
 import 'package:fingerPrint/Features/table_view/widget/table_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -6,8 +8,21 @@ class DataTableView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: TableViewBody(),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: const Icon(
+          Icons.arrow_back,
+          color: Colors.black,
+        ),
+        title: const TablePageAppBar(),
+        centerTitle: true,
+        actions: const [
+          TablePageAppBarActions(),
+        ],
+      ),
+      body: const TableViewBody(),
     );
   }
 }
