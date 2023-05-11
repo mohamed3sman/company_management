@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
@@ -7,6 +9,7 @@ import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../widgets/custom_date_picker.dart';
+import 'package:file_picker/file_picker.dart';
 
 class VacationRequestScreen extends StatelessWidget {
   const VacationRequestScreen({super.key});
@@ -51,7 +54,16 @@ class VacationRequestScreen extends StatelessWidget {
                   iconImagePath: "assets/icons/attach_icon.png",
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () async {
+                    FilePickerResult? result =
+                        await FilePicker.platform.pickFiles();
+
+                    if (result != null) {
+                      File file = File(result.files.single.path!);
+                    } else {
+                      // User canceled the picker
+                    }
+                  },
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
