@@ -11,7 +11,14 @@ const String kBookDetailsScreen = '/bookDetailsScreen';
 const String kSearchScreen = '/searchScreen';
 const String kIntroScreen = '/introScreen';
 const String kBookLanguageScreen = '/bookLanguageScreen';
-const String kLoginScreenForm="/loginScreenForm";
+const String kLoginScreenForm = "/loginScreenForm";
+const String kRegisterScreen = "/registerscreen";
+const String kVerificationScreen = "/verificationscreen";
+const String kTapBarScreen = "/tapbarscreen";
+const String kRejectedTapScreen = "/rejectedtapscreen";
+const String kUpComingTapScreen = "/upcomingtapscreen";
+const String kCurrentTapScreen = "/currenttapscreen";
+const String kAttendanceScreen = "/attendancescreen";
 const String KBottomNav = '/KBottomNav';
 
 // saved sharedprefernces

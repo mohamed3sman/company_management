@@ -7,8 +7,8 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     Key? key,
     required this.stringInTextField,
-     this.textInputType=TextInputType.text,
-     this.obscureText=false,
+    this.textInputType = TextInputType.text,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -23,38 +23,39 @@ class CustomTextField extends StatelessWidget {
         ),
         padding: const EdgeInsets.all(6),
         child: TextFormField(
-            textAlign: TextAlign.right,
-            validator: (value) {
-              if (value!.isEmpty) {
-                return "please enter your $stringInTextField";
-              }
-              return null;
-            },
-            obscureText: obscureText,
-            keyboardType: textInputType,
-            maxLines: 1,
-            decoration: InputDecoration(
-              label: Text(
-                stringInTextField,
-                style: const TextStyle(
-                    color: Color(0xff9d9d9e),
-                    fontFamily: "Amiri",
-                    fontWeight: FontWeight.w600,
-                    fontSize: 20),
-              ),
-              focusedBorder: InputBorder.none,
-              enabledBorder: InputBorder.none,
-              disabledBorder: InputBorder.none,
-              errorBorder: InputBorder.none,
-              focusedErrorBorder: InputBorder.none,
-              contentPadding: const EdgeInsets.symmetric(
-                  vertical: 12, horizontal: 15), // space of text
-              border: OutlineInputBorder(
-                borderSide: const BorderSide(width: 0.5),
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),),
-     ),
-);
-}
+          textAlign: TextAlign.right,
+          validator: (value) {
+            if (value!.isEmpty) {
+              return "please enter your $stringInTextField";
+            }
+            return null;
+          },
+          obscureText: obscureText,
+          keyboardType: textInputType,
+          maxLines: 1,
+          decoration: InputDecoration(
+            label: Text(
+              stringInTextField,
+              style: const TextStyle(
+                  color: Color(0xff9d9d9e),
+                  fontFamily: "Amiri",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20),
+            ),
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.symmetric(
+                vertical: 12, horizontal: 15), // space of text
+            border: OutlineInputBorder(
+              borderSide: const BorderSide(width: 0.5),
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }

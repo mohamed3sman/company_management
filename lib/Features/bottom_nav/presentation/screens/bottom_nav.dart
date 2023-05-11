@@ -97,7 +97,7 @@ class _BottomNavState extends State<BottomNav>
                                         .bottomNavIndex ==
                                     4
                                 ? kPrimaryColor
-                                : kSecondColor),
+                                : kSecondaryColor),
                       ),
                       onPressed: () {
                         _animationController.reset();
@@ -115,7 +115,7 @@ class _BottomNavState extends State<BottomNav>
                 ? AnimatedBottomNavigationBar.builder(
                     itemCount: _iconPathList.length,
                     tabBuilder: (int index, bool isActive) {
-                      final color = isActive ? kPrimaryColor : kSecondColor;
+                      final color = isActive ? kPrimaryColor : kSecondaryColor;
                       return Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,

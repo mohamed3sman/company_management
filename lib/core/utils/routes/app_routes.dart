@@ -1,6 +1,13 @@
+import 'package:fingerPrint/Features/attendance_view/attendance_view.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
-import 'package:fingerPrint/Features/login/login_screen.dart';
+import 'package:fingerPrint/Features/login_view/login_view.dart';
+import 'package:fingerPrint/Features/register_view/register_view.dart';
+import 'package:fingerPrint/Features/tap_bar_view/tap_bar_view.dart';
+import 'package:fingerPrint/Features/tap_bar_view/widgets/current_tap.dart';
+import 'package:fingerPrint/Features/tap_bar_view/widgets/rejected_tap.dart';
+import 'package:fingerPrint/Features/tap_bar_view/widgets/accepted_tap.dart';
+import 'package:fingerPrint/Features/verification_view/verification_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
@@ -29,9 +36,25 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const IntroScreen());
       case kBookLanguageScreen:
         return MaterialPageRoute(builder: (_) => const LanguageScreen());
+      case kRegisterScreen:
+        return MaterialPageRoute(builder: (_) => const RegisterView());
+      case kVerificationScreen:
+        return MaterialPageRoute(builder: (_) => const VerificationView());
+      case kTapBarScreen:
+        return MaterialPageRoute(builder: (_) => const TapBarView());
+      case kCurrentTapScreen:
+        return MaterialPageRoute(builder: (_) => const CurrentTap());
+      case kUpComingTapScreen:
+        return MaterialPageRoute(builder: (_) => const AcceptedTap());
+      case kRejectedTapScreen:
+        return MaterialPageRoute(builder: (_) => const RejectedTap());
       case kLoginScreenForm:
         return MaterialPageRoute(
-          builder: (_) => const LoginViewForm(),
+          builder: (_) => const LoginView(),
+        );
+      case kAttendanceScreen:
+        return MaterialPageRoute(
+          builder: (_) => const AttendanceView(),
         );
       default:
         return null;
