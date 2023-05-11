@@ -1,3 +1,4 @@
+import 'package:fingerPrint/Features/attendance_view/attendance_view.dart';
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
@@ -18,7 +19,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
 
   List<Widget> bottomNavScreens = [
     const LanguageScreen(),
-    const MyOrdersScreen(),
+    const AttendanceView(),
     const VacationRequestScreen(),
     const ContactUsScreen(),
     const EditProfileScreen(),
