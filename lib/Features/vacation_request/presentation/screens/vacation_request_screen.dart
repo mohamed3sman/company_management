@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
@@ -7,28 +9,29 @@ import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../widgets/custom_date_picker.dart';
+import 'package:file_picker/file_picker.dart';
 
 class VacationRequestScreen extends StatelessWidget {
   const VacationRequestScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-        late AppLocalizations locale;
+    late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Scaffold(
       body: SafeArea(
         bottom: false,
         child: Container(
-          padding:const EdgeInsets.only(left: 20, right: 20),
-         // height: MediaQuery.of(context).size.height * .87,
+          padding: const EdgeInsets.only(left: 20, right: 20),
+          // height: MediaQuery.of(context).size.height * .87,
           child: SingleChildScrollView(
             child: Column(
               children: [
-           const   CustomAppBar(),
+                const CustomAppBar(),
                 Gaps.vGap8,
-                 Text(
+                Text(
                   locale.translate('order_vacation')!,
-                  style:const TextStyle(
+                  style: const TextStyle(
                     color: Color(0xff000000),
                     fontSize: 25,
                     fontWeight: FontWeight.w400,
@@ -37,7 +40,7 @@ class VacationRequestScreen extends StatelessWidget {
                 const CustomOrdersRawIcon(
                     rawText: "نوع الإجازة",
                     iconImagePath: "assets/icons/vacation_icon.png"),
-                 CustomDropDownList(hintText: "نوع الإجازة"),
+                CustomDropDownList(hintText: "نوع الإجازة"),
                 const CustomOrdersRawIcon(
                     rawText: "تاريخ بداية الإجازة",
                     iconImagePath: "assets/icons/calender_icon.png"),
@@ -51,7 +54,16 @@ class VacationRequestScreen extends StatelessWidget {
                   iconImagePath: "assets/icons/attach_icon.png",
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () async {
+                    FilePickerResult? result =
+                        await FilePicker.platform.pickFiles();
+
+                    if (result != null) {
+                      File file = File(result.files.single.path!);
+                    } else {
+                      // User canceled the picker
+                    }
+                  },
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -109,7 +121,7 @@ class VacationRequestScreen extends StatelessWidget {
                         buttonText: "إلغاء")
                   ],
                 ),
-           // BottomNav()
+                // BottomNav()
               ],
             ),
           ),

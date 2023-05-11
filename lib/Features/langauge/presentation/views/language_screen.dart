@@ -34,12 +34,13 @@ class _LanguageScreenState extends State<LanguageScreen> {
           ),
         ),
         Center(
-          child: Card(elevation: 6,
+          child: Card(
+            elevation: 6,
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                 ),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
+              ),
               width: screenSize.width * .85,
               height: screenSize.height * .6,
               child: Column(
@@ -83,7 +84,8 @@ class _LanguageScreenState extends State<LanguageScreen> {
                               width: screenSize.width * .3,
                               height: screenSize.height * .2,
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Image.asset(
                                     AssetsData.usFlagImage,
@@ -116,7 +118,8 @@ class _LanguageScreenState extends State<LanguageScreen> {
                               width: screenSize.width * .3,
                               height: screenSize.height * .2,
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Image.asset(
                                     AssetsData.saudiFlagImage,
