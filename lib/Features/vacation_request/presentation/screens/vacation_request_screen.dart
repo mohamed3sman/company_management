@@ -11,10 +11,17 @@ import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../widgets/custom_date_picker.dart';
 import 'package:file_picker/file_picker.dart';
 
-class VacationRequestScreen extends StatelessWidget {
+class VacationRequestScreen extends StatefulWidget {
   const VacationRequestScreen({super.key});
 
   @override
+  State<VacationRequestScreen> createState() => _VacationRequestScreenState();
+}
+
+class _VacationRequestScreenState extends State<VacationRequestScreen> {
+  @override
+  File? selectedFile;
+  String? fileName;
   Widget build(BuildContext context) {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
@@ -55,14 +62,7 @@ class VacationRequestScreen extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    FilePickerResult? result =
-                        await FilePicker.platform.pickFiles();
-
-                    if (result != null) {
-                      File file = File(result.files.single.path!);
-                    } else {
-                      // User canceled the picker
-                    }
+                    await pickFileFromDevice();
                   },
                   child: Stack(
                     alignment: Alignment.center,
@@ -72,15 +72,24 @@ class VacationRequestScreen extends StatelessWidget {
                         child: SizedBox(
                           height: MediaQuery.of(context).size.height * .12,
                           width: MediaQuery.of(context).size.width * .87,
-                        ),
-                      ),
-                      Center(
-                        child: Image.asset(
-                          "assets/images/upload_cloud.png",
-                          alignment: Alignment.center,
-                          width: 50,
-                          height: 50,
-                          //  MediaQuery.of(context).size.width * 1
+                          child: SizedBox(
+                            child: fileName != null
+                                ? Center(
+                                    child: Text(fileName!),
+                                  )
+                                : Center(
+                                    child:
+                                        selectedFile == null && fileName == null
+                                            ? Image.asset(
+                                                "assets/images/upload_cloud.png",
+                                                alignment: Alignment.center,
+                                                width: 50,
+                                                height: 50,
+                                                //  MediaQuery.of(context).size.width * 1
+                                              )
+                                            : Image.file(selectedFile!),
+                                  ),
+                          ),
                         ),
                       ),
                     ],
@@ -128,5 +137,26 @@ class VacationRequestScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> pickFileFromDevice() async {
+    FilePickerResult? result = await FilePicker.platform
+        .pickFiles(type: FileType.any, allowMultiple: false);
+    if (result != null) {
+      PlatformFile file = result.files.first;
+      if (file.extension == 'jpg' ||
+          file.extension == 'jpeg' ||
+          file.extension == 'png' ||
+          file.extension == 'gif') {
+        setState(() {
+          fileName = null;
+          selectedFile = selectedFile = File(result.files.single.path!);
+        });
+      } else if (file.extension == 'pdf') {
+        setState(() {
+          fileName = file.name;
+        });
+      }
+    } else {}
   }
 }
