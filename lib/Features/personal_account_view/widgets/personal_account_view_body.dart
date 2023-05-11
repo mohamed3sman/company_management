@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -149,35 +150,49 @@ class PersonalAccountViewBody extends StatelessWidget {
             style: Styles.textStyle20.copyWith(color: Colors.black),
           ),
           const SizedBox(height: 15),
-          const CustomSettingRow(
-            text: 'اللغة',
-            path: 'assets/icons/language.svg',
-          ),
-          const CustomSettingRow(
-            text: 'الإشعارات',
-            path: 'assets/icons/language.svg',
-          ),
-          const CustomSettingRow(
-            text: 'الشروط والأحكام',
-            path: 'assets/icons/language.svg',
-          ),
-          const CustomSettingRow(
-            text: 'سياسة الخصوصية',
-            path: 'assets/icons/language.svg',
-          ),
-          const CustomSettingRow(
-            text: 'تواصل معنا',
-            path: 'assets/icons/language.svg',
-          ),
-          const CustomSettingRow(
-            text: 'حذف الحساب',
-            path: 'assets/icons/language.svg',
-          ),
+          CustomSettingRow(
+              text: 'اللغة',
+              path: 'assets/icons/language.svg',
+              function: () {
+                Navigator.pushNamed(context, kLanguageScreen);
+              }),
+          CustomSettingRow(
+              text: 'الإشعارات',
+              path: 'assets/icons/language.svg',
+              function: () {
+                Navigator.pushNamed(context, kBottomNav);
+              }),
+          CustomSettingRow(
+              text: 'الشروط والأحكام',
+              path: 'assets/icons/language.svg',
+              function: () {
+                Navigator.pushNamed(context, kBottomNav);
+              }),
+          CustomSettingRow(
+              text: 'سياسة الخصوصية',
+              path: 'assets/icons/language.svg',
+              function: () {
+                Navigator.pushNamed(context, kBottomNav);
+              }),
+          CustomSettingRow(
+              text: 'تواصل معنا',
+              path: 'assets/icons/language.svg',
+              function: () {
+                Navigator.pushNamed(context, kContactUsScreen);
+              }),
+          CustomSettingRow(
+              text: 'حذف الحساب',
+              path: 'assets/icons/language.svg',
+              function: () {
+                Navigator.pushNamed(context, kBottomNav);
+              }),
           const Spacer(),
           Center(
               child: CustomButton(
             buttonText: 'تسجيل الخروج',
-            buttonTapHandler: () {},
+            buttonTapHandler: () {
+              Navigator.pushNamed(context, kLoginScreenForm);
+            },
             screenWidth: 120.0,
           ))
         ],

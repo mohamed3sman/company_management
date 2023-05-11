@@ -94,12 +94,18 @@ class _BottomNavState extends State<BottomNav>
                 ],
                 leading: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(40.0),
-                    child: Image.network(
-                      "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
-                      height: 10.0,
-                      width: 10.0,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(
+                          context, KPersonalAccountView);
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(40.0),
+                      child: Image.network(
+                        "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
+                        height: 10.0,
+                        width: 10.0,
+                      ),
                     ),
                   ),
                 ),
