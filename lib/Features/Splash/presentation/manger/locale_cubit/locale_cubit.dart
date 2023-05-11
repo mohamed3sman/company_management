@@ -13,7 +13,7 @@ class LocaleCubit extends Cubit<LocaleState> {
 
   LocaleCubit(
       {required this.changeLocaleUseCase, required this.getSavedLangUseCase})
-      : super(const SelectedLocale(Locale('en')));
+      : super(const SelectedLocale(Locale('ar')));
 
   String langCode = english;
 

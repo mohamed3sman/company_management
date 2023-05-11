@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:intl/intl.dart';
 
-class CustomTimePicker extends StatelessWidget {
+class CustomTimePicker extends StatefulWidget {
   CustomTimePicker({super.key, required this.timePickerText});
   String timePickerText;
+
+  @override
+  State<CustomTimePicker> createState() => _CustomTimePickerState();
+}
+
+class _CustomTimePickerState extends State<CustomTimePicker> {
+  var pickedTime;
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -14,17 +21,24 @@ class CustomTimePicker extends StatelessWidget {
       height: screenSize.height * .07,
       child: InkWell(
         onTap: () {
-          showTimePicker(context: context, initialTime: TimeOfDay.now());
+          showTimePicker(context: context, initialTime: TimeOfDay.now())
+              .then((value) {
+            setState(() {
+              pickedTime = value!.format(context);
+            });
+          });
         },
         child: Card(
           elevation: 6,
           child: Container(
-            padding: EdgeInsets.only(left:4 ,right: 4),
-            alignment: Alignment.centerRight,
+              padding: EdgeInsets.only(left: 4, right: 4),
+              alignment: Alignment.centerRight,
               child: Text(
-            timePickerText,
-            textAlign: TextAlign.left,
-          )),
+                pickedTime == null
+                    ? widget.timePickerText
+                    : pickedTime.toString(),
+                textAlign: TextAlign.left,
+              )),
         ),
       ),
     );

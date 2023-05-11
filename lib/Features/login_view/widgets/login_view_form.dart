@@ -40,7 +40,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
         CustomButton(
           buttonText: 'تسجيل الدخول',
           buttonTapHandler: () {
-            Navigator.pushNamed(context, kTapBarScreen);
+            Navigator.pushNamed(context, kVerificationScreen);
           },
           screenWidth: 120,
         ),

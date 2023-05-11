@@ -30,6 +30,8 @@ const String kContactUsScreen = '/kContactUsScreen';
 const String kEditProfileScreen = '/kEditProfileScreen';
 const String kVacationRquestScreen = '/kVacationRquestScreen';
 const String kPermissionRquestScreen = '/kPermissionRquestScreen';
+const String KPersonalAccountView = '/KPersonalAccountView';
+
 // saved sharedprefernces
 const String locale = 'locale';
 const String english = 'en';

@@ -13,7 +13,6 @@ class ContactUsScreen extends StatefulWidget {
 }
 
 class _ContactUsScreenState extends State<ContactUsScreen> {
-
   @override
   Widget build(BuildContext context) {
     late AppLocalizations locale;
@@ -29,7 +28,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
             icon: const FaIcon(FontAwesomeIcons.arrowLeft),
             color: Colors.black,
             onPressed: () {}),
-        title:  Center(
+        title: Center(
           child: Text(
             locale.translate('english')!,
             style: const TextStyle(
@@ -47,30 +46,30 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 height: MediaQuery.of(context).size.height * .3,
                 'assets/images/mention_bro.png',
               ),
-               CustomTextField(
-                  stringInTextField: locale.translate('name')!,
-                  textInputType: TextInputType.text,
-                  obscureText: false,
-                ) ,
-               CustomTextField(
-                  stringInTextField:  locale.translate('email')!,
-                  textInputType: TextInputType.emailAddress,
-                  obscureText: false,
+              CustomTextField(
+                stringInTextField: locale.translate('name')!,
+                textInputType: TextInputType.text,
+                obscureText: false,
               ),
-               CustomTextField(
-                  stringInTextField:  locale.translate('title_of_message')!,
-                  textInputType: TextInputType.text,
-                  obscureText: false,
-             ),
-               CustomTextField(
-                  stringInTextField:  locale.translate('message')!,
+              CustomTextField(
+                stringInTextField: locale.translate('email')!,
+                textInputType: TextInputType.emailAddress,
+                obscureText: false,
+              ),
+              CustomTextField(
+                stringInTextField: locale.translate('title_of_message')!,
+                textInputType: TextInputType.text,
+                obscureText: false,
+              ),
+              CustomTextField(
+                  stringInTextField: locale.translate('message')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
                   height: 100),
-            
-          
-           
-           
+              CustomButton(
+                  buttonText: "ارسال",
+                  buttonTapHandler: () {},
+                  screenWidth: MediaQuery.of(context).size.width * .3),
               const SizedBox(
                 height: 40,
               ),

@@ -1,15 +1,16 @@
 import 'package:fingerPrint/Features/attendance_view/attendance_view.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
+import 'package:fingerPrint/Features/contact_us/presentation/screens/contact_us_screen.dart';
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/login_view/login_view.dart';
+import 'package:fingerPrint/Features/personal_account_view/personal_account_view.dart';
 import 'package:fingerPrint/Features/register_view/register_view.dart';
-import 'package:fingerPrint/Features/tap_bar_view/tap_bar_view.dart';
-import 'package:fingerPrint/Features/tap_bar_view/widgets/current_tap.dart';
-import 'package:fingerPrint/Features/tap_bar_view/widgets/rejected_tap.dart';
-import 'package:fingerPrint/Features/tap_bar_view/widgets/accepted_tap.dart';
+import 'package:fingerPrint/Features/vacation_view/vacation_view.dart';
+import 'package:fingerPrint/Features/vacation_view/widgets/current_tap.dart';
+import 'package:fingerPrint/Features/vacation_view/widgets/rejected_tap.dart';
+import 'package:fingerPrint/Features/vacation_view/widgets/accepted_tap.dart';
 import 'package:fingerPrint/Features/verification_view/verification_view.dart';
-import 'package:fingerPrint/Features/login/login_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/permission_request/presentation/screens/permission_request_screen.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
@@ -47,7 +48,7 @@ class AppRoutes {
       case kVerificationScreen:
         return MaterialPageRoute(builder: (_) => const VerificationView());
       case kTapBarScreen:
-        return MaterialPageRoute(builder: (_) => const TapBarView());
+        return MaterialPageRoute(builder: (_) => const VacationView());
       case kCurrentTapScreen:
         return MaterialPageRoute(builder: (_) => const CurrentTap());
       case kUpComingTapScreen:
@@ -68,7 +69,7 @@ class AppRoutes {
         );
       case kContactUsScreen:
         return MaterialPageRoute(
-          builder: (_) => const MyOrdersScreen(),
+          builder: (_) => const ContactUsScreen(),
         );
       case kEditProfileScreen:
         return MaterialPageRoute(
@@ -85,6 +86,10 @@ class AppRoutes {
       case kDataTableScreen:
         return MaterialPageRoute(
           builder: (_) => const DataTableView(),
+        );
+      case KPersonalAccountView:
+        return MaterialPageRoute(
+          builder: (_) => const PersonalAccountView(),
         );
 
       default:

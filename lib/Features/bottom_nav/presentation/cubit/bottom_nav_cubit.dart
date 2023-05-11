@@ -2,6 +2,8 @@ import 'package:fingerPrint/Features/attendance_view/attendance_view.dart';
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
+import 'package:fingerPrint/Features/permission_view/permission_view.dart';
+import 'package:fingerPrint/Features/vacation_view/vacation_view.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
 import 'dart:collection';
 import 'package:flutter/cupertino.dart';
@@ -21,12 +23,15 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const LanguageScreen(),
     const AttendanceView(),
     const VacationRequestScreen(),
-    const ContactUsScreen(),
-    const EditProfileScreen(),
+    const MyOrdersScreen(),
+    const AttendanceView(),
+    const VacationRequestScreen(),
+    const VacationView(),
+    const VacationRequestScreen(),
+    const PermissionView(),
     const VacationRequestScreen(),
     const PermissinRequestScreen(),
     const VacationRequestScreen(),
-    const PermissinRequestScreen(),
     const VacationRequestScreen(),
     const PermissinRequestScreen(),
   ];

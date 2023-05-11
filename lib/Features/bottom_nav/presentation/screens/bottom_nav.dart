@@ -94,12 +94,18 @@ class _BottomNavState extends State<BottomNav>
                 ],
                 leading: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(40.0),
-                    child: Image.network(
-                      "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
-                      height: 10.0,
-                      width: 10.0,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(
+                          context, KPersonalAccountView);
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(40.0),
+                      child: Image.network(
+                        "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
+                        height: 10.0,
+                        width: 10.0,
+                      ),
                     ),
                   ),
                 ),
@@ -131,7 +137,7 @@ class _BottomNavState extends State<BottomNav>
                                         .bottomNavIndex ==
                                     4
                                 ? kPrimaryColor
-                                : kSecondaryColor),
+                                : Colors.black),
                       ),
                       onPressed: () {
                         _animationController.reset();
@@ -146,64 +152,72 @@ class _BottomNavState extends State<BottomNav>
                 FloatingActionButtonLocation.centerDocked,
             bottomNavigationBar: !BlocProvider.of<BottomNavCubit>(context)
                     .drawerIsOpen
-                ? AnimatedBottomNavigationBar.builder(
-                    itemCount: _iconPathList.length,
-                    tabBuilder: (int index, bool isActive) {
-                      final color = isActive ? kPrimaryColor : kSecondaryColor;
-                      return Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            _iconPathList[index],
-                            height:
-                                orientation == Orientation.portrait ? 24 : 35,
-                            width:
-                                orientation == Orientation.portrait ? 24 : 35,
-                            color: color,
-                          ),
-                          SizedBox(
-                              height:
-                                  orientation == Orientation.portrait ? 4 : 12),
-                          // Padding(
-                          //   padding: EdgeInsets.symmetric(horizontal: 8),
-                          //   child: AutoSizeText(
-                          //     index == 0
-                          //         ? 'Menu'
-                          //         : index == 1
-                          //             ? 'Chat'
-                          //             : index == 2
-                          //                 ? 'To Do'
-                          //                 : ' Person',
-                          //     maxLines: 1,
-                          //     style: TextStyle(
-                          //         color: color,
-                          //         fontSize: orientation == Orientation.portrait
-                          //             ? 12
-                          //             : 25),
-                          //     group: _autoSizeGroup,
-                          //   ),
-                          // )
-                        ],
-                      );
-                    },
-                    backgroundColor: Colors.white,
-                    activeIndex: context.watch<BottomNavCubit>().bottomNavIndex,
-                    splashColor: kPrimaryColor,
-                    notchAndCornersAnimation: _animation,
-                    splashSpeedInMilliseconds: 300,
-                    notchSmoothness: NotchSmoothness.sharpEdge,
-                    gapLocation: GapLocation.center,
-                    // leftCornerRadius: 32,
-                    // rightCornerRadius: 32,
-                    onTap: (index) {
-                      BlocProvider.of<BottomNavCubit>(context)
-                          .navigationQueue
-                          .addLast(BlocProvider.of<BottomNavCubit>(context)
-                              .bottomNavIndex);
-                      BlocProvider.of<BottomNavCubit>(context)
-                          .updateBottomNavIndex(index);
-                    })
+                ? Directionality(
+                    textDirection: TextDirection.ltr,
+                    child: AnimatedBottomNavigationBar.builder(
+                        itemCount: _iconPathList.length,
+                        tabBuilder: (int index, bool isActive) {
+                          final color = isActive ? kPrimaryColor : Colors.black;
+                          return Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                _iconPathList[index],
+                                height: orientation == Orientation.portrait
+                                    ? 24
+                                    : 35,
+                                width: orientation == Orientation.portrait
+                                    ? 24
+                                    : 35,
+                                color: color,
+                              ),
+                              SizedBox(
+                                  height: orientation == Orientation.portrait
+                                      ? 4
+                                      : 12),
+                              // Padding(
+                              //   padding: EdgeInsets.symmetric(horizontal: 8),
+                              //   child: AutoSizeText(
+                              //     index == 0
+                              //         ? 'Menu'
+                              //         : index == 1
+                              //             ? 'Chat'
+                              //             : index == 2
+                              //                 ? 'To Do'
+                              //                 : ' Person',
+                              //     maxLines: 1,
+                              //     style: TextStyle(
+                              //         color: color,
+                              //         fontSize: orientation == Orientation.portrait
+                              //             ? 12
+                              //             : 25),
+                              //     group: _autoSizeGroup,
+                              //   ),
+                              // )
+                            ],
+                          );
+                        },
+                        backgroundColor: Colors.white,
+                        activeIndex:
+                            context.watch<BottomNavCubit>().bottomNavIndex,
+                        splashColor: kPrimaryColor,
+                        notchAndCornersAnimation: _animation,
+                        splashSpeedInMilliseconds: 300,
+                        notchSmoothness: NotchSmoothness.sharpEdge,
+                        gapLocation: GapLocation.center,
+
+                        // leftCornerRadius: 32,
+                        // rightCornerRadius: 32,
+                        onTap: (index) {
+                          BlocProvider.of<BottomNavCubit>(context)
+                              .navigationQueue
+                              .addLast(BlocProvider.of<BottomNavCubit>(context)
+                                  .bottomNavIndex);
+                          BlocProvider.of<BottomNavCubit>(context)
+                              .updateBottomNavIndex(index);
+                        }),
+                  )
                 : const SizedBox(),
           ),
         );

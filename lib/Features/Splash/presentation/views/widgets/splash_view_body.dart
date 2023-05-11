@@ -7,7 +7,6 @@ import 'sliding_text.dart';
 
 class SplashViewbody extends StatefulWidget {
   const SplashViewbody({Key? key}) : super(key: key);
-
   @override
   State<SplashViewbody> createState() => _SplashViewbodyState();
 }
@@ -50,7 +49,6 @@ class _SplashViewbodyState extends State<SplashViewbody>
   @override
   void dispose() {
     super.dispose();
-
     animationController.dispose();
   }
 

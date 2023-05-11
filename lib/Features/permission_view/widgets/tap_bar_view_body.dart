@@ -1,7 +1,7 @@
-import 'package:fingerPrint/Features/tap_bar_view/widgets/accepted_tap.dart';
-import 'package:fingerPrint/Features/tap_bar_view/widgets/current_tap.dart';
-import 'package:fingerPrint/Features/tap_bar_view/widgets/rejected_tap.dart';
-import 'package:fingerPrint/Features/tap_bar_view/widgets/tap_bar_app_bar.dart';
+import 'package:fingerPrint/Features/vacation_view/widgets/accepted_tap.dart';
+import 'package:fingerPrint/Features/vacation_view/widgets/current_tap.dart';
+import 'package:fingerPrint/Features/vacation_view/widgets/rejected_tap.dart';
+import 'package:fingerPrint/Features/vacation_view/widgets/tap_bar_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class TapBarViewBody extends StatefulWidget {
@@ -24,12 +24,12 @@ class _TapBarViewBodyState extends State<TapBarViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50, left: 15, right: 15),
+      padding: const EdgeInsets.only(top: 25, left: 15, right: 15),
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const TapBarAppBar(),
-            const SizedBox(height: 20),
+            // const TapBarAppBar(),
+            // const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
               height: 60,
