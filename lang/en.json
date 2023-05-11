@@ -64,6 +64,8 @@
   "confirm_password": "Confirm password",
   "confirm": "confirm",
   "order_vacation":"Order vacation",
-"permission_request":"Permission request"
+"permission_request":"Permission request",
+"vacation_type":"Vacation type"
+
 
 }

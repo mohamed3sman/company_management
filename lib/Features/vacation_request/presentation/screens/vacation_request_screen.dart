@@ -44,8 +44,8 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                const CustomOrdersRawIcon(
-                    rawText: "نوع الإجازة",
+                 CustomOrdersRawIcon(
+                    rawText:  locale.translate('vacation_type')!,
                     iconImagePath: "assets/icons/vacation_icon.png"),
                 CustomDropDownList(hintText: "نوع الإجازة"),
                 const CustomOrdersRawIcon(

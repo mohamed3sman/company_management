@@ -65,6 +65,8 @@
   "confirm": "تاكيد",
   "to_manage_human_resources_in_an_integrated_manner": "لإدارة الموارد البشرية بشكل متكامل",
   "order_vacation":"طلب إجازة",
-  "permission_request":"طلب إذن"
+  "permission_request":"طلب إذن",
+  "vacation_type":"نوع الإجازة"
+
 
 }
