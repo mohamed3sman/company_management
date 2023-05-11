@@ -1,4 +1,6 @@
+import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyOrdersGridViewItem extends StatelessWidget {
   const MyOrdersGridViewItem({
@@ -11,12 +13,16 @@ class MyOrdersGridViewItem extends StatelessWidget {
   final Function gridItemTapHandler;
   final String gridText;
   final String gridImagePath;
-  final String navScreenIndex;
+  final int navScreenIndex;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).pushNamed(navScreenIndex);
+        BlocProvider.of<BottomNavCubit>(context)
+            .navigationQueue
+            .addLast(BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
+        BlocProvider.of<BottomNavCubit>(context)
+            .updateBottomNavIndex(navScreenIndex + 5);
       },
       child: Tooltip(
         decoration: const BoxDecoration(color: Colors.black),

@@ -23,14 +23,13 @@ class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
     locale = AppLocalizations.of(context)!;
     return Scaffold(
       body: SafeArea(
-        
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20),
-           height: MediaQuery.of(context).size.height * .87,
+          height: MediaQuery.of(context).size.height * .87,
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const CustomAppBar(),
+                //     const CustomAppBar(),
                 Gaps.vGap8,
                 Text(
                   locale.translate('permission_request')!,

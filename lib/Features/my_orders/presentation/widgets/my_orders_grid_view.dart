@@ -30,7 +30,7 @@ class MyOrdersGridView extends StatelessWidget {
         itemCount: 6,
         itemBuilder: (context, index) {
           return MyOrdersGridViewItem(
-            navScreenIndex: MyOrdersScreens[index],
+            navScreenIndex: index,
             gridImagePath: MyOrdersGridDummtData().DUMMYGRIDDATA[index]
                 ["imagePath"],
             gridItemTapHandler: () {},

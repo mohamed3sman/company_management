@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../contact_us/presentation/screens/contact_us_screen.dart';
+import '../../../permission_request/presentation/screens/permission_request_screen.dart';
 part 'bottom_nav_state.dart';
 
 class BottomNavCubit extends Cubit<BottomNavState> {
@@ -21,6 +22,12 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const VacationRequestScreen(),
     const ContactUsScreen(),
     const EditProfileScreen(),
+    const VacationRequestScreen(),
+    const PermissinRequestScreen(),
+    const VacationRequestScreen(),
+    const PermissinRequestScreen(),
+    const VacationRequestScreen(),
+    const PermissinRequestScreen(),
   ];
 
   Widget get selectedBottomNavScreen => bottomNavScreens[bottomNavIndex];
