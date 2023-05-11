@@ -67,7 +67,7 @@ class OrderListTile extends StatelessWidget {
                   ],
                 ),
                 Text(
-                  'نوع الاجازة: اجازة مرضية',
+                  'نوع الاذن : اذن مرضية',
                   style: TextStyle(
                       color: Colors.black.withOpacity(0.6), fontSize: 12),
                 ),

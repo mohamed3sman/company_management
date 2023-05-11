@@ -53,19 +53,21 @@
   "company_name_validation" : "Please enter company name",
   "contact_with_us" : "Contact with us",
   "name": "Name",
-  "email": "Email",
   "title_of_message": "Title of message",
   "message": "Message",
-  "send": "send",
   "modify_the_account" : "Modify the account",
   "phone": "Phone",
   "id_number": "ID Number",
-  "password": "Password",
   "confirm_password": "Confirm password",
   "confirm": "confirm",
   "order_vacation":"Order vacation",
 "permission_request":"Permission request",
-"vacation_type":"Vacation type"
-
+  "num_request":"Number request :",
+  "date_request":"Date request :",
+  "type_vacation":"Type vacation :",
+  "num_days":"Number days :",  
+  "from_date":"From date :",
+  "to_date":"To date :",
+  "status":"status"
 
 }

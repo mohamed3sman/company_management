@@ -1,5 +1,9 @@
+import 'package:fingerPrint/Features/vacation_view/widgets/row_details_alert.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class OrderListTile extends StatelessWidget {
   const OrderListTile(
@@ -28,9 +32,23 @@ class OrderListTile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'التفاصيل',
-                  style: TextStyle(color: kPrimaryColor, fontSize: 12),
+                GestureDetector(
+                  onTap: () {
+                    // set up the AlertDialog
+                    AlertDialog alert = alertDetails(context);
+
+                    // show the dialog
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return alert;
+                      },
+                    );
+                  },
+                  child: const Text(
+                    'التفاصيل',
+                    style: TextStyle(color: kPrimaryColor, fontSize: 12),
+                  ),
                 ),
                 Text(
                   'رقم الطلب : 123456',
@@ -72,6 +90,57 @@ class OrderListTile extends StatelessWidget {
                       color: Colors.black.withOpacity(0.6), fontSize: 12),
                 ),
               ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  AlertDialog alertDetails(context) {
+    return AlertDialog(
+      insetPadding: const EdgeInsets.symmetric(horizontal: 20),
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(32.0))),
+      contentPadding: const EdgeInsets.only(top: 10.0, right: 10),
+      actionsAlignment: MainAxisAlignment.end,
+      actionsOverflowDirection: VerticalDirection.up,
+      icon: const Align(
+        alignment: Alignment.topLeft,
+        child: FaIcon(
+          FontAwesomeIcons.xmark,
+          color: Color(0xd97350cb),
+        ),
+      ),
+      title: Text("تفاصيل الطلب"),
+      alignment: Alignment.center,
+      content: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height * .3,
+        child: Column(
+          children: [
+            rowDetailsAlert(
+              staticText:
+                  AppLocalizations.of(context)!.translate("num_request")!,
+              comeText: "# 3625362",
+            ),
+            rowDetailsAlert(
+              staticText:
+                  AppLocalizations.of(context)!.translate("date_request")!,
+              comeText: "# 3625362",
+            ),
+            rowDetailsAlert(
+              staticText:
+                  AppLocalizations.of(context)!.translate("type_vacation")!,
+              comeText: "# 3625362",
+            ),
+            rowDetailsAlert(
+              staticText: AppLocalizations.of(context)!.translate("num_days")!,
+              comeText: "# 3625362",
+            ),
+            rowDetailsAlert(
+              staticText: AppLocalizations.of(context)!.translate("from_date")!,
+              comeText: "# 3625362",
             ),
           ],
         ),
