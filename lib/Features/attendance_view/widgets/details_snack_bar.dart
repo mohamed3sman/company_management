@@ -39,7 +39,7 @@ class DetailsSnackBar extends StatelessWidget {
               ),
               DetailsSnackBarItem(
                 icon: Icons.exit_to_app_rounded,
-                timeText: 'تسجيل الحضور',
+                timeText: '09:00 AM',
                 actionText: 'تسجيل الحضور',
               ),
             ],

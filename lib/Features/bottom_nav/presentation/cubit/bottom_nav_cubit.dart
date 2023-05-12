@@ -21,7 +21,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
 
   List<Widget> bottomNavScreens = [
     const LanguageScreen(),
-    const MyOrdersScreen(),
+    const AttendanceView(),
     const VacationRequestScreen(),
     const MyOrdersScreen(),
     const AttendanceView(),

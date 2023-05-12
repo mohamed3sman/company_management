@@ -19,6 +19,7 @@ const String kRejectedTapScreen = "/rejectedtapscreen";
 const String kUpComingTapScreen = "/upcomingtapscreen";
 const String kCurrentTapScreen = "/currenttapscreen";
 const String kAttendanceScreen = "/attendancescreen";
+const String kDataTableScreen = "/datatablescreen";
 const String KBottomNav = '/KBottomNav';
 
 const String kLanguageScreen = '/bookLanguageScreen';

@@ -21,6 +21,7 @@ import '../../../Features/home/presentation/views/book_details_view.dart';
 import '../../../Features/home/presentation/views/home_view.dart';
 import '../../../Features/introduction/presentation/intro_screen.dart';
 import '../../../Features/search/presentation/views/search_view.dart';
+import '../../../Features/table_view/table_view.dart';
 import '../constants.dart';
 
 class AppRoutes {
@@ -81,6 +82,10 @@ class AppRoutes {
       case kPermissionRquestScreen:
         return MaterialPageRoute(
           builder: (_) => const PermissinRequestScreen(),
+        );
+      case kDataTableScreen:
+        return MaterialPageRoute(
+          builder: (_) => const DataTableView(),
         );
       case KPersonalAccountView:
         return MaterialPageRoute(
