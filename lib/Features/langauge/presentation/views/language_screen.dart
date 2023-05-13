@@ -2,7 +2,6 @@ import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/loc
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/assets.dart';
 import 'package:fingerPrint/core/utils/commons.dart';
-import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -47,10 +46,10 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 // Gaps.vGap40,
                 Text(
                   locale.translate("Choose_language")!,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xff7350cb),
+                    color: kPrimaryColor,
                   ),
                 ),
                 SizedBox(
@@ -73,15 +72,14 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             decoration: locale.isEnLocale
                                 ? BoxDecoration(
                                     border: Border.all(
-                                        color: kPrimaryColor,
-                                        width: 2),
+                                        color: kPrimaryColor, width: 2),
                                     borderRadius: BorderRadius.circular(5))
                                 : null,
                             padding: const EdgeInsets.all(20),
                             width: screenSize.width * .32,
                             height: screenSize.height * .18,
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Image.asset(
                                   AssetsData.usFlagImage,
@@ -115,11 +113,11 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             width: screenSize.width * .32,
                             height: screenSize.height * .18,
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Image.asset(
                                   AssetsData.saudiFlagImage,
-                                    width: screenSize.width * .16,
+                                  width: screenSize.width * .16,
                                   height: screenSize.height * .09,
                                 ),
                                 const Text(
@@ -145,7 +143,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 ),
                 CustomButton(
                   buttonText: locale.translate("next")!,
-                  screenWidth: screenSize.width * .6,
+                  screenWidth: screenSize.width * .5,
                   buttonTapHandler: () {
                     // print("NAVIGATE");
                     //TO DO =>>NAVIGATE TO LOGIN SCREEN
