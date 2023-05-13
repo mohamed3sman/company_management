@@ -24,17 +24,18 @@ class CustomButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            border: Border.all(width: 2, color: kPrimaryColor),
-            gradient: buttonBackGroundColor == null
-                ? LinearGradient(colors: [
-                    kPrimaryColor,
-                    kSecondaryColor,
-                  ])
-                : LinearGradient(
-                    colors: [buttonBackGroundColor!, buttonBackGroundColor!]),
-            borderRadius: BorderRadius.circular(15)),
+          border: Border.all(width: 2, color: kPrimaryColor),
+          gradient: buttonBackGroundColor == null
+              ? LinearGradient(colors: [
+                  kPrimaryColor,
+                  kSecondaryColor,
+                ])
+              : LinearGradient(
+                  colors: [buttonBackGroundColor!, buttonBackGroundColor!]),
+          borderRadius: BorderRadius.circular(15),
+        ),
         height: screenSize.height * .06,
-        width: 150.0,
+        width:screenWidth==0.0? 150.0:screenWidth,
         child: Text(
           buttonText,
           style: TextStyle(
@@ -46,50 +47,3 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
-
-//CUSTOM BOOK BUTTON (THARWAT)
-// import 'package:flutter/material.dart';
-
-// import '../utils/styles.dart';
-
-// class CustomButton extends StatelessWidget {
-//   const CustomButton({
-//     super.key,
-//     required this.backgroundColor,
-//     required this.textColor,
-//     this.borderRadius,
-//     required this.text,
-//     this.fontSize,
-//   });
-//   final String text;
-//   final Color backgroundColor;
-//   final Color textColor;
-//   final BorderRadius? borderRadius;
-//   final double? fontSize;
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       height: 48,
-//       child: TextButton(
-//         onPressed: () {},
-//         style: TextButton.styleFrom(
-//           backgroundColor: backgroundColor,
-//           shape: RoundedRectangleBorder(
-//             borderRadius: borderRadius ??
-//                 BorderRadius.circular(
-//                   12,
-//                 ),
-//           ),
-//         ),
-//         child: Text(
-//           text,
-//           style: Styles.textStyle18.copyWith(
-//             color: textColor,
-//             fontWeight: FontWeight.w900,
-//             fontSize: fontSize,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
