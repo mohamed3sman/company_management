@@ -3,6 +3,7 @@ import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_prof
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/permission_view/permission_view.dart';
+import 'package:fingerPrint/Features/personal_account_view/personal_account_view.dart';
 import 'package:fingerPrint/Features/vacation_view/vacation_view.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
 import 'dart:collection';

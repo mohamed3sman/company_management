@@ -1,5 +1,6 @@
 import 'package:fingerPrint/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GenderSelection extends StatefulWidget {
   const GenderSelection({super.key});
@@ -18,10 +19,7 @@ class _GenderSelectionState extends State<GenderSelection> {
       children: [
         Row(
           children: [
-            Text(
-              'أنثي',
-              style: Styles.textStyle18,
-            ),
+            Text('أنثي', style: Styles.textStyle18.copyWith(fontSize: 15.sp)),
             Transform.translate(
               offset: const Offset(-7, 0),
               child: Radio(
@@ -36,15 +34,12 @@ class _GenderSelectionState extends State<GenderSelection> {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           width: 50,
         ),
         Row(
           children: [
-            Text(
-              'ذكر',
-              style: Styles.textStyle18,
-            ),
+            Text('ذكر', style: Styles.textStyle18.copyWith(fontSize: 15.sp)),
             Transform.translate(
               offset: const Offset(-7, 0),
               child: Radio(

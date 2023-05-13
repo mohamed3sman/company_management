@@ -1,18 +1,20 @@
-import 'package:fingerPrint/Features/attendance_view/widgets/attendance_view_body_app_bar.dart';
 import 'package:fingerPrint/Features/attendance_view/widgets/custom_grid_container.dart';
 import 'package:fingerPrint/Features/attendance_view/widgets/details_snack_bar.dart';
 import 'package:fingerPrint/Features/attendance_view/widgets/stack_day_text.dart';
 import 'package:fingerPrint/Features/attendance_view/widgets/stack_fingerprint_logo.dart';
 import 'package:fingerPrint/Features/attendance_view/widgets/stack_purble_container.dart';
 import 'package:fingerPrint/Features/attendance_view/widgets/stack_time_text.dart';
-import 'package:fingerPrint/Features/my_orders/presentation/widgets/my_orders_grid_view_item.dart';
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AttendanceViewBody extends StatelessWidget {
   const AttendanceViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Stack(
       children: [
         Column(
@@ -22,24 +24,22 @@ class AttendanceViewBody extends StatelessWidget {
                 color: const Color(0xffeaeaf7),
                 child: Column(
                   children: [
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Stack(
-                      children: [
-                        const Center(
-                          child: StackPurbleContainer(),
-                        ),
-                        Center(
-                          child: Column(
-                            children: const [
-                              StackFingerPrintLogo(),
-                              StackDayText(),
-                              StackTimeText()
-                            ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: Stack(
+                        children: [
+                          const Center(child: StackPurbleContainer()),
+                          Center(
+                            child: Column(
+                              children: const [
+                                StackFingerPrintLogo(),
+                                StackDayText(),
+                                StackTimeText()
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -47,14 +47,14 @@ class AttendanceViewBody extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                color: Color(0xffd3d1ef),
+                color: const Color(0xffd3d1ef),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 50, left: 8, right: 8),
+                  padding: const EdgeInsets.only(top: 70, left: 15, right: 15),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
+                        children: const [
                           CustomGridContainer(
                             imagePath: 'assets/images/permission.png',
                             orderText: 'طلب اذن',
@@ -69,12 +69,12 @@ class AttendanceViewBody extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
+                        children: const [
                           CustomGridContainer(
                             imagePath:
                                 'assets/images/confirmed_attendance_bro.png',

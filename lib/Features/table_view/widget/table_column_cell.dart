@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TableColumnCell extends StatelessWidget {
   const TableColumnCell({super.key, required this.columnText});
@@ -13,10 +14,10 @@ class TableColumnCell extends StatelessWidget {
         padding: const EdgeInsets.only(top: 10),
         child: Text(columnText,
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
               fontFamily: 'HacenTunisia',
-              color: Color(0xcc5647b2),
-              fontSize: 15,
+              color: const Color(0xcc5647b2),
+              fontSize: 15.sp,
               fontWeight: FontWeight.w700,
               fontStyle: FontStyle.normal,
             )),

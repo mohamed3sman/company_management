@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTableLeavingColumn extends StatelessWidget {
   const CustomTableLeavingColumn({super.key, required this.timeText});
@@ -9,10 +10,10 @@ class CustomTableLeavingColumn extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Text("$timeText مساءاً",
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: 'HacenTunisia',
-            color: Color(0xff99979c),
-            fontSize: 14,
+            color: const Color(0xff99979c),
+            fontSize: 14.sp,
             fontWeight: FontWeight.w600,
             fontStyle: FontStyle.normal,
           )),

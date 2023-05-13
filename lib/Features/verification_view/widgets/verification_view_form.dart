@@ -1,4 +1,6 @@
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:dotted_line/dotted_line.dart';
 
@@ -14,20 +16,21 @@ class VerificationViewForm extends StatefulWidget {
 class _VerificationViewFormState extends State<VerificationViewForm> {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.only(top: 40),
+        Padding(
+          padding: const EdgeInsets.only(top: 40),
           child: Text(
             'كود التفعيل',
             style: TextStyle(
-                color: Color(0xff8f7abd),
-                fontSize: 25,
+                color: const Color(0xff8f7abd),
+                fontSize: 22.sp,
                 fontWeight: FontWeight.w900),
           ),
         ),
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.3,
+          width: SizeConfig.screenWidth! * 0.3,
           child: const Divider(
             color: Color(0xff8f7abd),
             thickness: 3,
@@ -38,26 +41,26 @@ class _VerificationViewFormState extends State<VerificationViewForm> {
           'من فضلك أدخل رمز التحقق المرسل إلي',
           style: TextStyle(
               color: Colors.black.withOpacity(0.8),
-              fontSize: 16,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w800),
         ),
         const SizedBox(
           height: 10,
         ),
-        const Text(
+        Text(
           '01223456789',
           style: TextStyle(
-              color: Color(0xff8f7abd),
-              fontSize: 18,
+              color: const Color(0xff8f7abd),
+              fontSize: 16.sp,
               fontWeight: FontWeight.w800),
         ),
         const SizedBox(
           height: 50,
         ),
         VerificationCode(
-          textStyle: const TextStyle(
-            fontSize: 20.0,
-            color: Color(0xff8f7abd),
+          textStyle: TextStyle(
+            fontSize: 16.0.sp,
+            color: const Color(0xff8f7abd),
           ),
           fullBorder: true,
           itemSize: 40,
@@ -90,12 +93,12 @@ class _VerificationViewFormState extends State<VerificationViewForm> {
               Text(
                 '00:59',
                 style: Styles.textStyle20
-                    .copyWith(color: const Color(0xff8f7abd), fontSize: 18),
+                    .copyWith(color: const Color(0xff8f7abd), fontSize: 18.sp),
               ),
               Text(
                 'إعادة إرسال الرمز',
                 style: Styles.textStyle20.copyWith(
-                  fontSize: 18,
+                  fontSize: 15.sp,
                   color: Colors.black.withOpacity(0.7),
                 ),
               ),

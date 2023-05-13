@@ -21,6 +21,7 @@ const String kCurrentTapScreen = "/currenttapscreen";
 const String kAttendanceScreen = "/attendancescreen";
 const String kDataTableScreen = "/datatablescreen";
 const String KBottomNav = '/KBottomNav';
+const String kPermissionView = '/permissionview';
 
 const String kLanguageScreen = '/bookLanguageScreen';
 //const String kLoginScreenForm = "/loginScreenForm";
@@ -30,7 +31,7 @@ const String kContactUsScreen = '/kContactUsScreen';
 const String kEditProfileScreen = '/kEditProfileScreen';
 const String kVacationRquestScreen = '/kVacationRquestScreen';
 const String kPermissionRquestScreen = '/kPermissionRquestScreen';
-const String KPersonalAccountView = '/KPersonalAccountView';
+const String kPersonalAccountView = '/KPersonalAccountView';
 
 // saved sharedprefernces
 const String locale = 'locale';

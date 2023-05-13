@@ -1,6 +1,8 @@
 import 'package:fingerPrint/core/utils/constants.dart';
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import 'custom_text_field.dart';
@@ -16,13 +18,14 @@ class RegisterViewForm extends StatefulWidget {
 class _RegisterViewFormState extends State<RegisterViewForm> {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Column(
       children: [
-        const Text(
+        Text(
           'إنشاء حساب',
           style: TextStyle(
-              color: Color(0xff8f7abd),
-              fontSize: 25,
+              color: const Color(0xff8f7abd),
+              fontSize: 25.sp,
               fontWeight: FontWeight.w900),
         ),
         Padding(
@@ -43,7 +46,7 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
           ),
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.04,
+          height: SizeConfig.screenHeight! * 0.04,
         ),
         CustomButton(
           buttonText: 'إنشاء حساب',
@@ -59,8 +62,8 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
             alignment: Alignment.bottomLeft,
             child: Text(
               'تخطي',
-              style:
-                  Styles.textStyle20.copyWith(color: const Color(0xff8f7abd)),
+              style: Styles.textStyle20
+                  .copyWith(color: const Color(0xff8f7abd), fontSize: 17.sp),
             ),
           ),
         ),

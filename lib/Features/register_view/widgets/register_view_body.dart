@@ -1,6 +1,8 @@
 import 'package:fingerPrint/Features/register_view/widgets/register_form_decoration.dart';
 import 'package:fingerPrint/Features/register_view/widgets/register_view_form.dart';
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import '../../login_view/login_view.dart';
@@ -11,6 +13,7 @@ class RegisterViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return SingleChildScrollView(
       child: Stack(
         children: [
@@ -18,7 +21,7 @@ class RegisterViewBody extends StatelessWidget {
             clipper: CurveClipper(),
             child: Container(
               color: const Color(0xff9a80d9),
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: SizeConfig.screenHeight! * 0.5,
             ),
           ),
           Padding(
@@ -27,8 +30,8 @@ class RegisterViewBody extends StatelessWidget {
               children: [
                 Center(
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.80,
-                    width: MediaQuery.of(context).size.width * 0.85,
+                    height: SizeConfig.screenHeight! * 0.80,
+                    width: SizeConfig.screenWidth! * 0.85,
                     decoration: FormDecoration(),
                     child: const Padding(
                       padding: EdgeInsets.only(top: 30),
@@ -36,11 +39,11 @@ class RegisterViewBody extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: 20.h,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 40),
+                  padding: EdgeInsets.only(right: 40.w),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -48,22 +51,22 @@ class RegisterViewBody extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return LoginView();
+                            return const LoginView();
                           }));
                         },
                         child: Text(
                           'تسجيل الدخول',
                           style: Styles.textStyle20.copyWith(
-                            color: const Color(0xff8f7abd),
-                            decoration: TextDecoration.underline,
-                            decorationThickness: 2,
-                          ),
+                              color: const Color(0xff8f7abd),
+                              decoration: TextDecoration.underline,
+                              decorationThickness: 2,
+                              fontSize: 17.sp),
                         ),
                       ),
                       Text(
                         '! لدي حساب بالفعل',
-                        style: Styles.textStyle20
-                            .copyWith(color: const Color(0xff8f7abd)),
+                        style: Styles.textStyle20.copyWith(
+                            color: const Color(0xff8f7abd), fontSize: 17.sp),
                       ),
                     ],
                   ),

@@ -16,7 +16,7 @@ class DataTableView extends StatelessWidget {
           Icons.arrow_back,
           color: Colors.black,
         ),
-        title: const TablePageAppBar(),
+        title: const TablePageAppBarTitle(),
         centerTitle: true,
         actions: const [
           TablePageAppBarActions(),

@@ -2,6 +2,7 @@ import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/loc
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'Features/home/data/repos/home_repo_impl.dart';
 import 'Features/home/domain/use_cases/fetch_featured_books_use_case.dart';
@@ -48,31 +49,36 @@ class fingerPrint extends StatelessWidget {
         buildWhen: (previousState, currentState) =>
             previousState != currentState,
         builder: (_, localeState) {
-          return MaterialApp(
-            locale: localeState.locale,
-            onGenerateRoute: AppRoutes.onGenerateRoute,
-            supportedLocales: AppLocalizationsSetup.supportedLocales,
-            localeResolutionCallback:
-                AppLocalizationsSetup.localeResolutionCallback,
-            localizationsDelegates:
-                AppLocalizationsSetup.localizationsDelegates,
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              textTheme: const TextTheme().copyWith(
-                displayLarge: const TextStyle(fontSize: 12)
-              ),
-              primarySwatch: Colors.blue,
-              
-              fontFamily: localeState.locale.languageCode == "ar"
-                  ? 'Hacen Tunisia'
-                  : "Cairo-Bold",
-            ),
+          return ScreenUtilInit(
+            designSize: const Size(360, 690),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            builder: (context, child) {
+              return MaterialApp(
+                locale: localeState.locale,
+                onGenerateRoute: AppRoutes.onGenerateRoute,
+                supportedLocales: AppLocalizationsSetup.supportedLocales,
+                localeResolutionCallback:
+                    AppLocalizationsSetup.localeResolutionCallback,
+                localizationsDelegates:
+                    AppLocalizationsSetup.localizationsDelegates,
+                debugShowCheckedModeBanner: false,
+                theme: ThemeData(
+                  textTheme: const TextTheme()
+                      .copyWith(displayLarge: const TextStyle(fontSize: 12)),
+                  primarySwatch: Colors.blue,
+                  fontFamily: localeState.locale.languageCode == "ar"
+                      ? 'Hacen Tunisia'
+                      : "Cairo-Bold",
+                ),
 
-            // ThemeData.dark().copyWith(
-            //   scaffoldBackgroundColor: kPrimaryColor,
-            //   textTheme:
-            //       GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
-            // ),
+                // ThemeData.dark().copyWith(
+                //   scaffoldBackgroundColor: kPrimaryColor,
+                //   textTheme:
+                //       GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+                // ),
+              );
+            },
           );
         },
       ),

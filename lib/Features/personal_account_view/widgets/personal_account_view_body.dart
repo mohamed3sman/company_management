@@ -1,5 +1,7 @@
+import 'package:fingerPrint/Features/personal_account_view/widgets/personal_account_container.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../core/utils/styles.dart';
@@ -27,10 +29,11 @@ class PersonalAccountViewBody extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12)),
                 child: Icon(
                   Icons.edit,
-                  color: Color(0xff8f7abd),
+                  color: const Color(0xff8f7abd),
+                  size: 22.sp,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Column(
@@ -38,13 +41,13 @@ class PersonalAccountViewBody extends StatelessWidget {
                   children: [
                     Text(
                       'أهلا وسهلا',
-                      style: Styles.textStyle20,
+                      style: Styles.textStyle20.copyWith(fontSize: 16.sp),
                     ),
                     Text(
                       'أحمد محمد عبدالرحمن',
                       style: Styles.textStyle20.copyWith(
                           color: Colors.black,
-                          fontSize: 18,
+                          fontSize: 16.sp,
                           fontWeight: FontWeight.w800),
                     )
                   ],
@@ -59,6 +62,7 @@ class PersonalAccountViewBody extends StatelessWidget {
                 child: Icon(
                   Icons.person,
                   color: Color(0xff8f7abd),
+                  size: 25.sp,
                 ),
               ),
             ],
@@ -67,87 +71,25 @@ class PersonalAccountViewBody extends StatelessWidget {
             height: 25,
           ),
           Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 7),
-                  child: Container(
-                      height: 90,
-                      decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(12)),
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 7),
-                          child: Text(
-                            'الحساب البنكي',
-                            style: Styles.textStyle18.copyWith(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      )),
-                ),
+            children: const [
+              PersonalAccountContainer(
+                text: 'الحساب البنكي',
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 7),
-                  child: Container(
-                      height: 90,
-                      decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(12)),
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 7),
-                          child: Text(
-                            'ملفاتي',
-                            style: Styles.textStyle18.copyWith(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      )),
-                ),
+              PersonalAccountContainer(
+                text: 'ملفاتي',
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 7),
-                  child: Container(
-                      height: 90,
-                      decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(12)),
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 7),
-                          child: Text(
-                            'الحساب البنكي',
-                            style: Styles.textStyle18.copyWith(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      )),
-                ),
+              PersonalAccountContainer(
+                text: 'البيانات الشخصية',
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text(
             'الإعدادات',
-            style: Styles.textStyle20.copyWith(color: Colors.black),
+            style: Styles.textStyle20
+                .copyWith(color: Colors.black, fontSize: 18.sp),
           ),
           const SizedBox(height: 15),
           CustomSettingRow(
@@ -188,12 +130,15 @@ class PersonalAccountViewBody extends StatelessWidget {
               }),
           const Spacer(),
           Center(
-              child: CustomButton(
-            buttonText: 'تسجيل الخروج',
-            buttonTapHandler: () {
-              Navigator.pushNamed(context, kLoginScreenForm);
-            },
-            screenWidth: 120.0,
+              child: Padding(
+            padding: EdgeInsets.only(bottom: 12.h),
+            child: CustomButton(
+              buttonText: 'تسجيل الخروج',
+              buttonTapHandler: () {
+                Navigator.pushNamed(context, kLoginScreenForm);
+              },
+              screenWidth: 120.0,
+            ),
           ))
         ],
       ),
