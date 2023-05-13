@@ -12,9 +12,14 @@ class DataTableView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Colors.black,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
         ),
         title: const TablePageAppBar(),
         centerTitle: true,
