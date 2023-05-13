@@ -16,7 +16,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
   Future checkFirstSeen() async {
-    print("checking");
+   
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool seen = (prefs.getBool('seen') ?? false);
 

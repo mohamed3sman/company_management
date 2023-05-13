@@ -96,7 +96,7 @@ class _BottomNavState extends State<BottomNav>
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacementNamed(
+                      Navigator.pushNamed(
                           context, kPersonalAccountView);
                     },
                     child: ClipRRect(

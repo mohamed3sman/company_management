@@ -87,11 +87,11 @@ class _IntroScreenState extends State<IntroScreen> {
         "تخطي",
         style: TextStyle(color: Colors.white, fontSize: 20),
       ),
-      nextFlex: (screenSize.width * .0111).toInt(),
+     // nextFlex: (screenSize.width * .0111).toInt(),
       doneStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       nextStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       onDone: () {
-        Navigator.pushReplacementNamed(context, kBottomNav);
+        Navigator.pushReplacementNamed(context,kLoginScreenForm);
       },
       showDoneButton: true,
       showNextButton: true,

@@ -8,11 +8,16 @@ import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/locale/app_localizations.dart';
+
 class AttendanceViewBody extends StatelessWidget {
-  const AttendanceViewBody({super.key});
+  AttendanceViewBody({super.key});
+  late AppLocalizations locale;
 
   @override
   Widget build(BuildContext context) {
+    locale = AppLocalizations.of(context)!;
+
     SizeConfig().init(context);
 
     return Stack(
@@ -54,7 +59,7 @@ class AttendanceViewBody extends StatelessWidget {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: const [
+                        children: [
                           CustomGridContainer(
                             imagePath: 'assets/images/permission.png',
                             orderText: 'طلب اذن',
@@ -65,7 +70,7 @@ class AttendanceViewBody extends StatelessWidget {
                           ),
                           CustomGridContainer(
                             imagePath: 'assets/images/holiday.png',
-                            orderText: 'طلب اجازة',
+                            orderText: locale.translate("order_vacation")!,
                           ),
                         ],
                       ),

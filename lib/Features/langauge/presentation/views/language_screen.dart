@@ -22,6 +22,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
 
   @override
   Widget build(BuildContext context) {
+    
     locale = AppLocalizations.of(context)!;
     final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(

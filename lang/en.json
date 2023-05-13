@@ -64,12 +64,12 @@
   "permission_request": "Permission request",
   "num_request": "Number request :",
   "date_request": "Date request :",
-  "type_vacation": "Type vacation :",
+  "vacation_type": "Type vacation :",
   "num_days": "Number days :",
   "from_date": "From date :",
   "to_date": "To date :",
   "status": "status",
   "Choose_language": "Choose language",
-"next":"Next",
-  "language_text":"You can change language from setting"
+  "next": "Next",
+  "language_text": "You can change language from setting"
 }
