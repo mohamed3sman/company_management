@@ -51,7 +51,7 @@ class LoginViewBody extends StatelessWidget {
                     children: [
                       TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, kRegisterScreen);
+                          Navigator.pushReplacementNamed(context, kRegisterScreen);
                         },
                         child: Text(
                           locale.translate('login')!,

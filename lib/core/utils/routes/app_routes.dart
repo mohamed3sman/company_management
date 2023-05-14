@@ -62,7 +62,7 @@ class AppRoutes {
         );
       case kAttendanceScreen:
         return MaterialPageRoute(
-          builder: (_) => const AttendanceView(),
+          builder: (_) => const HomeScreen(),
         );
       case kMyOrdersScreen:
         return MaterialPageRoute(

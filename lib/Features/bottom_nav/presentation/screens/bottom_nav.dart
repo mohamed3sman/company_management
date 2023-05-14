@@ -28,7 +28,12 @@ class _BottomNavState extends State<BottomNav>
     'assets/images/icon_feather_info.png',
     'assets/images/icon_awesome_clipboard_list.png',
   ];
-
+  final iconToolTipMessege = <String>[
+    'المزيد',
+    'رسائل',
+    'استعلامات',
+    'طلباتي',
+  ];
   @override
   void initState() {
     final systemTheme = SystemUiOverlayStyle.light.copyWith(
@@ -160,15 +165,18 @@ class _BottomNavState extends State<BottomNav>
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.asset(
-                                _iconPathList[index],
-                                height: orientation == Orientation.portrait
-                                    ? 24
-                                    : 35,
-                                width: orientation == Orientation.portrait
-                                    ? 24
-                                    : 35,
-                                color: color,
+                              Tooltip(
+                                message: iconToolTipMessege[index],
+                                child: Image.asset(
+                                  _iconPathList[index],
+                                  height: orientation == Orientation.portrait
+                                      ? 24
+                                      : 35,
+                                  width: orientation == Orientation.portrait
+                                      ? 24
+                                      : 35,
+                                  color: color,
+                                ),
                               ),
                               SizedBox(
                                   height: orientation == Orientation.portrait

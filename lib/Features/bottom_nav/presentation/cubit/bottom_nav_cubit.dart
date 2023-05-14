@@ -19,19 +19,23 @@ class BottomNavCubit extends Cubit<BottomNavState> {
   bool drawerIsOpen = false;
 
   List<Widget> bottomNavScreens = [
-    const ContactUsScreen(),
-    const AttendanceView(),
-    const VacationRequestScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
     const MyOrdersScreen(),
-    const AttendanceView(),
-    const VacationRequestScreen(),
+    const HomeScreen(),
+    //
     const VacationView(),
     const VacationRequestScreen(),
-    const PermissionView(),
+    const VacationView(),
+    const VacationView(),
+    const VacationView(),
     const VacationRequestScreen(),
     const PermissinRequestScreen(),
     const VacationRequestScreen(),
     const VacationRequestScreen(),
+    const PermissinRequestScreen(),
+    const PermissinRequestScreen(),
     const PermissinRequestScreen(),
   ];
 

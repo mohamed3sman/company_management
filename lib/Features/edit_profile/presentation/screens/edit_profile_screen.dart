@@ -22,12 +22,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        // centerTitle: true,
+         centerTitle: true,
 
         leading: IconButton(
-            icon: const FaIcon(FontAwesomeIcons.arrowLeft),
+            icon: const FaIcon(Icons.arrow_back),
             color: Colors.black,
-            onPressed: () {}),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
         backgroundColor: Colors.white,
         title: Center(
           child: Text(

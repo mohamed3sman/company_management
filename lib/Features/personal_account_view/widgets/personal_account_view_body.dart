@@ -26,10 +26,14 @@ class PersonalAccountViewBody extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.grey.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(12)),
-                child: Icon(
-                  Icons.edit,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, kEditProfileScreen);
+                  },
+                  icon:Icon( Icons.edit,
                   color: const Color(0xff8f7abd),
-                  size: 22.sp,
+                  size: 22.sp,) ,
+                 
                 ),
               ),
               const Spacer(),
