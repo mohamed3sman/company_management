@@ -64,7 +64,6 @@
   "confirm_password": "تأكيد كلمة المرور",
   "confirm": "تاكيد",
   "to_manage_human_resources_in_an_integrated_manner": "لإدارة الموارد البشرية بشكل متكامل",
-<<<<<<< HEAD
   "order_vacation": "طلب إجازة",
   "num_request": "رقم الطلب :",
   "date_request": " تاريخ الطلب :",
@@ -75,8 +74,7 @@
   "status": "الحاله :",
   "Choose_language": "اختر اللغة",
   "next": "التالي",  "skip":"تخطي",
-  "language_text": "يمكنك تغيير اللغة من قائمة الاعدادات"
-=======
+  "language_text": "يمكنك تغيير اللغة من قائمة الاعدادات",
   "order_vacation":"طلب إجازة",
   "num_request":"رقم الطلب :",
   "date_request":" تاريخ الطلب :",
@@ -106,5 +104,4 @@
 
 "language_text":"يمكنك تغيير اللغة من قائمة الاعدادات"
 
->>>>>>> f1fe2c02e534d52daba5c14eda64abde8b9bc29f
 }

@@ -45,11 +45,7 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                   ),
                 ),
                  CustomOrdersRawIcon(
-<<<<<<< HEAD
-                    rawText:locale.translate('type_vacation')!,
-=======
                     rawText:  locale.translate('vacation_type')!,
->>>>>>> cf74fae603757f372119a4db70528a8ec4bc71f7
                     iconImagePath: "assets/icons/vacation_icon.png"),
                 CustomDropDownList(hintText:locale.translate('type_vacation')!),
                  CustomOrdersRawIcon(
