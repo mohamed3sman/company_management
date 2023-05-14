@@ -26,6 +26,7 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         bottom: false,
         child: Container(
@@ -47,7 +48,7 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                  CustomOrdersRawIcon(
                     rawText:  locale.translate('vacation_type')!,
                     iconImagePath: "assets/icons/vacation_icon.png"),
-                CustomDropDownList(hintText:locale.translate('type_vacation')!),
+                CustomDropDownList(hintText:locale.translate('vacation_type')!),
                  CustomOrdersRawIcon(
                     rawText: locale.translate('The_start_date_of_the_leave')!,
                     iconImagePath: "assets/icons/calender_icon.png"),
@@ -105,6 +106,7 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                   child: const Card(
                     elevation: 6,
                     child: TextField(
+                      maxLines: 3,
                       decoration: InputDecoration(
                         focusedBorder: InputBorder.none,
                         enabledBorder: InputBorder.none,

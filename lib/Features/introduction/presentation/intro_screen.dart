@@ -26,7 +26,7 @@ class _IntroScreenState extends State<IntroScreen> {
         alignment: Alignment.topCenter,
         children: [
           ClipPath(
-            clipper: RoundedClipper(screenSize.height - 140),
+            clipper: RoundedClipper(screenSize.height*.7),
             child: AnimatedContainer(
               duration: const Duration(seconds: 3),
               height: screenSize.height - 80,
@@ -50,7 +50,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 textDirection: TextDirection.ltr,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Gaps.vGap100,
+                  Gaps.vGap12,
                   const Text(
                     "نظام بصمتك",
                     style: TextStyle(color: Colors.white, fontSize: 20),

@@ -16,13 +16,11 @@ class _SplashViewbodyState extends State<SplashViewbody>
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
   Future checkFirstSeen() async {
-   
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool seen = (prefs.getBool('seen') ?? false);
-
     if (seen) {
       // print("seen");
-      Navigator.pushReplacementNamed(context, kLoginView);
+      Navigator.pushReplacementNamed(context, kLanguageScreen);
       // Navigator.of(context).pushReplacement(
       //     new MaterialPageRoute(builder: (context) => new Home()));
     } else {

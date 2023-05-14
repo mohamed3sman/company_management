@@ -46,7 +46,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 ),
                 // Gaps.vGap40,
                 Text(
-                  locale.translate("Choose_language")!,
+                 locale.translate('Choose_language')!,
                   style: const TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -96,7 +96,9 @@ class _LanguageScreenState extends State<LanguageScreen> {
                       GestureDetector(
                         onTap: () {
                           Commons.showToast(context,
-                              message: locale.translate('arabic')!);
+                              message:
+                              
+                               locale.translate('arabic')!);
                           BlocProvider.of<LocaleCubit>(context).toArabic();
                         },
                         child: Card(
