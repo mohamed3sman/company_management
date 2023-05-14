@@ -16,8 +16,9 @@ class VerificationViewForm extends StatefulWidget {
 
 class _VerificationViewFormState extends State<VerificationViewForm> {
   @override
-  Widget build(BuildContext context) {    final Size screenSize = MediaQuery.of(context).size;
-    late AppLocalizations locale;    locale = AppLocalizations.of(context)!;
+  Widget build(BuildContext context) {
+        late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return Column(
       children: [
