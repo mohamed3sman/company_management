@@ -86,6 +86,18 @@
   "the_end_date_of_the_leave": "تاريخ نهاية الإجازة",
   "attachments": "مرفقات",
   "Choose_language": "اختر اللغة",
-  "please_enter_the_verification_code_sent_to_me": "من فضلك أدخل رمز التحقق المرسل إلي"
+  "please_enter_the_verification_code_sent_to_me": "من فضلك أدخل رمز التحقق المرسل إلي",
+  "you_do_not_have_an_account" :"ليس لديك حساب",
+  "permission_type":"نوع الإذن",
+  "period":"المدة",
+  "start_permission":"بداية الإذن",
+  "end_permission":"نهاية الإذن",
+  "to":"من",
+  "from":"الي",
+  "remaining_time":"المدة المتبقة",
+  "the_number_of_permissions_left":"عدد الأذونات المتبقة",
+  "the_reason":"السبب"
+
+
 
 }
