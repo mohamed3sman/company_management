@@ -14,16 +14,18 @@ class OrderListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Padding(
-      padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10),
+      padding:  const EdgeInsets.only(top: 5, bottom: 5, left: 10),
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+        padding:  const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          boxShadow: const [
-            BoxShadow(
+          boxShadow:  [
+            const BoxShadow(
                 color: Colors.grey, blurRadius: 3.0, offset: Offset(0.0, 0.8))
           ],
         ),
@@ -45,13 +47,13 @@ class OrderListTile extends StatelessWidget {
                       },
                     );
                   },
-                  child: const Text(
-                    'التفاصيل',
-                    style: TextStyle(color: kPrimaryColor, fontSize: 12),
+                  child:  Text(
+                   locale.translate('the_details')!,
+                    style: const TextStyle(color: kPrimaryColor, fontSize: 12),
                   ),
                 ),
                 Text(
-                  'رقم الطلب : 123456',
+                  ' ${locale.translate('order_number')!} : 123456',
                   style: TextStyle(
                       color: Colors.black.withOpacity(0.6), fontSize: 12),
                 ),
@@ -78,14 +80,14 @@ class OrderListTile extends StatelessWidget {
                         size: 10,
                       ),
                     ),
-                    const Text(
-                      ' :الحالة',
-                      style: TextStyle(color: Colors.black, fontSize: 12),
+                     Text(
+                      ' :${locale.translate('status')!}',
+                      style: const TextStyle(color: Colors.black, fontSize: 12),
                     ),
                   ],
                 ),
                 Text(
-                  'نوع الاجازة: اجازة مرضية',
+                  '${locale.translate('type_vacation')!} : ${locale.translate('sick_leave')!} ',
                   style: TextStyle(
                       color: Colors.black.withOpacity(0.6), fontSize: 12),
                 ),
@@ -100,21 +102,21 @@ class OrderListTile extends StatelessWidget {
   AlertDialog alertDetails(context) {
     return AlertDialog(
       insetPadding: const EdgeInsets.symmetric(horizontal: 20),
-      shape: const RoundedRectangleBorder(
+      shape:  const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(32.0))),
       contentPadding: const EdgeInsets.only(top: 10.0, right: 10),
       actionsAlignment: MainAxisAlignment.end,
       actionsOverflowDirection: VerticalDirection.up,
-      icon: const Align(
+      icon:  const Align(
         alignment: Alignment.topLeft,
         child: FaIcon(
           FontAwesomeIcons.xmark,
           color: Color(0xd97350cb),
         ),
       ),
-      title: Text("تفاصيل الطلب"),
+      title: Text(   AppLocalizations.of(context)!.translate("order_details")!),
       alignment: Alignment.center,
-      content: Container(
+      content: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * .3,
         child: Column(

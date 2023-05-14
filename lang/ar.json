@@ -64,6 +64,7 @@
   "confirm_password": "تأكيد كلمة المرور",
   "confirm": "تاكيد",
   "to_manage_human_resources_in_an_integrated_manner": "لإدارة الموارد البشرية بشكل متكامل",
+<<<<<<< HEAD
   "order_vacation": "طلب إجازة",
   "num_request": "رقم الطلب :",
   "date_request": " تاريخ الطلب :",
@@ -75,4 +76,35 @@
   "Choose_language": "اختر اللغة",
   "next": "التالي",  "skip":"تخطي",
   "language_text": "يمكنك تغيير اللغة من قائمة الاعدادات"
+=======
+  "order_vacation":"طلب إجازة",
+  "num_request":"رقم الطلب :",
+  "date_request":" تاريخ الطلب :",
+  "type_vacation":"نوع الاجازه :",
+  "num_days":"عدد الايام",  
+  "from_date":"من تاريخ :",
+  "to_date":"الي تاريخ :",
+  "status":"الحاله :",
+  "activation_code":"كود التفعيل",
+  "please_enter_the_verification_code_sent_to_me":"من فضلك أدخل رمز التحقق المرسل إلي",
+  "resend_the_code":"إعادة إرسال الرمز",
+  "the_request_was_accepted":"تم قبول الطلب",
+  "work_is_underway":"جاري العمل",
+  "the_details":"التفاصيل",
+  "order_number":"رقم الطلب",
+  "sick_leave":"اجازة مرضية",
+  "reject":"مرفوض",
+  "accept":"تاكيد",
+  "the_start_date_of_the_leave" :"تاريخ بداية الإجازة",
+  "the_end_date_of_the_leave":"تاريخ نهاية الإجازة",
+  "attachments":"مرفقات",
+  "notifications":"ملاحظات"
+,
+
+"Choose_language":"اختر اللغة",
+"next":"التالي",
+
+"language_text":"يمكنك تغيير اللغة من قائمة الاعدادات"
+
+>>>>>>> f1fe2c02e534d52daba5c14eda64abde8b9bc29f
 }

@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/vacation_view/widgets/order_list_tile.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class CurrentTap extends StatelessWidget {
@@ -6,27 +7,29 @@ class CurrentTap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Column(
-      children: const [
+      children: [
         OrderListTile(
           dotColor: Colors.amber,
-          status: 'جاري العمل',
+          status: locale.translate('work_is_underway')!,
         ),
         OrderListTile(
           dotColor: Colors.amber,
-          status: 'جاري العمل',
+          status: locale.translate('work_is_underway')!,
         ),
         OrderListTile(
           dotColor: Colors.amber,
-          status: 'جاري العمل',
+          status:locale.translate('work_is_underway')!,
         ),
         OrderListTile(
           dotColor: Colors.amber,
-          status: 'جاري العمل',
+          status:locale.translate('work_is_underway')!,
         ),
         OrderListTile(
           dotColor: Colors.amber,
-          status: 'جاري العمل',
+          status: locale.translate('work_is_underway')!,
         ),
       ],
     );

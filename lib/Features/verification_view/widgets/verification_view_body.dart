@@ -1,7 +1,6 @@
 import 'package:fingerPrint/Features/verification_view/widgets/verification_view_form.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
-
 import '../../login_view/widgets/login_view_form.dart';
 import '../../register_view/widgets/clipping_color.dart';
 import '../../register_view/widgets/register_form_decoration.dart';

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import 'package:fingerPrint/core/locale/app_localizations.dart';
+=======
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
+>>>>>>> cf74fae603757f372119a4db70528a8ec4bc71f7
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
@@ -16,13 +20,22 @@ class VerificationViewForm extends StatefulWidget {
 class _VerificationViewFormState extends State<VerificationViewForm> {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
+      late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
+    return Column(
+      children: [
+         Padding(
+          padding: EdgeInsets.only(top: 40),
+=======
     SizeConfig().init(context);
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 40),
+>>>>>>> cf74fae603757f372119a4db70528a8ec4bc71f7
           child: Text(
-            'كود التفعيل',
+             locale.translate('activation_code')! ,
             style: TextStyle(
                 color: const Color(0xff8f7abd),
                 fontSize: 22.sp,
@@ -38,7 +51,7 @@ class _VerificationViewFormState extends State<VerificationViewForm> {
         ),
         const SizedBox(height: 20),
         Text(
-          'من فضلك أدخل رمز التحقق المرسل إلي',
+           locale.translate('please_enter_the_verification_code_sent_to_me')!,
           style: TextStyle(
               color: Colors.black.withOpacity(0.8),
               fontSize: 14.sp,
@@ -96,7 +109,7 @@ class _VerificationViewFormState extends State<VerificationViewForm> {
                     .copyWith(color: const Color(0xff8f7abd), fontSize: 18.sp),
               ),
               Text(
-                'إعادة إرسال الرمز',
+                 locale.translate('resend_the_code')!,
                 style: Styles.textStyle20.copyWith(
                   fontSize: 15.sp,
                   color: Colors.black.withOpacity(0.7),
