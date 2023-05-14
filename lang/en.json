@@ -71,5 +71,6 @@
   "status": "status",
   "Choose_language": "Choose language",
   "next": "Next",
-  "language_text": "You can change language from setting"
+  "language_text": "You can change language from setting",
+  "skip":"Skip"
 }

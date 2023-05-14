@@ -25,7 +25,7 @@ class _BottomNavState extends State<BottomNav>
   late CurvedAnimation _curve;
   final _iconPathList = <String>[
     'assets/images/group_1037.png',
-    'assets/images/icon_awesome_fingerprint.png',
+    'assets/images/mail_icon.png',
     'assets/images/icon_feather_info.png',
     'assets/images/icon_awesome_clipboard_list.png',
   ];
@@ -96,8 +96,7 @@ class _BottomNavState extends State<BottomNav>
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(
-                          context, kPersonalAccountView);
+                      Navigator.pushNamed(context, kPersonalAccountView);
                     },
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(40.0),

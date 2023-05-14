@@ -3,5 +3,5 @@ class AssetsData {
   static const testImage = 'assets/images/test_image.png';
   static const saudiFlagImage = 'assets/images/saudia_flag.png';
   static const usFlagImage = 'assets/images/us_flag.png';
-  static const fingerPrint = 'assets/images/fingerprint.png';
+  static const fingerPrint = 'assets/images/finger_print.png';
 }

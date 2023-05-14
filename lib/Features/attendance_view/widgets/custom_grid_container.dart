@@ -37,11 +37,11 @@ class CustomGridContainer extends StatelessWidget {
                 ),
                 Text(orderText,
                     style: TextStyle(
-                      fontFamily: 'HacenTunisia',
+                      // fontFamily: 'HacenTunisia',
                       color: const Color(0xff403f3f),
                       fontSize: SizeConfig.defaultSize! * 1.2,
-                      fontWeight: FontWeight.w700,
-                      fontStyle: FontStyle.normal,
+                      // fontWeight: FontWeight.w700,
+                      // fontStyle: FontStyle.normal,
                     ))
               ],
             ),

@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,12 +17,14 @@ class LoginViewForm extends StatefulWidget {
 class _LoginViewFormState extends State<LoginViewForm> {
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 40),
           child: Text(
-            'تسجيل الدخول',
+            locale.translate("key")!,
             style: TextStyle(
                 color: const Color(0xff8f7abd),
                 fontSize: 25.sp,
@@ -43,7 +46,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
           buttonTapHandler: () {
             Navigator.pushNamed(context, kVerificationScreen);
           },
-          screenWidth: 120,
+          screenWidth: MediaQuery.of(context).size.width*.5,
         ),
         const Spacer(),
         Padding(

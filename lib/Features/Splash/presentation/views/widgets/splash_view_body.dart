@@ -22,7 +22,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
 
     if (seen) {
       // print("seen");
-      Navigator.pushReplacementNamed(context, kBottomNav);
+      Navigator.pushReplacementNamed(context, kLanguageScreen);
       // Navigator.of(context).pushReplacement(
       //     new MaterialPageRoute(builder: (context) => new Home()));
     } else {

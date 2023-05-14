@@ -1,6 +1,7 @@
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import '../../../core/locale/app_localizations.dart';
 import '../../../core/utils/constants.dart';
 import '../../../core/widgets/custom_circle_clipper.dart';
 
@@ -46,7 +47,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 textDirection: TextDirection.ltr,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Gaps.vGap50,
+                  Gaps.vGap100,
                   const Text(
                     "نظام بصمتك",
                     style: TextStyle(color: Colors.white, fontSize: 20),
@@ -70,6 +71,8 @@ class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return IntroductionScreen(
       dotsDecorator: DotsDecorator(
           // spacing: EdgeInsets.only(left: 2, right: 3),
@@ -79,22 +82,24 @@ class _IntroScreenState extends State<IntroScreen> {
       //  dotsContainerDecorator: BoxDecoration(color: Colors.red),
       rtl: true,
       // resizeToAvoidBottomInset: true,
-      next: const Text(
-        "تخطي",
+      next: Text(
+        locale.translate("skip")!,
         style: TextStyle(color: Colors.white, fontSize: 20),
       ),
-      done: const Text(
-        "تخطي",
+      done: Text(
+        locale.translate("skip")!,
         style: TextStyle(color: Colors.white, fontSize: 20),
       ),
-     // nextFlex: (screenSize.width * .0111).toInt(),
+      // nextFlex: 1,
+      // dotsFlex:3,
       doneStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       nextStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       onDone: () {
-        Navigator.pushReplacementNamed(context,kLoginScreenForm);
+        Navigator.pushReplacementNamed(context, kLoginScreenForm);
       },
+
       showDoneButton: true,
-      showNextButton: true,
+
       rawPages: [
         getIntroPages(
             imagePath: "assets/images/intro1.png",

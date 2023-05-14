@@ -1,6 +1,7 @@
 import 'package:fingerPrint/Features/login_view/widgets/login_view_form.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
+import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +21,7 @@ class LoginViewBody extends StatelessWidget {
           ClipPath(
             clipper: CurveClipper(),
             child: Container(
-              color: const Color(0xff9a80d9),
+              color: kPrimaryColor,
               height: SizeConfig.screenHeight! * 0.5,
             ),
           ),
@@ -29,14 +30,13 @@ class LoginViewBody extends StatelessWidget {
             child: Column(
               children: [
                 Center(
-                  child: Container(
-                    height: SizeConfig.screenHeight! * 0.58,
-                    width: SizeConfig.screenWidth! * 0.85,
-                    decoration: FormDecoration(),
-                    child: const Padding(
+                  child: CustomElevatedContainer(
+                    containerChild: const Padding(
                       padding: EdgeInsets.only(top: 30),
                       child: LoginViewForm(),
                     ),
+                    containerHeight: SizeConfig.screenHeight! * 0.58,
+                    containerWidth: SizeConfig.screenWidth! * 0.85,
                   ),
                 ),
                 const SizedBox(

@@ -36,7 +36,11 @@ class AttendanceViewBody extends StatelessWidget {
                           const Center(child: StackPurbleContainer()),
                           Center(
                             child: Column(
-                              children: const [
+                              // crossAxisAlignment: CrossAxisAlignment.center,
+                              // mainAxisAlignment: MainAxisAlignment.center,
+                              children: const 
+                            
+                              [
                                 StackFingerPrintLogo(),
                                 StackDayText(),
                                 StackTimeText()
