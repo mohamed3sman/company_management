@@ -24,7 +24,8 @@ class _LoginViewFormState extends State<LoginViewForm> {
         Padding(
           padding: const EdgeInsets.only(top: 40),
           child: Text(
-            locale.translate("key")!,
+            // locale.translate("key")!,
+            "",
             style: TextStyle(
                 color: const Color(0xff8f7abd),
                 fontSize: 25.sp,

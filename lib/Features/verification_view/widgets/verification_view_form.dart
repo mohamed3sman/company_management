@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-import 'package:fingerPrint/core/locale/app_localizations.dart';
-=======
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
->>>>>>> cf74fae603757f372119a4db70528a8ec4bc71f7
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:dotted_line/dotted_line.dart';
 
+import '../../../core/locale/app_localizations.dart';
 import '../../../core/utils/styles.dart';
 
 class VerificationViewForm extends StatefulWidget {
@@ -19,21 +16,13 @@ class VerificationViewForm extends StatefulWidget {
 
 class _VerificationViewFormState extends State<VerificationViewForm> {
   @override
-  Widget build(BuildContext context) {
-<<<<<<< HEAD
-      late AppLocalizations locale;
-    locale = AppLocalizations.of(context)!;
-    return Column(
-      children: [
-         Padding(
-          padding: EdgeInsets.only(top: 40),
-=======
+  Widget build(BuildContext context) {    final Size screenSize = MediaQuery.of(context).size;
+    late AppLocalizations locale;    locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 40),
->>>>>>> cf74fae603757f372119a4db70528a8ec4bc71f7
           child: Text(
              locale.translate('activation_code')! ,
             style: TextStyle(
