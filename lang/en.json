@@ -82,10 +82,7 @@
   "accept":"Accept",
   "the_start_date_of_the_leave":"The start date of the leave",
   "the_end_date_of_the_leave":"The end of date of the leave",
-  "attachments":"مرفقات"
-
-,  "please_enter_the_verification_code_sent_to_me":"Please enter the verification code sent to me",
-
+  "please_enter_the_verification_code_sent_to_me":"Please enter the verification code sent to me",
   "order_vacation": "Order vacation",
   "permission_request": "Permission request",
   "num_request": "Number request :",
@@ -98,5 +95,15 @@
   "Choose_language": "Choose language",
   "next": "Next",
   "language_text": "You can change language from setting",
-  "skip":"Skip"
+  "skip":"Skip",
+  "you_do_not_have_an_account" :"you_do_not_have_an_account",
+  "permission_type":"Permission type",
+  "period":"Period",
+  "start_permission":"Start Permission",
+  "end_permission":" End Permission",
+  "to":"to",
+  "remaining_time":"Remaining time",
+  "the_number_of_permissions_left":"The number of permissions left",
+  "the_reason":"Reson"
+
 }

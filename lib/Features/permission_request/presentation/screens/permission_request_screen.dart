@@ -39,24 +39,24 @@ class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                const CustomOrdersRawIcon(
-                    rawText: "نوع الإذن",
+                 CustomOrdersRawIcon(
+                    rawText:    locale.translate('permission_type')!,
                     iconImagePath: "assets/icons/vacation_icon.png"),
-                CustomDropDownList(hintText: "نوع الإذن"),
-                const CustomOrdersRawIcon(
-                    rawText: "الفتره",
+                CustomDropDownList(hintText:locale.translate('permission_type')!),
+                 CustomOrdersRawIcon(
+                    rawText: locale.translate('Period')!,
                     iconImagePath: "assets/icons/vacation_icon.png"),
                 CustomDropDownList(
-                  hintText: "الفتره",
+                  hintText: locale.translate('Period')!,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    const CustomOrdersRawIcon(
-                        rawText: " بداية الإذن",
+                     CustomOrdersRawIcon(
+                        rawText: locale.translate('start_permission')!,
                         iconImagePath: "assets/icons/time_icon.png"),
-                    const CustomOrdersRawIcon(
-                        rawText: "نهاية الإذن",
+                     CustomOrdersRawIcon(
+                        rawText: locale.translate('end_permission')!,
                         iconImagePath: "assets/icons/time_icon.png"),
                   ],
                 ),
@@ -64,21 +64,21 @@ class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     CustomTimePicker(
-                      timePickerText: "من",
+                      timePickerText: locale.translate('to')!,
                     ),
                     CustomTimePicker(
-                      timePickerText: "إلى",
+                      timePickerText:  locale.translate('from')!,
                     )
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
+                  children:  [
                     CustomOrdersRawIcon(
-                        rawText: "المدة",
+                        rawText: locale.translate('Period')!,
                         iconImagePath: "assets/icons/time_icon.png"),
                     CustomOrdersRawIcon(
-                        rawText: "المدة المتبقة",
+                        rawText: locale.translate('remaining_time')!,
                         iconImagePath: "assets/icons/time_icon.png"),
                   ],
                 ),
@@ -86,28 +86,28 @@ class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     CustomTimePicker(
-                      timePickerText: "المدة",
+                      timePickerText: locale.translate('Period')!,
                     ),
                     CustomTimePicker(
-                      timePickerText: "المدة المتبقية",
+                      timePickerText: locale.translate('remaining_time')!,
                     )
                   ],
                 ),
 
-                const CustomOrdersRawIcon(
-                  rawText: "عدد الأذونات المتبقة",
+                 CustomOrdersRawIcon(
+                  rawText: locale.translate('the_number_of_permissions_left')!,
                   iconImagePath: "assets/icons/hashtag_icon.png",
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * .1,
                   width: MediaQuery.of(context).size.width * .87,
-                  child: const Card(
+                  child:  Card(
                     elevation: 6,
                     child: Padding(
                       padding: EdgeInsets.all(10.0),
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: "عدد الأذونات المتبقة",
+                          hintText: locale.translate('the_number_of_permissions_left')!,
                           hintStyle: TextStyle(),
                           focusedBorder: InputBorder.none,
                           enabledBorder: InputBorder.none,
@@ -120,20 +120,20 @@ class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
                   ),
                 ),
 
-                const CustomOrdersRawIcon(
-                  rawText: "السبب",
+                 CustomOrdersRawIcon(
+                  rawText: locale.translate('the_reason')!,
                   iconImagePath: "assets/icons/notes_icon.png",
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * .1,
                   width: MediaQuery.of(context).size.width * .87,
-                  child: const Card(
+                  child:  Card(
                     elevation: 6,
                     child: Padding(
                       padding: EdgeInsets.all(10.0),
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: "السبب",
+                          hintText:locale.translate('the_reason')!,
                           focusedBorder: InputBorder.none,
                           enabledBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
@@ -151,12 +151,12 @@ class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
                     CustomButton(
                         screenWidth: MediaQuery.of(context).size.width * .3,
                         buttonTapHandler: () {},
-                        buttonText: "تأكيد"),
+                        buttonText:locale.translate('accept')!),
                     CustomButton(
                         buttonBackGroundColor: Colors.white,
                         screenWidth: MediaQuery.of(context).size.width * .3,
                         buttonTapHandler: () {},
-                        buttonText: "إلغاء")
+                        buttonText: locale.translate('reject')!)
                   ],
                 ),
                 // BottomNav()

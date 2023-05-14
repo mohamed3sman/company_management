@@ -1,6 +1,8 @@
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/locale/app_localizations.dart';
+
 class OrderListTile extends StatelessWidget {
   const OrderListTile(
       {super.key, required this.status, required this.dotColor});
@@ -10,6 +12,8 @@ class OrderListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+        late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10),
       child: Container(
@@ -28,12 +32,12 @@ class OrderListTile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'التفاصيل',
+                 Text(
+               locale.translate('work_is_underway')!,
                   style: TextStyle(color: kPrimaryColor, fontSize: 12),
                 ),
                 Text(
-                  'رقم الطلب : 123456',
+                  '${locale.translate('order_number')!}  : 123456',
                   style: TextStyle(
                       color: Colors.black.withOpacity(0.6), fontSize: 12),
                 ),
@@ -60,14 +64,14 @@ class OrderListTile extends StatelessWidget {
                         size: 10,
                       ),
                     ),
-                    const Text(
-                      ' :الحالة',
+                     Text(
+                      ' :${locale.translate('status')!}',
                       style: TextStyle(color: Colors.black, fontSize: 12),
                     ),
                   ],
                 ),
                 Text(
-                  'نوع الاذن : اذن مرضية',
+                  ' ${locale.translate('permission_type')} : ${locale.translate('sick_leave')} ',
                   style: TextStyle(
                       color: Colors.black.withOpacity(0.6), fontSize: 12),
                 ),

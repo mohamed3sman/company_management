@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/login_view/widgets/login_view_form.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
@@ -14,6 +15,8 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+        late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return SingleChildScrollView(
       child: Stack(
@@ -52,7 +55,7 @@ class LoginViewBody extends StatelessWidget {
                           Navigator.pushNamed(context, kRegisterScreen);
                         },
                         child: Text(
-                          'إنشاء حساب',
+                          locale.translate('login')!,
                           style: Styles.textStyle20.copyWith(
                               color: const Color(0xff8f7abd),
                               decoration: TextDecoration.underline,
@@ -61,7 +64,7 @@ class LoginViewBody extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '! ليس لديك حساب',
+                        locale.translate('you_do_not_have_an_account')!,
                         style: Styles.textStyle20.copyWith(
                             color: const Color(0xff8f7abd), fontSize: 17.sp),
                       ),

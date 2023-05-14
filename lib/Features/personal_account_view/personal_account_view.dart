@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/personal_account_view/widgets/personal_account_view_body.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,6 +8,8 @@ class PersonalAccountView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+        late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -23,7 +26,7 @@ class PersonalAccountView extends StatelessWidget {
           ),
         ),
         title: Text(
-          'الملف الشخصي',
+          locale.translate('personal_account_view')!,
           style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
