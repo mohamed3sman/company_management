@@ -3,6 +3,7 @@ import 'package:fingerPrint/Features/table_view/widget/custom_table_date_column_
 import 'package:fingerPrint/Features/table_view/widget/custom_table_leaving_column.dart';
 import 'package:fingerPrint/Features/table_view/widget/custom_table_work_hour_column.dart';
 import 'package:fingerPrint/Features/table_view/widget/table_column_cell.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class AttendanceAndLeavingTable extends StatelessWidget {
@@ -10,6 +11,8 @@ class AttendanceAndLeavingTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+        late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Stack(
       children: [
         Table(
