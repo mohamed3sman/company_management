@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomElevatedContainer extends StatelessWidget {
-  CustomElevatedContainer(
+  const CustomElevatedContainer(
       {super.key,
       required this.containerHeight,
       required this.containerWidth,
       required this.containerChild});
-  double containerWidth;
-  double containerHeight;
-  Widget containerChild;
+  final double containerWidth;
+  final double containerHeight;
+  final Widget containerChild;
   @override
   Widget build(BuildContext context) {
     return Container(

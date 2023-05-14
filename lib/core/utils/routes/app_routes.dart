@@ -27,7 +27,7 @@ import '../constants.dart';
 
 class AppRoutes {
   static Route? onGenerateRoute(RouteSettings routeSettings) {
-    final args = routeSettings.arguments;
+    // final args = routeSettings.arguments;
 
     switch (routeSettings.name) {
       case initialRoute:

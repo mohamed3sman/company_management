@@ -2,24 +2,21 @@ import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import '../../../core/locale/app_localizations.dart';
 import '../../../core/utils/constants.dart';
 import '../../../core/widgets/custom_circle_clipper.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
-  
+
   @override
   State<IntroScreen> createState() => _IntroScreenState();
 }
 
 class _IntroScreenState extends State<IntroScreen> {
-  
   Widget getIntroPages(
       {required String imagePath,
       required Size screenSize,
       required String title}) {
-        
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: Stack(

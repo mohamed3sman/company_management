@@ -1,12 +1,10 @@
 import 'dart:io';
 
-import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/locale/app_localizations.dart';
 import '../../../../core/utils/gaps.dart';
-import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../widgets/custom_date_picker.dart';
 import 'package:file_picker/file_picker.dart';
@@ -19,9 +17,9 @@ class VacationRequestScreen extends StatefulWidget {
 }
 
 class _VacationRequestScreenState extends State<VacationRequestScreen> {
-  @override
   File? selectedFile;
   String? fileName;
+  @override
   Widget build(BuildContext context) {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
@@ -45,19 +43,21 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                 CustomOrdersRawIcon(
-                    rawText:  locale.translate('vacation_type')!,
+                CustomOrdersRawIcon(
+                    rawText: locale.translate('vacation_type')!,
                     iconImagePath: "assets/icons/vacation_icon.png"),
                 CustomDropDownList(hintText:locale.translate('vacation_type')!),
                  CustomOrdersRawIcon(
                     rawText: locale.translate('The_start_date_of_the_leave')!,
                     iconImagePath: "assets/icons/calender_icon.png"),
-                CustomDatePicker(CustomDatePickerText: locale.translate('from_date')!),
-                 CustomOrdersRawIcon(
+                CustomDatePicker(
+                    customDatePickerText: locale.translate('from_date')!),
+                CustomOrdersRawIcon(
                     rawText: locale.translate('the_end_date_of_the_leave')!,
                     iconImagePath: "assets/icons/calender_icon.png"),
-                CustomDatePicker(CustomDatePickerText: locale.translate('to_date')!),
-                 CustomOrdersRawIcon(
+                CustomDatePicker(
+                    customDatePickerText: locale.translate('to_date')!),
+                CustomOrdersRawIcon(
                   rawText: locale.translate('attachments')!,
                   iconImagePath: "assets/icons/attach_icon.png",
                 ),
@@ -96,7 +96,7 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                     ],
                   ),
                 ),
-                 CustomOrdersRawIcon(
+                CustomOrdersRawIcon(
                   rawText: locale.translate('notifications')!,
                   iconImagePath: "assets/icons/notes_icon.png",
                 ),

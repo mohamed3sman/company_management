@@ -1,7 +1,6 @@
 import 'package:fingerPrint/Features/vacation_view/widgets/accepted_tap.dart';
 import 'package:fingerPrint/Features/vacation_view/widgets/current_tap.dart';
 import 'package:fingerPrint/Features/vacation_view/widgets/rejected_tap.dart';
-import 'package:fingerPrint/Features/vacation_view/widgets/tap_bar_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class TapBarViewBody extends StatefulWidget {

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class CustomTimePicker extends StatefulWidget {
-  CustomTimePicker({super.key, required this.timePickerText});
-  String timePickerText;
+  const CustomTimePicker({super.key, required this.timePickerText});
+  final String timePickerText;
 
   @override
   State<CustomTimePicker> createState() => _CustomTimePickerState();

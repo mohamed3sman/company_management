@@ -5,7 +5,6 @@ import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cu
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/hex_color.dart';
-import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/page_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

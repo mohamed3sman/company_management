@@ -3,8 +3,6 @@ import 'package:fingerPrint/Features/vacation_view/widgets/tap_bar_view_body.dar
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../core/utils/constants.dart';
-
 class VacationView extends StatelessWidget {
   const VacationView({super.key});
 
