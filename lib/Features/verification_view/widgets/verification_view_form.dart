@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:dotted_line/dotted_line.dart';
+
 import '../../../core/locale/app_localizations.dart';
 import '../../../core/utils/styles.dart';
 
@@ -46,7 +47,6 @@ class _VerificationViewFormState extends State<VerificationViewForm> {
               fontSize: 14.sp,
               fontWeight: FontWeight.w800),
         ),
-
         const SizedBox(
           height: 10,
         ),

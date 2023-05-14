@@ -85,7 +85,8 @@
   "attachments":"attachments",
   "notifications":"Notifications"
 
-,
+,  "please_enter_the_verification_code_sent_to_me":"Please enter the verification code sent to me",
+
   "order_vacation": "Order vacation",
   "permission_request": "Permission request",
   "num_request": "Number request :",
