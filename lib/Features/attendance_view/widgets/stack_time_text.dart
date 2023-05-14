@@ -14,7 +14,10 @@ class StackTimeText extends StatelessWidget {
 
     return FittedBox(
       fit: BoxFit.fill,
-      child: Text("02:36 ${locale.translate("pm")!}",
+      child: Text(
+        
+        "02:36 ${locale.translate("pm")!}"
+        ,
           style: TextStyle(
             fontFamily: 'HacenTunisia',
             color: const Color(0xffffffff),

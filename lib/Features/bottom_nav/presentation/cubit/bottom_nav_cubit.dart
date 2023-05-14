@@ -8,6 +8,7 @@ import 'dart:collection';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../contact_us/presentation/screens/contact_us_screen.dart';
 import '../../../permission_request/presentation/screens/permission_request_screen.dart';
 part 'bottom_nav_state.dart';
 

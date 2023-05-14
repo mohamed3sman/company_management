@@ -18,7 +18,6 @@ class StackDayText extends StatelessWidget {
         fit: BoxFit.fill,
         child: Text("${locale.translate("sunday")!} :2023/5/7",
             style: TextStyle(
-              fontFamily: 'HacenTunisia',
               color: const Color(0xffffffff),
               fontSize: 18.sp,
               fontWeight: FontWeight.w700,
