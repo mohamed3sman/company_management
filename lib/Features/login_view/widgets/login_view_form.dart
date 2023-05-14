@@ -34,15 +34,15 @@ class _LoginViewFormState extends State<LoginViewForm> {
         const SizedBox(
           height: 50,
         ),
-         Padding(
+        const Padding(
           padding: EdgeInsets.only(right: 20.0),
-          child: CustomTextField(hintTextField:locale.translate("phone")!),
+          child: CustomTextField(hintTextField: 'رقم الجوال'),
         ),
         const SizedBox(
           height: 50,
         ),
         CustomButton(
-          buttonText: locale.translate("login")!,
+          buttonText: 'تسجيل الدخول',
           buttonTapHandler: () {
             Navigator.pushNamed(context, kVerificationScreen);
           },
@@ -54,7 +54,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
           child: Align(
             alignment: Alignment.bottomLeft,
             child: Text(
-             locale.translate("skip")!,
+              'تخطي',
               style:
                   Styles.textStyle20.copyWith(color: const Color(0xff8f7abd)),
             ),
