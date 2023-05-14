@@ -46,17 +46,22 @@ class _LoginViewFormState extends State<LoginViewForm> {
           buttonTapHandler: () {
             Navigator.pushNamed(context, kVerificationScreen);
           },
-          screenWidth: MediaQuery.of(context).size.width*.5,
+          screenWidth: MediaQuery.of(context).size.width * .5,
         ),
         const Spacer(),
         Padding(
           padding: const EdgeInsets.only(left: 20.0, top: 20, bottom: 20),
           child: Align(
             alignment: Alignment.bottomLeft,
-            child: Text(
-              'تخطي',
-              style:
-                  Styles.textStyle20.copyWith(color: const Color(0xff8f7abd)),
+            child: TextButton(
+              child: Text(
+                'تخطي',
+                style:
+                    Styles.textStyle20.copyWith(color: const Color(0xff8f7abd)),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, kBottomNav);
+              },
             ),
           ),
         ),
