@@ -2,7 +2,6 @@ import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/loc
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'Features/home/data/repos/home_repo_impl.dart';
 import 'Features/home/domain/use_cases/fetch_featured_books_use_case.dart';
 import 'Features/home/domain/use_cases/fetch_newest_books_use_case.dart';

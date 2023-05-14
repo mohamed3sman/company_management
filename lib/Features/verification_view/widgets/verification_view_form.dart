@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:dotted_line/dotted_line.dart';
@@ -14,12 +15,14 @@ class VerificationViewForm extends StatefulWidget {
 class _VerificationViewFormState extends State<VerificationViewForm> {
   @override
   Widget build(BuildContext context) {
+      late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Column(
       children: [
-        const Padding(
+         Padding(
           padding: EdgeInsets.only(top: 40),
           child: Text(
-            'كود التفعيل',
+             locale.translate('activation_code')! ,
             style: TextStyle(
                 color: Color(0xff8f7abd),
                 fontSize: 25,
@@ -35,7 +38,7 @@ class _VerificationViewFormState extends State<VerificationViewForm> {
         ),
         const SizedBox(height: 20),
         Text(
-          'من فضلك أدخل رمز التحقق المرسل إلي',
+           locale.translate('please_enter_the_verification_code_sent_to_me')!,
           style: TextStyle(
               color: Colors.black.withOpacity(0.8),
               fontSize: 16,
@@ -93,7 +96,7 @@ class _VerificationViewFormState extends State<VerificationViewForm> {
                     .copyWith(color: const Color(0xff8f7abd), fontSize: 18),
               ),
               Text(
-                'إعادة إرسال الرمز',
+                 locale.translate('resend_the_code')!,
                 style: Styles.textStyle20.copyWith(
                   fontSize: 18,
                   color: Colors.black.withOpacity(0.7),

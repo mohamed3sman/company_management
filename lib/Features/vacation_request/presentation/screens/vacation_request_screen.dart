@@ -44,20 +44,20 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                const CustomOrdersRawIcon(
-                    rawText: "نوع الإجازة",
+                 CustomOrdersRawIcon(
+                    rawText:locale.translate('type_vacation')!,
                     iconImagePath: "assets/icons/vacation_icon.png"),
-                CustomDropDownList(hintText: "نوع الإجازة"),
-                const CustomOrdersRawIcon(
-                    rawText: "تاريخ بداية الإجازة",
+                CustomDropDownList(hintText:locale.translate('type_vacation')!),
+                 CustomOrdersRawIcon(
+                    rawText: locale.translate('The_start_date_of_the_leave')!,
                     iconImagePath: "assets/icons/calender_icon.png"),
-                CustomDatePicker(CustomDatePickerText: "من تاريخ"),
-                const CustomOrdersRawIcon(
-                    rawText: "تاريخ نهاية الإجازة",
+                CustomDatePicker(CustomDatePickerText: locale.translate('from_date')!),
+                 CustomOrdersRawIcon(
+                    rawText: locale.translate('the_end_date_of_the_leave')!,
                     iconImagePath: "assets/icons/calender_icon.png"),
-                CustomDatePicker(CustomDatePickerText: "إلى تاريخ"),
-                const CustomOrdersRawIcon(
-                  rawText: "مرفقات",
+                CustomDatePicker(CustomDatePickerText: locale.translate('to_date')!),
+                 CustomOrdersRawIcon(
+                  rawText: locale.translate('attachments')!,
                   iconImagePath: "assets/icons/attach_icon.png",
                 ),
                 GestureDetector(
@@ -95,8 +95,8 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                     ],
                   ),
                 ),
-                const CustomOrdersRawIcon(
-                  rawText: "ملاحظات",
+                 CustomOrdersRawIcon(
+                  rawText: locale.translate('notifications')!,
                   iconImagePath: "assets/icons/notes_icon.png",
                 ),
                 SizedBox(
@@ -122,12 +122,12 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                     CustomButton(
                         screenWidth: MediaQuery.of(context).size.width * .3,
                         buttonTapHandler: () {},
-                        buttonText: "تأكيد"),
+                        buttonText: locale.translate('accept')!),
                     CustomButton(
                         buttonBackGroundColor: Colors.white,
                         screenWidth: MediaQuery.of(context).size.width * .3,
                         buttonTapHandler: () {},
-                        buttonText: "إلغاء")
+                        buttonText: locale.translate('cancel')!)
                   ],
                 ),
                 // BottomNav()

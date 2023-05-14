@@ -1,4 +1,5 @@
 import 'package:fingerPrint/core/locale/app_localizations.dart';
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -72,16 +73,12 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   textInputType: TextInputType.visiblePassword,
                   obscureText: true,
                 ),
-                const SizedBox(
-                  height: 40,
-                ),
+                Gaps.vGap40,
                 CustomButton(
                     buttonText: locale.translate('confirm')!,
                     buttonTapHandler: () {},
                     screenWidth: MediaQuery.of(context).size.width * .6),
-                const SizedBox(
-                  height: 40,
-                ),
+                Gaps.vGap40,
               ],
             ),
           ),
