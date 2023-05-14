@@ -56,7 +56,7 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const AcceptedTap());
       case kRejectedTapScreen:
         return MaterialPageRoute(builder: (_) => const RejectedTap());
-      case kLoginScreenForm:
+      case kLoginView:
         return MaterialPageRoute(
           builder: (_) => const LoginView(),
         );

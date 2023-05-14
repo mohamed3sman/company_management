@@ -135,7 +135,7 @@ class PersonalAccountViewBody extends StatelessWidget {
             child: CustomButton(
               buttonText: 'تسجيل الخروج',
               buttonTapHandler: () {
-                Navigator.pushNamed(context, kLoginScreenForm);
+                Navigator.pushNamed(context, kLoginView);
               },
               screenWidth: 120.0,
             ),

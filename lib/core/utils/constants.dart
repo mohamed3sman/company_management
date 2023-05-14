@@ -11,7 +11,7 @@ const String kBookDetailsScreen = '/bookDetailsScreen';
 const String kSearchScreen = '/searchScreen';
 const String kIntroScreen = '/introScreen';
 const String kBookLanguageScreen = '/bookLanguageScreen';
-const String kLoginScreenForm = "/loginScreenForm";
+// const String kLoginScreenForm = "/loginScreenForm";
 const String kRegisterScreen = "/registerscreen";
 const String kVerificationScreen = "/verificationscreen";
 const String kTapBarScreen = "/tapbarscreen";
@@ -24,7 +24,7 @@ const String KBottomNav = '/KBottomNav';
 const String kPermissionView = '/permissionview';
 
 const String kLanguageScreen = '/bookLanguageScreen';
-//const String kLoginScreenForm = "/loginScreenForm";
+const String kLoginView = "/kLoginView";
 const String kBottomNav = '/KBottomNav';
 const String kMyOrdersScreen = '/kMyOrdersScreen';
 const String kContactUsScreen = '/kContactUsScreen';
