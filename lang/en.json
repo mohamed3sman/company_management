@@ -68,6 +68,22 @@
   "num_days":"Number days :",  
   "from_date":"From date :",
   "to_date":"To date :",
-  "status":"status"
+  "status":"status",
+  "activation_code":"Activation code",
+  "please_enter_the_verification_code_sent_to_me":"Please enter the verification code sent to me",
+  "resend_the_code":"Resend the code",
+  "the_request_was_accepted":"The request was accepted",
+  "work_is_underway":"Work is underway",
+  "the_details":"The details",
+  "order_number":"Order number",
+  "the_condition":"the condition",
+  "sick_leave":"Sick leave",
+  "reject":"Reject",
+  "accept":"Accept",
+  "the_start_date_of_the_leave":"The start date of the leave",
+  "the_end_date_of_the_leave":"The end of date of the leave",
+  "attachments":"attachments",
+  "notifications":"Notifications"
+
 
 }
