@@ -3,22 +3,28 @@ import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/locale/app_localizations.dart';
+
+// ignore: must_be_immutable
 class DetailsSnackBar extends StatelessWidget {
-  const DetailsSnackBar({
+  DetailsSnackBar({
     super.key,
   });
+  late AppLocalizations locale;
 
   @override
   Widget build(BuildContext context) {
+    locale = AppLocalizations.of(context)!;
+
     SizeConfig().init(context);
     return Center(
       child: Container(
         width: 290.w,
         height: 80.h,
         decoration: BoxDecoration(
-          color: Color(0xffffffff),
+          color: const Color(0xffffffff),
           borderRadius: BorderRadius.circular(25),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
                 color: Color(0x29000000),
                 offset: Offset(0, 3),
@@ -31,21 +37,21 @@ class DetailsSnackBar extends StatelessWidget {
               horizontal: SizeConfig.defaultSize! * 4,
               vertical: SizeConfig.defaultSize! * 0.5),
           child: Row(
-            children: const [
+            children: [
               DetailsSnackBarItem(
                 icon: Icons.access_time_outlined,
-                timeText: '8 ساعات',
-                actionText: 'عدد ساعات العمل',
+                timeText: '8 ${locale.translate("hours")!}',
+                actionText: locale.translate("work_hours")!,
               ),
               DetailsSnackBarItem(
                 icon: Icons.keyboard_double_arrow_left_rounded,
-                timeText: '05:00 PM',
-                actionText: 'تسجيل الانصراف',
+                timeText: '05:00 ${locale.translate("pm")!}',
+                actionText: locale.translate("leaving_register")!,
               ),
               DetailsSnackBarItem(
                 icon: Icons.exit_to_app_rounded,
-                timeText: '09:00 AM',
-                actionText: 'تسجيل الحضور',
+                timeText: '09:00 ${locale.translate("am")!}',
+                actionText: locale.translate("attendance_register")!,
               ),
             ],
           ),

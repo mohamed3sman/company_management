@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomDropDownList extends StatefulWidget {
-   CustomDropDownList({super.key,required this.hintText});
+  CustomDropDownList({super.key, required this.hintText});
   String hintText;
   @override
   State<CustomDropDownList> createState() => _CustomDropDownListState();
-  
-
 }
 
 class _CustomDropDownListState extends State<CustomDropDownList> {
   List<String> items = ["1", "2"];
   String? selectedItem;
-
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +20,7 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
         borderRadius: BorderRadius.circular(10),
         iconSize: 50,
         //elevation: 12,
-        hint:  Text(widget.hintText,
+        hint: Text(widget.hintText,
             style: TextStyle(
               color: Color(0xffababac),
               fontSize: 13,

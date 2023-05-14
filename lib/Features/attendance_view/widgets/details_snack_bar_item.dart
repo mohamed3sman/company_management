@@ -22,22 +22,28 @@ class DetailsSnackBarItem extends StatelessWidget {
             icon,
             color: Colors.deepPurple,
           ),
-          Text(timeText,
-              style: TextStyle(
-                fontFamily: 'HacenTunisia',
-                color: const Color(0xff636262),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w700,
-                fontStyle: FontStyle.normal,
-              )),
-          Text(actionText,
-              style: TextStyle(
-                fontFamily: 'HacenTunisia',
-                color: const Color(0xffdbdada),
-                fontSize: 7.sp,
-                fontWeight: FontWeight.w400,
-                fontStyle: FontStyle.normal,
-              ))
+          FittedBox(
+            fit: BoxFit.fill,
+            child: Text(timeText,
+                style: TextStyle(
+                  //fontFamily: 'HacenTunisia',
+                  color: const Color(0xff636262),
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.normal,
+                )),
+          ),
+          FittedBox(
+            fit: BoxFit.fill,
+            child: Text(actionText,
+                style: TextStyle(
+                  //  fontFamily: 'HacenTunisia',
+                  color: const Color(0xffdbdada),
+                  fontSize: 7.sp,
+                  fontWeight: FontWeight.w400,
+                  fontStyle: FontStyle.normal,
+                )),
+          )
         ],
       ),
     );

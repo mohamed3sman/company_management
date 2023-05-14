@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton(
+  const CustomButton(
       {super.key,
       this.buttonBackGroundColor,
       required this.screenWidth,
       required this.buttonTapHandler,
       required this.buttonText});
-  var screenWidth = 0.0;
-  Function buttonTapHandler;
-  String buttonText;
-  Color? buttonBackGroundColor;
+  final double screenWidth;
+  final Function buttonTapHandler;
+  final String buttonText;
+  final Color? buttonBackGroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         height: screenSize.height * .06,
-        width:screenWidth==0.0? 150.0:screenWidth,
+        width: screenWidth == 0.0 ? 150.0 : screenWidth,
         child: Text(
           buttonText,
           style: TextStyle(

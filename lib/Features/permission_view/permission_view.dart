@@ -3,8 +3,6 @@ import 'package:fingerPrint/Features/permission_view/widgets/tap_bar_view_body.d
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../core/utils/constants.dart';
-
 class PermissionView extends StatelessWidget {
   const PermissionView({super.key});
 

@@ -118,6 +118,5 @@ class _TableViewBodyState extends State<TableViewBody> {
         ),
       ),
     );
-    ;
   }
 }

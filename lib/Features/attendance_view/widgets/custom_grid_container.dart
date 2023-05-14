@@ -35,14 +35,17 @@ class CustomGridContainer extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
-                Text(orderText,
-                    style: TextStyle(
-                      // fontFamily: 'HacenTunisia',
-                      color: const Color(0xff403f3f),
-                      fontSize: SizeConfig.defaultSize! * 1.2,
-                      // fontWeight: FontWeight.w700,
-                      // fontStyle: FontStyle.normal,
-                    ))
+                FittedBox(
+                  fit: BoxFit.fill,
+                  child: Text(orderText,
+                      style: TextStyle(
+                        // fontFamily: 'HacenTunisia',
+                        color: const Color(0xff403f3f),
+                        fontSize: SizeConfig.defaultSize! * 1.2,
+                        // fontWeight: FontWeight.w700,
+                        // fontStyle: FontStyle.normal,
+                      )),
+                )
               ],
             ),
           ),

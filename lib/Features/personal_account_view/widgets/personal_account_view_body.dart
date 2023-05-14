@@ -2,7 +2,6 @@ import 'package:fingerPrint/Features/personal_account_view/widgets/personal_acco
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../core/utils/styles.dart';
 import '../../../core/widgets/custom_button.dart';

@@ -11,7 +11,8 @@ class AttendanceAndLeavingTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        late AppLocalizations locale;
+    // ignore: unused_local_variable
+    late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Stack(
       children: [

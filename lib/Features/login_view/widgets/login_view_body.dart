@@ -8,14 +8,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import '../../register_view/widgets/clipping_color.dart';
-import '../../register_view/widgets/register_form_decoration.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-        late AppLocalizations locale;
+    late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return SingleChildScrollView(

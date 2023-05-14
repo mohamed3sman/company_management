@@ -1,7 +1,6 @@
 import 'package:fingerPrint/Features/vacation_view/widgets/row_details_alert.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
-import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -17,14 +16,14 @@ class OrderListTile extends StatelessWidget {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Padding(
-      padding:  const EdgeInsets.only(top: 5, bottom: 5, left: 10),
+      padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10),
       child: Container(
         width: double.infinity,
-        padding:  const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          boxShadow:  [
+          boxShadow: [
             const BoxShadow(
                 color: Colors.grey, blurRadius: 3.0, offset: Offset(0.0, 0.8))
           ],
@@ -47,8 +46,8 @@ class OrderListTile extends StatelessWidget {
                       },
                     );
                   },
-                  child:  Text(
-                   locale.translate('the_details')!,
+                  child: Text(
+                    locale.translate('the_details')!,
                     style: const TextStyle(color: kPrimaryColor, fontSize: 12),
                   ),
                 ),
@@ -80,7 +79,7 @@ class OrderListTile extends StatelessWidget {
                         size: 10,
                       ),
                     ),
-                     Text(
+                    Text(
                       ' :${locale.translate('status')!}',
                       style: const TextStyle(color: Colors.black, fontSize: 12),
                     ),
@@ -102,19 +101,19 @@ class OrderListTile extends StatelessWidget {
   AlertDialog alertDetails(context) {
     return AlertDialog(
       insetPadding: const EdgeInsets.symmetric(horizontal: 20),
-      shape:  const RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(32.0))),
       contentPadding: const EdgeInsets.only(top: 10.0, right: 10),
       actionsAlignment: MainAxisAlignment.end,
       actionsOverflowDirection: VerticalDirection.up,
-      icon:  const Align(
+      icon: const Align(
         alignment: Alignment.topLeft,
         child: FaIcon(
           FontAwesomeIcons.xmark,
           color: Color(0xd97350cb),
         ),
       ),
-      title: Text(   AppLocalizations.of(context)!.translate("order_details")!),
+      title: Text(AppLocalizations.of(context)!.translate("order_details")!),
       alignment: Alignment.center,
       content: SizedBox(
         width: MediaQuery.of(context).size.width,

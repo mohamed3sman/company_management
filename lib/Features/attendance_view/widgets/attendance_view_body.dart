@@ -6,10 +6,10 @@ import 'package:fingerPrint/Features/attendance_view/widgets/stack_purble_contai
 import 'package:fingerPrint/Features/attendance_view/widgets/stack_time_text.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/locale/app_localizations.dart';
 
+// ignore: must_be_immutable
 class AttendanceViewBody extends StatelessWidget {
   AttendanceViewBody({super.key});
   late AppLocalizations locale;
@@ -38,10 +38,8 @@ class AttendanceViewBody extends StatelessWidget {
                             child: Column(
                               // crossAxisAlignment: CrossAxisAlignment.center,
                               // mainAxisAlignment: MainAxisAlignment.center,
-                              children: const 
-                            
-                              [
-                                StackFingerPrintLogo(),
+                              children: [
+                                const StackFingerPrintLogo(),
                                 StackDayText(),
                                 StackTimeText()
                               ],
@@ -66,11 +64,11 @@ class AttendanceViewBody extends StatelessWidget {
                         children: [
                           CustomGridContainer(
                             imagePath: 'assets/images/permission.png',
-                            orderText: 'طلب اذن',
+                            orderText: locale.translate("order_permission")!,
                           ),
                           CustomGridContainer(
                             imagePath: 'assets/images/depression.png',
-                            orderText: 'طلب سلفة',
+                            orderText: locale.translate("order_cache")!,
                           ),
                           CustomGridContainer(
                             imagePath: 'assets/images/holiday.png',
@@ -83,19 +81,20 @@ class AttendanceViewBody extends StatelessWidget {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: const [
+                        children: [
                           CustomGridContainer(
                             imagePath:
                                 'assets/images/confirmed_attendance_bro.png',
-                            orderText: 'الحضور والانصراف',
+                            orderText:
+                                locale.translate("attendance_and_leaving")!,
                           ),
                           CustomGridContainer(
                             imagePath: 'assets/images/credit_card.png',
-                            orderText: 'الرواتب',
+                            orderText: locale.translate("salaries")!,
                           ),
                           CustomGridContainer(
                             imagePath: 'assets/images/bank_account.png',
-                            orderText: 'حساب بنكي',
+                            orderText: locale.translate("bank_account")!,
                           ),
                         ],
                       ),
@@ -106,7 +105,7 @@ class AttendanceViewBody extends StatelessWidget {
             ),
           ],
         ),
-        const DetailsSnackBar()
+        DetailsSnackBar()
       ],
     );
   }

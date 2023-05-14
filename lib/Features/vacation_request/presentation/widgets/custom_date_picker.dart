@@ -1,12 +1,10 @@
-import 'package:dio/dio.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class CustomDatePicker extends StatefulWidget {
-  CustomDatePicker({super.key, required this.CustomDatePickerText});
-  String CustomDatePickerText;
+  const CustomDatePicker({super.key, required this.customDatePickerText});
+  final String customDatePickerText;
 
   @override
   State<CustomDatePicker> createState() => _CustomDatePickerState();
@@ -42,7 +40,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
             padding: const EdgeInsets.all(12.0),
             child: Text(
               selectedDate == null
-                  ? widget.CustomDatePickerText
+                  ? widget.customDatePickerText
                   : selectedDate.toString(),
               style: selectedDate == null
                   ? TextStyle(
