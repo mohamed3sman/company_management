@@ -4,6 +4,7 @@ import 'package:fingerPrint/Features/contact_us/presentation/screens/contact_us_
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/login_view/login_view.dart';
+import 'package:fingerPrint/Features/permission_view/permission_view.dart';
 import 'package:fingerPrint/Features/personal_account_view/personal_account_view.dart';
 import 'package:fingerPrint/Features/register_view/register_view.dart';
 import 'package:fingerPrint/Features/vacation_view/vacation_view.dart';
@@ -87,9 +88,13 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const DataTableView(),
         );
-      case KPersonalAccountView:
+      case kPersonalAccountView:
         return MaterialPageRoute(
           builder: (_) => const PersonalAccountView(),
+        );
+      case kPermissionView:
+        return MaterialPageRoute(
+          builder: (_) => const PermissionView(),
         );
 
       default:

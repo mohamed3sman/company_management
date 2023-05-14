@@ -97,7 +97,7 @@ class _BottomNavState extends State<BottomNav>
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pushReplacementNamed(
-                          context, KPersonalAccountView);
+                          context, kPersonalAccountView);
                     },
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(40.0),

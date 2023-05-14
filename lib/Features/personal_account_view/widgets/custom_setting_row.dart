@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -28,8 +29,8 @@ class CustomSettingRow extends StatelessWidget {
               children: [
                 Text(
                   text,
-                  style: Styles.textStyle18
-                      .copyWith(color: Colors.black.withOpacity(0.6)),
+                  style: Styles.textStyle18.copyWith(
+                      color: Colors.black.withOpacity(0.6), fontSize: 16.sp),
                 ),
                 const SizedBox(
                   width: 10,

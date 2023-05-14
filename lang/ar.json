@@ -86,8 +86,11 @@
   "the_end_date_of_the_leave":"تاريخ نهاية الإجازة",
   "attachments":"مرفقات",
   "notifications":"ملاحظات"
+,
 
+"Choose_language":"اختر اللغة",
+"next":"التالي",
 
-
+"language_text":"يمكنك تغيير اللغة من قائمة الاعدادات"
 
 }

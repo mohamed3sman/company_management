@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTableAttendanceColumn extends StatelessWidget {
   const CustomTableAttendanceColumn({super.key, required this.timeText});
@@ -9,10 +10,10 @@ class CustomTableAttendanceColumn extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Text("$timeText صباحاً",
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: 'HacenTunisia',
-            color: Color(0xff99979c),
-            fontSize: 14,
+            color: const Color(0xff99979c),
+            fontSize: 14.sp,
             fontWeight: FontWeight.w600,
             fontStyle: FontStyle.normal,
           )),

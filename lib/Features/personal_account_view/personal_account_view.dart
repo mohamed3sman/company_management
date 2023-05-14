@@ -1,5 +1,6 @@
 import 'package:fingerPrint/Features/personal_account_view/widgets/personal_account_view_body.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PersonalAccountView extends StatelessWidget {
   const PersonalAccountView({super.key});
@@ -15,18 +16,18 @@ class PersonalAccountView extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Icon(
+          icon: Icon(
             Icons.arrow_back,
             color: Colors.black,
-            size: 28,
+            size: 28.sp,
           ),
         ),
-        title: const Text(
+        title: Text(
           'الملف الشخصي',
           style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 16.sp),
         ),
       ),
       body: const PersonalAccountViewBody(),

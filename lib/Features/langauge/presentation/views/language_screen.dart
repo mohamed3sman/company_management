@@ -2,6 +2,7 @@ import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/loc
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/assets.dart';
 import 'package:fingerPrint/core/utils/commons.dart';
+import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,130 +35,122 @@ class _LanguageScreenState extends State<LanguageScreen> {
           ),
         ),
         Center(
-          child: Card(
-            elevation: 6,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              width: screenSize.width * .85,
-              height: screenSize.height * .6,
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: screenSize.height * .07,
+          child: CustomElevatedContainer(
+            containerHeight: screenSize.height * .6,
+            containerWidth: screenSize.width * .85,
+            containerChild: Column(
+              children: [
+                SizedBox(
+                  height: screenSize.height * .07,
+                ),
+                // Gaps.vGap40,
+                Text(
+                  locale.translate("Choose_language")!,
+                  style: const TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: kPrimaryColor,
                   ),
-                  const Text(
-                    "اختر اللغة",
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff7350cb),
-                    ),
-                  ),
-                  SizedBox(
-                    height: screenSize.height * .03,
-                  ),
-                  Directionality(
-                    textDirection: TextDirection.ltr,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Commons.showToast(context,
-                                message: locale.translate('english')!);
-                            BlocProvider.of<LocaleCubit>(context).toEnglish();
-                          },
-                          child: Card(
-                            elevation: 6,
-                            child: Container(
-                              decoration: locale.isEnLocale
-                                  ? BoxDecoration(
-                                      border: Border.all(
-                                          color: const Color(0xff7350cb),
-                                          width: 2),
-                                      borderRadius: BorderRadius.circular(5))
-                                  : null,
-                              padding: const EdgeInsets.all(20),
-                              width: screenSize.width * .3,
-                              height: screenSize.height * .2,
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Image.asset(
-                                    AssetsData.usFlagImage,
-                                  ),
-                                  const Text("English")
-                                ],
-                              ),
+                ),
+                SizedBox(
+                  height: screenSize.height * .03,
+                ),
+                Directionality(
+                  textDirection: TextDirection.ltr,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Commons.showToast(context,
+                              message: locale.translate('english')!);
+                          BlocProvider.of<LocaleCubit>(context).toEnglish();
+                        },
+                        child: Card(
+                          elevation: 6,
+                          child: Container(
+                            decoration: locale.isEnLocale
+                                ? BoxDecoration(
+                                    border: Border.all(
+                                        color: kPrimaryColor, width: 2),
+                                    borderRadius: BorderRadius.circular(5))
+                                : null,
+                            padding: const EdgeInsets.all(20),
+                            width: screenSize.width * .32,
+                            height: screenSize.height * .18,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset(
+                                  AssetsData.usFlagImage,
+                                  width: screenSize.width * .16,
+                                  height: screenSize.height * .09,
+                                ),
+                                Text("English"),
+                              ],
                             ),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            Commons.showToast(context,
-                                message: locale.translate('arabic')!);
-                            BlocProvider.of<LocaleCubit>(context).toArabic();
-                          },
-                          child: Card(
-                            elevation: 6,
-                            child: Container(
-                              decoration: !locale.isEnLocale
-                                  ? BoxDecoration(
-                                      border: Border.all(
-                                          color: const Color(0xff7350cb),
-                                          width: 2),
-                                      borderRadius: BorderRadius.circular(5))
-                                  : null,
-                              padding: const EdgeInsets.all(20),
-                              alignment: Alignment.center,
-                              // margin: EdgeInsets.only(right: 10),
-                              width: screenSize.width * .3,
-                              height: screenSize.height * .2,
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Image.asset(
-                                    AssetsData.saudiFlagImage,
-                                  ),
-                                  const Text("عربي")
-                                ],
-                              ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Commons.showToast(context,
+                              message: locale.translate('arabic')!);
+                          BlocProvider.of<LocaleCubit>(context).toArabic();
+                        },
+                        child: Card(
+                          elevation: 6,
+                          child: Container(
+                            decoration: !locale.isEnLocale
+                                ? BoxDecoration(
+                                    border: Border.all(
+                                        color: kPrimaryColor, width: 2),
+                                    borderRadius: BorderRadius.circular(5),
+                                  )
+                                : null,
+                            padding: const EdgeInsets.all(20),
+                            alignment: Alignment.center,
+                            width: screenSize.width * .32,
+                            height: screenSize.height * .18,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset(
+                                  AssetsData.saudiFlagImage,
+                                  width: screenSize.width * .16,
+                                  height: screenSize.height * .09,
+                                ),
+                                const Text(
+                                  "عربي",
+                                )
+                              ],
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    height: screenSize.height * .02,
-                  ),
-                  Text(
-                    "يمكنك تغيير اللغة من قائمة الاعدادات",
-                    style: Theme.of(context).textTheme.displayLarge,
-                  ),
-                  SizedBox(
-                    height: screenSize.height * .01,
-                  ),
-                  const Text("You can change language from settings"),
-                  SizedBox(
-                    height: screenSize.height * .04,
-                  ),
-                  CustomButton(
-                    buttonText: "التالي",
-                    screenWidth: screenSize.width * .51,
-                    buttonTapHandler: () {
-                      // print("NAVIGATE");
-                      //TO DO =>>NAVIGATE TO LOGIN SCREEN
-                      Navigator.pushNamed(context, kIntroScreen);
-                    },
-                  ),
-                ],
-              ),
+                ),
+                SizedBox(
+                  height: screenSize.height * .05,
+                ),
+                Text(
+                  locale.translate("language_text")!,
+                  // style: Theme.of(context).textTheme.displayLarge,
+                ),
+                SizedBox(
+                  height: screenSize.height * .05,
+                ),
+                CustomButton(
+                  buttonText: locale.translate("next")!,
+                  screenWidth: screenSize.width * .5,
+                  buttonTapHandler: () {
+                    // print("NAVIGATE");
+                    //TO DO =>>NAVIGATE TO LOGIN SCREEN
+                    Navigator.pushNamed(context, kIntroScreen);
+                  },
+                ),
+              ],
             ),
           ),
         )
@@ -165,34 +158,3 @@ class _LanguageScreenState extends State<LanguageScreen> {
     );
   }
 }
-
-
-
-
-
-
-//LANGUAGE CHANGE
-// Center(
-//         child: Row(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             GestureDetector(
-//                 onTap: () {
-//                   Commons.showToast(context,
-//                       message: locale.translate('english')!);
-
-//                   BlocProvider.of<LocaleCubit>(context).toEnglish();
-//                 },
-//                 child: Text(locale.translate('english')!)),
-//             Gaps.hGap30,
-//             GestureDetector(
-//                 onTap: () {
-//                   Commons.showToast(context,
-//                       message: locale.translate('arabic')!);
-//                   BlocProvider.of<LocaleCubit>(context).toArabic();
-//                 },
-//                 child: Text(locale.translate('arabic')!))
-//           ],
-//         ),
-//       ),
-    

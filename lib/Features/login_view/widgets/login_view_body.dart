@@ -1,6 +1,8 @@
 import 'package:fingerPrint/Features/login_view/widgets/login_view_form.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import '../../register_view/widgets/clipping_color.dart';
@@ -11,6 +13,7 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return SingleChildScrollView(
       child: Stack(
         children: [
@@ -18,7 +21,7 @@ class LoginViewBody extends StatelessWidget {
             clipper: CurveClipper(),
             child: Container(
               color: const Color(0xff9a80d9),
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: SizeConfig.screenHeight! * 0.5,
             ),
           ),
           Padding(
@@ -27,8 +30,8 @@ class LoginViewBody extends StatelessWidget {
               children: [
                 Center(
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.58,
-                    width: MediaQuery.of(context).size.width * 0.85,
+                    height: SizeConfig.screenHeight! * 0.58,
+                    width: SizeConfig.screenWidth! * 0.85,
                     decoration: FormDecoration(),
                     child: const Padding(
                       padding: EdgeInsets.only(top: 30),
@@ -51,16 +54,16 @@ class LoginViewBody extends StatelessWidget {
                         child: Text(
                           'إنشاء حساب',
                           style: Styles.textStyle20.copyWith(
-                            color: const Color(0xff8f7abd),
-                            decoration: TextDecoration.underline,
-                            decorationThickness: 2,
-                          ),
+                              color: const Color(0xff8f7abd),
+                              decoration: TextDecoration.underline,
+                              decorationThickness: 2,
+                              fontSize: 17.sp),
                         ),
                       ),
                       Text(
                         '! ليس لديك حساب',
-                        style: Styles.textStyle20
-                            .copyWith(color: const Color(0xff8f7abd)),
+                        style: Styles.textStyle20.copyWith(
+                            color: const Color(0xff8f7abd), fontSize: 17.sp),
                       ),
                     ],
                   ),

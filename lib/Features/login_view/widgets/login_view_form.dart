@@ -1,5 +1,6 @@
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import '../../../core/widgets/custom_button.dart';
@@ -17,13 +18,13 @@ class _LoginViewFormState extends State<LoginViewForm> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.only(top: 40),
+        Padding(
+          padding: const EdgeInsets.only(top: 40),
           child: Text(
             'تسجيل الدخول',
             style: TextStyle(
-                color: Color(0xff8f7abd),
-                fontSize: 25,
+                color: const Color(0xff8f7abd),
+                fontSize: 25.sp,
                 fontWeight: FontWeight.w900),
           ),
         ),

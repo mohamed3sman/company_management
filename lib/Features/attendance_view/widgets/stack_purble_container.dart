@@ -1,13 +1,16 @@
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StackPurbleContainer extends StatelessWidget {
   const StackPurbleContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Container(
-      width: 300,
-      height: 230,
+      width: SizeConfig.screenWidth! * 0.7,
+      height: 220.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         gradient: const LinearGradient(

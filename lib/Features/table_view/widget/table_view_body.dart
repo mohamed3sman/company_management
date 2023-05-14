@@ -1,5 +1,6 @@
 import 'package:fingerPrint/Features/table_view/widget/attendance_and_leaving_table.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TableViewBody extends StatefulWidget {
   const TableViewBody({super.key});
@@ -86,6 +87,7 @@ class _TableViewBodyState extends State<TableViewBody> {
                               child: Text(
                                 months[index],
                                 style: TextStyle(
+                                    fontSize: 14.sp,
                                     color: current == index
                                         ? Colors.white
                                         : const Color(0xff989898)),

@@ -15,7 +15,7 @@ class AttendanceAndLeavingTable extends StatelessWidget {
         Table(
           border: TableBorder.all(
               width: 2,
-              color: Color(0xfff1f1f1),
+              color: const Color(0xfff1f1f1),
               borderRadius: BorderRadius.circular(16)),
           columnWidths: const {
             0: FlexColumnWidth(1),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTableDateColumnItem extends StatelessWidget {
   const CustomTableDateColumnItem(
@@ -19,18 +20,18 @@ class CustomTableDateColumnItem extends StatelessWidget {
         child: Column(
           children: [
             Text(dayNumber,
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: 'HacenTunisia',
-                  color: Color(0xcc5647b2),
-                  fontSize: 14,
+                  color: const Color(0xcc5647b2),
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.normal,
                 )),
             Text(dayName,
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: 'HacenTunisia',
-                  color: Color(0xcc5647b2),
-                  fontSize: 14,
+                  color: const Color(0xcc5647b2),
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.normal,
                 )),
