@@ -1,14 +1,11 @@
 import 'package:fingerPrint/Features/attendance_view/attendance_view.dart';
-import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
-import 'package:fingerPrint/Features/permission_view/permission_view.dart';
 import 'package:fingerPrint/Features/vacation_view/vacation_view.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
 import 'dart:collection';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../contact_us/presentation/screens/contact_us_screen.dart';
 import '../../../permission_request/presentation/screens/permission_request_screen.dart';
 part 'bottom_nav_state.dart';
 
