@@ -20,7 +20,9 @@ class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
+        
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20),
           height: MediaQuery.of(context).size.height * .87,

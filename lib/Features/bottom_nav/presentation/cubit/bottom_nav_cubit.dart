@@ -27,15 +27,9 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const RequestStatus(),
     const VacationRequestScreen(),
     const RequestStatus(),
+    const PermissinRequestScreen(),
     const RequestStatus(),
     const RequestStatus(),
-    const VacationRequestScreen(),
-    const PermissinRequestScreen(),
-    const VacationRequestScreen(),
-    const VacationRequestScreen(),
-    const PermissinRequestScreen(),
-    const PermissinRequestScreen(),
-    const PermissinRequestScreen(),
   ];
 
   Widget get selectedBottomNavScreen => bottomNavScreens[bottomNavIndex];
