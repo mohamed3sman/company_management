@@ -20,7 +20,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
     bool seen = (prefs.getBool('seen') ?? false);
     if (seen) {
       // print("seen");
-      Navigator.pushReplacementNamed(context, kLoginView);
+      Navigator.pushReplacementNamed(context, kLoginScreen);
       // Navigator.of(context).pushReplacement(
       //     new MaterialPageRoute(builder: (context) => new Home()));
     } else {

@@ -1,17 +1,15 @@
-import 'package:fingerPrint/Features/attendance_view/attendance_view.dart';
+import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/contact_us/presentation/screens/contact_us_screen.dart';
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
-import 'package:fingerPrint/Features/langauge/presentation/views/language_screen.dart';
-import 'package:fingerPrint/Features/login_view/login_view.dart';
-import 'package:fingerPrint/Features/permission_view/permission_view.dart';
-import 'package:fingerPrint/Features/personal_account_view/personal_account_view.dart';
-import 'package:fingerPrint/Features/register_view/register_view.dart';
-import 'package:fingerPrint/Features/vacation_view/vacation_view.dart';
-import 'package:fingerPrint/Features/vacation_view/widgets/current_tap.dart';
-import 'package:fingerPrint/Features/vacation_view/widgets/rejected_tap.dart';
-import 'package:fingerPrint/Features/vacation_view/widgets/accepted_tap.dart';
-import 'package:fingerPrint/Features/verification_view/verification_view.dart';
+import 'package:fingerPrint/Features/langauge/presentation/screens/language_screen.dart';
+import 'package:fingerPrint/Features/personal_account/personal_account_screen.dart';
+import 'package:fingerPrint/Features/register/register_screen.dart';
+import 'package:fingerPrint/Features/request_status/request_status_screen.dart';
+import 'package:fingerPrint/Features/request_status/widgets/current_tap.dart';
+import 'package:fingerPrint/Features/request_status/widgets/rejected_tap.dart';
+import 'package:fingerPrint/Features/request_status/widgets/accepted_tap.dart';
+import 'package:fingerPrint/Features/verification/verification_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/permission_request/presentation/screens/permission_request_screen.dart';
 import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
@@ -21,8 +19,9 @@ import '../../../Features/Splash/presentation/views/splash_view.dart';
 import '../../../Features/home/presentation/views/book_details_view.dart';
 import '../../../Features/home/presentation/views/home_view.dart';
 import '../../../Features/introduction/presentation/intro_screen.dart';
+import '../../../Features/login/presentation/login_screen.dart';
 import '../../../Features/search/presentation/views/search_view.dart';
-import '../../../Features/table_view/table_view.dart';
+import '../../../Features/table/table_screen.dart';
 import '../constants.dart';
 
 class AppRoutes {
@@ -47,18 +46,18 @@ class AppRoutes {
       case kRegisterScreen:
         return MaterialPageRoute(builder: (_) => const RegisterView());
       case kVerificationScreen:
-        return MaterialPageRoute(builder: (_) => const VerificationView());
+        return MaterialPageRoute(builder: (_) => const VerificationScreen());
       case kTapBarScreen:
-        return MaterialPageRoute(builder: (_) => const VacationView());
+        return MaterialPageRoute(builder: (_) => const RequestStatus());
       case kCurrentTapScreen:
         return MaterialPageRoute(builder: (_) => const CurrentTap());
       case kUpComingTapScreen:
         return MaterialPageRoute(builder: (_) => const AcceptedTap());
       case kRejectedTapScreen:
         return MaterialPageRoute(builder: (_) => const RejectedTap());
-      case kLoginView:
+      case kLoginScreen:
         return MaterialPageRoute(
-          builder: (_) => const LoginView(),
+          builder: (_) => const LoginScreen(),
         );
       case kAttendanceScreen:
         return MaterialPageRoute(
@@ -88,13 +87,13 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const DataTableView(),
         );
-      case kPersonalAccountView:
+      case kPersonalAccountScreen:
         return MaterialPageRoute(
-          builder: (_) => const PersonalAccountView(),
+          builder: (_) => const PersonalAccountScreen(),
         );
-      case kPermissionView:
+      case kRequestStatusScreen:
         return MaterialPageRoute(
-          builder: (_) => const PermissionView(),
+          builder: (_) => const RequestStatus(),
         );
 
       default:
