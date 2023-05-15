@@ -95,7 +95,7 @@ class _IntroScreenState extends State<IntroScreen> {
       doneStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       nextStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       onDone: () {
-        Navigator.pushReplacementNamed(context, kLoginView);
+        Navigator.pushReplacementNamed(context, kLoginScreen);
       },
 
       showDoneButton: true,

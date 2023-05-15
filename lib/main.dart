@@ -14,5 +14,5 @@ void main() async {
   await di.init();
   await Hive.openBox<BookEntity>(kFeaturedBox);
   await Hive.openBox<BookEntity>(kNewestBox);
-  runApp(const fingerPrint());
+  runApp(const fingerPrint()); 
 }

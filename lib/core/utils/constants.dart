@@ -11,7 +11,6 @@ const String kBookDetailsScreen = '/bookDetailsScreen';
 const String kSearchScreen = '/searchScreen';
 const String kIntroScreen = '/introScreen';
 const String kBookLanguageScreen = '/bookLanguageScreen';
-// const String kLoginScreenForm = "/loginScreenForm";
 const String kRegisterScreen = "/registerscreen";
 const String kVerificationScreen = "/verificationscreen";
 const String kTapBarScreen = "/tapbarscreen";
@@ -21,17 +20,17 @@ const String kCurrentTapScreen = "/currenttapscreen";
 const String kAttendanceScreen = "/attendancescreen";
 const String kDataTableScreen = "/datatablescreen";
 const String KBottomNav = '/KBottomNav';
-const String kPermissionView = '/permissionview';
+const String kRequestStatusScreen = '/kRequestStatusScreen';
 
 const String kLanguageScreen = '/bookLanguageScreen';
-const String kLoginView = "/kLoginView";
+const String kLoginScreen = "/kLoginScreen";
 const String kBottomNav = '/KBottomNav';
 const String kMyOrdersScreen = '/kMyOrdersScreen';
 const String kContactUsScreen = '/kContactUsScreen';
 const String kEditProfileScreen = '/kEditProfileScreen';
 const String kVacationRquestScreen = '/kVacationRquestScreen';
 const String kPermissionRquestScreen = '/kPermissionRquestScreen';
-const String kPersonalAccountView = '/KPersonalAccountView';
+const String kPersonalAccountScreen = '/kPersonalAccountScreen';
 
 // saved sharedprefernces
 const String locale = 'locale';
