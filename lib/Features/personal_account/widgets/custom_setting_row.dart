@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -5,8 +6,9 @@ import '../../../core/utils/styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomSettingRow extends StatelessWidget {
-  const CustomSettingRow(
+   CustomSettingRow(
       {super.key,
+      this.deleteAccountColor,
       required this.path,
       required this.text,
       required this.function});
@@ -14,10 +16,11 @@ class CustomSettingRow extends StatelessWidget {
   final String text;
   final String path;
   final Function function;
+  late int? deleteAccountColor;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 2),
+      padding: const EdgeInsets.only(top: 10),
       child: Column(
         children: [
           GestureDetector(
@@ -25,21 +28,22 @@ class CustomSettingRow extends StatelessWidget {
               function();
             },
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                Image.asset(path),
+               Gaps.hGap20,
                 Text(
                   text,
-                  style: Styles.textStyle18.copyWith(
-                      color: Colors.black.withOpacity(0.6), fontSize: 16.sp),
+                  style: TextStyle(color:
+                  deleteAccountColor==null?
+                   Color(0xff707070):Color(deleteAccountColor!),fontSize: 20),
+                  // style: Styles.textStyle18.copyWith(
+                  //     color: Colors.black.withOpacity(0.6), fontSize: 16.sp),
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
-                SvgPicture.asset(path),
               ],
             ),
           ),
-          const Divider(),
+          const Divider(color: Color(0xff707070),),
         ],
       ),
     );
