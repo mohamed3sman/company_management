@@ -4,9 +4,6 @@ import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../core/utils/styles.dart';
 import '../../register/widgets/clipping_color.dart';
 
 class LoginScreenBody extends StatelessWidget {
@@ -63,7 +60,7 @@ class LoginScreenBody extends StatelessWidget {
                           children: [
                             Text(
                               locale.translate('create_account')!,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Color(0xff3816a2),
                                   decoration: TextDecoration.underline),
                             ),

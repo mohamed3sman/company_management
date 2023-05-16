@@ -1,6 +1,7 @@
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/locale/app_localizations.dart';
 import 'details_snack_bar_item.dart';
@@ -19,8 +20,8 @@ class DetailsSnackBar extends StatelessWidget {
     SizeConfig().init(context);
     return Center(
       child: Container(
-        width: 290.w,
-        height: 80.h,
+        width: 260.w,
+        height: 65.h,
         decoration: BoxDecoration(
           color: const Color(0xffffffff),
           borderRadius: BorderRadius.circular(25),
@@ -39,19 +40,19 @@ class DetailsSnackBar extends StatelessWidget {
           child: Row(
             children: [
               DetailsSnackBarItem(
-                icon: Icons.access_time_outlined,
+                icon: FontAwesomeIcons.clock,
                 timeText: '8 ${locale.translate("hours")!}',
                 actionText: locale.translate("work_hours")!,
               ),
               DetailsSnackBarItem(
-                icon: Icons.keyboard_double_arrow_left_rounded,
-                timeText: '05:00 ${locale.translate("pm")!}',
-                actionText: locale.translate("leaving_register")!,
-              ),
-              DetailsSnackBarItem(
-                icon: Icons.exit_to_app_rounded,
+                icon: FontAwesomeIcons.arrowsToCircle,
                 timeText: '09:00 ${locale.translate("am")!}',
                 actionText: locale.translate("attendance_register")!,
+              ),
+              DetailsSnackBarItem(
+                icon: FontAwesomeIcons.clock,
+                timeText: '05:00 ${locale.translate("pm")!}',
+                actionText: locale.translate("leaving_register")!,
               ),
             ],
           ),

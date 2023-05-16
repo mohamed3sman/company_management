@@ -1,17 +1,26 @@
+import 'package:fingerPrint/Features/app_home/presentation/widgets/app_home_screen_app_bar.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/custom_grid_container.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/details_snack_bar.dart';
+import 'package:fingerPrint/Features/app_home/presentation/widgets/home_app_toggle_button.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_day_text.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_fingerprint_logo.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_purble_container.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_time_text.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/locale/app_localizations.dart';
 
 // ignore: must_be_immutable
-class HomeScreenBody extends StatelessWidget {
+class HomeScreenBody extends StatefulWidget {
   HomeScreenBody({super.key});
+
+  @override
+  State<HomeScreenBody> createState() => _HomeScreenBodyState();
+}
+
+class _HomeScreenBodyState extends State<HomeScreenBody> {
   late AppLocalizations locale;
 
   @override
@@ -30,19 +39,24 @@ class HomeScreenBody extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      padding: EdgeInsets.only(left: 10.w, top: 10.h),
+                      child: const HomeScreenAppBar(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 25.h),
                       child: Stack(
                         children: [
                           const Center(child: StackPurbleContainer()),
                           Center(
-                            child: Column(
-                              // crossAxisAlignment: CrossAxisAlignment.center,
-                              // mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const StackFingerPrintLogo(),
-                                StackDayText(),
-                                StackTimeText()
-                              ],
+                            child: Padding(
+                              padding: EdgeInsets.only(top: 20.h),
+                              child: Column(
+                                children: [
+                                  const StackFingerPrintLogo(),
+                                  StackDayText(),
+                                  StackTimeText()
+                                ],
+                              ),
                             ),
                           ),
                         ],
@@ -60,41 +74,51 @@ class HomeScreenBody extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          CustomGridContainer(
-                            imagePath: 'assets/images/permission.png',
-                            orderText: locale.translate("order_permission")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/permission.png',
+                              orderText: locale.translate("order_permission")!,
+                            ),
                           ),
-                          CustomGridContainer(
-                            imagePath: 'assets/images/depression.png',
-                            orderText: locale.translate("order_cache")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/depression.png',
+                              orderText: locale.translate("order_cache")!,
+                            ),
                           ),
-                          CustomGridContainer(
-                            imagePath: 'assets/images/holiday.png',
-                            orderText: locale.translate("order_vacation")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/holiday.png',
+                              orderText: locale.translate("order_vacation")!,
+                            ),
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: 8.h,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          CustomGridContainer(
-                            imagePath:
-                                'assets/images/confirmed_attendance_bro.png',
-                            orderText:
-                                locale.translate("attendance_and_leaving")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath:
+                                  'assets/images/confirmed_attendance_bro.png',
+                              orderText:
+                                  locale.translate("attendance_and_leaving")!,
+                            ),
                           ),
-                          CustomGridContainer(
-                            imagePath: 'assets/images/credit_card.png',
-                            orderText: locale.translate("salaries")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/credit_card.png',
+                              orderText: locale.translate("salaries")!,
+                            ),
                           ),
-                          CustomGridContainer(
-                            imagePath: 'assets/images/bank_account.png',
-                            orderText: locale.translate("bank_account")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/bank_account.png',
+                              orderText: locale.translate("bank_account")!,
+                            ),
                           ),
                         ],
                       ),
@@ -105,7 +129,15 @@ class HomeScreenBody extends StatelessWidget {
             ),
           ],
         ),
-        DetailsSnackBar()
+        DetailsSnackBar(),
+        Padding(
+          padding:
+              EdgeInsets.only(left: SizeConfig.screenWidth! * 0.19, top: 10.h),
+          child: Padding(
+            padding: EdgeInsets.only(left: 30.w, top: 65.h),
+            child: const HomeAppToggleButton(),
+          ),
+        ),
       ],
     );
   }

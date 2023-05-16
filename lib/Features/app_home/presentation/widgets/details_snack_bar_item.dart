@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DetailsSnackBarItem extends StatelessWidget {
   const DetailsSnackBarItem({
@@ -16,11 +17,12 @@ class DetailsSnackBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
             icon,
             color: Colors.deepPurple,
+            size: 22,
           ),
           FittedBox(
             fit: BoxFit.fill,
@@ -38,7 +40,7 @@ class DetailsSnackBarItem extends StatelessWidget {
             child: Text(actionText,
                 style: TextStyle(
                   //  fontFamily: 'HacenTunisia',
-                  color: const Color(0xffdbdada),
+                  color: Colors.grey,
                   fontSize: 7.sp,
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
