@@ -1,5 +1,7 @@
+import 'package:fingerPrint/Features/app_home/presentation/widgets/app_home_screen_app_bar.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/custom_grid_container.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/details_snack_bar.dart';
+import 'package:fingerPrint/Features/app_home/presentation/widgets/home_app_toggle_button.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_day_text.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_fingerprint_logo.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_purble_container.dart';
@@ -7,8 +9,6 @@ import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_time_te
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:toggle_switch/toggle_switch.dart';
 
 import '../../../../core/locale/app_localizations.dart';
 
@@ -39,13 +39,17 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 25.h),
+                      padding: EdgeInsets.only(left: 10.w, top: 10.h),
+                      child: const HomeScreenAppBar(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 25.h),
                       child: Stack(
                         children: [
                           const Center(child: StackPurbleContainer()),
                           Center(
                             child: Padding(
-                              padding: EdgeInsets.only(top: 35.h),
+                              padding: EdgeInsets.only(top: 20.h),
                               child: Column(
                                 children: [
                                   const StackFingerPrintLogo(),
@@ -130,25 +134,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
           padding:
               EdgeInsets.only(left: SizeConfig.screenWidth! * 0.19, top: 10.h),
           child: Padding(
-            padding: EdgeInsets.only(left: 30.w),
-            child: ToggleSwitch(
-              minWidth: 90.0,
-              cornerRadius: 20.0,
-              activeBgColors: [
-                [Colors.deepPurple],
-                [Colors.deepPurple]
-              ],
-              activeFgColor: Colors.white,
-              inactiveBgColor: Colors.white,
-              inactiveFgColor: Colors.deepPurple,
-              initialLabelIndex: 1,
-              totalSwitches: 2,
-              labels: ['إنصراف', 'حضور'],
-              radiusStyle: true,
-              onToggle: (index) {
-                print('switched to: $index');
-              },
-            ),
+            padding: EdgeInsets.only(left: 30.w, top: 65.h),
+            child: const HomeAppToggleButton(),
           ),
         ),
       ],

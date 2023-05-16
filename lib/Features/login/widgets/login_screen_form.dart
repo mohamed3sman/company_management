@@ -2,8 +2,6 @@ import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../core/utils/styles.dart';
 import '../../../core/widgets/custom_button.dart';
 import '../../register/widgets/custom_text_field.dart';
 
@@ -63,12 +61,12 @@ class _LoginViewFormState extends State<LoginViewForm> {
             child: TextButton(
               child: Text(
                 locale.translate('skip')!,
-                style:const TextStyle(
+                style: const TextStyle(
                   color: Color(0xff7350cb),
                 ),
               ),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, kBottomNav);
+                Navigator.pushReplacementNamed(context, kAppHomeScreen);
               },
             ),
           ),

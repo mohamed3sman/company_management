@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/utils/styles.dart';
-
 class PersonalAccountContainer extends StatelessWidget {
   const PersonalAccountContainer({super.key, required this.text});
 
@@ -24,7 +22,7 @@ class PersonalAccountContainer extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 7),
                 child: Text(
                   text,
-                  style: TextStyle(color: Color(0xff828282)),
+                  style: const TextStyle(color: Color(0xff828282)),
                   // style: Styles.textStyle18.copyWith(
                   //   color: Colors.black,
                   //   fontSize: 12.sp,

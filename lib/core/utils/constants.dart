@@ -21,6 +21,7 @@ const String kAttendanceScreen = "/attendancescreen";
 const String kDataTableScreen = "/datatablescreen";
 const String KBottomNav = '/KBottomNav';
 const String kRequestStatusScreen = '/kRequestStatusScreen';
+const String kAppHomeScreen = '/kapphomescreen';
 
 const String kLanguageScreen = '/bookLanguageScreen';
 const String kLoginScreen = "/kLoginScreen";

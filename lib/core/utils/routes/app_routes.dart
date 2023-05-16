@@ -95,6 +95,10 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const RequestStatus(),
         );
+      case kAppHomeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
+        );
 
       default:
         return null;
