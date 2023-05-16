@@ -66,7 +66,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
                 ),
               ),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, kAppHomeScreen);
+                Navigator.pushReplacementNamed(context, kBottomNav);
               },
             ),
           ),
