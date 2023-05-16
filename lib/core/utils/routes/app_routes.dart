@@ -96,18 +96,16 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const RequestStatus(),
         );
-<<<<<<< HEAD
       case kDeptRequestScreen:
         return MaterialPageRoute(
           builder: (_) => const DeptRequestScreen(),
         );
-=======
+
       case kAppHomeScreen:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
         );
 
->>>>>>> c04fbc3323cefd518ffb8a2227db40651027f7ed
       default:
         return null;
     }
