@@ -10,7 +10,7 @@
   "refresh_screen": "تحديث الصفحة",
   "retry": "إعادة المحاولة",
   "welcome": "أهلًا بك...",
-  "login": "تسجيل دخول",
+  "login": "تسجيل الدخول",
   "user_name": " اسم المستخدم",
   "password": " كلمة المرور",
   "forgot_password": " هل نسيت كلمة المرور ؟ ",
@@ -96,7 +96,7 @@
   "attachments": "مرفقات",
   "Choose_language": "اختر اللغة",
   "please_enter_the_verification_code_sent_to_me": "من فضلك أدخل رمز التحقق المرسل إلي",
-  "you_do_not_have_an_account": "ليس لديك حساب",
+  "you_do_not_have_an_account": "ليس لديك حساب ؟",
   "permission_type": "نوع الإذن",
   "period": "المدة",
   "start_permission": "بداية الإذن",
@@ -113,7 +113,7 @@
   "notifications": "الإشعارات",
   "The_start_date_of_the_leave": "تاريخ بداية الإجازة",
   "personal_account_view": "الملف الشخصي",
-  "you_do_not_have_an_account" :"ليس لديك حساب",
+  "you_do_not_have_an_account" : "ليس لديك حساب ؟",
   "permission_type":"نوع الإذن",
   "period":"المدة",
   "start_permission":"بداية الإذن",
@@ -134,7 +134,7 @@
   "refresh_screen": "تحديث الصفحة",
   "retry": "إعادة المحاولة",
   "welcome": "أهلًا بك...",
-  "login": "تسجيل دخول",
+  "login": "تسجيل الدخول",
   "user_name": " اسم المستخدم",
   "password": " كلمة المرور",
   "forgot_password": " هل نسيت كلمة المرور ؟ ",
@@ -211,7 +211,7 @@
   "attachments": "مرفقات",
   "Choose_language": "اختر اللغة",
   "please_enter_the_verification_code_sent_to_me": "من فضلك أدخل رمز التحقق المرسل إلي",
-  "you_do_not_have_an_account" :"ليس لديك حساب",
+  "you_do_not_have_an_account" : "ليس لديك حساب ؟",
   "permission_type":"نوع الإذن",
   "period":"المدة",
   "start_permission":"بداية الإذن",
@@ -226,7 +226,8 @@
   "personal_data":"البيانات الشخصية",
   "notifications":"ملاحظات",
   "Period":"المدة",
-  "permission_request":"طلب إذن"
+  "permission_request":"طلب إذن",
+  "create_account":"إنشاء حساب"
 
 
 

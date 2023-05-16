@@ -9,8 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/utils/styles.dart';
 import '../../register/widgets/clipping_color.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class LoginScreenBody extends StatelessWidget {
+  const LoginScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +19,7 @@ class LoginViewBody extends StatelessWidget {
     SizeConfig().init(context);
     return SingleChildScrollView(
       child: Stack(
+        clipBehavior: Clip.none,
         children: [
           ClipPath(
             clipper: CurveClipper(),
@@ -30,42 +31,44 @@ class LoginViewBody extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 240),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Center(
-                  child: CustomElevatedContainer(
-                    containerChild: const Padding(
-                      padding: EdgeInsets.only(top: 30),
-                      child: LoginViewForm(),
-                    ),
-                    containerHeight: SizeConfig.screenHeight! * 0.58,
-                    containerWidth: SizeConfig.screenWidth! * 0.85,
+                CustomElevatedContainer(
+                  containerChild: const Padding(
+                    padding: EdgeInsets.only(top: 30),
+                    child: LoginViewForm(),
                   ),
+                  containerHeight: SizeConfig.screenHeight! * 0.6,
+                  containerWidth: SizeConfig.screenWidth! * 0.85,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 40),
+                  padding: const EdgeInsets.only(right: 40, left: 40),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushReplacementNamed(context, kRegisterScreen);
-                        },
-                        child: Text(
-                          locale.translate('login')!,
-                          style: Styles.textStyle20.copyWith(
-                              color: const Color(0xff8f7abd),
-                              decoration: TextDecoration.underline,
-                              decorationThickness: 2,
-                              fontSize: 17.sp),
-                        ),
-                      ),
                       Text(
                         locale.translate('you_do_not_have_an_account')!,
-                        style: Styles.textStyle20.copyWith(
-                            color: const Color(0xff8f7abd), fontSize: 17.sp),
+                        style: TextStyle(color: Color(0xff7350cb)),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                              context, kRegisterScreen);
+                        },
+                        child: Column(
+                          children: [
+                            Text(
+                              locale.translate('create_account')!,
+                              style: TextStyle(
+                                  color: Color(0xff3816a2),
+                                  decoration: TextDecoration.underline),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),

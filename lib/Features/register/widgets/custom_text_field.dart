@@ -41,9 +41,9 @@ class CustomTextField extends StatelessWidget {
                     hintTextField,
                     style: TextStyle(
                         color: const Color(0xff9d9d9e),
-                        fontFamily: "Amiri",
+                       // fontFamily: "Amiri",
                         fontWeight: FontWeight.w600,
-                        fontSize: 18.sp),
+                        fontSize: 16.sp),
                   ),
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,

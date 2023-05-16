@@ -51,7 +51,7 @@ class RegisterViewBody extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return const LoginView();
+                            return const LoginScreen();
                           }));
                         },
                         child: Text(

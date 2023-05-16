@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../contact_us/presentation/screens/contact_us_screen.dart';
 import '../../../permission_request/presentation/screens/permission_request_screen.dart';
+import '../../../personal_account/personal_account_screen.dart';
 part 'bottom_nav_state.dart';
 
 class BottomNavCubit extends Cubit<BottomNavState> {
@@ -18,7 +19,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
   bool drawerIsOpen = false;
 
   List<Widget> bottomNavScreens = [
-    const HomeScreen(),
+    const PersonalAccountScreen(),
     const HomeScreen(),
     const HomeScreen(),
     const MyOrdersScreen(),
