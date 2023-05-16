@@ -15,13 +15,13 @@ class CustomElevatedContainer extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: const [
           BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0.0, 1.0), //(x,y)
+            color: Color(0xFFD6D6D6),
+            offset: Offset(0.0, 2.0), //(x,y)
             blurRadius: 6.0,
           ),
         ],
         color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(12),
       ),
       width: containerWidth,
       height: containerHeight,

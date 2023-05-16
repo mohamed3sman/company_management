@@ -11,6 +11,7 @@ class PersonalAccountScreen extends StatelessWidget {
         late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         centerTitle: true,

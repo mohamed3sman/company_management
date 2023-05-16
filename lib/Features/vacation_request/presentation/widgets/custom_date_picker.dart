@@ -31,8 +31,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
       },
       child: Container(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-        // alignment: Alignment.centerRight,
-        width: MediaQuery.of(context).size.width * .87,
+        width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * .07,
         child: Card(
           elevation: 4,

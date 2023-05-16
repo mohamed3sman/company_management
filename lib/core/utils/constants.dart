@@ -31,6 +31,8 @@ const String kEditProfileScreen = '/kEditProfileScreen';
 const String kVacationRquestScreen = '/kVacationRquestScreen';
 const String kPermissionRquestScreen = '/kPermissionRquestScreen';
 const String kPersonalAccountScreen = '/kPersonalAccountScreen';
+const String kDeptRequestScreen = '/kDeptRequestScreen';
+
 
 // saved sharedprefernces
 const String locale = 'locale';

@@ -250,5 +250,7 @@
 "attachments":"Attachments",
 "Period":"Period",
 "from":"From",
-"create_account":"Create account"
+"create_account":"Create account",
+"reason":"Reason",
+"notes":"Notes"
 }

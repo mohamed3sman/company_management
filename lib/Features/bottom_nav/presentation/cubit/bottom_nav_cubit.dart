@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
+import 'package:fingerPrint/Features/dept_request/presentation/screens/dept_request_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/screens/language_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/request_status/request_status_screen.dart';
@@ -25,7 +26,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const MyOrdersScreen(),
     const HomeScreen(),
     //
-    const RequestStatus(),
+    const DeptRequestScreen(),
     const VacationRequestScreen(),
     const RequestStatus(),
     const PermissinRequestScreen(),

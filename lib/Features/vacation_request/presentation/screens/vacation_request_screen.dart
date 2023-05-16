@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/locale/app_localizations.dart';
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
+import '../../../../core/widgets/orders_text_field.dart';
 import '../widgets/custom_date_picker.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -46,8 +47,9 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                 CustomOrdersRawIcon(
                     rawText: locale.translate('vacation_type')!,
                     iconImagePath: "assets/icons/vacation_icon.png"),
-                CustomDropDownList(hintText:locale.translate('vacation_type')!),
-                 CustomOrdersRawIcon(
+                CustomDropDownList(
+                    hintText: locale.translate('vacation_type')!),
+                CustomOrdersRawIcon(
                     rawText: locale.translate('The_start_date_of_the_leave')!,
                     iconImagePath: "assets/icons/calender_icon.png"),
                 CustomDatePicker(
@@ -97,26 +99,10 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                   ),
                 ),
                 CustomOrdersRawIcon(
-                  rawText: locale.translate('notifications')!,
+                  rawText: locale.translate('notes')!,
                   iconImagePath: "assets/icons/notes_icon.png",
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * .1,
-                  width: MediaQuery.of(context).size.width * .87,
-                  child: const Card(
-                    elevation: 6,
-                    child: TextField(
-                      maxLines: 3,
-                      decoration: InputDecoration(
-                        focusedBorder: InputBorder.none,
-                        enabledBorder: InputBorder.none,
-                        disabledBorder: InputBorder.none,
-                        errorBorder: InputBorder.none,
-                        focusedErrorBorder: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                ),
+                OrdersTextField(height:MediaQuery.of(context).size.height * .1 ,hintText: ""),
                 Gaps.vGap15,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -162,3 +148,4 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
     } else {}
   }
 }
+
