@@ -33,10 +33,10 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              const CustomTextField(hintTextField: 'الاسم'),
-              const CustomTextField(hintTextField: 'رقم الجوال'),
-              const CustomTextField(hintTextField: 'رقم الهوية'),
-              const CustomTextField(hintTextField: 'البريد الالكتروني'),
+               CustomTextField(hintTextField: 'الاسم'),
+               CustomTextField(hintTextField: 'رقم الجوال'),
+               CustomTextField(hintTextField: 'رقم الهوية'),
+               CustomTextField(hintTextField: 'البريد الالكتروني'),
               Text(
                 'النوع',
                 style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w700),

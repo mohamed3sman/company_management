@@ -1,3 +1,4 @@
+import 'package:fingerPrint/Features/messeges/presentation/screens/new_messege_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
 import 'package:fingerPrint/Features/request_status/request_status_screen.dart';
@@ -19,18 +20,21 @@ class BottomNavCubit extends Cubit<BottomNavState> {
   bool drawerIsOpen = false;
 
   List<Widget> bottomNavScreens = [
+    //FIVE BOTTOM NAV ITEMS
     const PersonalAccountScreen(),
     const MessegesScreen(),
     const HomeScreen(),
     const MyOrdersScreen(),
     const HomeScreen(),
-    //
+    //SIX DRID ITEMS
     const DeptRequestScreen(),
     const VacationRequestScreen(),
     const RequestStatus(),
     const PermissinRequestScreen(),
     const RequestStatus(),
     const RequestStatus(),
+    //NEW MESSEGE INDEX
+    const NewMessegeScreen(),
   ];
 
   Widget get selectedBottomNavScreen => bottomNavScreens[bottomNavIndex];

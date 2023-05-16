@@ -5,7 +5,9 @@ class CustomTextField extends StatelessWidget {
   final String hintTextField;
   final bool obscureText;
   final TextInputType textInputType;
-  const CustomTextField({
+  int? fieldLines;
+  CustomTextField({
+    this.fieldLines,
     Key? key,
     required this.hintTextField,
     this.textInputType = TextInputType.text,
@@ -15,14 +17,14 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(top: 10, bottom: 10, left: 20),
+        padding: const EdgeInsets.only(top: 10, bottom: 10),
         child: Material(
-          shadowColor: Colors.red.withOpacity(0.5),
+          // shadowColor: Colors.red.withOpacity(0.5),
           child: Container(
             decoration: BoxDecoration(
-              border: Border.all(color: const Color(0xff707070)),
+              border: Border.all(color: const Color(0xffd8d5d5)),
               color: const Color(0xffffffff),
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(12),
             ),
             padding: const EdgeInsets.all(6),
             child: TextFormField(
@@ -35,15 +37,16 @@ class CustomTextField extends StatelessWidget {
                 },
                 obscureText: obscureText,
                 keyboardType: textInputType,
-                maxLines: 1,
+                maxLines: fieldLines ?? 1,
                 decoration: InputDecoration(
                   label: Text(
                     hintTextField,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                         color: const Color(0xff9d9d9e),
-                       // fontFamily: "Amiri",
+                        // fontFamily: "Amiri",
                         fontWeight: FontWeight.w600,
-                        fontSize: 16.sp),
+                        fontSize: 12.sp),
                   ),
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,

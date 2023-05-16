@@ -1,9 +1,9 @@
-
-
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import '../widgets/messeges_list_item.dart';
 
 class MessegesScreen extends StatelessWidget {
@@ -21,7 +21,7 @@ class MessegesScreen extends StatelessWidget {
           //  crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             SizedBox(
-              height: screenSize.height*.83,
+              height: screenSize.height * .84,
               child: ListView.builder(
                 physics: BouncingScrollPhysics(),
                 itemCount: 17,
@@ -35,11 +35,16 @@ class MessegesScreen extends StatelessWidget {
               shape: StadiumBorder(),
               child: CustomButton(
                   screenWidth: screenSize.width * .37,
-                  buttonTapHandler: () {},
+                  buttonTapHandler: () {
+BlocProvider.of<BottomNavCubit>(context)
+            .navigationQueue
+            .addLast(BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
+        BlocProvider.of<BottomNavCubit>(context)
+            .updateBottomNavIndex(11);
+                    //IMPLEMENT NAVIGATION TO A NEW MESSEGE
+                  },
                   buttonText: "رسالة جديدة"),
             )
-
-           
           ],
         ),
       ),

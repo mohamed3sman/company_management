@@ -20,8 +20,9 @@ import '../../../Features/Splash/presentation/views/splash_view.dart';
 import '../../../Features/home/presentation/views/book_details_view.dart';
 import '../../../Features/home/presentation/views/home_view.dart';
 import '../../../Features/introduction/presentation/intro_screen.dart';
-import '../../../Features/login/login_screen.dart';
+import '../../../Features/login/presentation/login_screen.dart';
 import '../../../Features/messeges/presentation/screens/messeges_screen.dart';
+import '../../../Features/messeges/presentation/screens/new_messege_screen.dart';
 import '../../../Features/search/presentation/views/search_view.dart';
 import '../../../Features/table/table_screen.dart';
 import '../constants.dart';
@@ -110,6 +111,10 @@ class AppRoutes {
               case kMessegesScreen:
         return MaterialPageRoute(
           builder: (_) => const MessegesScreen(),
+        );
+               case kNewMessegeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const NewMessegeScreen(),
         );
 
       default:
