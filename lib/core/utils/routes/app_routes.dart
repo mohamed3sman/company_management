@@ -96,7 +96,10 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const RequestStatus(),
         );
+<<<<<<< HEAD
 
+=======
+>>>>>>> c8ba494c6f67cd2729c6a1252bba1e1b746cf366
       case kDeptRequestScreen:
         return MaterialPageRoute(
           builder: (_) => const DeptRequestScreen(),
