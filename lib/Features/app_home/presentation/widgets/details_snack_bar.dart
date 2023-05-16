@@ -19,8 +19,8 @@ class DetailsSnackBar extends StatelessWidget {
     SizeConfig().init(context);
     return Center(
       child: Container(
-        width: 290.w,
-        height: 80.h,
+        width: 260.w,
+        height: 65.h,
         decoration: BoxDecoration(
           color: const Color(0xffffffff),
           borderRadius: BorderRadius.circular(25),

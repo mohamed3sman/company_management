@@ -16,7 +16,7 @@ class DetailsSnackBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
             icon,
@@ -28,7 +28,7 @@ class DetailsSnackBarItem extends StatelessWidget {
                 style: TextStyle(
                   //fontFamily: 'HacenTunisia',
                   color: const Color(0xff636262),
-                  fontSize: 12.sp,
+                  fontSize: 11.sp,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.normal,
                 )),
@@ -39,7 +39,7 @@ class DetailsSnackBarItem extends StatelessWidget {
                 style: TextStyle(
                   //  fontFamily: 'HacenTunisia',
                   color: const Color(0xffdbdada),
-                  fontSize: 7.sp,
+                  fontSize: 6.sp,
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
                 )),

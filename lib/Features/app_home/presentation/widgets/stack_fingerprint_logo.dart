@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/assets.dart';
 
@@ -9,7 +10,7 @@ class StackFingerPrintLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.asset(
       AssetsData.fingerPrint,
-      width: 80,
+      width: 90.w,
     );
   }
 }

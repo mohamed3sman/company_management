@@ -9,7 +9,7 @@ class StackPurbleContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Container(
-      width: SizeConfig.screenWidth! * 0.7,
+      width: SizeConfig.screenWidth! * 0.8,
       height: 220.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),

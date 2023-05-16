@@ -6,12 +6,21 @@ import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_purble_
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_time_text.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 import '../../../../core/locale/app_localizations.dart';
 
 // ignore: must_be_immutable
-class HomeScreenBody extends StatelessWidget {
+class HomeScreenBody extends StatefulWidget {
   HomeScreenBody({super.key});
+
+  @override
+  State<HomeScreenBody> createState() => _HomeScreenBodyState();
+}
+
+class _HomeScreenBodyState extends State<HomeScreenBody> {
   late AppLocalizations locale;
 
   @override
@@ -30,19 +39,20 @@ class HomeScreenBody extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      padding: EdgeInsets.symmetric(vertical: 25.h),
                       child: Stack(
                         children: [
                           const Center(child: StackPurbleContainer()),
                           Center(
-                            child: Column(
-                              // crossAxisAlignment: CrossAxisAlignment.center,
-                              // mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const StackFingerPrintLogo(),
-                                StackDayText(),
-                                StackTimeText()
-                              ],
+                            child: Padding(
+                              padding: EdgeInsets.only(top: 35.h),
+                              child: Column(
+                                children: [
+                                  const StackFingerPrintLogo(),
+                                  StackDayText(),
+                                  StackTimeText()
+                                ],
+                              ),
                             ),
                           ),
                         ],
@@ -60,41 +70,51 @@ class HomeScreenBody extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          CustomGridContainer(
-                            imagePath: 'assets/images/permission.png',
-                            orderText: locale.translate("order_permission")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/permission.png',
+                              orderText: locale.translate("order_permission")!,
+                            ),
                           ),
-                          CustomGridContainer(
-                            imagePath: 'assets/images/depression.png',
-                            orderText: locale.translate("order_cache")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/depression.png',
+                              orderText: locale.translate("order_cache")!,
+                            ),
                           ),
-                          CustomGridContainer(
-                            imagePath: 'assets/images/holiday.png',
-                            orderText: locale.translate("order_vacation")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/holiday.png',
+                              orderText: locale.translate("order_vacation")!,
+                            ),
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: 8.h,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          CustomGridContainer(
-                            imagePath:
-                                'assets/images/confirmed_attendance_bro.png',
-                            orderText:
-                                locale.translate("attendance_and_leaving")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath:
+                                  'assets/images/confirmed_attendance_bro.png',
+                              orderText:
+                                  locale.translate("attendance_and_leaving")!,
+                            ),
                           ),
-                          CustomGridContainer(
-                            imagePath: 'assets/images/credit_card.png',
-                            orderText: locale.translate("salaries")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/credit_card.png',
+                              orderText: locale.translate("salaries")!,
+                            ),
                           ),
-                          CustomGridContainer(
-                            imagePath: 'assets/images/bank_account.png',
-                            orderText: locale.translate("bank_account")!,
+                          Expanded(
+                            child: CustomGridContainer(
+                              imagePath: 'assets/images/bank_account.png',
+                              orderText: locale.translate("bank_account")!,
+                            ),
                           ),
                         ],
                       ),
@@ -105,7 +125,32 @@ class HomeScreenBody extends StatelessWidget {
             ),
           ],
         ),
-        DetailsSnackBar()
+        DetailsSnackBar(),
+        Padding(
+          padding:
+              EdgeInsets.only(left: SizeConfig.screenWidth! * 0.19, top: 10.h),
+          child: Padding(
+            padding: EdgeInsets.only(left: 30.w),
+            child: ToggleSwitch(
+              minWidth: 90.0,
+              cornerRadius: 20.0,
+              activeBgColors: [
+                [Colors.deepPurple],
+                [Colors.deepPurple]
+              ],
+              activeFgColor: Colors.white,
+              inactiveBgColor: Colors.white,
+              inactiveFgColor: Colors.deepPurple,
+              initialLabelIndex: 1,
+              totalSwitches: 2,
+              labels: ['إنصراف', 'حضور'],
+              radiusStyle: true,
+              onToggle: (index) {
+                print('switched to: $index');
+              },
+            ),
+          ),
+        ),
       ],
     );
   }

@@ -19,7 +19,7 @@ class StackDayText extends StatelessWidget {
         child: Text("${locale.translate("sunday")!} :2023/5/7",
             style: TextStyle(
               color: const Color(0xffffffff),
-              fontSize: 18.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w700,
               fontStyle: FontStyle.normal,
             )),
