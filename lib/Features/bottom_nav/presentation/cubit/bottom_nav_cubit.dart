@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../permission_request/presentation/screens/permission_request_screen.dart';
+import '../../../personal_account/personal_account_screen.dart';
 part 'bottom_nav_state.dart';
 
 class BottomNavCubit extends Cubit<BottomNavState> {
@@ -16,7 +17,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
   bool drawerIsOpen = false;
 
   List<Widget> bottomNavScreens = [
-    const HomeScreen(),
+    const PersonalAccountScreen(),
     const HomeScreen(),
     const HomeScreen(),
     const MyOrdersScreen(),
@@ -25,15 +26,9 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const RequestStatus(),
     const VacationRequestScreen(),
     const RequestStatus(),
+    const PermissinRequestScreen(),
     const RequestStatus(),
     const RequestStatus(),
-    const VacationRequestScreen(),
-    const PermissinRequestScreen(),
-    const VacationRequestScreen(),
-    const VacationRequestScreen(),
-    const PermissinRequestScreen(),
-    const PermissinRequestScreen(),
-    const PermissinRequestScreen(),
   ];
 
   Widget get selectedBottomNavScreen => bottomNavScreens[bottomNavIndex];

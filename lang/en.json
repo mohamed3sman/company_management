@@ -124,7 +124,6 @@
   "next": "Next",
   "language_text": "You can change language from setting",
   "skip": "Skip",
-  "you_do_not_have_an_account": "you_do_not_have_an_account",
   "permission_type": "Permission type",
   "period": "Period",
   "start_permission": "Start Permission",
@@ -234,7 +233,7 @@
   "next": "Next",
   "language_text": "You can change language from setting",
   "skip":"Skip",
-  "you_do_not_have_an_account" :"You don’t have account",
+  "you_do_not_have_an_account" :"don’t have account ?",
   "permission_type":"Permission type",
   "period":"Period",
   "start_permission":"Start Permission",
@@ -248,5 +247,8 @@
   "personal_data":"Personal data",
 "setting":"Setting",
 "notifications":"Notifications",
-"attachments":"Attachments"
+"attachments":"Attachments",
+"Period":"Period",
+"from":"From",
+"create_account":"Create account"
 }

@@ -1,9 +1,9 @@
-import 'package:fingerPrint/Features/app_home/presentation/widgets/details_snack_bar_item.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/locale/app_localizations.dart';
+import 'details_snack_bar_item.dart';
 
 // ignore: must_be_immutable
 class DetailsSnackBar extends StatelessWidget {

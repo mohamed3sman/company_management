@@ -26,7 +26,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
           child: Text(
             locale.translate("login")!,
             style: TextStyle(
-                color: const Color(0xff8f7abd),
+                color: kPrimaryColor,
                 fontSize: 25.sp,
                 fontWeight: FontWeight.w900),
           ),
@@ -46,18 +46,26 @@ class _LoginViewFormState extends State<LoginViewForm> {
           buttonTapHandler: () {
             Navigator.pushNamed(context, kVerificationScreen);
           },
-          screenWidth: MediaQuery.of(context).size.width * .5,
+          screenWidth: MediaQuery.of(context).size.width * .55,
         ),
         const Spacer(),
         Padding(
-          padding: const EdgeInsets.only(left: 20.0, top: 20, bottom: 20),
+          padding: const EdgeInsets.only(
+            left: 20.0,
+            top: 20,
+            bottom: 20,
+            right: 20,
+          ),
           child: Align(
-            alignment: Alignment.bottomLeft,
+            alignment: locale.isEnLocale
+                ? Alignment.bottomRight
+                : Alignment.bottomLeft,
             child: TextButton(
               child: Text(
                 locale.translate('skip')!,
-                style:
-                    Styles.textStyle20.copyWith(color: const Color(0xff8f7abd)),
+                style:const TextStyle(
+                  color: Color(0xff7350cb),
+                ),
               ),
               onPressed: () {
                 Navigator.pushReplacementNamed(context, kBottomNav);

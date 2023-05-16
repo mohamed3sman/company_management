@@ -17,18 +17,19 @@ class PersonalAccountContainer extends StatelessWidget {
             height: 90,
             decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(12)),
+                borderRadius: BorderRadius.circular(20)),
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 7),
                 child: Text(
                   text,
-                  style: Styles.textStyle18.copyWith(
-                    color: Colors.black,
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(color: Color(0xff828282)),
+                  // style: Styles.textStyle18.copyWith(
+                  //   color: Colors.black,
+                  //   fontSize: 12.sp,
+                  //   fontWeight: FontWeight.bold,
+                  // ),
                 ),
               ),
             )),
