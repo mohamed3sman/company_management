@@ -21,6 +21,7 @@ import '../../../Features/home/presentation/views/book_details_view.dart';
 import '../../../Features/home/presentation/views/home_view.dart';
 import '../../../Features/introduction/presentation/intro_screen.dart';
 import '../../../Features/login/login_screen.dart';
+import '../../../Features/messeges/presentation/screens/messeges_screen.dart';
 import '../../../Features/search/presentation/views/search_view.dart';
 import '../../../Features/table/table_screen.dart';
 import '../constants.dart';
@@ -96,10 +97,7 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const RequestStatus(),
         );
-<<<<<<< HEAD
 
-=======
->>>>>>> c8ba494c6f67cd2729c6a1252bba1e1b746cf366
       case kDeptRequestScreen:
         return MaterialPageRoute(
           builder: (_) => const DeptRequestScreen(),
@@ -108,6 +106,10 @@ class AppRoutes {
       case kAppHomeScreen:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
+        );
+              case kMessegesScreen:
+        return MaterialPageRoute(
+          builder: (_) => const MessegesScreen(),
         );
 
       default:

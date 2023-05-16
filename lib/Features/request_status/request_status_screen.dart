@@ -10,17 +10,7 @@ class RequestStatus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xff7350cb),
-        onPressed: () {
-          BlocProvider.of<BottomNavCubit>(context)
-              .navigationQueue
-              .addLast(BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
-          BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(12);
-        },
-        child: const Icon(Icons.add),
-      ),
+      
       body: const TapBarViewBody(),
     );
   }

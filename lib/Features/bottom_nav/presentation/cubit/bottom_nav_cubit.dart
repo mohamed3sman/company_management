@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../dept_request/presentation/screens/dept_request_screen.dart';
+import '../../../messeges/presentation/screens/messeges_screen.dart';
 import '../../../permission_request/presentation/screens/permission_request_screen.dart';
 import '../../../personal_account/personal_account_screen.dart';
 part 'bottom_nav_state.dart';
@@ -19,7 +20,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
 
   List<Widget> bottomNavScreens = [
     const PersonalAccountScreen(),
-    const HomeScreen(),
+    const MessegesScreen(),
     const HomeScreen(),
     const MyOrdersScreen(),
     const HomeScreen(),

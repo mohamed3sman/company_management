@@ -14,141 +14,147 @@ class PersonalAccountScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 23, vertical: 15),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 10
-            ),
-            child: Row(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width * .15,
-                  height: MediaQuery.of(context).size.height * .07,
-                  decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Icon(
-                    Icons.person_2_outlined,
-                    color: Color(0xff707070),
-                    size: 25.sp,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'أهلا وسهلا',
-                        style: TextStyle(color: Color(0xff8b8989)),
-                        // style: Styles.textStyle20.copyWith(fontSize: 16.sp),
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height*.75,
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * .15,
+                      height: MediaQuery.of(context).size.height * .07,
+                      decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Icon(
+                        Icons.person_2_outlined,
+                        color: Color(0xff707070),
+                        size: 25.sp,
                       ),
-                      Text(
-                        'أحمد محمد عبدالرحمن',
-                        style: TextStyle(color: Color(0xff4e4d4d), fontSize: 20),
-                      )
-                    ],
-                  ),
-                ),
-                const Spacer(),
-                Container(
-                  width: 45,
-                  height: 45,
-                  decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, kEditProfileScreen);
-                    },
-                    icon: Icon(
-                      Icons.edit,
-                      color: const Color(0xff8f7abd),
-                      size: 22.sp,
                     ),
-                  ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'أهلا وسهلا',
+                            style: TextStyle(color: Color(0xff8b8989)),
+                            // style: Styles.textStyle20.copyWith(fontSize: 16.sp),
+                          ),
+                          Text(
+                            'أحمد محمد عبدالرحمن',
+                            style: TextStyle(
+                                color: Color(0xff4e4d4d), fontSize: 20),
+                          )
+                        ],
+                      ),
+                    ),
+                    const Spacer(),
+                    Container(
+                      width: 45,
+                      height: 45,
+                      decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(12)),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                              context, kEditProfileScreen);
+                        },
+                        icon: Icon(
+                          Icons.edit,
+                          color: const Color(0xff8f7abd),
+                          size: 22.sp,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 25,
-          ),
-          Row(
-            children: const [
-              PersonalAccountContainer(
-                text: 'البيانات الشخصية',
               ),
-              PersonalAccountContainer(
-                text: 'ملفاتي',
+              const SizedBox(
+                height: 25,
               ),
-              PersonalAccountContainer(
-                text: 'الحساب البنكي',
+              Row(
+                children: const [
+                  PersonalAccountContainer(
+                    text: 'البيانات الشخصية',
+                  ),
+                  PersonalAccountContainer(
+                    text: 'ملفاتي',
+                  ),
+                  PersonalAccountContainer(
+                    text: 'الحساب البنكي',
+                  ),
+                ],
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              Text(
+                'الإعدادات',
+                style: Styles.textStyle20
+                    .copyWith(color: Colors.black, fontSize: 18.sp),
+              ),
+              const SizedBox(height: 15),
+              CustomSettingRow(
+                  text: 'اللغة',
+                  path: 'assets/icons/language_icon.png',
+                  function: () {
+                    Navigator.pushNamed(context, kLanguageScreen);
+                  }),
+              CustomSettingRow(
+                  text: 'الإشعارات',
+                  path: 'assets/icons/notification_icon.png',
+                  function: () {
+                    Navigator.pushNamed(context, kBottomNav);
+                  }),
+              CustomSettingRow(
+                  text: 'الشروط والأحكام',
+                  path: 'assets/icons/list_icon.png',
+                  function: () {
+                    Navigator.pushNamed(context, kBottomNav);
+                  }),
+              CustomSettingRow(
+                  text: 'سياسة الخصوصية',
+                  path: 'assets/icons/secure_icon.png',
+                  function: () {
+                    Navigator.pushNamed(context, kBottomNav);
+                  }),
+              CustomSettingRow(
+                  text: 'تواصل معنا',
+                  path: 'assets/icons/contact_us_icon.png',
+                  function: () {
+                    Navigator.pushNamed(context, kContactUsScreen);
+                  }),
+              CustomSettingRow(
+                  text: 'حذف الحساب',
+                  deleteAccountColor: 0xfff16056,
+                  path: 'assets/icons/delete_account_icon.png',
+                  function: () {
+                    Navigator.pushNamed(context, kBottomNav);
+                  }),
+          SizedBox(height: 50,),
+              Center(
+                  child: Padding(
+                padding: EdgeInsets.only(bottom: 12.h),
+                child: CustomButton(
+                  buttonText: 'تسجيل الخروج',
+                  buttonTapHandler: () {
+                    Navigator.pushNamed(context, kLoginScreen);
+                  },
+                  screenWidth: MediaQuery.of(context).size.width * .7,
+                ),
+              ))
             ],
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Text(
-            'الإعدادات',
-            style: Styles.textStyle20
-                .copyWith(color: Colors.black, fontSize: 18.sp),
-          ),
-          const SizedBox(height: 15),
-          CustomSettingRow(
-              text: 'اللغة',
-              path: 'assets/icons/language_icon.png',
-              function: () {
-                Navigator.pushNamed(context, kLanguageScreen);
-              }),
-          CustomSettingRow(
-              text: 'الإشعارات',
-              path: 'assets/icons/notification_icon.png',
-              function: () {
-                Navigator.pushNamed(context, kBottomNav);
-              }),
-          CustomSettingRow(
-              text: 'الشروط والأحكام',
-              path: 'assets/icons/list_icon.png',
-              function: () {
-                Navigator.pushNamed(context, kBottomNav);
-              }),
-          CustomSettingRow(
-              text: 'سياسة الخصوصية',
-              path: 'assets/icons/secure_icon.png',
-              function: () {
-                Navigator.pushNamed(context, kBottomNav);
-              }),
-          CustomSettingRow(
-              text: 'تواصل معنا',
-              path: 'assets/icons/contact_us_icon.png',
-              function: () {
-                Navigator.pushNamed(context, kContactUsScreen);
-              }),
-          CustomSettingRow(
-              text: 'حذف الحساب',
-              deleteAccountColor: 0xfff16056,
-              path: 'assets/icons/delete_account_icon.png',
-              function: () {
-                Navigator.pushNamed(context, kBottomNav);
-              }),
-          const Spacer(),
-          Center(
-              child: Padding(
-            padding: EdgeInsets.only(bottom: 12.h),
-            child: CustomButton(
-              buttonText: 'تسجيل الخروج',
-              buttonTapHandler: () {
-                Navigator.pushNamed(context, kLoginScreen);
-              },
-              screenWidth: MediaQuery.of(context).size.width*.7,
-            ),
-          ))
-        ],
+        ),
       ),
     );
   }

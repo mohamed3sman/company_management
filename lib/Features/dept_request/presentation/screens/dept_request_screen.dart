@@ -20,6 +20,7 @@ class DeptRequestScreen extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * .77,
             child: ListView(
+              physics: BouncingScrollPhysics(),
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
@@ -29,7 +30,6 @@ class DeptRequestScreen extends StatelessWidget {
                         "طلب سلفة",
                         style: TextStyle(
                           fontSize: 20,
-                         
                         ),
                       ),
                       CustomOrdersRawIcon(
