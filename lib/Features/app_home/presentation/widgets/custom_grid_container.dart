@@ -15,7 +15,7 @@ class CustomGridContainer extends StatelessWidget {
     SizeConfig().init(context);
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, kRegisterScreen);
+        Navigator.pushNamed(context, kDataTableScreen);
       },
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 5.w),

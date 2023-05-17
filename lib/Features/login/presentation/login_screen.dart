@@ -1,4 +1,4 @@
-import 'package:fingerPrint/Features/login/widgets/login_screen_body.dart';
+import 'package:fingerPrint/Features/login/presentation/widgets/login_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {

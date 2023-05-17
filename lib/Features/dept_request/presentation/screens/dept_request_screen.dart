@@ -18,6 +18,7 @@ class DeptRequestScreen extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * .77,
             child: ListView(
+              physics: BouncingScrollPhysics(),
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),

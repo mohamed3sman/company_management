@@ -1,10 +1,10 @@
-import 'package:fingerPrint/Features/login/widgets/login_screen_form.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
-import '../../register/widgets/clipping_color.dart';
+import '../../../register/widgets/clipping_color.dart';
+import 'login_screen_form.dart';
 
 class LoginScreenBody extends StatelessWidget {
   const LoginScreenBody({super.key});
@@ -22,11 +22,11 @@ class LoginScreenBody extends StatelessWidget {
             clipper: CurveClipper(),
             child: Container(
               color: kPrimaryColor,
-              height: SizeConfig.screenHeight! * 0.5,
+              height: SizeConfig.screenHeight! * 0.45,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 240),
+            padding: const EdgeInsets.only(top: 220),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,

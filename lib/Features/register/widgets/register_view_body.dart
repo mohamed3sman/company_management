@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
-import '../../login/login_screen.dart';
+import '../../login/presentation/login_screen.dart';
 import 'clipping_color.dart';
 
 class RegisterViewBody extends StatelessWidget {
