@@ -1,8 +1,6 @@
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../core/locale/app_localizations.dart';
 import 'details_snack_bar_item.dart';
 
@@ -40,19 +38,19 @@ class DetailsSnackBar extends StatelessWidget {
           child: Row(
             children: [
               DetailsSnackBarItem(
-                icon: FontAwesomeIcons.clock,
-                timeText: '8 ${locale.translate("hours")!}',
-                actionText: locale.translate("work_hours")!,
-              ),
-              DetailsSnackBarItem(
-                icon: FontAwesomeIcons.arrowsToCircle,
+                icon: Icons.login_rounded,
                 timeText: '09:00 ${locale.translate("am")!}',
                 actionText: locale.translate("attendance_register")!,
               ),
               DetailsSnackBarItem(
-                icon: FontAwesomeIcons.clock,
+                icon: Icons.logout,
                 timeText: '05:00 ${locale.translate("pm")!}',
                 actionText: locale.translate("leaving_register")!,
+              ),
+              DetailsSnackBarItem(
+                icon: Icons.access_time,
+                timeText: '8 ${locale.translate("hours")!}',
+                actionText: locale.translate("work_hours")!,
               ),
             ],
           ),

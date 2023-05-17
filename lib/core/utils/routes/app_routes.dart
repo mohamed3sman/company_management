@@ -17,6 +17,7 @@ import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacat
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
+import '../../../Features/following_request/following_request_screen.dart';
 import '../../../Features/home/presentation/views/book_details_view.dart';
 import '../../../Features/home/presentation/views/home_view.dart';
 import '../../../Features/introduction/presentation/intro_screen.dart';
@@ -104,6 +105,10 @@ class AppRoutes {
       case kAppHomeScreen:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
+        );
+      case kFollowingRequestScreen:
+        return MaterialPageRoute(
+          builder: (_) => const FollowingRequestScreen(),
         );
 
       default:

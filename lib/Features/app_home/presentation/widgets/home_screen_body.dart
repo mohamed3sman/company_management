@@ -134,7 +134,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
           padding:
               EdgeInsets.only(left: SizeConfig.screenWidth! * 0.19, top: 10.h),
           child: Padding(
-            padding: EdgeInsets.only(left: 30.w, top: 65.h),
+            padding: EdgeInsets.only(left: 30.w, top: 65.h, right: 100.w),
             child: const HomeAppToggleButton(),
           ),
         ),

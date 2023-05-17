@@ -45,8 +45,13 @@ class RegisterViewBody extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(right: 40.w),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      Text(
+                        '! لدي حساب بالفعل',
+                        style: Styles.textStyle20.copyWith(
+                            color: const Color(0xff8f7abd), fontSize: 17.sp),
+                      ),
                       TextButton(
                         onPressed: () {
                           Navigator.push(context,
@@ -62,11 +67,6 @@ class RegisterViewBody extends StatelessWidget {
                               decorationThickness: 2,
                               fontSize: 17.sp),
                         ),
-                      ),
-                      Text(
-                        '! لدي حساب بالفعل',
-                        style: Styles.textStyle20.copyWith(
-                            color: const Color(0xff8f7abd), fontSize: 17.sp),
                       ),
                     ],
                   ),

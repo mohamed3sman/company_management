@@ -17,31 +17,45 @@ class VerificationScreenForm extends StatefulWidget {
 class _VerificationScreenFormState extends State<VerificationScreenForm> {
   @override
   Widget build(BuildContext context) {
-        late AppLocalizations locale;
+    late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 40),
+          padding: EdgeInsets.only(top: 40.h, bottom: 5.h),
           child: Text(
-             locale.translate('activation_code')! ,
+            locale.translate('activation_code')!,
             style: TextStyle(
                 color: const Color(0xff8f7abd),
                 fontSize: 22.sp,
                 fontWeight: FontWeight.w900),
           ),
         ),
-        SizedBox(
-          width: SizeConfig.screenWidth! * 0.3,
-          child: const Divider(
-            color: Color(0xff8f7abd),
-            thickness: 3,
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+                width: 50.w,
+                height: 3,
+                decoration: new BoxDecoration(color: Color(0xff7350cb))),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w),
+              child: Icon(
+                Icons.circle_outlined,
+                size: 12.sp,
+                color: Colors.deepPurple,
+              ),
+            ),
+            Container(
+                width: 50.w,
+                height: 3,
+                decoration: new BoxDecoration(color: Color(0xff7350cb)))
+          ],
         ),
-        const SizedBox(height: 20),
+        SizedBox(height: 30.h),
         Text(
-           locale.translate('please_enter_the_verification_code_sent_to_me')!,
+          locale.translate('please_enter_the_verification_code_sent_to_me')!,
           style: TextStyle(
               color: Colors.black.withOpacity(0.8),
               fontSize: 14.sp,
@@ -53,9 +67,10 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
         Text(
           '01223456789',
           style: TextStyle(
-              color: const Color(0xff8f7abd),
-              fontSize: 16.sp,
-              fontWeight: FontWeight.w800),
+            color: const Color(0xff8f7abd),
+            fontSize: 16.sp,
+            fontWeight: FontWeight.w800,
+          ),
         ),
         const SizedBox(
           height: 50,
@@ -80,12 +95,13 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
             setState(() {});
           },
         ),
-        const Padding(
-          padding: EdgeInsets.all(35),
+        Padding(
+          padding:
+              const EdgeInsets.only(top: 30, left: 55, right: 55, bottom: 30),
           child: DottedLine(
-            dashColor: Color(0xff8f7abd),
-            dashGapLength: 6,
-            dashLength: 10,
+            dashColor: const Color(0xff8f7abd).withOpacity(0.5),
+            dashGapLength: 4,
+            dashLength: 8,
           ),
         ),
         Padding(
@@ -94,16 +110,16 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '00:59',
-                style: Styles.textStyle20
-                    .copyWith(color: const Color(0xff8f7abd), fontSize: 18.sp),
-              ),
-              Text(
-                 locale.translate('resend_the_code')!,
+                locale.translate('resend_the_code')!,
                 style: Styles.textStyle20.copyWith(
                   fontSize: 15.sp,
                   color: Colors.black.withOpacity(0.7),
                 ),
+              ),
+              Text(
+                '00:59',
+                style: Styles.textStyle20
+                    .copyWith(color: const Color(0xff8f7abd), fontSize: 18.sp),
               ),
             ],
           ),

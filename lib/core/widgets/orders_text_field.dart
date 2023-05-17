@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'custom_elevated_container.dart';
 
+// ignore: must_be_immutable
 class OrdersTextField extends StatelessWidget {
   OrdersTextField({super.key, required this.height, required this.hintText});
   double height;

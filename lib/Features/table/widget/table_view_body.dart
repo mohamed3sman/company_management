@@ -11,18 +11,18 @@ class TableViewBody extends StatefulWidget {
 
 class _TableViewBodyState extends State<TableViewBody> {
   final List<String> months = const [
-    'ديسمبر',
-    'نوفمبر',
-    'اكتوبر',
-    'سبتمبر',
-    'اغسطس',
-    'يوليو',
-    'يونيو',
-    'مايو',
-    'ابريل',
-    'مارس',
+    'يناير',
     'فبراير',
-    'يناير'
+    'مارس',
+    'ابريل',
+    'مايو',
+    'يونيو',
+    'يوليو',
+    'اغسطس',
+    'سبتمبر',
+    'اكتوبر',
+    'نوفمبر',
+    'ديسمبر',
   ];
   List<Widget> body = const [
     AttendanceAndLeavingTable(),
@@ -38,7 +38,7 @@ class _TableViewBodyState extends State<TableViewBody> {
     AttendanceAndLeavingTable(),
     AttendanceAndLeavingTable(),
   ];
-  int current = 11;
+  int current = 0;
 
   @override
   Widget build(BuildContext context) {

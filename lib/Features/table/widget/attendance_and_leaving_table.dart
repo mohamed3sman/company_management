@@ -36,16 +36,16 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topRight: Radius.circular(16))),
               children: [
                 TableColumnCell(
-                  columnText: 'ساعات العمل',
-                ),
-                TableColumnCell(
-                  columnText: 'الانصراف',
+                  columnText: 'التاريخ',
                 ),
                 TableColumnCell(
                   columnText: 'الحضور',
                 ),
                 TableColumnCell(
-                  columnText: 'التاريخ',
+                  columnText: 'الانصراف',
+                ),
+                TableColumnCell(
+                  columnText: 'ساعات العمل',
                 ),
               ],
             ),
@@ -55,17 +55,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -74,17 +74,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -93,17 +93,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -112,17 +112,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -131,17 +131,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -150,17 +150,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -169,17 +169,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -188,17 +188,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -207,17 +207,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
             TableRow(
@@ -226,17 +226,17 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                       topLeft: Radius.circular(12),
                       topRight: Radius.circular(12))),
               children: [
-                CustomTableWorkHourColumn(),
-                CustomTableLeavingColumn(
-                  timeText: '05:00',
-                ),
-                CustomTableAttendanceColumn(
-                  timeText: '09.00',
-                ),
                 CustomTableDateColumnItem(
                   dayNumber: '1',
                   dayName: 'الأحد',
                 ),
+                CustomTableAttendanceColumn(
+                  timeText: '09.00',
+                ),
+                CustomTableLeavingColumn(
+                  timeText: '05:00',
+                ),
+                CustomTableWorkHourColumn(),
               ],
             ),
           ],

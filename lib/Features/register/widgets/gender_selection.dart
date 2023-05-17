@@ -15,31 +15,10 @@ class _GenderSelectionState extends State<GenderSelection> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Row(
           children: [
-            Text('أنثي', style: Styles.textStyle18.copyWith(fontSize: 15.sp)),
-            Transform.translate(
-              offset: const Offset(-7, 0),
-              child: Radio(
-                  activeColor: const Color(0xff9a80d9),
-                  value: 'أنثي',
-                  groupValue: gender,
-                  onChanged: (value) {
-                    setState(() {
-                      gender = value as String;
-                    });
-                  }),
-            )
-          ],
-        ),
-        const SizedBox(
-          width: 50,
-        ),
-        Row(
-          children: [
-            Text('ذكر', style: Styles.textStyle18.copyWith(fontSize: 15.sp)),
             Transform.translate(
               offset: const Offset(-7, 0),
               child: Radio(
@@ -51,7 +30,34 @@ class _GenderSelectionState extends State<GenderSelection> {
                       gender = value as String;
                     });
                   }),
-            )
+            ),
+            Text(
+              'ذكر',
+              style: Styles.textStyle18.copyWith(fontSize: 15.sp),
+            ),
+          ],
+        ),
+        const SizedBox(
+          width: 50,
+        ),
+        Row(
+          children: [
+            Transform.translate(
+              offset: const Offset(-7, 0),
+              child: Radio(
+                  activeColor: const Color(0xff9a80d9),
+                  value: 'أنثي',
+                  groupValue: gender,
+                  onChanged: (value) {
+                    setState(() {
+                      gender = value as String;
+                    });
+                  }),
+            ),
+            Text(
+              'أنثي',
+              style: Styles.textStyle18.copyWith(fontSize: 15.sp),
+            ),
           ],
         ),
       ],

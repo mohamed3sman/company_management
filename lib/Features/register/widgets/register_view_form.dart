@@ -31,7 +31,7 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
         Padding(
           padding: const EdgeInsets.only(top: 20, right: 20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const CustomTextField(hintTextField: 'الاسم'),
               const CustomTextField(hintTextField: 'رقم الجوال'),
@@ -57,14 +57,16 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
         ),
         const Spacer(),
         Padding(
-          padding: const EdgeInsets.only(left: 20.0, bottom: 20),
-          child: Align(
-            alignment: Alignment.bottomLeft,
-            child: Text(
-              'تخطي',
-              style: Styles.textStyle20
-                  .copyWith(color: const Color(0xff8f7abd), fontSize: 17.sp),
-            ),
+          padding: EdgeInsets.only(bottom: 20.h, right: 20.w, left: 20.w),
+          child: Row(
+            children: [
+              Spacer(),
+              Text(
+                'تخطي',
+                style: Styles.textStyle20
+                    .copyWith(color: const Color(0xff8f7abd), fontSize: 17.sp),
+              ),
+            ],
           ),
         ),
       ],

@@ -23,8 +23,8 @@ class OrderListTile extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          boxShadow: [
-            const BoxShadow(
+          boxShadow: const [
+            BoxShadow(
                 color: Colors.grey, blurRadius: 3.0, offset: Offset(0.0, 0.8))
           ],
         ),
@@ -33,6 +33,11 @@ class OrderListTile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                Text(
+                  ' ${locale.translate('order_number')!} : 123456',
+                  style: TextStyle(
+                      color: Colors.black.withOpacity(0.6), fontSize: 12),
+                ),
                 GestureDetector(
                   onTap: () {
                     // set up the AlertDialog
@@ -51,11 +56,6 @@ class OrderListTile extends StatelessWidget {
                     style: const TextStyle(color: kPrimaryColor, fontSize: 12),
                   ),
                 ),
-                Text(
-                  ' ${locale.translate('order_number')!} : 123456',
-                  style: TextStyle(
-                      color: Colors.black.withOpacity(0.6), fontSize: 12),
-                ),
               ],
             ),
             const SizedBox(
@@ -64,12 +64,16 @@ class OrderListTile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                Text(
+                  '${locale.translate('type_vacation')!} : ${locale.translate('sick_leave')!} ',
+                  style: TextStyle(
+                      color: Colors.black.withOpacity(0.6), fontSize: 12),
+                ),
                 Row(
                   children: [
                     Text(
-                      status,
-                      style: TextStyle(
-                          color: Colors.black.withOpacity(0.5), fontSize: 12),
+                      ' ${locale.translate('status')!}:',
+                      style: const TextStyle(color: Colors.black, fontSize: 12),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 3),
@@ -80,15 +84,11 @@ class OrderListTile extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      ' :${locale.translate('status')!}',
-                      style: const TextStyle(color: Colors.black, fontSize: 12),
+                      status,
+                      style: TextStyle(
+                          color: Colors.black.withOpacity(0.5), fontSize: 12),
                     ),
                   ],
-                ),
-                Text(
-                  '${locale.translate('type_vacation')!} : ${locale.translate('sick_leave')!} ',
-                  style: TextStyle(
-                      color: Colors.black.withOpacity(0.6), fontSize: 12),
                 ),
               ],
             ),

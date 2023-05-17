@@ -1,9 +1,7 @@
 import 'package:fingerPrint/Features/vacation_request/presentation/widgets/custom_date_picker.dart';
-import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:fingerPrint/core/widgets/custom_orders_raw_icon.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/widgets/custom_text_field.dart';
 import '../../../../core/widgets/orders_text_field.dart';
 import '../../../vacation_request/presentation/widgets/custom_drop_down_list.dart';
 import '../widgets/out_put_container.dart';
@@ -29,7 +27,6 @@ class DeptRequestScreen extends StatelessWidget {
                         "طلب سلفة",
                         style: TextStyle(
                           fontSize: 20,
-                         
                         ),
                       ),
                       CustomOrdersRawIcon(
