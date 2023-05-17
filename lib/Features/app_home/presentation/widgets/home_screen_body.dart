@@ -1,4 +1,3 @@
-import 'package:fingerPrint/Features/app_home/presentation/widgets/app_home_screen_app_bar.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/custom_grid_container.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/details_snack_bar.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/home_app_toggle_button.dart';
@@ -38,10 +37,6 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                 color: const Color(0xffeaeaf7),
                 child: Column(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.w, top: 10.h),
-                      child: const HomeScreenAppBar(),
-                    ),
                     Padding(
                       padding: EdgeInsets.only(top: 25.h),
                       child: Stack(
@@ -131,10 +126,9 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         ),
         DetailsSnackBar(),
         Padding(
-          padding:
-              EdgeInsets.only(left: SizeConfig.screenWidth! * 0.19, top: 10.h),
+          padding: EdgeInsets.only(left: SizeConfig.screenWidth! * 0.19),
           child: Padding(
-            padding: EdgeInsets.only(left: 30.w, top: 65.h, right: 100.w),
+            padding: EdgeInsets.only(left: 30.w, top: 10.h, right: 100.w),
             child: const HomeAppToggleButton(),
           ),
         ),

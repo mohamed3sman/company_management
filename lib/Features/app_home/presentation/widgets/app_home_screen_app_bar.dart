@@ -16,8 +16,8 @@ class HomeScreenAppBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(40.0),
                 child: Image.network(
                   "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
-                  height: 40.0,
-                  width: 40.0,
+                  height: 35.0,
+                  width: 35.0,
                 ),
               ),
               Text(

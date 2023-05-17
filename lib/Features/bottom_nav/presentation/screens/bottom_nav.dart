@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
-import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/hex_color.dart';
 import 'package:fingerPrint/core/widgets/page_container.dart';
@@ -86,7 +85,6 @@ class _BottomNavState extends State<BottomNav>
             return false;
           },
           child: Scaffold(
-            
             extendBody: true,
             body: context.watch<BottomNavCubit>().selectedBottomNavScreen,
             floatingActionButton: ScaleTransition(
