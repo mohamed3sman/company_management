@@ -8,6 +8,7 @@ class OutPutContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 10),
       padding: EdgeInsets.only(left: 10, right: 10),
       alignment: Alignment.centerRight,
       width: containerWidth,
