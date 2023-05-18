@@ -23,7 +23,7 @@ class fingerPrint extends StatelessWidget {
           create: (_) => getIt<BottomNavCubit>(),
         ),
         BlocProvider(
-          create: (context) => getIt<LocaleCubit>()..getSavedLang(),
+          create: (context) => getIt<LocaleCubit>(),
         ),
         BlocProvider(
           create: (context) {
@@ -63,15 +63,8 @@ class fingerPrint extends StatelessWidget {
                     AppLocalizationsSetup.localizationsDelegates,
                 debugShowCheckedModeBanner: false,
                 theme: ThemeData(
-                  textTheme: const TextTheme().copyWith(
-                      displayLarge: TextStyle(
-                          fontSize: (localeState.locale.languageCode == "ar")
-                              ? 12
-                              : 7),),
                   primarySwatch: Colors.blue,
-                  fontFamily: localeState.locale.languageCode == "ar"
-                      ? 'Hacen Tunisia'
-                      : "Cairo-Bold",
+                  fontFamily: "Cairo-Bold",
                 ),
 
                 // ThemeData.dark().copyWith(
