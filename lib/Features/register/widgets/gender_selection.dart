@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,14 +16,14 @@ class _GenderSelectionState extends State<GenderSelection> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Row(
           children: [
             Transform.translate(
               offset: const Offset(-7, 0),
               child: Radio(
-                  activeColor: const Color(0xff9a80d9),
+                  activeColor: kPrimaryColor,
                   value: 'ذكر',
                   groupValue: gender,
                   onChanged: (value) {
@@ -33,19 +34,22 @@ class _GenderSelectionState extends State<GenderSelection> {
             ),
             Text(
               'ذكر',
-              style: Styles.textStyle18.copyWith(fontSize: 15.sp),
+              style: Styles.textStyle18.copyWith(
+                fontSize: 12.sp,
+                color: kTextColor,
+              ),
             ),
           ],
         ),
-        const SizedBox(
-          width: 50,
-        ),
+        // const SizedBox(
+        //   width: 50,
+        // ),
         Row(
           children: [
             Transform.translate(
               offset: const Offset(-7, 0),
               child: Radio(
-                  activeColor: const Color(0xff9a80d9),
+                  activeColor: kPrimaryColor,
                   value: 'أنثي',
                   groupValue: gender,
                   onChanged: (value) {
@@ -56,7 +60,10 @@ class _GenderSelectionState extends State<GenderSelection> {
             ),
             Text(
               'أنثي',
-              style: Styles.textStyle18.copyWith(fontSize: 15.sp),
+              style: Styles.textStyle18.copyWith(
+                fontSize: 12.sp,
+                color: kTextColor,
+              ),
             ),
           ],
         ),

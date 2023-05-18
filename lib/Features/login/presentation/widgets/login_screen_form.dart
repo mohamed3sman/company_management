@@ -74,7 +74,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
                 ),
               ),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, kBottomNav);
+                Navigator.pushNamed(context, kBottomNav);
               },
             ),
           ),

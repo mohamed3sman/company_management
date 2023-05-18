@@ -45,6 +45,7 @@ const String arabic = 'ar';
 //color
 const Color kPrimaryColor = Color(0xff1a938a);
 const Color kSecondaryColor = Color.fromARGB(255, 12, 99, 93);
+const Color kTextColor = Color(0xff7a7a7a);
 
 const kTranstionDuration = Duration(milliseconds: 250);
 const kGtSectraFine = 'GT Sectra Fine';

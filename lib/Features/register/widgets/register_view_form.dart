@@ -1,4 +1,6 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -19,44 +21,50 @@ class RegisterViewForm extends StatefulWidget {
 class _RegisterViewFormState extends State<RegisterViewForm> {
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return Column(
       children: [
         Text(
           'إنشاء حساب',
           style: TextStyle(
-              color: const Color(0xff8f7abd),
-              fontSize: 25.sp,
-              fontWeight: FontWeight.w900),
+              color: kPrimaryColor,
+              fontSize: 17.sp,
+              fontWeight: FontWeight.w700),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 0, right: 0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomLoginTextField(
-                  textInputType: TextInputType.text,
-                  obscureText: false,
-                  stringInTextField: 'الاسم'),
-              CustomLoginTextField(
-                  textInputType: TextInputType.number,
-                  obscureText: false,
-                  stringInTextField: 'رقم الجوال'),
-              CustomLoginTextField(
-                  textInputType: TextInputType.number,
-                  obscureText: false,
-                  stringInTextField: 'رقم الهوية'),
-              CustomLoginTextField(
-                  textInputType: TextInputType.emailAddress,
-                  obscureText: false,
-                  stringInTextField: 'البريد الالكتروني'),
-              Text(
+        Gaps.vGap20,
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomLoginTextField(
+                textInputType: TextInputType.text,
+                obscureText: false,
+                stringInTextField: 'الاسم'),
+            CustomLoginTextField(
+                textInputType: TextInputType.number,
+                obscureText: false,
+                stringInTextField: 'رقم الجوال'),
+            CustomLoginTextField(
+                textInputType: TextInputType.number,
+                obscureText: false,
+                stringInTextField: 'رقم الهوية'),
+            CustomLoginTextField(
+                textInputType: TextInputType.emailAddress,
+                obscureText: false,
+                stringInTextField: 'البريد الالكتروني'),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Text(
                 'النوع',
-                style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w700),
+                style: Styles.textStyle20.copyWith(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 15,
+                    color: kTextColor),
               ),
-              const GenderSelection(),
-            ],
-          ),
+            ),
+            const GenderSelection(),
+          ],
         ),
         SizedBox(
           height: SizeConfig.screenHeight! * 0.04,
@@ -66,20 +74,28 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
           buttonTapHandler: () {
             Navigator.pushNamed(context, kVerificationScreen);
           },
-          screenWidth: 120.0,
+          screenWidth: 190.0,
         ),
-        const Spacer(),
+        Gaps.vGap20,
         Padding(
           padding: EdgeInsets.only(bottom: 20.h, right: 20.w, left: 20.w),
-          child: Row(
-            children: [
-              Spacer(),
-              Text(
-                'تخطي',
-                style: Styles.textStyle20
-                    .copyWith(color: const Color(0xff8f7abd), fontSize: 17.sp),
-              ),
-            ],
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, kBottomNav);
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  locale.translate('skip')!,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    color: kPrimaryColor,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],
