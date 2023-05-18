@@ -18,11 +18,11 @@ class CustomLoginTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       child: Container(
-        height: height ?? 55,
+        height: height ?? 53,
         decoration: BoxDecoration(
           border: Border.all(color: const Color(0xff707070)),
           color: const Color(0xffffffff),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(10),
         ),
         padding: const EdgeInsets.all(6),
         child: TextFormField(

@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:dotted_line/dotted_line.dart';
 
-import '../../../core/locale/app_localizations.dart';
-import '../../../core/utils/styles.dart';
+import '../../../../core/locale/app_localizations.dart';
+import '../../../../core/utils/styles.dart';
 
 class VerificationScreenForm extends StatefulWidget {
   const VerificationScreenForm({super.key});

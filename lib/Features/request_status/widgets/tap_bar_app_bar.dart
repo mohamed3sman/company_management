@@ -1,14 +1,14 @@
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 
-import '../../register/widgets/styles.dart';
+import '../../auth/register/widgets/styles.dart';
 
 class TapBarAppBar extends StatelessWidget {
   const TapBarAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-        late AppLocalizations locale;
+    late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -22,7 +22,7 @@ class TapBarAppBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text(
-           locale.translate('welcome')!,
+              locale.translate('welcome')!,
               style: Styles.textStyle16.copyWith(
                 color: Colors.black.withOpacity(0.5),
               ),

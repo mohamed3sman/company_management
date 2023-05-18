@@ -2,7 +2,7 @@ import 'package:fingerPrint/Features/dept_request/presentation/widgets/out_put_c
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 
-import '../../../register/widgets/custom_text_field.dart';
+import '../../../auth/register/widgets/custom_text_field.dart';
 
 class NewMessegeScreen extends StatelessWidget {
   const NewMessegeScreen({super.key});
@@ -31,7 +31,8 @@ class NewMessegeScreen extends StatelessWidget {
                 Text("عنوان الرسالة"),
                 CustomTextField(hintTextField: "رسالة لطلب إجازة"),
                 Text("نص الرسالة"),
-                CustomTextField(hintTextField: "رسالة لطلب إجازة",fieldLines: 4),
+                CustomTextField(
+                    hintTextField: "رسالة لطلب إجازة", fieldLines: 4),
               ],
             ),
           ),

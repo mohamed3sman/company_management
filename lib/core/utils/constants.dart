@@ -38,16 +38,15 @@ const String kMessegesScreen = '/kMessegesScreen';
 const String kNewMessegeScreen = '/kNewMessegeScreen';
 const String kEmployeeProfileStep2 = '/kEmployeeProfileStep2';
 
-
-
 // saved sharedprefernces
 const String locale = 'locale';
 const String english = 'en';
 const String arabic = 'ar';
 
 //color
-const Color kPrimaryColor = Color(0xff5C4DB1);
-const Color kSecondaryColor = Color(0xff3816a2);
+const Color kPrimaryColor = Color(0xff1a938a);
+const Color kSecondaryColor = Color.fromARGB(255, 12, 99, 93);
+const Color kTextColor = Color(0xff7a7a7a);
 
 const kTranstionDuration = Duration(milliseconds: 250);
 const kGtSectraFine = 'GT Sectra Fine';

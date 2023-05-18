@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 
 class RoundedClipper extends CustomClipper<Path> {
-  final double height;
-
-  RoundedClipper(this.height);
+  RoundedClipper();
 
   @override
   Path getClip(Size size) {
     var path = Path();
-    path.lineTo(0.0, height - 200);
+    path.lineTo(0.0, 500 - 200);
     path.quadraticBezierTo(
       size.width / 2,
-      height,
+      500,
       size.width,
-      height - 200,
+      500 - 200,
     );
     path.lineTo(size.width, 0.0);
     path.close();
@@ -21,5 +19,5 @@ class RoundedClipper extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(CustomClipper<Path> oldClipper)=>true;
+  bool shouldReclip(CustomClipper<Path> oldClipper) => true;
 }
