@@ -1,4 +1,4 @@
-import 'package:fingerPrint/Features/register/widgets/custom_text_field.dart';
+import 'package:fingerPrint/Features/auth/register/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class EmployeeProfileStep2 extends StatelessWidget {

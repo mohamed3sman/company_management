@@ -1,23 +1,19 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../../../dept_request/presentation/widgets/out_put_container.dart';
-import '../../../register/widgets/custom_text_field.dart';
+import '../../../auth/register/widgets/custom_text_field.dart';
 import '../../../vacation_request/presentation/widgets/custom_drop_down_list.dart';
 
 class EmployeeProfileStep1 extends StatelessWidget {
   const EmployeeProfileStep1({
     super.key,
-   
   });
-
-
 
   @override
   Widget build(BuildContext context) {
-        final screenSize = MediaQuery.of(context).size;
+    final screenSize = MediaQuery.of(context).size;
 
     return Stack(
       alignment: Alignment.bottomLeft,

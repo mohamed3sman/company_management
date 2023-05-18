@@ -6,8 +6,8 @@ import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/utils/styles.dart';
-import '../../../core/widgets/custom_login_text_field.dart';
+import '../../../../core/utils/styles.dart';
+import '../../../../core/widgets/custom_login_text_field.dart';
 import 'custom_text_field.dart';
 import 'gender_selection.dart';
 

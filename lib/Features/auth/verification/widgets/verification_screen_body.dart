@@ -1,4 +1,4 @@
-import 'package:fingerPrint/Features/verification/widgets/verification_screen_form.dart';
+import 'package:fingerPrint/Features/auth/verification/widgets/verification_screen_form.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import '../../register/widgets/clipping_color.dart';
