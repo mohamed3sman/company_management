@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
+import '../../../core/widgets/custom_login_text_field.dart';
 import 'custom_text_field.dart';
 import 'gender_selection.dart';
 
@@ -29,14 +30,26 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
               fontWeight: FontWeight.w900),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 20, right: 20),
+          padding: const EdgeInsets.only(top: 0, right: 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               CustomTextField(hintTextField: 'الاسم'),
-               CustomTextField(hintTextField: 'رقم الجوال'),
-               CustomTextField(hintTextField: 'رقم الهوية'),
-               CustomTextField(hintTextField: 'البريد الالكتروني'),
+              CustomLoginTextField(
+                  textInputType: TextInputType.text,
+                  obscureText: false,
+                  stringInTextField: 'الاسم'),
+              CustomLoginTextField(
+                  textInputType: TextInputType.number,
+                  obscureText: false,
+                  stringInTextField: 'رقم الجوال'),
+              CustomLoginTextField(
+                  textInputType: TextInputType.number,
+                  obscureText: false,
+                  stringInTextField: 'رقم الهوية'),
+              CustomLoginTextField(
+                  textInputType: TextInputType.emailAddress,
+                  obscureText: false,
+                  stringInTextField: 'البريد الالكتروني'),
               Text(
                 'النوع',
                 style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w700),
