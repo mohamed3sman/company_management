@@ -23,11 +23,14 @@ class CustomDotStepper extends StatelessWidget {
           activeStep: 1,
           shape: Shape.squircle,
           indicator: Indicator.jump,
+          indicatorDecoration: IndicatorDecoration(
+            color: kPrimaryColor,
+          ),
           dotCount: 2,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [Text("1"), Text("2")],
+          children: [Text("2"), Text("1")],
         )
       ],
     );

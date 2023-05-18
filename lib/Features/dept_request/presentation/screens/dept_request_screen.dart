@@ -47,7 +47,7 @@ class DeptRequestScreen extends StatelessWidget {
                               rawText: "عدد الأقساط",
                               iconImagePath: "assets/icons/hashtag_icon.png"),
                           SizedBox(
-                            width: MediaQuery.of(context).size.width * .25,
+                            width: MediaQuery.of(context).size.width * .2,
                           ),
                           CustomOrdersRawIcon(
                               rawText: "قيمة القسط",
