@@ -63,8 +63,11 @@ class fingerPrint extends StatelessWidget {
                     AppLocalizationsSetup.localizationsDelegates,
                 debugShowCheckedModeBanner: false,
                 theme: ThemeData(
-                  textTheme: const TextTheme()
-                      .copyWith(displayLarge: const TextStyle(fontSize: 12)),
+                  textTheme: const TextTheme().copyWith(
+                      displayLarge: TextStyle(
+                          fontSize: (localeState.locale.languageCode == "ar")
+                              ? 12
+                              : 7),),
                   primarySwatch: Colors.blue,
                   fontFamily: localeState.locale.languageCode == "ar"
                       ? 'Hacen Tunisia'
