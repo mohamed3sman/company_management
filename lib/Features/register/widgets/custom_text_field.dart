@@ -2,11 +2,13 @@ import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: must_be_immutable
 class CustomTextField extends StatelessWidget {
   final String hintTextField;
   final bool obscureText;
   final TextInputType textInputType;
-  int? fieldLines;double ? containerHeight;
+  int? fieldLines;
+  double? containerHeight;
   CustomTextField({
     this.fieldLines,
     Key? key,
@@ -23,8 +25,7 @@ class CustomTextField extends StatelessWidget {
         child: Material(
           // shadowColor: Colors.red.withOpacity(0.5),
           child: CustomElevatedContainer(
-            
-            containerHeight: containerHeight??50,
+            containerHeight: containerHeight ?? 50,
             containerWidth: double.infinity,
             //   decoration: BoxDecoration(
             //     border: Border.all(color: const Color(0xffd8d5d5)),
