@@ -22,13 +22,14 @@ class _LanguageScreenState extends State<LanguageScreen> {
 
   @override
   Widget build(BuildContext context) {
-    
     locale = AppLocalizations.of(context)!;
+    Commons.showToast(context, message: locale.locale.languageCode);
+
     final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(children: [
         ClipPath(
-          clipper: RoundedClipper(screenSize.height * .6),
+          clipper: RoundedClipper(),
           child: AnimatedContainer(
             duration: const Duration(seconds: 3),
             height: screenSize.height * .5,
@@ -46,9 +47,9 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 ),
                 // Gaps.vGap40,
                 Text(
-                 locale.translate('Choose_language')!,
-                  style: const TextStyle(
-                    fontSize: 25,
+                  locale.translate('Choose_language')!,
+                  style: TextStyle(
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: kPrimaryColor,
                   ),
@@ -63,8 +64,9 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Commons.showToast(context,
-                              message: locale.translate('english')!);
+                          // Commons.showToast(context,
+                          //     message: locale.translate('english')!);
+
                           BlocProvider.of<LocaleCubit>(context).toEnglish();
                         },
                         child: Card(
@@ -80,14 +82,16 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             width: screenSize.width * .32,
                             height: screenSize.height * .18,
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Image.asset(
                                   AssetsData.usFlagImage,
                                   width: screenSize.width * .16,
                                   height: screenSize.height * .09,
                                 ),
-                                Text("English"),
+                                Text(
+                                  "English",
+                                  style: TextStyle(fontSize: 13),
+                                ),
                               ],
                             ),
                           ),
@@ -95,10 +99,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Commons.showToast(context,
-                              message:
-                              
-                               locale.translate('arabic')!);
                           BlocProvider.of<LocaleCubit>(context).toArabic();
                         },
                         child: Card(
@@ -116,7 +116,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             width: screenSize.width * .32,
                             height: screenSize.height * .18,
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Image.asset(
                                   AssetsData.saudiFlagImage,
@@ -125,6 +124,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                                 ),
                                 const Text(
                                   "عربي",
+                                  style: TextStyle(fontSize: 13),
                                 )
                               ],
                             ),

@@ -1,10 +1,12 @@
 import 'package:fingerPrint/Features/register/widgets/register_form_decoration.dart';
 import 'package:fingerPrint/Features/register/widgets/register_view_form.dart';
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
+import '../../../core/widgets/custom_circle_clipper.dart';
 import '../../login/presentation/login_screen.dart';
 import 'clipping_color.dart';
 
@@ -18,9 +20,9 @@ class RegisterViewBody extends StatelessWidget {
       child: Stack(
         children: [
           ClipPath(
-            clipper: CurveClipper(),
+            clipper: RoundedClipper(),
             child: Container(
-              color: const Color(0xff9a80d9),
+              color: kPrimaryColor,
               height: SizeConfig.screenHeight! * 0.5,
             ),
           ),
