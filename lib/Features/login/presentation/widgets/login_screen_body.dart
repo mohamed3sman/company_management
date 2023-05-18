@@ -4,7 +4,6 @@ import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_circle_clipper.dart';
 import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
-import '../../../register/widgets/clipping_color.dart';
 import 'login_screen_form.dart';
 
 class LoginScreenBody extends StatelessWidget {

@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 
 class CustomLoginTextField extends StatelessWidget {
@@ -16,7 +17,8 @@ class CustomLoginTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+      padding: EdgeInsets.symmetric(
+          vertical: 10, horizontal: SizeConfig.screenWidth! * 0.040),
       child: Container(
         height: height ?? 53,
         decoration: BoxDecoration(

@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import '../../../core/widgets/custom_login_text_field.dart';
-import 'custom_text_field.dart';
 import 'gender_selection.dart';
 
 class RegisterViewForm extends StatefulWidget {
@@ -29,34 +28,35 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
               fontSize: 25.sp,
               fontWeight: FontWeight.w900),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 0, right: 0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomLoginTextField(
-                  textInputType: TextInputType.text,
-                  obscureText: false,
-                  stringInTextField: 'الاسم'),
-              CustomLoginTextField(
-                  textInputType: TextInputType.number,
-                  obscureText: false,
-                  stringInTextField: 'رقم الجوال'),
-              CustomLoginTextField(
-                  textInputType: TextInputType.number,
-                  obscureText: false,
-                  stringInTextField: 'رقم الهوية'),
-              CustomLoginTextField(
-                  textInputType: TextInputType.emailAddress,
-                  obscureText: false,
-                  stringInTextField: 'البريد الالكتروني'),
-              Text(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomLoginTextField(
+                textInputType: TextInputType.text,
+                obscureText: false,
+                stringInTextField: 'الاسم'),
+            CustomLoginTextField(
+                textInputType: TextInputType.number,
+                obscureText: false,
+                stringInTextField: 'رقم الجوال'),
+            CustomLoginTextField(
+                textInputType: TextInputType.number,
+                obscureText: false,
+                stringInTextField: 'رقم الهوية'),
+            CustomLoginTextField(
+                textInputType: TextInputType.emailAddress,
+                obscureText: false,
+                stringInTextField: 'البريد الالكتروني'),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: SizeConfig.screenWidth! * 0.040),
+              child: Text(
                 'النوع',
                 style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w700),
               ),
-              const GenderSelection(),
-            ],
-          ),
+            ),
+            const GenderSelection(),
+          ],
         ),
         SizedBox(
           height: SizeConfig.screenHeight! * 0.04,

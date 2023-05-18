@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
@@ -6,8 +7,9 @@ class HomeAppToggleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return ToggleSwitch(
-      minWidth: 90.0,
+      minWidth: SizeConfig.screenWidth! * 0.20,
       cornerRadius: 20.0,
       activeBgColors: const [
         [Colors.deepPurple],

@@ -126,11 +126,9 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         ),
         DetailsSnackBar(),
         Padding(
-          padding: EdgeInsets.only(left: SizeConfig.screenWidth! * 0.19),
-          child: Padding(
-            padding: EdgeInsets.only(left: 30.w, top: 10.h, right: 100.w),
-            child: const HomeAppToggleButton(),
-          ),
+          padding: EdgeInsets.only(
+              left: 20.w, top: 10.h, right: SizeConfig.screenWidth! * 0.32),
+          child: const HomeAppToggleButton(),
         ),
       ],
     );

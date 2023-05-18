@@ -1,10 +1,9 @@
 import 'package:fingerPrint/Features/request_status/widgets/accepted_tap.dart';
 import 'package:fingerPrint/Features/request_status/widgets/current_tap.dart';
 import 'package:fingerPrint/Features/request_status/widgets/rejected_tap.dart';
+import 'package:fingerPrint/core/utils/constants.dart';
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 
 class TapBarViewBody extends StatefulWidget {
   const TapBarViewBody({super.key});
@@ -13,14 +12,18 @@ class TapBarViewBody extends StatefulWidget {
   State<TapBarViewBody> createState() => _TapBarViewBodyState();
 }
 
-List<String> taps = const ['تم الرفض', 'تم القبول', 'جارية'];
+List<String> taps = const [
+  'جارية',
+  'تم القبول',
+  'تم الرفض',
+];
 
 List<Widget> body = const [
-  RejectedTap(),
-  AcceptedTap(),
   CurrentTap(),
+  AcceptedTap(),
+  RejectedTap(),
 ];
-int current = 2;
+int current = 0;
 
 class _TapBarViewBodyState extends State<TapBarViewBody> {
   @override
@@ -30,14 +33,10 @@ class _TapBarViewBodyState extends State<TapBarViewBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height*.7,
-            child: SingleChildScrollView(
+          SingleChildScrollView(
+            child: Expanded(
               child: Column(
                 children: [
-                  
-                  // const TapBarAppBar(),
-                  // const SizedBox(height: 20),
                   SizedBox(
                     width: double.infinity,
                     height: 60,
@@ -57,8 +56,10 @@ class _TapBarViewBodyState extends State<TapBarViewBody> {
                                 },
                                 child: AnimatedContainer(
                                   duration: const Duration(milliseconds: 300),
-                                  margin: const EdgeInsets.symmetric(horizontal: 5),
-                                  width: MediaQuery.of(context).size.width / 3.48,
+                                  margin:
+                                      const EdgeInsets.symmetric(horizontal: 5),
+                                  width:
+                                      MediaQuery.of(context).size.width / 3.48,
                                   height: 40,
                                   decoration: BoxDecoration(
                                     boxShadow: const [
@@ -111,21 +112,19 @@ class _TapBarViewBodyState extends State<TapBarViewBody> {
                       ),
                     ),
                   ),
-                 
                 ],
               ),
             ),
           ),
-         FloatingActionButton(
-        backgroundColor: const Color(0xff7350cb),
-        onPressed: () {
-          BlocProvider.of<BottomNavCubit>(context)
-              .navigationQueue
-              .addLast(BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
-          BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(12);
-        },
-        child: const Icon(Icons.add),
-      ),
+          const Spacer(),
+          Padding(
+            padding: EdgeInsets.only(bottom: SizeConfig.screenHeight! * 0.025),
+            child: FloatingActionButton(
+              backgroundColor: kPrimaryColor,
+              onPressed: () {},
+              child: const Icon(Icons.add),
+            ),
+          ),
         ],
       ),
     );

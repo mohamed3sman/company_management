@@ -1,5 +1,5 @@
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/assets.dart';
 
@@ -8,9 +8,10 @@ class StackFingerPrintLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Image.asset(
       AssetsData.fingerPrint,
-      width: 90.w,
+      width: SizeConfig.screenWidth! * 0.25,
     );
   }
 }

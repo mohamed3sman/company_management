@@ -8,7 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/utils/styles.dart';
 import '../../../core/widgets/custom_circle_clipper.dart';
 import '../../login/presentation/login_screen.dart';
-import 'clipping_color.dart';
 
 class RegisterViewBody extends StatelessWidget {
   const RegisterViewBody({super.key});
