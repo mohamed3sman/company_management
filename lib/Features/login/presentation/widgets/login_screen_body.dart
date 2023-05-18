@@ -1,6 +1,7 @@
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
+import 'package:fingerPrint/core/widgets/custom_circle_clipper.dart';
 import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
 import '../../../register/widgets/clipping_color.dart';
@@ -19,14 +20,14 @@ class LoginScreenBody extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           ClipPath(
-            clipper: CurveClipper(),
+            clipper: RoundedClipper(),
             child: Container(
               color: kPrimaryColor,
               height: SizeConfig.screenHeight! * 0.45,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 220),
+            padding: const EdgeInsets.only(top: 160),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +37,7 @@ class LoginScreenBody extends StatelessWidget {
                     padding: EdgeInsets.only(top: 30),
                     child: LoginViewForm(),
                   ),
-                  containerHeight: SizeConfig.screenHeight! * 0.6,
+                  containerHeight: SizeConfig.screenHeight! * 0.62,
                   containerWidth: SizeConfig.screenWidth! * 0.85,
                 ),
                 const SizedBox(
@@ -49,7 +50,8 @@ class LoginScreenBody extends StatelessWidget {
                     children: [
                       Text(
                         locale.translate('you_do_not_have_an_account')!,
-                        style: TextStyle(color: Color(0xff7350cb)),
+                        style:
+                            const TextStyle(color: kPrimaryColor, fontSize: 15),
                       ),
                       TextButton(
                         onPressed: () {
@@ -61,7 +63,8 @@ class LoginScreenBody extends StatelessWidget {
                             Text(
                               locale.translate('create_account')!,
                               style: const TextStyle(
-                                  color: Color(0xff3816a2),
+                                  color: kSecondaryColor,
+                                  fontSize: 15,
                                   decoration: TextDecoration.underline),
                             ),
                           ],

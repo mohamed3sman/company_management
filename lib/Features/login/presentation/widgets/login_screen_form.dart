@@ -7,7 +7,6 @@ import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_login_text_field.dart';
 import '../../../register/widgets/custom_text_field.dart';
 
-
 class LoginViewForm extends StatefulWidget {
   const LoginViewForm({super.key});
 
@@ -28,16 +27,20 @@ class _LoginViewFormState extends State<LoginViewForm> {
             locale.translate("login")!,
             style: TextStyle(
                 color: kPrimaryColor,
-                fontSize: 25.sp,
-                fontWeight: FontWeight.w900),
+                fontSize: 17.sp,
+                fontWeight: FontWeight.w700),
           ),
         ),
         const SizedBox(
           height: 50,
         ),
         Padding(
-          padding: EdgeInsets.only(right: 0.0,left: 0),
-          child: CustomLoginTextField(stringInTextField: locale.translate('phone')!,obscureText: true, textInputType: TextInputType.text,),
+          padding: EdgeInsets.only(right: 0.0, left: 0),
+          child: CustomLoginTextField(
+            stringInTextField: locale.translate('phone')!,
+            obscureText: true,
+            textInputType: TextInputType.text,
+          ),
         ),
         const SizedBox(
           height: 50,
@@ -47,7 +50,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
           buttonTapHandler: () {
             Navigator.pushNamed(context, kVerificationScreen);
           },
-          screenWidth: MediaQuery.of(context).size.width * .55,
+          screenWidth: MediaQuery.of(context).size.width * .45,
         ),
         const Spacer(),
         Padding(
@@ -65,7 +68,9 @@ class _LoginViewFormState extends State<LoginViewForm> {
               child: Text(
                 locale.translate('skip')!,
                 style: const TextStyle(
-                  color: Color(0xff7350cb),
+                  fontSize: 15,
+                  color: kPrimaryColor,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
               onPressed: () {

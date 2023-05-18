@@ -23,7 +23,7 @@ class _IntroScreenState extends State<IntroScreen> {
         alignment: Alignment.topCenter,
         children: [
           ClipPath(
-            clipper: RoundedClipper(screenSize.height*.7),
+            clipper: RoundedClipper(),
             child: AnimatedContainer(
               duration: const Duration(seconds: 3),
               height: screenSize.height - 80,

@@ -29,7 +29,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
     return Scaffold(
       body: Stack(children: [
         ClipPath(
-          clipper: RoundedClipper(screenSize.height * .6),
+          clipper: RoundedClipper(),
           child: AnimatedContainer(
             duration: const Duration(seconds: 3),
             height: screenSize.height * .5,

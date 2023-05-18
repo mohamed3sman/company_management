@@ -24,15 +24,19 @@ class CustomButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          border: Border.all(width: 2, color: kPrimaryColor),
+          // border: Border.all(width: 1, color: kPrimaryColor),
           gradient: buttonBackGroundColor == null
-              ? LinearGradient(colors: [
-                  kPrimaryColor,
-                  kSecondaryColor,
-                ])
+              ? const LinearGradient(
+                  colors: [kPrimaryColor, kSecondaryColor],
+                  stops: [0, 1],
+                  begin: Alignment(-0.96, -0.28),
+                  end: Alignment(0.96, 0.28),
+                  // angle: 106,
+                  // scale: undefined,
+                )
               : LinearGradient(
                   colors: [buttonBackGroundColor!, buttonBackGroundColor!]),
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(10),
         ),
         height: screenSize.height * .06,
         width: screenWidth == 0.0 ? 150.0 : screenWidth,
