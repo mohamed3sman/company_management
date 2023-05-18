@@ -3,6 +3,7 @@ import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.
 import 'package:fingerPrint/Features/contact_us/presentation/screens/contact_us_screen.dart';
 import 'package:fingerPrint/Features/dept_request/presentation/screens/dept_request_screen.dart';
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
+import 'package:fingerPrint/Features/employee_profile_form/presentation/widgets/employee_form_step2.dart';
 import 'package:fingerPrint/Features/langauge/presentation/screens/language_screen.dart';
 import 'package:fingerPrint/Features/personal_account/personal_account_screen.dart';
 import 'package:fingerPrint/Features/register/register_screen.dart';
@@ -123,7 +124,10 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const NewMessegeScreen(),
         );
-
+ case kEmployeeProfileStep2:
+        return MaterialPageRoute(
+          builder: (_) => const EmployeeProfileStep2(),
+        );
       default:
         return null;
     }
