@@ -10,6 +10,7 @@ import 'package:fingerPrint/Features/request_status/request_status_screen.dart';
 import 'package:fingerPrint/Features/request_status/widgets/current_tap.dart';
 import 'package:fingerPrint/Features/request_status/widgets/rejected_tap.dart';
 import 'package:fingerPrint/Features/request_status/widgets/accepted_tap.dart';
+import 'package:fingerPrint/Features/step.dart';
 import 'package:fingerPrint/Features/verification/verification_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/permission_request/presentation/screens/permission_request_screen.dart';
@@ -122,6 +123,10 @@ class AppRoutes {
       case kNewMessegeScreen:
         return MaterialPageRoute(
           builder: (_) => const NewMessegeScreen(),
+        );
+      case kCustomStepper:
+        return MaterialPageRoute(
+          builder: (_) => const CustomStepper(),
         );
 
       default:

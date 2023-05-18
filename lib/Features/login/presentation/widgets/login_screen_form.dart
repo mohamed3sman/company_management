@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../../../register/widgets/custom_text_field.dart';
 
-
 class LoginViewForm extends StatefulWidget {
   const LoginViewForm({super.key});
 
@@ -35,7 +34,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
           height: 50,
         ),
         Padding(
-          padding: EdgeInsets.only(right: 20.0,left: 20),
+          padding: EdgeInsets.only(right: 20.0, left: 20),
           child: CustomTextField(hintTextField: locale.translate('phone')!),
         ),
         const SizedBox(

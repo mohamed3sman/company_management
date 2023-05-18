@@ -23,6 +23,7 @@ const String KBottomNav = '/KBottomNav';
 const String kRequestStatusScreen = '/kRequestStatusScreen';
 const String kAppHomeScreen = '/kapphomescreen';
 const String kFollowingRequestScreen = '/kfollowingrequestscreen';
+const String kCustomStepper = '/kcustomstepper';
 
 const String kLanguageScreen = '/bookLanguageScreen';
 const String kLoginScreen = "/kLoginScreen";
@@ -36,8 +37,6 @@ const String kPersonalAccountScreen = '/kPersonalAccountScreen';
 const String kDeptRequestScreen = '/kDeptRequestScreen';
 const String kMessegesScreen = '/kMessegesScreen';
 const String kNewMessegeScreen = '/kNewMessegeScreen';
-
-
 
 // saved sharedprefernces
 const String locale = 'locale';
