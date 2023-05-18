@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/widgets/custom_button.dart';
+import '../../../../core/widgets/custom_login_text_field.dart';
 import '../../../register/widgets/custom_text_field.dart';
 
 
@@ -35,8 +36,8 @@ class _LoginViewFormState extends State<LoginViewForm> {
           height: 50,
         ),
         Padding(
-          padding: EdgeInsets.only(right: 20.0,left: 20),
-          child: CustomTextField(hintTextField: locale.translate('phone')!),
+          padding: EdgeInsets.only(right: 0.0,left: 0),
+          child: CustomLoginTextField(stringInTextField: locale.translate('phone')!,obscureText: true, textInputType: TextInputType.text,),
         ),
         const SizedBox(
           height: 50,
