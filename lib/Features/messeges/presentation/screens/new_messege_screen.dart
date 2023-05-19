@@ -1,5 +1,7 @@
 import 'package:fingerPrint/Features/dept_request/presentation/widgets/out_put_container.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
+import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
+import 'package:fingerPrint/core/widgets/custom_login_text_field.dart';
 import 'package:flutter/material.dart';
 
 import '../../../auth/register/widgets/custom_text_field.dart';
@@ -10,15 +12,17 @@ class NewMessegeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+          child: CustomAppBar(),
+          preferredSize: MediaQuery.of(context).size * .1),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16),
+          padding: const EdgeInsets.only(left: 12, right: 12),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Gaps.vGap50,
                 Text("من"),
                 Gaps.vGap10,
                 OutPutContainer(
@@ -27,12 +31,26 @@ class NewMessegeScreen extends StatelessWidget {
                 ),
                 Gaps.vGap10,
                 Text("إلى"),
-                CustomTextField(hintTextField: "alatheer123@gmail.com"),
+                CustomLoginTextField(
+                    stringInTextField: "alatheer123@gmail.com",
+                    obscureText: false,
+                    textInputType: TextInputType.text,
+                    width: double.infinity),
                 Text("عنوان الرسالة"),
-                CustomTextField(hintTextField: "رسالة لطلب إجازة"),
+                CustomLoginTextField(
+                    stringInTextField: "رسالة لطلب إجازة",
+                    obscureText: false,
+                    textInputType: TextInputType.text,
+                    width: double.infinity),
                 Text("نص الرسالة"),
-                CustomTextField(
-                    hintTextField: "رسالة لطلب إجازة", fieldLines: 4),
+                CustomLoginTextField(
+                  stringInTextField: "رسالة لطلب إجازة",
+                  textInputType: TextInputType.text,
+                  obscureText: false,
+                  height: 100,
+                  width: double.infinity,
+                  multiLine: 10,
+                ),
               ],
             ),
           ),

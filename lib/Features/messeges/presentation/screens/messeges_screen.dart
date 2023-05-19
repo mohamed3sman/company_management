@@ -35,13 +35,13 @@ class MessegesScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 20),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         child: Stack(
           alignment: Alignment.bottomLeft,
           //  crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             SizedBox(
-              height: screenSize.height * .84,
+              height: screenSize.height * .8,
               child: ListView.builder(
                 physics: BouncingScrollPhysics(),
                 itemCount: 17,
@@ -61,7 +61,7 @@ class MessegesScreen extends StatelessWidget {
                         .addLast(BlocProvider.of<BottomNavCubit>(context)
                             .bottomNavIndex);
                     BlocProvider.of<BottomNavCubit>(context)
-                        .updateBottomNavIndex(11);
+                        .updateBottomNavIndex(12);
                     //IMPLEMENT NAVIGATION TO A NEW MESSEGE
                   },
                   buttonText: "رسالة جديدة"),

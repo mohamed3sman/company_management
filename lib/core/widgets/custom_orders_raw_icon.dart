@@ -5,9 +5,9 @@ import '../utils/constants.dart';
 
 class CustomOrdersRawIcon extends StatelessWidget {
   const CustomOrdersRawIcon(
-      {super.key, required this.rawText, required this.iconImagePath});
+      {super.key, required this.rawText, this.iconImagePath});
   final String rawText;
-  final String iconImagePath;
+  final String? iconImagePath;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,19 +16,21 @@ class CustomOrdersRawIcon extends StatelessWidget {
         //mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          iconImagePath!=null?
         Image.asset(
-          iconImagePath,
+          iconImagePath!,
           color: kPrimaryColor,
           width: MediaQuery.of(context).size.width * .04,
           height: MediaQuery.of(context).size.height * .04,
-        ),
+        ):
         Gaps.hGap12,
+         Gaps.hGap12,
         Text(rawText,
             style: const TextStyle(
                 color: Color(0xff828282),
                 fontWeight: FontWeight.w700,
                 fontStyle: FontStyle.normal,
-                fontSize: 16.0)),
+                fontSize: 12.0)),
       ]),
     );
   }

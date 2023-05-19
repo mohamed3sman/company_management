@@ -17,6 +17,7 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: widget.width,
       child: DropdownButtonFormField<String>(
         iconEnabledColor: Color(0xffC9C9CA),
         borderRadius: BorderRadius.circular(12),

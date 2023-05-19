@@ -16,8 +16,8 @@ class CustomElevatedContainer extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 5,
+            color: Colors.grey.withOpacity(0.1),
+            spreadRadius: 2,
             blurRadius: 7,
             offset: const Offset(0, 5), // changes position of shadow
           ),

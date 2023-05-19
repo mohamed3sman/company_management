@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
+import '../../auth/login/presentation/login_screen.dart';
 import '../../auth/register/widgets/clipping_color.dart';
 import '../../auth/register/widgets/register_form_decoration.dart';
 import '../../auth/register/widgets/register_view_form.dart';
-import '../../login/presentation/login_screen.dart';
 
 class RegisterViewBody extends StatelessWidget {
   const RegisterViewBody({super.key});
