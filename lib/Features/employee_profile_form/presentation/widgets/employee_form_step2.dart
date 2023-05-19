@@ -14,14 +14,14 @@ class EmployeeProfileStep2 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                children: [
+                children:const [
                   Text("السيد / إلى من يهمه الأمر"),
                   Spacer(),
                   Text("سلمها الله"),
                 ],
               ),
               Gaps.vGap10,
-              Text("السلام عليكم و رحمة الله و بركاتة ، وبعد :",style: TextStyle(fontSize: 12),),
+            const  Text("السلام عليكم و رحمة الله و بركاتة ، وبعد :",style: TextStyle(fontSize: 12),),
              Gaps.vGap30,
               CustomTextField(
                 fieldLines: 10,

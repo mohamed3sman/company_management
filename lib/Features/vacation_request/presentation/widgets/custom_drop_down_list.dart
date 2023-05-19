@@ -1,4 +1,3 @@
-import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -18,13 +17,30 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
   Widget build(BuildContext context) {
     return Container(
       width: widget.width,
+      //height: 46,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(
+          color: Color(0xfff9f9f9),
+          width: 1,
+        ),
+        borderRadius: BorderRadius.circular(10),
+        boxShadow:const [
+          BoxShadow(
+            color: Color(0x1c000000),
+            offset: Offset(0, 2),
+            blurRadius: 4,
+            spreadRadius: 0,
+          ),
+        ],
+      ),
       child: DropdownButtonFormField<String>(
-        iconEnabledColor: Color(0xffC9C9CA),
+        iconEnabledColor:const Color(0xffC9C9CA),
         borderRadius: BorderRadius.circular(12),
         iconSize: 50,
         //elevation: 12,
         hint: Text(widget.hintText,
-            style: TextStyle(
+            style:  const TextStyle(
               color: Color(0xffababac),
               fontSize: 13,
               fontWeight: FontWeight.w400,
@@ -36,10 +52,6 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
           border: InputBorder.none,
           contentPadding: EdgeInsets.only(right: 10, left: 0),
 
-          // constraints: BoxConstraints.loose(
-          //   Size(MediaQuery.of(context).size.width * .85,
-          //       MediaQuery.of(context).size.height*.2),
-          // ),
         ),
         items: items.map((item) {
           return DropdownMenuItem(
@@ -52,23 +64,6 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
             selectedItem = value;
           });
         },
-      ),
-      //height: 46,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(
-          color: Color(0xfff9f9f9),
-          width: 1,
-        ),
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0x1c000000),
-            offset: Offset(0, 2),
-            blurRadius: 4,
-            spreadRadius: 0,
-          ),
-        ],
       ),
     );
   }

@@ -9,10 +9,10 @@ class MessegesListItem extends StatelessWidget {
       key: UniqueKey(),
       direction: DismissDirection.startToEnd,
       background: Container(
-        padding: EdgeInsets.only(left: 50, right: 50),
+        padding:const EdgeInsets.only(left: 50, right: 50),
         alignment: Alignment.centerRight,
-        color: Color(0xffbb0202),
-        child: Icon(
+        color:const Color(0xffbb0202),
+        child:const Icon(
           Icons.delete_outline_rounded,
           size: 30,
           color: Colors.white,
@@ -22,17 +22,17 @@ class MessegesListItem extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            subtitle: Text(
+            subtitle:const Text(
               "تهنئكم الشركة بحلول شهر رمضان الكريم أعادة الله علينا وعليكم بالخير و اليمن و البركات",
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 12),
             ),
-            title: Text(
+            title: const Text(
               "تهنئة بحلول شهر رمضان الكريم",
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 17),
             ),
-            trailing: Text("03:00 PM"),
+            trailing:const Text("03:00 PM"),
             leading: ClipRRect(
               borderRadius: BorderRadius.circular(50),
               child: Image.network(
