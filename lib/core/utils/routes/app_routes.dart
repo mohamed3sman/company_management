@@ -125,12 +125,7 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const NewMessegeScreen(),
         );
-<<<<<<< HEAD
-
-      case kEmployeeProfileStep2:
-=======
- case kEmployeeProfileFormScreenStep2:
->>>>>>> 6a5a4822ab73ee50b50f4fc188a9585076dc1a4b
+      case kEmployeeProfileFormScreenStep2:
         return MaterialPageRoute(
           builder: (_) => const EmployeeProfileFormScreenStep2(),
         );

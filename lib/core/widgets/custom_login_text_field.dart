@@ -6,8 +6,8 @@ class CustomLoginTextField extends StatelessWidget {
   final bool obscureText;
   final TextInputType textInputType;
   final double? height;
-    final double? width;
-   final int ?multiLine;
+  final double? width;
+  final int? multiLine;
 
   const CustomLoginTextField({
     Key? key,
@@ -22,15 +22,11 @@ class CustomLoginTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-<<<<<<< HEAD
       padding: EdgeInsets.symmetric(
-          vertical: 10, horizontal: SizeConfig.screenWidth! * 0.040),
-=======
-      padding:  EdgeInsets.symmetric(vertical: 10, horizontal:width!=null?0:30),
->>>>>>> 6a5a4822ab73ee50b50f4fc188a9585076dc1a4b
+          vertical: 10, horizontal: width != null ? 0 : 30),
       child: Container(
         height: height ?? 53,
-        width:width??null ,
+        width: width ?? null,
         decoration: BoxDecoration(
           border: Border.all(color: const Color(0xff707070)),
           color: const Color(0xffffffff),
@@ -47,7 +43,7 @@ class CustomLoginTextField extends StatelessWidget {
             },
             obscureText: obscureText,
             keyboardType: textInputType,
-            maxLines:multiLine ?? 1,
+            maxLines: multiLine ?? 1,
             decoration: InputDecoration(
               label: Text(
                 stringInTextField,
