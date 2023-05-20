@@ -18,6 +18,7 @@ import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacat
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
+import '../../../Features/employee_profile_form/presentation/screens/employee_profile_form_screen_step2.dart';
 import '../../../Features/following_request/following_request_screen.dart';
 import '../../../Features/home/presentation/views/book_details_view.dart';
 import '../../../Features/home/presentation/views/home_view.dart';
@@ -124,10 +125,14 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const NewMessegeScreen(),
         );
+<<<<<<< HEAD
 
       case kEmployeeProfileStep2:
+=======
+ case kEmployeeProfileFormScreenStep2:
+>>>>>>> 6a5a4822ab73ee50b50f4fc188a9585076dc1a4b
         return MaterialPageRoute(
-          builder: (_) => const EmployeeProfileStep2(),
+          builder: (_) => const EmployeeProfileFormScreenStep2(),
         );
       default:
         return null;

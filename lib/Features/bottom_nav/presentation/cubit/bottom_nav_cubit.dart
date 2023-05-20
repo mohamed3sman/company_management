@@ -9,7 +9,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../dept_request/presentation/screens/dept_request_screen.dart';
-import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen.dart';
+import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen_step1.dart';
+import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen_step2.dart';
 import '../../../messeges/presentation/screens/messeges_screen.dart';
 import '../../../permission_request/presentation/screens/permission_request_screen.dart';
 import '../../../personal_account/personal_account_screen.dart';
@@ -29,13 +30,15 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const MyOrdersScreen(),
     const HomeScreen(),
     //SIX DRID ITEMS
-    const DeptRequestScreen(),
     const VacationRequestScreen(),
-    const RequestStatus(),
+    const DeptRequestScreen(),
     const PermissinRequestScreen(),
+    const RequestStatus(),
+    EmployeeProfileFormScreenStep1(),
     const PaymentPermissionScreen(),
-     EmploeeProfileForm(),
     
+    EmployeeProfileFormScreenStep2(),
+
     //NEW MESSEGE INDEX
     const NewMessegeScreen(),
   ];

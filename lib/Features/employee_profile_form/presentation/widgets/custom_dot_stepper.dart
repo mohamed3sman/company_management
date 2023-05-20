@@ -1,33 +1,42 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:im_stepper/stepper.dart';
-
-import '../../../../core/utils/constants.dart';
+import 'package:flutter/services.dart';
 
 class CustomDotStepper extends StatelessWidget {
-  const CustomDotStepper({super.key});
-
+   CustomDotStepper({super.key,required this.isActive});
+bool? isActive;
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        DotStepper(
-          tappingEnabled: false,
-          spacing: MediaQuery.of(context).size.width * .35,
-          onDotTapped: (tappedDotIndex) {},
-          lineConnectorsEnabled: true,
-          lineConnectorDecoration: const LineConnectorDecoration(
-            color: kPrimaryColor,
-            strokeWidth: 2.0,
-          ),
-          activeStep: 1,
-          shape: Shape.squircle,
-          indicator: Indicator.jump,
-          dotCount: 2,
+        Container(
+          alignment: Alignment.center,
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+              color: 
+            kPrimaryColor, borderRadius: BorderRadius.circular(12)),
+          child: Text("1",style: TextStyle(color: Colors.white),),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [Text("1"), Text("2")],
+        SizedBox(
+          width: MediaQuery.of(context).size.width * .4,
+          child: Divider(
+           // height: 2,
+            thickness: 1,
+            color:
+            isActive!?
+            kPrimaryColor:Colors.grey
+          ),
+        ),
+        Container(
+          alignment: Alignment.center,
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+              color:   isActive!?
+              kPrimaryColor:Colors.grey, borderRadius: BorderRadius.circular(12)),
+          child: Text("2",style: TextStyle(color: Colors.white)),
         )
       ],
     );
