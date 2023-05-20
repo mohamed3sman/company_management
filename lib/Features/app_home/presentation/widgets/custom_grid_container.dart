@@ -15,12 +15,12 @@ class CustomGridContainer extends StatelessWidget {
     SizeConfig().init(context);
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, kRequestStatusScreen);
+        Navigator.pushNamed(context, kFollowingRequestScreen);
       },
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 5.w),
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 2.h),
+          padding: EdgeInsets.symmetric(vertical: 4.h),
           decoration: BoxDecoration(
             color: const Color(0xffeaeaf7),
             borderRadius: BorderRadius.circular(12),

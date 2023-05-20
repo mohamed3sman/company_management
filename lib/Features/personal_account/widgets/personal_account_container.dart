@@ -1,5 +1,8 @@
+import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../core/utils/styles.dart';
 
 class PersonalAccountContainer extends StatelessWidget {
   const PersonalAccountContainer({super.key, required this.text});
@@ -8,26 +11,29 @@ class PersonalAccountContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Expanded(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.w),
         child: Container(
-            height: 90,
+            height: SizeConfig.screenHeight! * 0.11,
             decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(20)),
+                color: Colors.grey.withOpacity(0.15),
+                borderRadius: BorderRadius.circular(14)),
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 7),
-                child: Text(
-                  text,
-                  style: const TextStyle(color: Color(0xff828282)),
-                  // style: Styles.textStyle18.copyWith(
-                  //   color: Colors.black,
-                  //   fontSize: 12.sp,
-                  //   fontWeight: FontWeight.bold,
-                  // ),
+                padding: const EdgeInsets.only(bottom: 10),
+                child: FittedBox(
+                  fit: BoxFit.fill,
+                  child: Text(
+                    text,
+                    style: Styles.textStyle18.copyWith(
+                      color: const Color(0xff828282),
+                      fontSize: 10.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
             )),

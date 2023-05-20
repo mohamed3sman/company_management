@@ -24,9 +24,9 @@ class FollowingRequestScreen extends StatelessWidget {
         title: Text(
           'تتبع طلبك',
           style: TextStyle(
-            color: Colors.black,
-            fontSize: 22.sp,
-          ),
+              color: Colors.black,
+              fontSize: 17.sp,
+              fontWeight: FontWeight.w800),
         ),
         centerTitle: true,
       ),

@@ -26,7 +26,7 @@ class DetailsSnackBarItem extends StatelessWidget {
             Icon(
               icon,
               color: Colors.deepPurple,
-              size: 22,
+              size: 23.sp,
             ),
             FittedBox(
               fit: BoxFit.fill,
@@ -34,8 +34,8 @@ class DetailsSnackBarItem extends StatelessWidget {
                   style: TextStyle(
                     //fontFamily: 'HacenTunisia',
                     color: const Color(0xff636262),
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w700,
+                    fontSize: 10.sp,
+                    fontWeight: FontWeight.w900,
                     fontStyle: FontStyle.normal,
                   )),
             ),

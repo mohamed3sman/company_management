@@ -64,10 +64,10 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const LoginScreen(),
         );
-      case kAttendanceScreen:
-        return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
-        );
+      // case kAttendanceScreen:
+      //   return MaterialPageRoute(
+      //     builder: (_) => const HomeScreen(),
+      //   );
       case kMyOrdersScreen:
         return MaterialPageRoute(
           builder: (_) => const MyOrdersScreen(),

@@ -28,26 +28,21 @@ class _FollowingRequestCustomWidgetState
           SizedBox(
             width: 10.w,
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 5.h),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'أحمد محمد عبدالرحمن',
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                  ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'أحمد محمد عبدالرحمن',
+                style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w900),
+              ),
+              Text(
+                'تم قبول الطلب المقدم بخصوص الإجازة',
+                style: TextStyle(
+                  fontSize: 11.sp,
+                  color: Colors.black.withOpacity(0.3),
                 ),
-                Text(
-                  'تم قبول الطلب المقدم بخصوص الإجازة',
-                  style: TextStyle(
-                    fontSize: 13.sp,
-                    color: Colors.black.withOpacity(0.5),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),

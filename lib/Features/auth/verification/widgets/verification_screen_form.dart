@@ -39,7 +39,7 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
             Container(
                 width: 50.w,
                 height: 3,
-                decoration: BoxDecoration(color: kPrimaryColor)),
+                decoration: const BoxDecoration(color: kPrimaryColor)),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 3.w),
               child: Icon(
@@ -51,7 +51,7 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
             Container(
                 width: 50.w,
                 height: 3,
-                decoration: new BoxDecoration(color: kPrimaryColor))
+                decoration: const BoxDecoration(color: kPrimaryColor))
           ],
         ),
         SizedBox(height: 30.h),
@@ -59,8 +59,8 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
           locale.translate('please_enter_the_verification_code_sent_to_me')!,
           style: TextStyle(
               color: Colors.black.withOpacity(0.8),
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w800),
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w900),
         ),
         const SizedBox(
           height: 10,
@@ -81,10 +81,11 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
             fontSize: 16.0.sp,
             color: kPrimaryColor,
           ),
-          fullBorder: true,
-          itemSize: 40,
-          fillColor: Colors.grey.withOpacity(0.1),
-          margin: const EdgeInsets.symmetric(horizontal: 3),
+          underlineWidth: 0,
+          underlineUnfocusedColor: const Color(0xffE8E8E8),
+          itemSize: 37,
+          fillColor: const Color(0xffE8E8E8),
+          margin: const EdgeInsets.symmetric(horizontal: 5),
           keyboardType: TextInputType.number,
           underlineColor: kPrimaryColor,
           length: 5,
@@ -100,7 +101,7 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
           padding:
               const EdgeInsets.only(top: 30, left: 55, right: 55, bottom: 30),
           child: DottedLine(
-            dashColor: kPrimaryColor.withOpacity(0.5),
+            dashColor: kPrimaryColor.withOpacity(0.2),
             dashGapLength: 4,
             dashLength: 8,
           ),
@@ -113,14 +114,14 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
               Text(
                 locale.translate('resend_the_code')!,
                 style: Styles.textStyle20.copyWith(
-                  fontSize: 15.sp,
-                  color: Colors.black.withOpacity(0.7),
-                ),
+                    fontSize: 12.sp,
+                    color: Colors.black.withOpacity(0.7),
+                    fontWeight: FontWeight.w900),
               ),
               Text(
-                '00:59',
+                '59 : 00',
                 style: Styles.textStyle20
-                    .copyWith(color: kPrimaryColor, fontSize: 18.sp),
+                    .copyWith(color: kPrimaryColor, fontSize: 15.sp),
               ),
             ],
           ),

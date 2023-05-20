@@ -15,47 +15,50 @@ class FollowingRequestBody extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(top: 20.h),
-          child: IconStepper(
-            direction: Axis.vertical,
-            stepColor: Colors.transparent,
-            activeStepColor: Colors.transparent,
-            activeStepBorderColor: Colors.transparent,
-            activeStepBorderPadding: 0,
-            enableNextPreviousButtons: false,
-            lineColor: const Color(0xff09b214),
-            lineLength: 70,
-            alignment: Alignment.topCenter,
-            icons: [
-              Icon(
-                Icons.check_circle,
-                color: const Color(0xff09b214),
-                size: 20.sp,
-              ),
-              Icon(
-                Icons.check_circle,
-                color: const Color(0xff09b214),
-                size: 20.sp,
-              ),
-              Icon(
-                Icons.check_circle,
-                color: const Color(0xff09b214),
-                size: 20.sp,
-              ),
-              Icon(
-                Icons.check_circle,
-                color: const Color(0xff09b214),
-                size: 20.sp,
-              ),
-              Icon(
-                Icons.check_circle,
-                color: const Color(0xff09b214),
-                size: 20.sp,
-              ),
-            ],
+          child: SizedBox(
+            width: SizeConfig.screenWidth! * 0.15,
+            child: IconStepper(
+              direction: Axis.vertical,
+              stepColor: Colors.transparent,
+              activeStepColor: Colors.transparent,
+              activeStepBorderColor: Colors.transparent,
+              activeStepBorderPadding: 0,
+              enableNextPreviousButtons: false,
+              lineColor: const Color(0xff09b214),
+              lineLength: SizeConfig.screenHeight! * 0.08,
+              alignment: Alignment.topCenter,
+              icons: [
+                Icon(
+                  Icons.check_circle,
+                  color: const Color(0xff09b214),
+                  size: 20.sp,
+                ),
+                Icon(
+                  Icons.check_circle,
+                  color: const Color(0xff09b214),
+                  size: 20.sp,
+                ),
+                Icon(
+                  Icons.check_circle,
+                  color: const Color(0xff09b214),
+                  size: 20.sp,
+                ),
+                Icon(
+                  Icons.check_circle,
+                  color: const Color(0xff09b214),
+                  size: 20.sp,
+                ),
+                Icon(
+                  Icons.check_circle,
+                  color: const Color(0xff09b214),
+                  size: 20.sp,
+                ),
+              ],
+            ),
           ),
         ),
         SizedBox(
-          width: SizeConfig.screenWidth! * 0.75,
+          width: SizeConfig.screenWidth! * 0.815,
           child: ListView.builder(
             physics: const BouncingScrollPhysics(),
             padding: EdgeInsets.zero,

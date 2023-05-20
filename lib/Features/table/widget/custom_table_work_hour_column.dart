@@ -13,8 +13,8 @@ class CustomTableWorkHourColumn extends StatelessWidget {
           style: TextStyle(
             fontFamily: 'HacenTunisia',
             color: const Color(0xffd50a0a),
-            fontSize: 14.sp,
-            fontWeight: FontWeight.w600,
+            fontSize: 13.sp,
+            fontWeight: FontWeight.w900,
             fontStyle: FontStyle.normal,
           )),
     );

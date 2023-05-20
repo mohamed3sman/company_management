@@ -11,7 +11,7 @@ class StackFingerPrintLogo extends StatelessWidget {
     SizeConfig().init(context);
     return Image.asset(
       AssetsData.fingerPrint,
-      width: SizeConfig.screenWidth! * 0.25,
+      width: SizeConfig.screenWidth! * 0.29,
     );
   }
 }

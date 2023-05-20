@@ -2,6 +2,7 @@ import 'package:fingerPrint/Features/request_status/widgets/row_details_alert.da
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class OrderListTile extends StatelessWidget {
@@ -16,16 +17,18 @@ class OrderListTile extends StatelessWidget {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Padding(
-      padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10),
+      padding: const EdgeInsets.only(top: 5, bottom: 7, left: 10),
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
-                color: Colors.grey, blurRadius: 3.0, offset: Offset(0.0, 0.8))
+                color: kTextColor.withOpacity(0.4),
+                blurRadius: 3.0,
+                offset: const Offset(0.0, 0.8))
           ],
         ),
         child: Column(
@@ -33,10 +36,21 @@ class OrderListTile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  ' ${locale.translate('order_number')!} : 123456',
-                  style: TextStyle(
-                      color: Colors.black.withOpacity(0.6), fontSize: 12),
+                Row(
+                  children: [
+                    Text(
+                      ' ${locale.translate('order_number')!}',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          color: Colors.black.withOpacity(0.6),
+                          fontSize: 12.sp),
+                    ),
+                    Text(
+                      ' :  123456',
+                      style: TextStyle(
+                          color: Colors.black.withOpacity(0.6), fontSize: 12),
+                    ),
+                  ],
                 ),
                 GestureDetector(
                   onTap: () {
@@ -53,7 +67,10 @@ class OrderListTile extends StatelessWidget {
                   },
                   child: Text(
                     locale.translate('the_details')!,
-                    style: const TextStyle(color: kPrimaryColor, fontSize: 12),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        color: kPrimaryColor,
+                        fontSize: 12.sp),
                   ),
                 ),
               ],
@@ -64,16 +81,30 @@ class OrderListTile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  '${locale.translate('type_vacation')!} : ${locale.translate('sick_leave')!} ',
-                  style: TextStyle(
-                      color: Colors.black.withOpacity(0.6), fontSize: 12),
+                Row(
+                  children: [
+                    Text(
+                      '${locale.translate('type_vacation')!}',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          color: Colors.black.withOpacity(0.6),
+                          fontSize: 12.sp),
+                    ),
+                    Text(
+                      '  ${locale.translate('sick_leave')!} ',
+                      style: TextStyle(
+                          color: Colors.black.withOpacity(0.6), fontSize: 12),
+                    ),
+                  ],
                 ),
                 Row(
                   children: [
                     Text(
-                      ' ${locale.translate('status')!}:',
-                      style: const TextStyle(color: Colors.black, fontSize: 12),
+                      '  ${locale.translate('status')!} ',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900,
+                          color: Colors.black,
+                          fontSize: 12),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 3),

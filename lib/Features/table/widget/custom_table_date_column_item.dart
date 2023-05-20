@@ -10,12 +10,14 @@ class CustomTableDateColumnItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 5),
+        padding: const EdgeInsets.symmetric(
+          vertical: 5,
+        ),
         decoration: BoxDecoration(
           color: const Color(0xffeaeaf7),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
           children: [
@@ -23,8 +25,8 @@ class CustomTableDateColumnItem extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'HacenTunisia',
                   color: const Color(0xcc5647b2),
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w700,
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.w900,
                   fontStyle: FontStyle.normal,
                 )),
             Text(dayName,
@@ -32,7 +34,7 @@ class CustomTableDateColumnItem extends StatelessWidget {
                   fontFamily: 'HacenTunisia',
                   color: const Color(0xcc5647b2),
                   fontSize: 14.sp,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w900,
                   fontStyle: FontStyle.normal,
                 )),
           ],

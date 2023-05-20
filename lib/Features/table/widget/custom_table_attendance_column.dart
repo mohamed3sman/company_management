@@ -13,8 +13,8 @@ class CustomTableAttendanceColumn extends StatelessWidget {
           style: TextStyle(
             fontFamily: 'HacenTunisia',
             color: const Color(0xff99979c),
-            fontSize: 14.sp,
-            fontWeight: FontWeight.w600,
+            fontSize: 13.sp,
+            fontWeight: FontWeight.w900,
             fontStyle: FontStyle.normal,
           )),
     );

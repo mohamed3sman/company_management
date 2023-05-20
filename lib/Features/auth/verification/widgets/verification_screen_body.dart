@@ -19,16 +19,16 @@ class VerificationScreenBody extends StatelessWidget {
             clipper: RoundedClipper(),
             child: Container(
               color: kPrimaryColor,
-              height: SizeConfig.screenHeight! * 0.5,
+              height: SizeConfig.screenHeight! * 0.8,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 140),
+            padding: EdgeInsets.only(top: SizeConfig.screenHeight! * 0.2),
             child: Center(
               child: Column(
                 children: [
                   Container(
-                    height: SizeConfig.screenHeight! * 0.70,
+                    height: SizeConfig.screenHeight! * 0.62,
                     width: SizeConfig.screenWidth! * 0.85,
                     decoration: FormDecoration(),
                     child: const Padding(

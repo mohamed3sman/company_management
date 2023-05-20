@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/locale/app_localizations.dart';
+import 'app_home_screen_app_bar.dart';
 
 // ignore: must_be_immutable
 class HomeScreenBody extends StatefulWidget {
@@ -33,18 +34,24 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         Column(
           children: [
             Expanded(
+              flex: 8,
               child: Container(
                 color: const Color(0xffeaeaf7),
                 child: Column(
                   children: [
+                    const HomeScreenAppBar(),
                     Padding(
-                      padding: EdgeInsets.only(top: 25.h),
+                      padding: EdgeInsets.only(
+                        top: SizeConfig.screenHeight! * 0.03,
+                      ),
                       child: Stack(
                         children: [
                           const Center(child: StackPurbleContainer()),
                           Center(
                             child: Padding(
-                              padding: EdgeInsets.only(top: 20.h),
+                              padding: EdgeInsets.only(
+                                top: SizeConfig.screenHeight! * 0.03,
+                              ),
                               child: Column(
                                 children: [
                                   const StackFingerPrintLogo(),
@@ -62,10 +69,14 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
               ),
             ),
             Expanded(
+              flex: 6,
               child: Container(
                 color: const Color(0xffd3d1ef),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 70, left: 15, right: 15),
+                  padding: EdgeInsets.only(
+                      top: SizeConfig.screenHeight! * 0.07,
+                      left: 15,
+                      right: 15),
                   child: Column(
                     children: [
                       Row(
@@ -127,7 +138,9 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         DetailsSnackBar(),
         Padding(
           padding: EdgeInsets.only(
-              left: 20.w, top: 10.h, right: SizeConfig.screenWidth! * 0.32),
+              left: SizeConfig.screenWidth! * 0.29,
+              top: 55.h,
+              right: SizeConfig.screenWidth! * 0.29),
           child: const HomeAppToggleButton(),
         ),
       ],

@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:fingerPrint/Features/login/presentation/login_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/constants.dart';
+import '../../../../auth/login/presentation/login_screen.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

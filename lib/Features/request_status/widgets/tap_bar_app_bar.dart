@@ -1,44 +1,63 @@
-import 'package:fingerPrint/core/locale/app_localizations.dart';
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../auth/register/widgets/styles.dart';
+import '../../../core/utils/mediaquery_sizes.dart';
 
-class TapBarAppBar extends StatelessWidget {
-  const TapBarAppBar({super.key});
+class RequestStatusAppBar extends StatelessWidget {
+  const RequestStatusAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    late AppLocalizations locale;
-    locale = AppLocalizations.of(context)!;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back)),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Text(
-              locale.translate('welcome')!,
-              style: Styles.textStyle16.copyWith(
-                color: Colors.black.withOpacity(0.5),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Image.network(
+                  'https://sportsmatik.com/uploads/world-events/players/lionel-messi_1564492648.jpg',
+                  width: 45.sp,
+                ),
               ),
-            ),
-            const Text('أحمد محمد عبدالرحمن', style: Styles.textStyle16)
-          ],
-        ),
-        CircleAvatar(
-          radius: 25,
-          backgroundColor: Colors.grey.withOpacity(0.5),
-          child: const Icon(
-            Icons.person_2_outlined,
-            color: Colors.deepPurple,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'أهلا وسهلا',
+                      style: TextStyle(
+                        color: kTextColor.withOpacity(0.7),
+                        fontSize: 13.sp,
+                      ),
+                    ),
+                    Text(
+                      'أحمد محمد عبدالرحمن',
+                      style: TextStyle(
+                          color: kTextColor,
+                          fontSize: 13.sp,
+                          fontWeight: FontWeight.w900),
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
-        )
-      ],
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: SizeConfig.screenWidth! * 0.040),
+            child: const Icon(
+              Icons.arrow_forward,
+              color: Colors.black,
+              size: 30,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

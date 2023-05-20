@@ -1,5 +1,6 @@
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class HomeAppToggleButton extends StatelessWidget {
@@ -10,7 +11,9 @@ class HomeAppToggleButton extends StatelessWidget {
     SizeConfig().init(context);
     return ToggleSwitch(
       minWidth: SizeConfig.screenWidth! * 0.20,
-      cornerRadius: 20.0,
+      minHeight: 30.sp,
+      cornerRadius: 50.0,
+      borderColor: [Colors.white],
       activeBgColors: const [
         [Colors.deepPurple],
         [Colors.deepPurple]
@@ -19,9 +22,9 @@ class HomeAppToggleButton extends StatelessWidget {
       inactiveBgColor: Colors.white,
       inactiveFgColor: Colors.deepPurple,
       textDirectionRTL: true,
-      initialLabelIndex: 1,
+      initialLabelIndex: 0,
       totalSwitches: 2,
-      labels: const ['إنصراف', 'حضور'],
+      labels: const ['حضور', 'إنصراف'],
       radiusStyle: true,
       onToggle: (index) {
         print('switched to: $index');

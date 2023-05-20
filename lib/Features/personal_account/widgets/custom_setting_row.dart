@@ -1,5 +1,6 @@
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomSettingRow extends StatelessWidget {
@@ -27,23 +28,25 @@ class CustomSettingRow extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Image.asset(path),
+                Image.asset(
+                  path,
+                  width: 24.sp,
+                  height: 24.sp,
+                ),
                 Gaps.hGap20,
                 Text(
                   text,
                   style: TextStyle(
                       color: deleteAccountColor == null
-                          ? Color(0xff707070)
+                          ? const Color(0xff707070)
                           : Color(deleteAccountColor!),
-                      fontSize: 20),
-                  // style: Styles.textStyle18.copyWith(
-                  //     color: Colors.black.withOpacity(0.6), fontSize: 16.sp),
+                      fontSize: 14.sp),
                 ),
               ],
             ),
           ),
-          const Divider(
-            color: Color(0xff707070),
+          Divider(
+            color: const Color(0xff707070).withOpacity(0.4),
           ),
         ],
       ),
