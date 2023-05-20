@@ -64,6 +64,7 @@ class LoginScreenBody extends StatelessWidget {
                               style: const TextStyle(
                                   color: kSecondaryColor,
                                   fontSize: 15,
+                                  decorationThickness: 2,
                                   decoration: TextDecoration.underline),
                             ),
                           ],

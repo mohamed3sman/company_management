@@ -34,7 +34,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const RequestStatus(),
     const PermissinRequestScreen(),
     const PaymentPermissionScreen(),
-    const EmploeeProfileForm(),
+     EmploeeProfileForm(),
     
     //NEW MESSEGE INDEX
     const NewMessegeScreen(),

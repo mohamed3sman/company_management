@@ -1,38 +1,31 @@
-
 import 'package:flutter/material.dart';
+import 'package:im_stepper/stepper.dart';
 
+import '../../../../core/utils/constants.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../../../dept_request/presentation/widgets/out_put_container.dart';
-import '../../../register/widgets/custom_text_field.dart';
+import '../../../auth/register/widgets/custom_text_field.dart';
 import '../../../vacation_request/presentation/widgets/custom_drop_down_list.dart';
 
 class EmployeeProfileStep1 extends StatelessWidget {
   const EmployeeProfileStep1({
     super.key,
-   
   });
-
-
 
   @override
   Widget build(BuildContext context) {
-        final screenSize = MediaQuery.of(context).size;
+    final screenSize = MediaQuery.of(context).size;
 
     return Stack(
       alignment: Alignment.bottomLeft,
       children: [
         SizedBox(
-          height: screenSize.height * .8,
+          height: screenSize.height ,
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Column(children: [
-              const Text(
-                "نموذج تعريف موظف",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
+             
               // NumberStepper(
               //   activeStepBorderPadding: 0,
               //   stepColor: Colors.red,
@@ -46,6 +39,7 @@ class EmployeeProfileStep1 extends StatelessWidget {
               //   activeStepBorderColor: kPrimaryColor,
               //   activeStepColor: kPrimaryColor,
               // ),
+           
               Row(
                 children: [
                   const CustomOrdersRawIcon(
@@ -119,7 +113,9 @@ class EmployeeProfileStep1 extends StatelessWidget {
         ),
         CustomButton(
           screenWidth: screenSize.width * .3,
-          buttonTapHandler: () {},
+          buttonTapHandler: () {
+           
+          },
           buttonText: "عرض النموذج",
         ),
       ],

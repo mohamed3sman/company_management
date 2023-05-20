@@ -3,8 +3,8 @@ import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/widgets/custom_button.dart';
-import '../../../../core/widgets/custom_login_text_field.dart';
+import '../../../../../core/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_login_text_field.dart';
 
 class LoginViewForm extends StatefulWidget {
   const LoginViewForm({super.key});
@@ -73,7 +73,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
                 ),
               ),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, kBottomNav);
+                Navigator.pushNamed(context, kBottomNav);
               },
             ),
           ),

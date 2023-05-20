@@ -1,11 +1,12 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:dotted_line/dotted_line.dart';
 
-import '../../../core/locale/app_localizations.dart';
-import '../../../core/utils/styles.dart';
+import '../../../../core/locale/app_localizations.dart';
+import '../../../../core/utils/styles.dart';
 
 class VerificationScreenForm extends StatefulWidget {
   const VerificationScreenForm({super.key});
@@ -27,8 +28,8 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
           child: Text(
             locale.translate('activation_code')!,
             style: TextStyle(
-                color: const Color(0xff8f7abd),
-                fontSize: 22.sp,
+                color: kPrimaryColor,
+                fontSize: 15.sp,
                 fontWeight: FontWeight.w900),
           ),
         ),
@@ -38,19 +39,19 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
             Container(
                 width: 50.w,
                 height: 3,
-                decoration: new BoxDecoration(color: Color(0xff7350cb))),
+                decoration: BoxDecoration(color: kPrimaryColor)),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 3.w),
               child: Icon(
                 Icons.circle_outlined,
                 size: 12.sp,
-                color: Colors.deepPurple,
+                color: kPrimaryColor,
               ),
             ),
             Container(
                 width: 50.w,
                 height: 3,
-                decoration: new BoxDecoration(color: Color(0xff7350cb)))
+                decoration: new BoxDecoration(color: kPrimaryColor))
           ],
         ),
         SizedBox(height: 30.h),
@@ -67,7 +68,7 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
         Text(
           '01223456789',
           style: TextStyle(
-            color: const Color(0xff8f7abd),
+            color: kPrimaryColor,
             fontSize: 16.sp,
             fontWeight: FontWeight.w800,
           ),
@@ -78,16 +79,16 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
         VerificationCode(
           textStyle: TextStyle(
             fontSize: 16.0.sp,
-            color: const Color(0xff8f7abd),
+            color: kPrimaryColor,
           ),
           fullBorder: true,
           itemSize: 40,
           fillColor: Colors.grey.withOpacity(0.1),
           margin: const EdgeInsets.symmetric(horizontal: 3),
           keyboardType: TextInputType.number,
-          underlineColor: const Color(0xff8f7abd),
+          underlineColor: kPrimaryColor,
           length: 5,
-          cursorColor: const Color(0xff8f7abd),
+          cursorColor: kPrimaryColor,
           onCompleted: (String value) {
             setState(() {});
           },
@@ -99,7 +100,7 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
           padding:
               const EdgeInsets.only(top: 30, left: 55, right: 55, bottom: 30),
           child: DottedLine(
-            dashColor: const Color(0xff8f7abd).withOpacity(0.5),
+            dashColor: kPrimaryColor.withOpacity(0.5),
             dashGapLength: 4,
             dashLength: 8,
           ),
@@ -119,7 +120,7 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
               Text(
                 '00:59',
                 style: Styles.textStyle20
-                    .copyWith(color: const Color(0xff8f7abd), fontSize: 18.sp),
+                    .copyWith(color: kPrimaryColor, fontSize: 18.sp),
               ),
             ],
           ),

@@ -1,12 +1,12 @@
-import 'package:fingerPrint/Features/register/widgets/register_form_decoration.dart';
-import 'package:fingerPrint/Features/register/widgets/register_view_form.dart';
+import 'package:fingerPrint/Features/auth/register/widgets/register_form_decoration.dart';
+import 'package:fingerPrint/Features/auth/register/widgets/register_view_form.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/utils/styles.dart';
-import '../../../core/widgets/custom_circle_clipper.dart';
+import '../../../../core/utils/styles.dart';
+import '../../../../core/widgets/custom_circle_clipper.dart';
 import '../../login/presentation/login_screen.dart';
 
 class RegisterViewBody extends StatelessWidget {
@@ -31,7 +31,7 @@ class RegisterViewBody extends StatelessWidget {
               children: [
                 Center(
                   child: Container(
-                    height: SizeConfig.screenHeight! * 0.80,
+                    height: SizeConfig.screenHeight! * 0.77,
                     width: SizeConfig.screenWidth! * 0.85,
                     decoration: FormDecoration(),
                     child: const Padding(
@@ -49,9 +49,9 @@ class RegisterViewBody extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        '! لدي حساب بالفعل',
-                        style: Styles.textStyle20.copyWith(
-                            color: const Color(0xff8f7abd), fontSize: 17.sp),
+                        ' لدي حساب بالفعل ! ',
+                        style: Styles.textStyle20
+                            .copyWith(color: kPrimaryColor, fontSize: 13.sp),
                       ),
                       TextButton(
                         onPressed: () {
@@ -63,10 +63,10 @@ class RegisterViewBody extends StatelessWidget {
                         child: Text(
                           'تسجيل الدخول',
                           style: Styles.textStyle20.copyWith(
-                              color: const Color(0xff8f7abd),
+                              color: kSecondaryColor,
                               decoration: TextDecoration.underline,
                               decorationThickness: 2,
-                              fontSize: 17.sp),
+                              fontSize: 13.sp),
                         ),
                       ),
                     ],

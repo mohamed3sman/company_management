@@ -1,4 +1,4 @@
-import 'package:fingerPrint/Features/register/widgets/register_view_body.dart';
+import 'package:fingerPrint/Features/auth/register/widgets/register_view_body.dart';
 import 'package:flutter/material.dart';
 
 class RegisterView extends StatelessWidget {
