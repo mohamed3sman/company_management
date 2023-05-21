@@ -26,6 +26,8 @@ class NewMessegeScreen extends StatelessWidget {
              const   Text("من"),
                 Gaps.vGap10,
                 OutPutContainer(
+                      containerIconPath: "assets/icons/calender_icon.png",
+                              containerTitle: "",
                   containerWidth: double.infinity,
                   containerText: "alatheer123@gmail.com",
                 ),

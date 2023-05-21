@@ -17,6 +17,7 @@ import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacat
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
+import '../../../Features/change_bank_account/presentation/screens/change_bank_account_screen_step2.dart';
 import '../../../Features/employee_profile_form/presentation/screens/employee_profile_form_screen_step2.dart';
 import '../../../Features/following_request/following_request_screen.dart';
 import '../../../Features/introduction/presentation/intro_screen.dart';
@@ -126,6 +127,11 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const EmployeeProfileFormScreenStep2(),
         );
+          case kChangeBankAccountScreenStep2:
+        return MaterialPageRoute(
+          builder: (_) => const ChangeBankAccountScreenStep2(),
+        );
+        
       default:
         return null;
     }

@@ -31,7 +31,9 @@ class EmployeeProfileFormScreenStep1 extends StatelessWidget {
                           fontSize: 18,
                         ),
                       ),
-                      CustomDotStepper(isActive: false),
+                      CustomDotStepper(isActive: false,
+                      firstText: "تعريف موظف",
+                      secondText: "عرض النموذج"),
                       //   SizedBox(height: screenSize.height*.1,),
                     ]),
                   )

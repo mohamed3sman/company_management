@@ -79,7 +79,13 @@ class MyOrdersGridView extends StatelessWidget {
               gridImagePath: MyOrdersGridDummtData().DUMMYGRIDDATA[3]
                   ["imagePath"],
               gridItemTapHandler: () {
-                Commons.showToast(context, message: "not Found screen");
+                BlocProvider.of<BottomNavCubit>(context)
+                    .navigationQueue
+                    .addLast(BlocProvider.of<BottomNavCubit>(context)
+                        .bottomNavIndex);
+                BlocProvider.of<BottomNavCubit>(context)
+                    .updateBottomNavIndex(16);
+                // Commons.showToast(context, message: "not Found screen");
               },
               gridText: MyOrdersGridDummtData().DUMMYGRIDDATA[3]["gridText"],
             )

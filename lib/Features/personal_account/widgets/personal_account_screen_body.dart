@@ -87,11 +87,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                 height: SizeConfig.screenHeight! * 0.05,
               ),
                Row(
-<<<<<<< HEAD
-                children:const [
-=======
                 children: [
->>>>>>> 2a88103ac46a162c8aec2d247b7e0dbc7ced4ece
                   PersonalAccountContainer(
                     text: 'البيانات الشخصية',
                   ),

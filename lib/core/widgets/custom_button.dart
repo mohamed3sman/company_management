@@ -40,7 +40,7 @@ class CustomButton extends StatelessWidget {
                     colors: [buttonBackGroundColor!, buttonBackGroundColor!]),
             borderRadius: BorderRadius.circular(10),
             border:
-                haveBorder == true ? Border.all(color: Colors.black) : null),
+                haveBorder == true ? Border.all(color: kPrimaryColor) : null),
         height: screenSize.height * .06,
         width: screenWidth == 0.0 ? 150.0 : screenWidth,
         child: Text(

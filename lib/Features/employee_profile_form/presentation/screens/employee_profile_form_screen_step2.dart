@@ -1,7 +1,6 @@
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
-
 import '../widgets/custom_dot_stepper.dart';
 import '../widgets/employee_form_step2.dart';
 
@@ -27,7 +26,10 @@ class EmployeeProfileFormScreenStep2 extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-                CustomDotStepper(isActive: true),
+                CustomDotStepper(
+                    isActive: true,
+                    firstText: "تعريف موظف",
+                    secondText: "عرض النموذج"),
                 SizedBox(
                   height: screenSize.height * .05,
                 ),

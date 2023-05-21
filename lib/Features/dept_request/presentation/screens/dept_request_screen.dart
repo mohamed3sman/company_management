@@ -58,12 +58,16 @@ class RequestDeptScreen extends StatelessWidget {
                         Row(
                           children: [
                             OutPutContainer(
+                              containerIconPath:"assets/icons/calender_icon.png" ,
+                              containerTitle: "",
                               containerText: "",
                               containerWidth:
                                   MediaQuery.of(context).size.width * .4,
                             ),
                             Spacer(),
                             OutPutContainer(
+                              containerIconPath: "assets/icons/calender_icon.png",
+                              containerTitle: "",
                               containerText: "",
                               containerWidth:
                                   MediaQuery.of(context).size.width * .4,
@@ -89,12 +93,16 @@ class RequestDeptScreen extends StatelessWidget {
                         Row(
                           children: [
                             OutPutContainer(
+                              containerIconPath: "assets/icons/calender_icon.png",
+                              containerTitle: "",
                               containerText: "500 جنية",
                               containerWidth:
                                   MediaQuery.of(context).size.width * .4,
                             ),
                             Spacer(),
                             OutPutContainer(
+                                  containerIconPath: "assets/icons/calender_icon.png",
+                              containerTitle: "",
                               containerText: "5",
                               containerWidth:
                                   MediaQuery.of(context).size.width * .4,
@@ -106,6 +114,8 @@ class RequestDeptScreen extends StatelessWidget {
                           iconImagePath: "assets/icons/calender_icon.png",
                         ),
                         OutPutContainer(
+                              containerIconPath: "assets/icons/calender_icon.png",
+                              containerTitle: "",
                           containerWidth: double.infinity,
                           containerText: "05/15/2023",
                         ),

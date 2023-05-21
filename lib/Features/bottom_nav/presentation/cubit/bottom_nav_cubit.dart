@@ -1,3 +1,4 @@
+import 'package:fingerPrint/Features/change_bank_account/presentation/screens/change_bank_account_screen_step2.dart';
 import 'package:fingerPrint/Features/messeges/presentation/screens/new_messege_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
@@ -10,6 +11,7 @@ import 'dart:collection';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../change_bank_account/presentation/screens/change_bank_account_screen_step1.dart';
 import '../../../dept_request/presentation/screens/dept_request_screen.dart';
 import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen_step1.dart';
 import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen_step2.dart';
@@ -66,7 +68,11 @@ class BottomNavCubit extends Cubit<BottomNavState> {
 
     //15
 
-    const FollowingRequestScreen()
+    const FollowingRequestScreen(),
+    //16
+    const ChangeBankAccountScreenStep1(),
+    //17
+    const ChangeBankAccountScreenStep2(),
   ];
 
   Widget get selectedBottomNavScreen => bottomNavScreens[bottomNavIndex];

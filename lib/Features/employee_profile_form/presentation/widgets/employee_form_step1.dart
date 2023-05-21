@@ -35,9 +35,13 @@ class EmployeeProfileStep1 extends StatelessWidget {
         Row(
           children: [
             OutPutContainer(
+              containerTitle: "",
+              containerIconPath: 'assets/icons/calender_icon.png',
                 containerWidth: screenSize.width * .41, containerText: "125"),
             const Spacer(),
             OutPutContainer(
+              containerIconPath: "assets/icons/calender_icon.png",
+              containerTitle: "",
                 containerWidth: screenSize.width * .41,
                 containerText: "25/9/2023"),
           ],

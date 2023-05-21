@@ -48,10 +48,14 @@ class PaymentPermissionScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     OutPutContainer(
+                      containerIconPath: "assets/icons/calender_icon.png",
+                      containerTitle: "",
                         containerWidth: screenSize.width * .4,
                         containerText: "125"),
                     const Spacer(),
                     OutPutContainer(
+                      containerIconPath: "assets/icons/calender_icon.png",
+                      containerTitle: "",
                         containerWidth: screenSize.width * .4,
                         containerText: "25/9/2023"),
                   ],

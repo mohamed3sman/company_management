@@ -39,6 +39,7 @@ const String kMessegesScreen = '/kMessegesScreen';
 const String kNewMessegeScreen = '/kNewMessegeScreen';
 const String kEmployeeProfileFormScreenStep2 =
     '/kEmployeeProfileFormScreenStep2';
+const String kChangeBankAccountScreenStep2 = '/kChangeBankAccountScreenStep2';
 
 // saved sharedprefernces
 const String locale = 'locale';
@@ -49,6 +50,7 @@ const String arabic = 'ar';
 const Color kPrimaryColor = Color(0xff1a938a);
 const Color kSecondaryColor = Color.fromARGB(255, 12, 99, 93);
 const Color kTextColor = Color(0xff7a7a7a);
+const Color kOutPutContainerTextColor = Color(0xffABABAC);
 
 const kTranstionDuration = Duration(milliseconds: 250);
 const kGtSectraFine = 'GT Sectra Fine';
