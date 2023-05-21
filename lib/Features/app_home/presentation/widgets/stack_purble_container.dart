@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -14,9 +15,9 @@ class StackPurbleContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
         gradient: const LinearGradient(
           colors: [
-            Color(0xff5647b2),
-            Color(0xffafaadb),
-            Color(0xff5647b2),
+            kSecondaryColor,
+            kPrimaryColor,
+            kSecondaryColor,
           ],
           stops: [0, 0.4560239911079407, 1],
           begin: Alignment(-0.73, -0.68),

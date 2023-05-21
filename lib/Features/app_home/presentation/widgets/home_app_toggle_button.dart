@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,12 +16,12 @@ class HomeAppToggleButton extends StatelessWidget {
       cornerRadius: 50.0,
       borderColor: [Colors.white],
       activeBgColors: const [
-        [Colors.deepPurple],
-        [Colors.deepPurple]
+        [kPrimaryColor],
+        [kPrimaryColor]
       ],
       activeFgColor: Colors.white,
       inactiveBgColor: Colors.white,
-      inactiveFgColor: Colors.deepPurple,
+      inactiveFgColor: kPrimaryColor,
       textDirectionRTL: true,
       initialLabelIndex: 0,
       totalSwitches: 2,

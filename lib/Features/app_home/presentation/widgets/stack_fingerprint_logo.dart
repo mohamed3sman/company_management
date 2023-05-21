@@ -9,9 +9,12 @@ class StackFingerPrintLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return Image.asset(
-      AssetsData.fingerPrint,
-      width: SizeConfig.screenWidth! * 0.29,
+    return GestureDetector(
+      onTap: () {},
+      child: Image.asset(
+        AssetsData.fingerPrint,
+        width: SizeConfig.screenWidth! * 0.25,
+      ),
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_day_tex
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_fingerprint_logo.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_purble_container.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_time_text.dart';
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -50,7 +51,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                           Center(
                             child: Padding(
                               padding: EdgeInsets.only(
-                                top: SizeConfig.screenHeight! * 0.03,
+                                top: SizeConfig.screenHeight! * 0.05,
                               ),
                               child: Column(
                                 children: [
@@ -71,7 +72,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             Expanded(
               flex: 6,
               child: Container(
-                color: const Color(0xffd3d1ef),
+                color: kPrimaryColor.withOpacity(.2),
                 child: Padding(
                   padding: EdgeInsets.only(
                       top: SizeConfig.screenHeight! * 0.07,
@@ -139,7 +140,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         Padding(
           padding: EdgeInsets.only(
               left: SizeConfig.screenWidth! * 0.29,
-              top: 55.h,
+              top: 57.h,
               right: SizeConfig.screenWidth! * 0.29),
           child: const HomeAppToggleButton(),
         ),
