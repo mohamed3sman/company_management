@@ -20,9 +20,10 @@ class DetailsSnackBar extends StatelessWidget {
       width: 260.w,
       height: SizeConfig.screenHeight! * 0.11,
       margin: EdgeInsets.only(
-          top: SizeConfig.screenHeight! * 0.45,
-          right: SizeConfig.screenWidth! * 0.14,
-          left: SizeConfig.screenWidth! * 0.14),
+        top: SizeConfig.screenHeight! * 0.455,
+        right: SizeConfig.screenWidth! * 0.14,
+        left: SizeConfig.screenWidth! * 0.14,
+      ),
       decoration: BoxDecoration(
         color: const Color(0xffffffff),
         borderRadius: BorderRadius.circular(25),
@@ -46,9 +47,10 @@ class DetailsSnackBar extends StatelessWidget {
               actionText: locale.translate("attendance_register")!,
             ),
             DetailsSnackBarItem(
-              icon: Icons.logout,
+              icon: Icons.logout_outlined,
               timeText: '05:00 ${locale.translate("pm")!}',
               actionText: locale.translate("leaving_register")!,
+              rotate: true,
             ),
             DetailsSnackBarItem(
               icon: Icons.access_time,

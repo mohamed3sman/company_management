@@ -15,6 +15,9 @@ class VerificationScreenForm extends StatefulWidget {
   State<VerificationScreenForm> createState() => _VerificationScreenFormState();
 }
 
+bool _onEditing = true;
+String? _code;
+
 class _VerificationScreenFormState extends State<VerificationScreenForm> {
   @override
   Widget build(BuildContext context) {
@@ -76,26 +79,37 @@ class _VerificationScreenFormState extends State<VerificationScreenForm> {
         const SizedBox(
           height: 50,
         ),
-        VerificationCode(
-          textStyle: TextStyle(
-            fontSize: 16.0.sp,
-            color: kPrimaryColor,
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: VerificationCode(
+            textStyle: TextStyle(
+                fontSize: 18.0.sp,
+                color: kPrimaryColor,
+                fontWeight: FontWeight.w800),
+            underlineWidth: 0,
+            autofocus: true,
+            underlineUnfocusedColor: const Color(0xffE8E8E8),
+            itemSize: 37,
+            onCompleted: (String value) {
+              setState(() {
+                _code = value;
+                Navigator.pushNamed(context, kBottomNav);
+              });
+            },
+            onEditing: (bool value) {
+              setState(() {
+                _onEditing = value;
+              });
+              if (!_onEditing) FocusScope.of(context).unfocus();
+            },
+            padding: const EdgeInsets.only(bottom: 15),
+            fillColor: const Color(0xffE8E8E8),
+            margin: const EdgeInsets.symmetric(horizontal: 5),
+            keyboardType: TextInputType.number,
+            underlineColor: kPrimaryColor,
+            length: 5,
+            cursorColor: kPrimaryColor,
           ),
-          underlineWidth: 0,
-          underlineUnfocusedColor: const Color(0xffE8E8E8),
-          itemSize: 37,
-          fillColor: const Color(0xffE8E8E8),
-          margin: const EdgeInsets.symmetric(horizontal: 5),
-          keyboardType: TextInputType.number,
-          underlineColor: kPrimaryColor,
-          length: 5,
-          cursorColor: kPrimaryColor,
-          onCompleted: (String value) {
-            setState(() {});
-          },
-          onEditing: (bool value) {
-            setState(() {});
-          },
         ),
         Padding(
           padding:

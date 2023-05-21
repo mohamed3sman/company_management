@@ -1,21 +1,24 @@
-import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomGridContainer extends StatelessWidget {
   const CustomGridContainer(
-      {super.key, required this.imagePath, required this.orderText});
+      {super.key,
+      required this.imagePath,
+      required this.orderText,
+      required this.onTap});
 
   final String imagePath;
   final String orderText;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, kFollowingRequestScreen);
+        onTap();
       },
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 5.w),

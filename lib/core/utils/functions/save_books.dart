@@ -1,6 +1,5 @@
+import 'package:fingerPrint/Features/example/domain/entities/book_entity.dart';
 import 'package:hive/hive.dart';
-
-import '../../../Features/home/domain/entities/book_entity.dart';
 
 void saveBooksData(List<BookEntity> books, String boxName) {
   var box = Hive.box(boxName);

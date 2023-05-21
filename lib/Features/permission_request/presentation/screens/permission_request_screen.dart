@@ -7,14 +7,14 @@ import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../../../vacation_request/presentation/widgets/custom_drop_down_list.dart';
 import '../widgets/custom_time_picker_widget.dart';
 
-class PermissinRequestScreen extends StatefulWidget {
-  const PermissinRequestScreen({super.key});
+class RequestPermissinScreen extends StatefulWidget {
+  const RequestPermissinScreen({super.key});
 
   @override
-  State<PermissinRequestScreen> createState() => _PermissinRequestScreenState();
+  State<RequestPermissinScreen> createState() => _RequestPermissinScreenState();
 }
 
-class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
+class _RequestPermissinScreenState extends State<RequestPermissinScreen> {
   @override
   Widget build(BuildContext context) {
     late AppLocalizations locale;
@@ -22,7 +22,6 @@ class _PermissinRequestScreenState extends State<PermissinRequestScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20),
           height: MediaQuery.of(context).size.height * .87,

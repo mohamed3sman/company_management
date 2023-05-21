@@ -1,4 +1,3 @@
-import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 
 class CustomLoginTextField extends StatelessWidget {

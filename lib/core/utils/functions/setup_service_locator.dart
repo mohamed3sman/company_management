@@ -7,11 +7,11 @@ import 'package:fingerPrint/Features/Splash/domain/usecases/change_locale_use_ca
 import 'package:fingerPrint/Features/Splash/domain/usecases/get_saved_lang_use_case.dart';
 import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/locale_cubit.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
+import 'package:fingerPrint/Features/example/data/data_sources/home_local_data_source.dart';
+import 'package:fingerPrint/Features/example/data/data_sources/home_remote_data_source.dart';
+import 'package:fingerPrint/Features/example/data/repos/home_repo_impl.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../Features/home/data/data_sources/home_local_data_source.dart';
-import '../../../Features/home/data/data_sources/home_remote_data_source.dart';
-import '../../../Features/home/data/repos/home_repo_impl.dart';
 import '../api_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

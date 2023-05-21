@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/constants.dart';
 import '../../../../auth/login/presentation/login_screen.dart';
@@ -33,24 +34,24 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Stack(
-        children: [
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [kPrimaryColor, Colors.white.withOpacity(0.5)],
-                  stops: [10, 50]),
-            ),
+    return Stack(
+      children: [
+        Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [kPrimaryColor, Colors.white.withOpacity(0.5)],
+                stops: const [10, 50]),
           ),
-          Image.asset(
+        ),
+        Center(
+          child: Image.asset(
             'assets/images/splash_image.png',
-            width: 50,
+            width: 180.w,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

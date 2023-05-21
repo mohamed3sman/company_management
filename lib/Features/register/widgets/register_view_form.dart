@@ -8,7 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import '../../../core/widgets/custom_login_text_field.dart';
-import 'custom_text_field.dart';
 import 'gender_selection.dart';
 
 class RegisterViewForm extends StatefulWidget {
@@ -37,19 +36,19 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomLoginTextField(
+            const CustomLoginTextField(
                 textInputType: TextInputType.text,
                 obscureText: false,
                 stringInTextField: 'الاسم'),
-            CustomLoginTextField(
+            const CustomLoginTextField(
                 textInputType: TextInputType.number,
                 obscureText: false,
                 stringInTextField: 'رقم الجوال'),
-            CustomLoginTextField(
+            const CustomLoginTextField(
                 textInputType: TextInputType.number,
                 obscureText: false,
                 stringInTextField: 'رقم الهوية'),
-            CustomLoginTextField(
+            const CustomLoginTextField(
                 textInputType: TextInputType.emailAddress,
                 obscureText: false,
                 stringInTextField: 'البريد الالكتروني'),

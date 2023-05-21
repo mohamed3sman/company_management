@@ -3,7 +3,6 @@ import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.
 import 'package:fingerPrint/Features/contact_us/presentation/screens/contact_us_screen.dart';
 import 'package:fingerPrint/Features/dept_request/presentation/screens/dept_request_screen.dart';
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
-import 'package:fingerPrint/Features/employee_profile_form/presentation/widgets/employee_form_step2.dart';
 import 'package:fingerPrint/Features/langauge/presentation/screens/language_screen.dart';
 import 'package:fingerPrint/Features/personal_account/personal_account_screen.dart';
 import 'package:fingerPrint/Features/auth/register/register_screen.dart';
@@ -20,13 +19,11 @@ import 'package:flutter/material.dart';
 import '../../../Features/Splash/presentation/views/splash_view.dart';
 import '../../../Features/employee_profile_form/presentation/screens/employee_profile_form_screen_step2.dart';
 import '../../../Features/following_request/following_request_screen.dart';
-import '../../../Features/home/presentation/views/book_details_view.dart';
-import '../../../Features/home/presentation/views/home_view.dart';
 import '../../../Features/introduction/presentation/intro_screen.dart';
 import '../../../Features/auth/login/presentation/login_screen.dart';
 import '../../../Features/messeges/presentation/screens/messeges_screen.dart';
 import '../../../Features/messeges/presentation/screens/new_messege_screen.dart';
-import '../../../Features/search/presentation/views/search_view.dart';
+import '../../../Features/example/search/presentation/views/search_view.dart';
 import '../../../Features/table/table_screen.dart';
 import '../constants.dart';
 
@@ -41,10 +38,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SearchView());
       case kBottomNav:
         return MaterialPageRoute(builder: (_) => const BottomNav());
-      case kHomeScreen:
-        return MaterialPageRoute(builder: (_) => const HomeView());
-      case kBookDetailsScreen:
-        return MaterialPageRoute(builder: (_) => const BookDetailsView());
+      // case kHomeScreen:
+      //   return MaterialPageRoute(builder: (_) => const HomeView());
+      // case kBookDetailsScreen:
+      //   return MaterialPageRoute(builder: (_) => const BookDetailsView());
       case kIntroScreen:
         return MaterialPageRoute(builder: (_) => const IntroScreen());
       case kLanguageScreen:
@@ -83,11 +80,11 @@ class AppRoutes {
         );
       case kVacationRquestScreen:
         return MaterialPageRoute(
-          builder: (_) => const VacationRequestScreen(),
+          builder: (_) => const RequestVacationScreen(),
         );
       case kPermissionRquestScreen:
         return MaterialPageRoute(
-          builder: (_) => const PermissinRequestScreen(),
+          builder: (_) => const RequestPermissinScreen(),
         );
       case kDataTableScreen:
         return MaterialPageRoute(
@@ -104,7 +101,7 @@ class AppRoutes {
 
       case kDeptRequestScreen:
         return MaterialPageRoute(
-          builder: (_) => const DeptRequestScreen(),
+          builder: (_) => const RequestDeptScreen(),
         );
 
       case kAppHomeScreen:
