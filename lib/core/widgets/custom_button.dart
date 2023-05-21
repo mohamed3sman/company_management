@@ -8,11 +8,13 @@ class CustomButton extends StatelessWidget {
       this.buttonBackGroundColor,
       required this.screenWidth,
       required this.buttonTapHandler,
-      required this.buttonText});
+      required this.buttonText,
+      this.haveBorder = false});
   final double screenWidth;
   final Function buttonTapHandler;
   final String buttonText;
   final Color? buttonBackGroundColor;
+  final bool haveBorder;
 
   @override
   Widget build(BuildContext context) {
@@ -24,20 +26,21 @@ class CustomButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          // border: Border.all(width: 1, color: kPrimaryColor),
-          gradient: buttonBackGroundColor == null
-              ? const LinearGradient(
-                  colors: [kPrimaryColor, kSecondaryColor],
-                  stops: [0, 1],
-                  begin: Alignment(-0.96, -0.28),
-                  end: Alignment(0.96, 0.28),
-                  // angle: 106,
-                  // scale: undefined,
-                )
-              : LinearGradient(
-                  colors: [buttonBackGroundColor!, buttonBackGroundColor!]),
-          borderRadius: BorderRadius.circular(10),
-        ),
+            // border: Border.all(width: 1, color: kPrimaryColor),
+            gradient: buttonBackGroundColor == null
+                ? const LinearGradient(
+                    colors: [kPrimaryColor, kSecondaryColor],
+                    stops: [0, 1],
+                    begin: Alignment(-0.96, -0.28),
+                    end: Alignment(0.96, 0.28),
+                    // angle: 106,
+                    // scale: undefined,
+                  )
+                : LinearGradient(
+                    colors: [buttonBackGroundColor!, buttonBackGroundColor!]),
+            borderRadius: BorderRadius.circular(10),
+            border:
+                haveBorder == true ? Border.all(color: Colors.black) : null),
         height: screenSize.height * .06,
         width: screenWidth == 0.0 ? 150.0 : screenWidth,
         child: Text(

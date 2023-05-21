@@ -2,6 +2,7 @@ import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'dart:math' as math;
 
 class DetailsSnackBarItem extends StatelessWidget {
   const DetailsSnackBarItem({
@@ -9,10 +10,12 @@ class DetailsSnackBarItem extends StatelessWidget {
     required this.icon,
     required this.timeText,
     required this.actionText,
+    this.rotate = false,
   });
   final IconData icon;
   final String timeText;
   final String actionText;
+  final bool rotate;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +27,13 @@ class DetailsSnackBarItem extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              color: kPrimaryColor,
-              size: 23.sp,
+            Transform.rotate(
+              angle: rotate == true ? -math.pi : 0.0,
+              child: Icon(
+                icon,
+                color: kPrimaryColor,
+                size: 23.sp,
+              ),
             ),
             FittedBox(
               fit: BoxFit.fill,

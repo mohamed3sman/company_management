@@ -5,9 +5,11 @@ import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_day_tex
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_fingerprint_logo.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_purble_container.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_time_text.dart';
+import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/locale/app_localizations.dart';
@@ -84,18 +86,45 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                         children: [
                           Expanded(
                             child: CustomGridContainer(
+                              onTap: () {
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .navigationQueue
+                                    .addLast(
+                                        BlocProvider.of<BottomNavCubit>(context)
+                                            .bottomNavIndex);
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .updateBottomNavIndex(7);
+                              },
                               imagePath: 'assets/images/permission.png',
                               orderText: locale.translate("order_permission")!,
                             ),
                           ),
                           Expanded(
                             child: CustomGridContainer(
+                              onTap: () {
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .navigationQueue
+                                    .addLast(
+                                        BlocProvider.of<BottomNavCubit>(context)
+                                            .bottomNavIndex);
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .updateBottomNavIndex(6);
+                              },
                               imagePath: 'assets/images/depression.png',
                               orderText: locale.translate("order_cache")!,
                             ),
                           ),
                           Expanded(
                             child: CustomGridContainer(
+                              onTap: () {
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .navigationQueue
+                                    .addLast(
+                                        BlocProvider.of<BottomNavCubit>(context)
+                                            .bottomNavIndex);
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .updateBottomNavIndex(5);
+                              },
                               imagePath: 'assets/images/holiday.png',
                               orderText: locale.translate("order_vacation")!,
                             ),
@@ -109,6 +138,15 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                         children: [
                           Expanded(
                             child: CustomGridContainer(
+                              onTap: () {
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .navigationQueue
+                                    .addLast(
+                                        BlocProvider.of<BottomNavCubit>(context)
+                                            .bottomNavIndex);
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .updateBottomNavIndex(13);
+                              },
                               imagePath:
                                   'assets/images/confirmed_attendance_bro.png',
                               orderText:
@@ -117,12 +155,14 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                           ),
                           Expanded(
                             child: CustomGridContainer(
+                              onTap: () {},
                               imagePath: 'assets/images/credit_card.png',
                               orderText: locale.translate("salaries")!,
                             ),
                           ),
                           Expanded(
                             child: CustomGridContainer(
+                              onTap: () {},
                               imagePath: 'assets/images/bank_account.png',
                               orderText: locale.translate("bank_account")!,
                             ),

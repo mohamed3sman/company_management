@@ -47,9 +47,10 @@ class DetailsSnackBar extends StatelessWidget {
               actionText: locale.translate("attendance_register")!,
             ),
             DetailsSnackBarItem(
-              icon: Icons.logout,
+              icon: Icons.logout_outlined,
               timeText: '05:00 ${locale.translate("pm")!}',
               actionText: locale.translate("leaving_register")!,
+              rotate: true,
             ),
             DetailsSnackBarItem(
               icon: Icons.access_time,

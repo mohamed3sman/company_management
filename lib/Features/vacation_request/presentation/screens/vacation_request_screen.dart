@@ -10,14 +10,14 @@ import '../../../../core/widgets/orders_text_field.dart';
 import '../widgets/custom_date_picker.dart';
 import 'package:file_picker/file_picker.dart';
 
-class VacationRequestScreen extends StatefulWidget {
-  const VacationRequestScreen({super.key});
+class RequestVacationScreen extends StatefulWidget {
+  const RequestVacationScreen({super.key});
 
   @override
-  State<VacationRequestScreen> createState() => _VacationRequestScreenState();
+  State<RequestVacationScreen> createState() => _RequestVacationScreenState();
 }
 
-class _VacationRequestScreenState extends State<VacationRequestScreen> {
+class _RequestVacationScreenState extends State<RequestVacationScreen> {
   File? selectedFile;
   String? fileName;
   @override
@@ -102,7 +102,9 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
                   rawText: locale.translate('notes')!,
                   iconImagePath: "assets/icons/notes_icon.png",
                 ),
-                OrdersTextField(height:MediaQuery.of(context).size.height * .1 ,hintText: ""),
+                OrdersTextField(
+                    height: MediaQuery.of(context).size.height * .1,
+                    hintText: ""),
                 Gaps.vGap15,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -148,4 +150,3 @@ class _VacationRequestScreenState extends State<VacationRequestScreen> {
     } else {}
   }
 }
-
