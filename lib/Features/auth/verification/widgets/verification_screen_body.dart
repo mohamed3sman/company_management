@@ -3,7 +3,6 @@ import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_circle_clipper.dart';
 import 'package:flutter/material.dart';
-import '../../register/widgets/clipping_color.dart';
 import '../../register/widgets/register_form_decoration.dart';
 
 class VerificationScreenBody extends StatelessWidget {

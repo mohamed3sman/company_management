@@ -31,6 +31,22 @@ class CurrentTap extends StatelessWidget {
           dotColor: Colors.amber,
           status: locale.translate('work_is_underway')!,
         ),
+        OrderListTile(
+          dotColor: Colors.amber,
+          status: locale.translate('work_is_underway')!,
+        ),
+        OrderListTile(
+          dotColor: Colors.amber,
+          status: locale.translate('work_is_underway')!,
+        ),
+        OrderListTile(
+          dotColor: Colors.amber,
+          status: locale.translate('work_is_underway')!,
+        ),
+        OrderListTile(
+          dotColor: Colors.amber,
+          status: locale.translate('work_is_underway')!,
+        ),
       ],
     );
   }
