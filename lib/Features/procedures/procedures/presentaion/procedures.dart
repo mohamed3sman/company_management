@@ -1,7 +1,9 @@
+import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/Features/procedures/procedures/widgets/custom_row.dart';
 import 'package:fingerPrint/Features/procedures/procedures/widgets/divider_custom.dart';
 import 'package:fingerPrint/Features/procedures/procedures/widgets/showing_bottom_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ButtonSheet extends StatefulWidget {
@@ -24,6 +26,13 @@ class _ButtonSheetState extends State<ButtonSheet> {
             icon: const Icon(Icons.cable_rounded),
             color: const Color(0xff7350cb),
             onPressed: () {
+              BlocProvider.of<BottomNavCubit>(context).navigationQueue.addLast(
+                  BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
+              BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(15);
+            },
+          ),
+          IconButton(
+            onPressed: () {
               showModalBottomSheet(
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
@@ -37,9 +46,6 @@ class _ButtonSheetState extends State<ButtonSheet> {
                 },
               );
             },
-          ),
-          IconButton(
-            onPressed: () {},
             color: const Color(0xff7350cb),
             icon: const Icon(Icons.touch_app),
           ),

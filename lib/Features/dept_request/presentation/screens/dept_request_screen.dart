@@ -6,8 +6,8 @@ import '../../../../core/widgets/orders_text_field.dart';
 import '../../../vacation_request/presentation/widgets/custom_drop_down_list.dart';
 import '../widgets/out_put_container.dart';
 
-class DeptRequestScreen extends StatelessWidget {
-  const DeptRequestScreen({super.key});
+class RequestDeptScreen extends StatelessWidget {
+  const RequestDeptScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

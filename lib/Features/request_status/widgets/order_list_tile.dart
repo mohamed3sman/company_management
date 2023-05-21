@@ -1,7 +1,9 @@
+import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/Features/request_status/widgets/row_details_alert.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -54,16 +56,22 @@ class OrderListTile extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // set up the AlertDialog
-                    AlertDialog alert = alertDetails(context);
+                    BlocProvider.of<BottomNavCubit>(context)
+                        .navigationQueue
+                        .addLast(BlocProvider.of<BottomNavCubit>(context)
+                            .bottomNavIndex);
+                    BlocProvider.of<BottomNavCubit>(context)
+                        .updateBottomNavIndex(14);
+                    // // set up the AlertDialog
+                    // AlertDialog alert = alertDetails(context);
 
-                    // show the dialog
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return alert;
-                      },
-                    );
+                    // // show the dialog
+                    // showDialog(
+                    //   context: context,
+                    //   builder: (BuildContext context) {
+                    //     return alert;
+                    //   },
+                    // );
                   },
                   child: Text(
                     locale.translate('the_details')!,

@@ -81,11 +81,11 @@ class AppRoutes {
         );
       case kVacationRquestScreen:
         return MaterialPageRoute(
-          builder: (_) => const VacationRequestScreen(),
+          builder: (_) => const RequestVacationScreen(),
         );
       case kPermissionRquestScreen:
         return MaterialPageRoute(
-          builder: (_) => const PermissinRequestScreen(),
+          builder: (_) => const RequestPermissinScreen(),
         );
       case kDataTableScreen:
         return MaterialPageRoute(
@@ -102,7 +102,7 @@ class AppRoutes {
 
       case kDeptRequestScreen:
         return MaterialPageRoute(
-          builder: (_) => const DeptRequestScreen(),
+          builder: (_) => const RequestDeptScreen(),
         );
 
       case kAppHomeScreen:
