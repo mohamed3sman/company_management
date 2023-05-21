@@ -19,29 +19,30 @@ class EmployeeProfileStep1 extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Row(
-          children: [
-            const CustomOrdersRawIcon(
-                rawText: "رقم الخطاب",
-                iconImagePath: "assets/icons/hashtag_icon.png"),
-            SizedBox(
-              width: screenSize.width * .25,
-            ),
-            const CustomOrdersRawIcon(
-                rawText: "التاريخ",
-                iconImagePath: "assets/icons/calender_icon.png"),
-          ],
-        ),
+        // Row(
+        //   children: [
+        //     const CustomOrdersRawIcon(
+        //         rawText: "رقم الخطاب",
+        //         iconImagePath: "assets/icons/hashtag_icon.png"),
+        //     SizedBox(
+        //       width: screenSize.width * .25,
+        //     ),
+        //     const CustomOrdersRawIcon(
+        //         rawText: "التاريخ",
+        //         iconImagePath: "assets/icons/calender_icon.png"),
+        //   ],
+        // ),
         Row(
           children: [
             OutPutContainer(
-              containerTitle: "",
-              containerIconPath: 'assets/icons/calender_icon.png',
+
+              containerTitle: "رقم الخطاب",
+              containerIconPath: "assets/icons/hashtag_icon.png",
                 containerWidth: screenSize.width * .41, containerText: "125"),
             const Spacer(),
             OutPutContainer(
               containerIconPath: "assets/icons/calender_icon.png",
-              containerTitle: "",
+              containerTitle:  "التاريخ",
                 containerWidth: screenSize.width * .41,
                 containerText: "25/9/2023"),
           ],

@@ -52,7 +52,7 @@ class _ChangeBankAccountScreenStep2State extends State<ChangeBankAccountScreenSt
                 secondText: "حساب جديد",
               ),
               SizedBox(
-                height: screenSize.height * .65,
+                height: screenSize.height * .62,
                 child: SingleChildScrollView(
                     physics: BouncingScrollPhysics(),
                     child: Column(

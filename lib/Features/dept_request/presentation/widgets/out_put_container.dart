@@ -33,7 +33,7 @@ class OutPutContainer extends StatelessWidget {
               ),
               Gaps.hGap10,
               Text(containerTitle,style: TextStyle(color: kTextColor,
-              fontSize:14,
+              fontSize:12,
               overflow:TextOverflow.ellipsis,
               ),),
             ],
