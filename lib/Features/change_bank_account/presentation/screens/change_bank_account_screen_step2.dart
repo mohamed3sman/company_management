@@ -35,116 +35,118 @@ class _ChangeBankAccountScreenStep2State extends State<ChangeBankAccountScreenSt
           left: 12,
           right: 12,
         ),
-        child: Column(
-          children: [
-            Gaps.vGap15,
-            const Text(
-              "تغيير حساب بنكي ",
-              style: TextStyle(
-                fontSize: 20,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Gaps.vGap15,
+              const Text(
+                "تغيير حساب بنكي ",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
               ),
-            ),
-            Gaps.vGap15,
-            CustomDotStepper(
-              isActive: true,
-              firstText: "حساب حالي",
-              secondText: "حساب جديد",
-            ),
-            SizedBox(
-              height: screenSize.height * .65,
-              child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  child: Column(
-                    children: [
-                      Gaps.vGap15,
-                      OutPutContainer(
-                        containerIconPath: "assets/icons/calender_icon.png",
-                        containerTitle: "التاريخ",
-                        containerWidth: screenSize.width,
-                        containerText:
-                            DateFormat.yMMMd().format(DateTime.now()),
-                      ),
-                      const CustomOrdersRawIcon(
-                        rawText: "اسم البنك الجديد",
-                        iconImagePath: "assets/icons/bank_name_icon.png",
-                      ),
-                      Gaps.vGap15,
-                      CustomDropDownList(hintText: "بنك الراجحي"),
-                      Gaps.vGap15,
-                      OutPutContainer(
-                          containerIconPath: "assets/icons/bank_code_icon.png",
-                          containerTitle: "كود البنك الجديد",
+              Gaps.vGap15,
+              CustomDotStepper(
+                isActive: true,
+                firstText: "حساب حالي",
+                secondText: "حساب جديد",
+              ),
+              SizedBox(
+                height: screenSize.height * .65,
+                child: SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    child: Column(
+                      children: [
+                        Gaps.vGap15,
+                        OutPutContainer(
+                          containerIconPath: "assets/icons/calender_icon.png",
+                          containerTitle: "التاريخ",
                           containerWidth: screenSize.width,
-                          containerText: "RHJI"),
-                      const CustomOrdersRawIcon(
-                        rawText: "رقم الحساب الجديد",
-                        iconImagePath: "assets/icons/hashtag_icon.png",
-                      ),
-                      CustomTextField(hintTextField: "رقم الحساب "),
-                      const CustomOrdersRawIcon(
-                        rawText: "صورة الحساب الجديد",
-                        iconImagePath: "assets/icons/attach_icon.png",
-                      ),
-                  
-                     GestureDetector(
-                  onTap: () async {
-                    await pickFileFromDevice();
-                  },
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Card(
-                        elevation: 4,
-                        child: SizedBox(
-                          height: screenSize.height * .12,
-                          width: screenSize.width ,
+                          containerText:
+                              DateFormat.yMMMd().format(DateTime.now()),
+                        ),
+                        const CustomOrdersRawIcon(
+                          rawText: "اسم البنك الجديد",
+                          iconImagePath: "assets/icons/bank_name_icon.png",
+                        ),
+                        Gaps.vGap15,
+                        CustomDropDownList(hintText: "بنك الراجحي"),
+                        Gaps.vGap15,
+                        OutPutContainer(
+                            containerIconPath: "assets/icons/bank_code_icon.png",
+                            containerTitle: "كود البنك الجديد",
+                            containerWidth: screenSize.width,
+                            containerText: "RHJI"),
+                        const CustomOrdersRawIcon(
+                          rawText: "رقم الحساب الجديد",
+                          iconImagePath: "assets/icons/hashtag_icon.png",
+                        ),
+                        CustomTextField(hintTextField: "رقم الحساب "),
+                        const CustomOrdersRawIcon(
+                          rawText: "صورة الحساب الجديد",
+                          iconImagePath: "assets/icons/attach_icon.png",
+                        ),
+                    
+                       GestureDetector(
+                    onTap: () async {
+                      await pickFileFromDevice();
+                    },
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Card(
+                          elevation: 4,
                           child: SizedBox(
-                            child: fileName != null
-                                ? Center(
-                                    child: Text(fileName!),
-                                  )
-                                : Center(
-                                    child:
-                                        selectedFile == null && fileName == null
-                                            ? Image.asset(
-                                                "assets/images/upload_cloud.png",
-                                                alignment: Alignment.center,
-                                                width: 50,
-                                                height: 50,
-                                                //  MediaQuery.of(context).size.width * 1
-                                              )
-                                            : Image.file(selectedFile!),
-                                  ),
+                            height: screenSize.height * .12,
+                            width: screenSize.width ,
+                            child: SizedBox(
+                              child: fileName != null
+                                  ? Center(
+                                      child: Text(fileName!),
+                                    )
+                                  : Center(
+                                      child:
+                                          selectedFile == null && fileName == null
+                                              ? Image.asset(
+                                                  "assets/images/upload_cloud.png",
+                                                  alignment: Alignment.center,
+                                                  width: 50,
+                                                  height: 50,
+                                                  //  MediaQuery.of(context).size.width * 1
+                                                )
+                                              : Image.file(selectedFile!),
+                                    ),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-               
-                  
-                  Gaps.vGap12,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CustomButton(
-                              screenWidth:
-                                  MediaQuery.of(context).size.width * .3,
+                 
+                    
+                    Gaps.vGap12,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CustomButton(
+                                screenWidth:
+                                    MediaQuery.of(context).size.width * .3,
+                                buttonTapHandler: () {},
+                                buttonText: "تأكيد"),
+                            CustomButton(
+                              buttonBackGroundColor: Colors.white,
+                              screenWidth: MediaQuery.of(context).size.width * .3,
                               buttonTapHandler: () {},
-                              buttonText: "تأكيد"),
-                          CustomButton(
-                            buttonBackGroundColor: Colors.white,
-                            screenWidth: MediaQuery.of(context).size.width * .3,
-                            buttonTapHandler: () {},
-                            buttonText: "إلغاء",
-                            haveBorder: true,
-                          )
-                        ],
-                      ),
-                    ],
-                  )),
-            ),
-          ],
+                              buttonText: "إلغاء",
+                              haveBorder: true,
+                            )
+                          ],
+                        ),
+                      ],
+                    )),
+              ),
+            ],
+          ),
         ),
       ),
     );
