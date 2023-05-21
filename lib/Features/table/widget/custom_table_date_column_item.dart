@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,7 +17,7 @@ class CustomTableDateColumnItem extends StatelessWidget {
           vertical: 5,
         ),
         decoration: BoxDecoration(
-          color: const Color(0xffeaeaf7),
+          color: kPrimaryColor,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
@@ -24,7 +25,7 @@ class CustomTableDateColumnItem extends StatelessWidget {
             Text(dayNumber,
                 style: TextStyle(
                   fontFamily: 'HacenTunisia',
-                  color: const Color(0xcc5647b2),
+                  color: Colors.white,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.w900,
                   fontStyle: FontStyle.normal,
@@ -32,7 +33,7 @@ class CustomTableDateColumnItem extends StatelessWidget {
             Text(dayName,
                 style: TextStyle(
                   fontFamily: 'HacenTunisia',
-                  color: const Color(0xcc5647b2),
+                  color: Colors.white,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w900,
                   fontStyle: FontStyle.normal,

@@ -4,6 +4,7 @@ import 'package:fingerPrint/Features/table/widget/custom_table_leaving_column.da
 import 'package:fingerPrint/Features/table/widget/custom_table_work_hour_column.dart';
 import 'package:fingerPrint/Features/table/widget/table_column_cell.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class AttendanceAndLeavingTable extends StatelessWidget {
@@ -30,7 +31,7 @@ class AttendanceAndLeavingTable extends StatelessWidget {
           children: const [
             TableRow(
               decoration: BoxDecoration(
-                  color: Color(0xffd3d1ef),
+                  color: kPrimaryColor,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(16),
                       topRight: Radius.circular(16))),

@@ -37,7 +37,8 @@ const String kPersonalAccountScreen = '/kPersonalAccountScreen';
 const String kDeptRequestScreen = '/kDeptRequestScreen';
 const String kMessegesScreen = '/kMessegesScreen';
 const String kNewMessegeScreen = '/kNewMessegeScreen';
-const String kEmployeeProfileFormScreenStep2 = '/kEmployeeProfileFormScreenStep2';
+const String kEmployeeProfileFormScreenStep2 =
+    '/kEmployeeProfileFormScreenStep2';
 
 // saved sharedprefernces
 const String locale = 'locale';

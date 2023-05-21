@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/table/widget/attendance_and_leaving_table.dart';
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -45,6 +46,7 @@ class _TableViewBodyState extends State<TableViewBody> {
     return Padding(
       padding: const EdgeInsets.only(top: 15, left: 8, right: 8),
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             SizedBox(
@@ -80,7 +82,7 @@ class _TableViewBodyState extends State<TableViewBody> {
                                   ? BorderRadius.circular(20)
                                   : BorderRadius.circular(20),
                               color: current == index
-                                  ? const Color(0xff7350cb)
+                                  ? kPrimaryColor
                                   : Colors.white,
                             ),
                             child: Center(

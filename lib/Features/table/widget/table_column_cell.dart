@@ -16,7 +16,7 @@ class TableColumnCell extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: 'HacenTunisia',
-              color: const Color(0xcc5647b2),
+              color: Colors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w900,
               fontStyle: FontStyle.normal,

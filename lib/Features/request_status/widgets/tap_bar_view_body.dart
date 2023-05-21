@@ -36,8 +36,7 @@ class _TapBarViewBodyState extends State<TapBarViewBody> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Padding(
-      padding: EdgeInsets.only(
-          top: SizeConfig.screenHeight! * 0.02, left: 10, right: 10),
+      padding: EdgeInsets.only(left: 10, right: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
