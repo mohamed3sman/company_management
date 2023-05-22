@@ -1,6 +1,5 @@
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CustomDatePicker extends StatefulWidget {
   const CustomDatePicker({super.key, required this.customDatePickerText});
@@ -42,7 +41,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                   ? widget.customDatePickerText
                   : selectedDate.toString(),
               style: selectedDate == null
-                  ? TextStyle(
+                  ? const TextStyle(
                       color: Color(0xffababac),
                       fontSize: 13,
                       fontWeight: FontWeight.w400,

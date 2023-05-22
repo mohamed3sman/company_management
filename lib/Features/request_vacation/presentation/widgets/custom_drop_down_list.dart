@@ -21,7 +21,7 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
-          color: Color(0xfff9f9f9),
+          color: const Color(0xfff9f9f9),
           width: 1,
         ),
         borderRadius: BorderRadius.circular(10),

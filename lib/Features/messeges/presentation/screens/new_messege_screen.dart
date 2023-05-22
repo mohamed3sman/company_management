@@ -11,8 +11,8 @@ class NewMessegeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-          child: CustomAppBar(),
-          preferredSize: MediaQuery.of(context).size * .1),
+          preferredSize: MediaQuery.of(context).size * .1,
+          child: const CustomAppBar()),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(

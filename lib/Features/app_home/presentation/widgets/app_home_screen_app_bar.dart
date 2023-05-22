@@ -1,5 +1,3 @@
-import 'package:fingerPrint/core/utils/hex_color.dart';
-import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,7 +11,7 @@ class HomeScreenAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(
+          const SizedBox(
             width: 35,
           ),
           Column(

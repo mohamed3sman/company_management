@@ -92,7 +92,7 @@ class OrderListTile extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '${locale.translate('type_vacation')!}',
+                      locale.translate('type_vacation')!,
                       style: TextStyle(
                           fontWeight: FontWeight.w900,
                           color: Colors.black.withOpacity(0.6),

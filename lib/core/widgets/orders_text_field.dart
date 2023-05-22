@@ -15,11 +15,11 @@ class OrdersTextField extends StatelessWidget {
         containerChild: TextField(
           maxLines: 3,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.all(10),
+            contentPadding: const EdgeInsets.all(10),
             focusedBorder: InputBorder.none,
             enabledBorder: InputBorder.none,
             disabledBorder: InputBorder.none,
-            hintStyle: TextStyle(color: Color(0xffababac)),
+            hintStyle: const TextStyle(color: Color(0xffababac)),
             hintText: hintText,
             errorBorder: InputBorder.none,
             focusedErrorBorder: InputBorder.none,

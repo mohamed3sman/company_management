@@ -6,13 +6,13 @@ import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_prof
 import 'package:fingerPrint/Features/langauge/presentation/screens/language_screen.dart';
 import 'package:fingerPrint/Features/personal_account/personal_account_screen.dart';
 import 'package:fingerPrint/Features/auth/register/register_screen.dart';
+import 'package:fingerPrint/Features/request_permission/presentation/screens/request_permission_screen.dart';
 import 'package:fingerPrint/Features/status_request/status_request_screen.dart';
 import 'package:fingerPrint/Features/status_request/widgets/current_tap.dart';
 import 'package:fingerPrint/Features/status_request/widgets/rejected_tap.dart';
 import 'package:fingerPrint/Features/status_request/widgets/accepted_tap.dart';
 import 'package:fingerPrint/Features/auth/verification/verification_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
-import 'package:fingerPrint/Features/permission_request/presentation/screens/request_permission_screen.dart';
 import 'package:fingerPrint/Features/request_vacation/presentation/screens/request_vacation_screen.dart';
 import 'package:flutter/material.dart';
 

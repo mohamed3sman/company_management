@@ -47,22 +47,22 @@ class EmployeeProfileStep1 extends StatelessWidget {
                 containerText: "25/9/2023"),
           ],
         ),
-        CustomOrdersRawIcon(
+        const CustomOrdersRawIcon(
           rawText: "اللقب",
           iconImagePath: "assets/icons/subtitle_icon.png",
         ),
         CustomDropDownList(hintText: "المحترم"),
-        CustomOrdersRawIcon(rawText: "الجهة"),
+        const CustomOrdersRawIcon(rawText: "الجهة"),
         CustomTextField(hintTextField: "إلى من يهمة الأمر"),
         Row(
           children: [
-            CustomOrdersRawIcon(
+            const CustomOrdersRawIcon(
                 rawText: "نهاية اللقب",
                 iconImagePath: "assets/icons/subtitle_icon.png"),
             SizedBox(
               width: screenSize.width * .25,
             ),
-            CustomOrdersRawIcon(
+            const CustomOrdersRawIcon(
                 rawText: "النماذج",
                 iconImagePath: "assets/icons/diamond_icon.png"),
           ],
@@ -73,14 +73,14 @@ class EmployeeProfileStep1 extends StatelessWidget {
               hintText: "سلمها اللة",
               width: screenSize.width * .41,
             ),
-            Spacer(),
+            const Spacer(),
             CustomDropDownList(
               hintText: "اختر..",
               width: screenSize.width * .41,
             ),
           ],
         ),
-        CustomOrdersRawIcon(
+        const CustomOrdersRawIcon(
           rawText: "الموضوع",
           iconImagePath: "assets/icons/notes_icon.png",
         ),

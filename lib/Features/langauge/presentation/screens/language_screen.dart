@@ -48,7 +48,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 // Gaps.vGap40,
                 Text(
                   locale.translate('Choose_language')!,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: kPrimaryColor,
@@ -88,7 +88,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                                   width: screenSize.width * .16,
                                   height: screenSize.height * .09,
                                 ),
-                                Text(
+                                const Text(
                                   "English",
                                   style: TextStyle(fontSize: 13),
                                 ),

@@ -106,12 +106,12 @@ class _RequestPermissinScreenState extends State<RequestPermissinScreen> {
                   child: Card(
                     elevation: 6,
                     child: Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: locale
                               .translate('the_number_of_permissions_left')!,
-                          hintStyle: TextStyle(),
+                          hintStyle: const TextStyle(),
                           focusedBorder: InputBorder.none,
                           enabledBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
@@ -133,7 +133,7 @@ class _RequestPermissinScreenState extends State<RequestPermissinScreen> {
                   child: Card(
                     elevation: 6,
                     child: Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: locale.translate('the_reason')!,

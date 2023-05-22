@@ -5,11 +5,8 @@ import 'package:fingerPrint/Features/status_request/widgets/tap_bar_app_bar.dart
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/widgets/custom_button.dart';
-import '../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 
 class TapBarViewBody extends StatefulWidget {
   const TapBarViewBody({super.key});
@@ -36,7 +33,7 @@ class _TapBarViewBodyState extends State<TapBarViewBody> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Padding(
-      padding: EdgeInsets.only(left: 10, right: 10),
+      padding: const EdgeInsets.only(left: 10, right: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [

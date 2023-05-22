@@ -7,7 +7,6 @@ import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_purble_
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_time_text.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
-import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +17,7 @@ import 'app_home_screen_app_bar.dart';
 
 // ignore: must_be_immutable
 class HomeScreenBody extends StatefulWidget {
-  HomeScreenBody({super.key});
+  const HomeScreenBody({super.key});
 
   @override
   State<HomeScreenBody> createState() => _HomeScreenBodyState();

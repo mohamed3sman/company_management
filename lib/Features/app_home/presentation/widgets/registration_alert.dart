@@ -54,7 +54,7 @@ AlertDialog alertLeaveRegistration(context) {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             width: 250,
             child: Text(
               "'وقت تسجيل الانصراف هو 04:30 مساءاْ  هل تريد تسجيل الانصراف الآن ؟'",

@@ -26,7 +26,7 @@ class CustomDotStepper extends StatelessWidget {
               decoration: BoxDecoration(
                   color: kPrimaryColor,
                   borderRadius: BorderRadius.circular(12)),
-              child: Text(
+              child: const Text(
                 "1",
                 style: TextStyle(color: Colors.white),
               ),
@@ -45,7 +45,7 @@ class CustomDotStepper extends StatelessWidget {
               decoration: BoxDecoration(
                   color: isActive! ? kPrimaryColor : Colors.grey,
                   borderRadius: BorderRadius.circular(12)),
-              child: Text("2", style: TextStyle(color: Colors.white)),
+              child: const Text("2", style: TextStyle(color: Colors.white)),
             )
           ],
         ),

@@ -14,8 +14,8 @@ class PaymentPermissionScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
-          child: CustomAppBar(),
-          preferredSize: MediaQuery.of(context).size * .07),
+          preferredSize: MediaQuery.of(context).size * .07,
+          child: const CustomAppBar()),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 27,
@@ -24,7 +24,7 @@ class PaymentPermissionScreen extends StatelessWidget {
         child: SizedBox(
           height: screenSize.height * .8,
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
                 const Text(
@@ -89,7 +89,7 @@ class PaymentPermissionScreen extends StatelessWidget {
                         screenWidth: screenSize.width * .31,
                         buttonTapHandler: () {},
                         buttonText: "تأكيد"),
-                    Spacer(),
+                    const Spacer(),
                     CustomButton(
                         buttonBackGroundColor: Colors.white,
                         screenWidth: screenSize.width * .31,

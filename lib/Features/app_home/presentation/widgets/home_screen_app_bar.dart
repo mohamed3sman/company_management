@@ -7,7 +7,7 @@ class HomeScreenAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xffeaeaf7),
+      color: const Color(0xffeaeaf7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

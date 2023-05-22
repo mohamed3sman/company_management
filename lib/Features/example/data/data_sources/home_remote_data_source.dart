@@ -34,7 +34,7 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   List<BookEntity> getBooksList(Map<String, dynamic> data) {
     List<BookEntity> books = [];
     for (var bookMap in data['items']) {
-      books.add(BookModel.fromJson(bookMap) as BookEntity);
+      books.add(BookModel.fromJson(bookMap));
     }
     return books;
   }

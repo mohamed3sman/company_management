@@ -2,7 +2,6 @@ import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/utils/constants.dart';
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
@@ -42,7 +41,7 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
             SizedBox(
               height: screenSize.height * .62,
               child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
