@@ -11,7 +11,7 @@ import 'package:intl/intl.dart';
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/out_put_container.dart';
-import '../../../employee_profile_form/presentation/widgets/custom_dot_stepper.dart';
+import '../../../../core/widgets/custom_dot_stepper.dart';
 
 class ChangeBankAccountScreenStep2 extends StatefulWidget {
   const ChangeBankAccountScreenStep2({super.key});

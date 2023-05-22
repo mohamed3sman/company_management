@@ -48,10 +48,10 @@ class OutPutContainer extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10, right: 10),
             alignment: Alignment.centerRight,
             width: containerWidth,
-            height: MediaQuery.of(context).size.height * .06,
+            height: MediaQuery.of(context).size.height * .05,
             decoration: BoxDecoration(
               color: const Color(0xfff6f6f6),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(10),
             ),
             child: Text(
               containerText,

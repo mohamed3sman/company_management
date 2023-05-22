@@ -16,8 +16,9 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       width: widget.width,
-      //height: 46,
+      height: MediaQuery.of(context).size.height * .05,
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
