@@ -9,13 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Commons {
   static Widget chuckyLoader() {
-<<<<<<< HEAD
-    return Center(
-        child: SpinKitFoldingCube(
-=======
-    return Center(child: 
-    SpinKitFoldingCube(
->>>>>>> 5c51ac80c234592415d4fa0297eabe8b18ccb4f9
+    return Center(child: SpinKitFoldingCube(
       itemBuilder: (BuildContext context, int index) {
         return DecoratedBox(
           decoration: BoxDecoration(
@@ -32,29 +26,31 @@ class Commons {
     showDialog(
         context: context,
         builder: (BuildContext context) => CupertinoAlertDialog(
-              title: Text(
-                message,
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: MediaQuery.of(context).orientation ==
+          title: Text(
+            message,
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: MediaQuery.of(context).orientation ==
+                    Orientation.portrait
+                    ? 15.sp
+                    : 25.sp),
+          ),
+          actions: <Widget>[
+            TextButton(
+                style: TextButton.styleFrom(
+                    foregroundColor: Colors.black,
+                    textStyle: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: GoogleFonts.tajawal().fontFamily,
+                        fontSize: MediaQuery.of(context).orientation ==
                             Orientation.portrait
-                        ? 15.sp
-                        : 25.sp),
-              ),
-              actions: <Widget>[
-                TextButton(
-                    style: TextButton.styleFrom(
-                        foregroundColor: Colors.black, textStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontFamily: GoogleFonts.tajawal().fontFamily,
-                            fontSize: MediaQuery.of(context).orientation ==
-                                    Orientation.portrait
-                                ? 17.sp
-                                : 25.sp)),
-                    onPressed: () => Navigator.of(context).pop(),
-                    child: Text(AppLocalizations.of(context)!.translate('ok')!)),
-              ],
-            ));
+                            ? 17.sp
+                            : 25.sp)),
+                onPressed: () => Navigator.of(context).pop(),
+                child:
+                Text(AppLocalizations.of(context)!.translate('ok')!)),
+          ],
+        ));
   }
 
   static Widget chuckyLoading(String message) {
@@ -71,7 +67,6 @@ class Commons {
   static void showToast(BuildContext context,
       {required String message, Color? color, ToastGravity? gravity}) {
     Fluttertoast.showToast(
-      
       msg: message,
       toastLength: Toast.LENGTH_LONG,
       gravity: gravity ?? ToastGravity.BOTTOM,

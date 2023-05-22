@@ -2,15 +2,7 @@ import 'package:fingerPrint/Features/Splash/presentation/manger/locale_cubit/loc
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-<<<<<<< HEAD
-import 'Features/home/data/repos/home_repo_impl.dart';
-import 'Features/home/domain/use_cases/fetch_featured_books_use_case.dart';
-import 'Features/home/domain/use_cases/fetch_newest_books_use_case.dart';
-import 'Features/home/presentation/manger/featured_books_cubit/featured_books_cubit.dart';
-import 'Features/home/presentation/manger/newset_books_cubit/newest_books_cubit.dart';
-=======
 import 'package:flutter_screenutil/flutter_screenutil.dart';
->>>>>>> 5c51ac80c234592415d4fa0297eabe8b18ccb4f9
 import 'core/locale/app_localizations_setup.dart';
 import 'core/utils/functions/setup_service_locator.dart';
 import 'core/utils/routes/app_routes.dart';
@@ -49,7 +41,7 @@ class fingerPrint extends StatelessWidget {
       ],
       child: BlocBuilder<LocaleCubit, LocaleState>(
         buildWhen: (previousState, currentState) =>
-            previousState != currentState,
+        previousState != currentState,
         builder: (_, localeState) {
           return ScreenUtilInit(
             designSize: const Size(360, 690),
@@ -61,9 +53,9 @@ class fingerPrint extends StatelessWidget {
                 onGenerateRoute: AppRoutes.onGenerateRoute,
                 supportedLocales: AppLocalizationsSetup.supportedLocales,
                 localeResolutionCallback:
-                    AppLocalizationsSetup.localeResolutionCallback,
+                AppLocalizationsSetup.localeResolutionCallback,
                 localizationsDelegates:
-                    AppLocalizationsSetup.localizationsDelegates,
+                AppLocalizationsSetup.localizationsDelegates,
                 debugShowCheckedModeBanner: false,
                 theme: ThemeData(
                   primarySwatch: Colors.blue,
