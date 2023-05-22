@@ -117,5 +117,9 @@
   "from": "From",
   "create_account": "Create account",
   "reason": "Reason",
-  "notes": "Notes"
+  "notes": "Notes",
+  "fingerprint_system": "fingerprint system",
+  "manage_human_resources_in_an_integrated_manner": "To manage human resources in an integrated manner",
+  "provides_you_with_detailed_reports_on_all_your_employees": "Provides you with detailed reports on all your employees",
+  "the_employee_can_view_his_accrued_leave_balance": "The employee can view his accrued leave balance"
 }

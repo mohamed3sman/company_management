@@ -11,10 +11,13 @@ class IntroScreen extends StatefulWidget {
   @override
   State<IntroScreen> createState() => _IntroScreenState();
 }
+late AppLocalizations locale;
 
 class _IntroScreenState extends State<IntroScreen> {
+
   Widget getIntroPages(
-      {required String imagePath,
+      {
+        required String imagePath,
       required Size screenSize,
       required String title}) {
     return Scaffold(
@@ -31,7 +34,7 @@ class _IntroScreenState extends State<IntroScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 40),
+            padding:  EdgeInsets.only(top: 40),
             child: Image.asset(
               imagePath,
               //fit: BoxFit.cover,
@@ -48,8 +51,8 @@ class _IntroScreenState extends State<IntroScreen> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Gaps.vGap12,
-                  const Text(
-                    "نظام بصمتك",
+                   Text(
+                    locale.translate('fingerprint_system')!,
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   SizedBox(
@@ -104,15 +107,15 @@ class _IntroScreenState extends State<IntroScreen> {
         getIntroPages(
             imagePath: "assets/images/intro1.png",
             screenSize: screenSize,
-            title: "لإدارة الموارد البشرية بشكل متكامل"),
+            title:  locale.translate('manage_human_resources_in_an_integrated_manner')!),
         getIntroPages(
             imagePath: "assets/images/intro2.png",
             screenSize: screenSize,
-            title: "يقدم لك تقارير مفصلة عن جميع موظفيك"),
+            title:  locale.translate('provides_you_with_detailed_reports_on_all_your_employees')!),
         getIntroPages(
             imagePath: "assets/images/intro3.png",
             screenSize: screenSize,
-            title: "يمكن للموظف عرض رصيد إجازاته المستحقة")
+            title: locale.translate('the_employee_can_view_his_accrued_leave_balance')!),
       ],
     );
   }

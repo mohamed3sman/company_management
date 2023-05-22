@@ -117,5 +117,9 @@
   "Period": "المدة",
   "permission_request": "طلب إذن",
   "create_account": "إنشاء حساب",
-  "notes": "ملاحظات"
+  "notes":"ملاحظات",
+  "fingerprint_system": "نظام بصمتك",
+  "manage_human_resources_in_an_integrated_manner": " لإدارة الموارد البشرية بشكل متكامل",
+  "provides_you_with_detailed_reports_on_all_your_employees": "يقدم لك تقارير مفصلة عن جميع موظفيك",
+  "the_employee_can_view_his_accrued_leave_balance":"يمكن للموظف عرض رصيد إجازاته المستحقة"
 }
