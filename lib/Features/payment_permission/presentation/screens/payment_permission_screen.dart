@@ -1,8 +1,8 @@
-import 'package:fingerPrint/Features/request_dept/presentation/widgets/out_put_container.dart';
-import 'package:fingerPrint/Features/auth/register/widgets/custom_text_field.dart';
+import 'package:fingerPrint/core/widgets/out_put_container.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:fingerPrint/core/widgets/custom_orders_raw_icon.dart';
+import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
 import 'package:flutter/material.dart';
 
 class PaymentPermissionScreen extends StatelessWidget {
@@ -64,25 +64,25 @@ class PaymentPermissionScreen extends StatelessWidget {
                   rawText: "المبلغ",
                   iconImagePath: "assets/icons/money_icon.png",
                 ),
-                CustomTextField(hintTextField: "المبلغ"),
+                CustomRequestsTextField(hintTextField: "المبلغ"),
                 const CustomOrdersRawIcon(
                   rawText: "الجهة / المستفيد",
                   iconImagePath: "assets/icons/language_icon.png",
                 ),
-                CustomTextField(hintTextField: "إلى من يهمة الأمر"),
+                CustomRequestsTextField(hintTextField: "إلى من يهمة الأمر"),
                 const CustomOrdersRawIcon(
                   rawText: "الجوال",
                   iconImagePath: "assets/icons/phone_icon.png",
                 ),
-                CustomTextField(hintTextField: ""),
+                CustomRequestsTextField(hintTextField: ""),
                 const CustomOrdersRawIcon(
                     rawText: "عبارة عن",
                     iconImagePath: "assets/icons/notes_icon.png"),
-                CustomTextField(hintTextField: ""),
+                CustomRequestsTextField(hintTextField: ""),
                 const CustomOrdersRawIcon(
                     rawText: "المبادرة / المشروع",
                     iconImagePath: "assets/icons/notes_icon.png"),
-                CustomTextField(hintTextField: ""),
+                CustomRequestsTextField(hintTextField: ""),
                 Row(
                   children: [
                     CustomButton(

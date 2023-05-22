@@ -1,11 +1,11 @@
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_date_picker.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:fingerPrint/core/widgets/custom_orders_raw_icon.dart';
+import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
-import '../../../../core/widgets/orders_text_field.dart';
 import '../../../request_vacation/presentation/widgets/custom_drop_down_list.dart';
-import '../widgets/out_put_container.dart';
+import '../../../../core/widgets/out_put_container.dart';
 
 class RequestDeptScreen extends StatelessWidget {
   const RequestDeptScreen({super.key});
@@ -33,9 +33,9 @@ class RequestDeptScreen extends StatelessWidget {
                 const CustomOrdersRawIcon(
                     rawText: "قيمة السلفة",
                     iconImagePath: "assets/icons/money_icon.png"),
-                OrdersTextField(
-                  height: MediaQuery.of(context).size.height * .06,
-                  hintText: "قيمة السلفة",
+                CustomRequestsTextField(
+                  containerHeight: MediaQuery.of(context).size.height * .06,
+                  hintTextField: "قيمة السلفة",
                 ),
                 const CustomOrdersRawIcon(
                     rawText: "طريقة سداد السلفة",
@@ -118,9 +118,9 @@ class RequestDeptScreen extends StatelessWidget {
                   rawText: "السبب",
                   iconImagePath: "assets/icons/notes_icon.png",
                 ),
-                OrdersTextField(
-                  height: 50,
-                  hintText: "السبب",
+                CustomRequestsTextField(
+                  containerHeight: 50,
+                  hintTextField: "السبب",
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),

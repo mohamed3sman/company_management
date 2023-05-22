@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/constants.dart';
-import '../../../../core/utils/gaps.dart';
+import '../utils/constants.dart';
+import '../utils/gaps.dart';
 
 // ignore: must_be_immutable
 class OutPutContainer extends StatelessWidget {
@@ -29,13 +29,14 @@ class OutPutContainer extends StatelessWidget {
               Image.asset(
                 containerIconPath,
                 color: kPrimaryColor,
+                scale: 1.2,
               ),
               Gaps.hGap10,
               Text(
                 containerTitle,
                 style: const TextStyle(
                   color: kTextColor,
-                  fontSize: 12,
+                  fontSize: 11,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
@@ -57,7 +58,7 @@ class OutPutContainer extends StatelessWidget {
               style: const TextStyle(
                 color: kOutPutContainerTextColor,
                 overflow: TextOverflow.ellipsis,
-                fontSize: 13,
+                fontSize: 11,
               ),
             ),
           ),

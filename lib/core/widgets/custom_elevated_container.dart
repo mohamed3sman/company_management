@@ -12,18 +12,22 @@ class CustomElevatedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
-        boxShadow: [
+        color: Colors.white,
+        border: Border.all(
+          color: const Color(0xfff9f9f9),
+          width: 1,
+        ),
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: const [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            spreadRadius: 2,
-            blurRadius: 7,
-            offset: const Offset(0, 5), // changes position of shadow
+            color: Color(0x1c000000),
+            offset: Offset(0, 2),
+            blurRadius: 4,
+            spreadRadius: 0,
           ),
         ],
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
       ),
       width: containerWidth,
       height: containerHeight,

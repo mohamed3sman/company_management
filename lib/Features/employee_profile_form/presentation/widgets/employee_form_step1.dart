@@ -1,10 +1,10 @@
+import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
-import '../../../request_dept/presentation/widgets/out_put_container.dart';
-import '../../../auth/register/widgets/custom_text_field.dart';
+import '../../../../core/widgets/out_put_container.dart';
 import '../../../request_vacation/presentation/widgets/custom_drop_down_list.dart';
 
 class EmployeeProfileStep1 extends StatelessWidget {
@@ -17,7 +17,7 @@ class EmployeeProfileStep1 extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
@@ -39,7 +39,7 @@ class EmployeeProfileStep1 extends StatelessWidget {
               OutPutContainer(
                   containerTitle: "رقم الخطاب",
                   containerIconPath: "assets/icons/hashtag_icon.png",
-                  containerWidth: screenSize.width * .41,
+                  containerWidth: screenSize.width * .35,
                   containerText: "125"),
               const Spacer(),
               OutPutContainer(
@@ -55,7 +55,7 @@ class EmployeeProfileStep1 extends StatelessWidget {
           ),
           CustomDropDownList(hintText: "المحترم"),
           const CustomOrdersRawIcon(rawText: "الجهة"),
-          CustomTextField(hintTextField: "إلى من يهمة الأمر"),
+          CustomRequestsTextField(hintTextField: "إلى من يهمة الأمر"),
           Row(
             children: [
               const CustomOrdersRawIcon(
@@ -86,7 +86,7 @@ class EmployeeProfileStep1 extends StatelessWidget {
             rawText: "الموضوع",
             iconImagePath: "assets/icons/notes_icon.png",
           ),
-          CustomTextField(
+          CustomRequestsTextField(
             containerHeight: 80,
             hintTextField: "الموضوع",
             fieldLines: 3,

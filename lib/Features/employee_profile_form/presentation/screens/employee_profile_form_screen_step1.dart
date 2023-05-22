@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -29,9 +30,10 @@ class EmployeeProfileFormScreenStep1 extends StatelessWidget {
                     const Text(
                       "نموذج تعريف موظف",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 15,
                       ),
                     ),
+                    Gaps.vGap15,
                     CustomDotStepper(
                         isActive: false,
                         firstText: "تعريف موظف",
@@ -39,13 +41,14 @@ class EmployeeProfileFormScreenStep1 extends StatelessWidget {
                     //   SizedBox(height: screenSize.height*.1,),
                   ]),
                 ),
+                Gaps.vGap20,
                 const EmployeeProfileStep1(),
               ],
             ),
           ),
         ),
         floatingActionButton: CustomButton(
-          screenWidth: screenSize.width * .3,
+          screenWidth: screenSize.width * .35,
           buttonTapHandler: () {
             BlocProvider.of<BottomNavCubit>(context).navigationQueue.addLast(
                 BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);

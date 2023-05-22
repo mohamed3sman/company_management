@@ -25,7 +25,7 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
           width: 1,
         ),
         borderRadius: BorderRadius.circular(10),
-        boxShadow:const [
+        boxShadow: const [
           BoxShadow(
             color: Color(0x1c000000),
             offset: Offset(0, 2),
@@ -35,15 +35,15 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
         ],
       ),
       child: DropdownButtonFormField<String>(
-        iconEnabledColor:const Color(0xffC9C9CA),
+        iconEnabledColor: const Color(0xffC9C9CA),
         borderRadius: BorderRadius.circular(12),
-        iconSize: 50,
+        iconSize: 40,
         //elevation: 12,
         hint: Text(widget.hintText,
-            style:  const TextStyle(
+            style: const TextStyle(
               color: Color(0xffababac),
-              fontSize: 13,
-              fontWeight: FontWeight.w400,
+              fontSize: 10,
+              fontWeight: FontWeight.w100,
               fontStyle: FontStyle.normal,
             )),
         value: selectedItem,
@@ -51,7 +51,6 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
         decoration: const InputDecoration(
           border: InputBorder.none,
           contentPadding: EdgeInsets.only(right: 10, left: 0),
-
         ),
         items: items.map((item) {
           return DropdownMenuItem(

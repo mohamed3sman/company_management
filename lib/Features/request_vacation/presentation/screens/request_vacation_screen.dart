@@ -3,11 +3,11 @@ import 'dart:io';
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
+import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/locale/app_localizations.dart';
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
-import '../../../../core/widgets/orders_text_field.dart';
 import '../widgets/custom_date_picker.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -104,9 +104,9 @@ class _RequestVacationScreenState extends State<RequestVacationScreen> {
                   rawText: locale.translate('notes')!,
                   iconImagePath: "assets/icons/notes_icon.png",
                 ),
-                OrdersTextField(
-                    height: MediaQuery.of(context).size.height * .1,
-                    hintText: ""),
+                CustomRequestsTextField(
+                    containerHeight: MediaQuery.of(context).size.height * .1,
+                    hintTextField: ""),
                 Gaps.vGap15,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

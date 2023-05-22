@@ -1,16 +1,16 @@
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
-import 'package:fingerPrint/Features/auth/register/widgets/custom_text_field.dart';
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:fingerPrint/core/widgets/custom_orders_raw_icon.dart';
+import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
-import '../../../request_dept/presentation/widgets/out_put_container.dart';
+import '../../../../core/widgets/out_put_container.dart';
 import '../../../employee_profile_form/presentation/widgets/custom_dot_stepper.dart';
 
 class ChangeBankAccountScreenStep2 extends StatefulWidget {
@@ -84,7 +84,7 @@ class _ChangeBankAccountScreenStep2State
                           rawText: "رقم الحساب الجديد",
                           iconImagePath: "assets/icons/hashtag_icon.png",
                         ),
-                        CustomTextField(hintTextField: "رقم الحساب "),
+                        CustomRequestsTextField(hintTextField: "رقم الحساب "),
                         const CustomOrdersRawIcon(
                           rawText: "صورة الحساب الجديد",
                           iconImagePath: "assets/icons/attach_icon.png",

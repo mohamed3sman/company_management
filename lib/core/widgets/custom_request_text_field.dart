@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
-class CustomTextField extends StatelessWidget {
-  String?initialValue;
+class CustomRequestsTextField extends StatelessWidget {
+  String? initialValue;
   final String hintTextField;
   final bool obscureText;
   final TextInputType textInputType;
   int? fieldLines;
   double? containerHeight;
-  CustomTextField({
+  CustomRequestsTextField({
     this.initialValue,
     this.fieldLines,
     Key? key,
@@ -47,18 +47,15 @@ class CustomTextField extends StatelessWidget {
                 keyboardType: textInputType,
                 maxLines: fieldLines ?? 1,
                 initialValue: initialValue ?? "",
-                
                 decoration: InputDecoration(
-                  
                   hintText: hintTextField,
-                  
-                  hintStyle:
-                  TextStyle(
-                        color: const Color(0xff9d9d9e),
-                        // fontFamily: "Amiri",
-                        fontWeight: FontWeight.w600,
-                        fontSize: 12.sp), 
-                        
+
+                  hintStyle: TextStyle(
+                      color: const Color(0xff9d9d9e),
+                      // fontFamily: "Amiri",
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12.sp),
+
                   // label: Text(
                   //   hintTextField,
                   //   textAlign: TextAlign.center,

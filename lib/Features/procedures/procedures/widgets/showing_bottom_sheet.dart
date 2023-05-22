@@ -1,5 +1,5 @@
 import 'package:fingerPrint/core/widgets/custom_button.dart';
-import 'package:fingerPrint/core/widgets/custom_text_field.dart';
+import 'package:fingerPrint/core/widgets/custom_login_text_field.dart';
 import 'package:flutter/material.dart';
 
 class ShowModalBottomSheet extends StatefulWidget {
@@ -52,7 +52,7 @@ class _ShowModalBottomSheetState extends State<ShowModalBottomSheet> {
               ],
             ),
           ),
-          CustomTextField(
+          CustomLoginTextField(
             stringInTextField: "ملاحظات",
             textInputType: TextInputType.text,
             obscureText: false,

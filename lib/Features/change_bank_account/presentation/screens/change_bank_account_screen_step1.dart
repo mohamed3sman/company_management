@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
-import '../../../request_dept/presentation/widgets/out_put_container.dart';
+import '../../../../core/widgets/out_put_container.dart';
 import '../../../employee_profile_form/presentation/widgets/custom_dot_stepper.dart';
 
 class ChangeBankAccountScreenStep1 extends StatelessWidget {
