@@ -1,4 +1,4 @@
-import 'package:fingerPrint/Features/request_status/widgets/order_list_tile.dart';
+import 'package:fingerPrint/Features/status_request/widgets/order_list_tile.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 
@@ -7,10 +7,10 @@ class RejectedTap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        late AppLocalizations locale;
+    late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Column(
-      children:  [
+      children: [
         OrderListTile(
           dotColor: Colors.red,
           status: locale.translate('reject')!,
@@ -29,7 +29,7 @@ class RejectedTap extends StatelessWidget {
         ),
         OrderListTile(
           dotColor: Colors.red,
-          status:locale.translate('reject')!,
+          status: locale.translate('reject')!,
         ),
       ],
     );

@@ -84,11 +84,11 @@ class _IntroScreenState extends State<IntroScreen> {
       // resizeToAvoidBottomInset: true,
       next: Text(
         locale.translate("skip")!,
-        style: TextStyle(color: Colors.white, fontSize: 20),
+        style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
       done: Text(
         locale.translate("skip")!,
-        style: TextStyle(color: Colors.white, fontSize: 20),
+        style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
       // nextFlex: 1,
       // dotsFlex:3,

@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/locale/app_localizations.dart';
 import '../../../../core/utils/gaps.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
-import '../../../vacation_request/presentation/widgets/custom_drop_down_list.dart';
+import '../../../request_vacation/presentation/widgets/custom_drop_down_list.dart';
 import '../widgets/custom_time_picker_widget.dart';
 
 class RequestPermissinScreen extends StatefulWidget {
@@ -17,19 +18,20 @@ class RequestPermissinScreen extends StatefulWidget {
 class _RequestPermissinScreenState extends State<RequestPermissinScreen> {
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          height: MediaQuery.of(context).size.height * .87,
-          child: SingleChildScrollView(
+    return SafeArea(
+      child: Scaffold(
+        appBar: PreferredSize(
+            preferredSize: screenSize * .1, child: const CustomAppBar()),
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 30),
             child: Column(
               children: [
-                //     const CustomAppBar(),
-                Gaps.vGap8,
                 Text(
                   locale.translate('permission_request')!,
                   style: const TextStyle(
@@ -104,12 +106,12 @@ class _RequestPermissinScreenState extends State<RequestPermissinScreen> {
                   child: Card(
                     elevation: 6,
                     child: Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: locale
                               .translate('the_number_of_permissions_left')!,
-                          hintStyle: TextStyle(),
+                          hintStyle: const TextStyle(),
                           focusedBorder: InputBorder.none,
                           enabledBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
@@ -131,7 +133,7 @@ class _RequestPermissinScreenState extends State<RequestPermissinScreen> {
                   child: Card(
                     elevation: 6,
                     child: Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: locale.translate('the_reason')!,

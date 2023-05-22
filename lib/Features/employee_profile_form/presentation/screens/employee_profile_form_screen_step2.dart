@@ -1,7 +1,8 @@
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/custom_dot_stepper.dart';
+import '../../../../core/utils/gaps.dart';
+import '../../../../core/widgets/custom_dot_stepper.dart';
 import '../widgets/employee_form_step2.dart';
 
 class EmployeeProfileFormScreenStep2 extends StatelessWidget {
@@ -18,14 +19,15 @@ class EmployeeProfileFormScreenStep2 extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Column(children: [
                 const Text(
                   "نموذج تعريف موظف",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                 ),
+                Gaps.vGap15,
                 CustomDotStepper(
                     isActive: true,
                     firstText: "تعريف موظف",

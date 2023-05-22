@@ -2,12 +2,11 @@ import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/utils/constants.dart';
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
-import '../../../dept_request/presentation/widgets/out_put_container.dart';
-import '../../../employee_profile_form/presentation/widgets/custom_dot_stepper.dart';
+import '../../../../core/widgets/out_put_container.dart';
+import '../../../../core/widgets/custom_dot_stepper.dart';
 
 class ChangeBankAccountScreenStep1 extends StatelessWidget {
   const ChangeBankAccountScreenStep1({super.key});
@@ -42,7 +41,7 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
             SizedBox(
               height: screenSize.height * .62,
               child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -102,10 +101,12 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
                     CustomButton(
                         screenWidth: screenSize.width * .33,
                         buttonTapHandler: () {
-                     BlocProvider.of<BottomNavCubit>(context).navigationQueue.addLast(
-                BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
-            BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(17);
-         
+                          BlocProvider.of<BottomNavCubit>(context)
+                              .navigationQueue
+                              .addLast(BlocProvider.of<BottomNavCubit>(context)
+                                  .bottomNavIndex);
+                          BlocProvider.of<BottomNavCubit>(context)
+                              .updateBottomNavIndex(17);
                         },
                         buttonText: "التالي")
                   ],

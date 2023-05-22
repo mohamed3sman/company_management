@@ -36,19 +36,19 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomLoginTextField(
+            const CustomLoginTextField(
                 textInputType: TextInputType.text,
                 obscureText: false,
                 stringInTextField: 'الاسم'),
-            CustomLoginTextField(
+            const CustomLoginTextField(
                 textInputType: TextInputType.number,
                 obscureText: false,
                 stringInTextField: 'رقم الجوال'),
-            CustomLoginTextField(
+            const CustomLoginTextField(
                 textInputType: TextInputType.number,
                 obscureText: false,
                 stringInTextField: 'رقم الهوية'),
-            CustomLoginTextField(
+            const CustomLoginTextField(
                 textInputType: TextInputType.emailAddress,
                 obscureText: false,
                 stringInTextField: 'البريد الالكتروني'),

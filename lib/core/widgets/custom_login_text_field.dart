@@ -25,7 +25,7 @@ class CustomLoginTextField extends StatelessWidget {
           vertical: 10, horizontal: width != null ? 0 : 30),
       child: Container(
         height: height ?? 53,
-        width: width ?? null,
+        width: width,
         decoration: BoxDecoration(
           border: Border.all(color: const Color(0xff707070)),
           color: const Color(0xffffffff),

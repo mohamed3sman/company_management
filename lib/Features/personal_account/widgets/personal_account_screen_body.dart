@@ -35,7 +35,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12)),
                       child: Icon(
                         Icons.person_2_outlined,
-                        color: Color(0xff707070),
+                        color: const Color(0xff707070),
                         size: 25.sp,
                       ),
                     ),
@@ -54,7 +54,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                           Text(
                             'أحمد محمد عبدالرحمن',
                             style: TextStyle(
-                                color: Color(0xff4e4d4d),
+                                color: const Color(0xff4e4d4d),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w900),
                           )
@@ -87,7 +87,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                 height: SizeConfig.screenHeight! * 0.05,
               ),
                Row(
-                children: [
+                children: const [
                   PersonalAccountContainer(
                     text: 'البيانات الشخصية',
                   ),

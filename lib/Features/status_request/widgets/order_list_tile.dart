@@ -1,5 +1,5 @@
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
-import 'package:fingerPrint/Features/request_status/widgets/row_details_alert.dart';
+import 'package:fingerPrint/Features/status_request/widgets/row_details_alert.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -92,7 +92,7 @@ class OrderListTile extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '${locale.translate('type_vacation')!}',
+                      locale.translate('type_vacation')!,
                       style: TextStyle(
                           fontWeight: FontWeight.w900,
                           color: Colors.black.withOpacity(0.6),

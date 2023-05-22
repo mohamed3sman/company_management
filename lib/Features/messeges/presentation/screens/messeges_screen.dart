@@ -43,7 +43,7 @@ class MessegesScreen extends StatelessWidget {
             SizedBox(
               height: screenSize.height * .8,
               child: ListView.builder(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 itemCount: 17,
                 itemBuilder: (context, index) {
                   return const MessegesListItem();

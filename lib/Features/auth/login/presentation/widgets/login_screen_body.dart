@@ -76,6 +76,16 @@ class LoginScreenBody extends StatelessWidget {
               ],
             ),
           ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 28.0),
+              child: Image.asset(
+                "assets/images/logo.png",
+                height: 130,
+                width: 130,
+              ),
+            ),
+          ),
         ],
       ),
     );

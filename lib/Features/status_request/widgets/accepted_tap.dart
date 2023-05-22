@@ -1,4 +1,4 @@
-import 'package:fingerPrint/Features/request_status/widgets/order_list_tile.dart';
+import 'package:fingerPrint/Features/status_request/widgets/order_list_tile.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 
@@ -10,26 +10,26 @@ class AcceptedTap extends StatelessWidget {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     return Column(
-      children:  [
+      children: [
         OrderListTile(
           dotColor: Colors.green,
-          status:  locale.translate('the_request_was_accepted')!,
+          status: locale.translate('the_request_was_accepted')!,
         ),
         OrderListTile(
           dotColor: Colors.green,
-          status:  locale.translate('the_request_was_accepted')!,
+          status: locale.translate('the_request_was_accepted')!,
         ),
         OrderListTile(
           dotColor: Colors.green,
-          status:  locale.translate('the_request_was_accepted')!,
+          status: locale.translate('the_request_was_accepted')!,
         ),
         OrderListTile(
           dotColor: Colors.green,
-          status:  locale.translate('the_request_was_accepted')!,
+          status: locale.translate('the_request_was_accepted')!,
         ),
         OrderListTile(
           dotColor: Colors.green,
-          status:  locale.translate('the_request_was_accepted')!,
+          status: locale.translate('the_request_was_accepted')!,
         ),
       ],
     );

@@ -30,7 +30,7 @@ class FollowingRequestScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: FollowingRequestBody(),
+      body: const FollowingRequestBody(),
     );
   }
 }

@@ -30,7 +30,7 @@ class _CustomTimePickerState extends State<CustomTimePicker> {
         child: Card(
           elevation: 6,
           child: Container(
-              padding: EdgeInsets.only(left: 4, right: 4),
+              padding: const EdgeInsets.only(left: 4, right: 4),
               alignment: Alignment.centerRight,
               child: Text(
                 pickedTime == null

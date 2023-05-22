@@ -15,7 +15,7 @@ class HomeAppToggleButton extends StatelessWidget {
         minWidth: SizeConfig.screenWidth! * 0.20,
         minHeight: 30.sp,
         cornerRadius: 50.0,
-        borderColor: [Colors.white],
+        borderColor: const [Colors.white],
         activeBgColors: const [
           [kPrimaryColor],
           [kPrimaryColor]

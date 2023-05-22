@@ -39,6 +39,16 @@ class VerificationScreenBody extends StatelessWidget {
               ),
             ),
           ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15.0),
+              child: Image.asset(
+                "assets/images/logo.png",
+                height: 130,
+                width: 130,
+              ),
+            ),
+          ),
         ],
       ),
     );

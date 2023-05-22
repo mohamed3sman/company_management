@@ -1,10 +1,10 @@
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
+import 'package:fingerPrint/core/widgets/custom_login_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/widgets/custom_button.dart';
-import '../../../../core/widgets/custom_text_field.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({Key? key}) : super(key: key);
@@ -22,8 +22,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-         centerTitle: true,
-
+        centerTitle: true,
         leading: IconButton(
             icon: const FaIcon(Icons.arrow_back),
             color: Colors.black,
@@ -45,32 +44,32 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
             child: Column(
               children: [
-                CustomTextField(
+                CustomLoginTextField(
                   stringInTextField: locale.translate('name')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
                 ),
-                CustomTextField(
+                CustomLoginTextField(
                   stringInTextField: locale.translate('phone')!,
                   textInputType: TextInputType.phone,
                   obscureText: false,
                 ),
-                CustomTextField(
+                CustomLoginTextField(
                   stringInTextField: locale.translate('id_number')!,
                   textInputType: TextInputType.number,
                   obscureText: false,
                 ),
-                CustomTextField(
+                CustomLoginTextField(
                   stringInTextField: locale.translate('email')!,
                   textInputType: TextInputType.emailAddress,
                   obscureText: false,
                 ),
-                CustomTextField(
+                CustomLoginTextField(
                   stringInTextField: locale.translate('password')!,
                   textInputType: TextInputType.visiblePassword,
                   obscureText: true,
                 ),
-                CustomTextField(
+                CustomLoginTextField(
                   stringInTextField: locale.translate('confirm_password')!,
                   textInputType: TextInputType.visiblePassword,
                   obscureText: true,

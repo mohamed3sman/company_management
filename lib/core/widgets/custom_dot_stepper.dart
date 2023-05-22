@@ -21,12 +21,12 @@ class CustomDotStepper extends StatelessWidget {
           children: [
             Container(
               alignment: Alignment.center,
-              width: 40,
-              height: 40,
+              width: 30,
+              height: 30,
               decoration: BoxDecoration(
                   color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(12)),
-              child: Text(
+                  borderRadius: BorderRadius.circular(10)),
+              child: const Text(
                 "1",
                 style: TextStyle(color: Colors.white),
               ),
@@ -40,12 +40,12 @@ class CustomDotStepper extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              width: 40,
-              height: 40,
+              width: 30,
+              height: 30,
               decoration: BoxDecoration(
                   color: isActive! ? kPrimaryColor : Colors.grey,
-                  borderRadius: BorderRadius.circular(12)),
-              child: Text("2", style: TextStyle(color: Colors.white)),
+                  borderRadius: BorderRadius.circular(10)),
+              child: const Text("2", style: TextStyle(color: Colors.white)),
             )
           ],
         ),
@@ -54,11 +54,11 @@ class CustomDotStepper extends StatelessWidget {
           children: [
             Text(
               firstText,
-              style:const TextStyle(color: kTextColor),
+              style: const TextStyle(color: kTextColor, fontSize: 12),
             ),
             Text(
               secondText,
-              style: const TextStyle(color: kTextColor),
+              style: const TextStyle(color: kTextColor, fontSize: 12),
             )
           ],
         )

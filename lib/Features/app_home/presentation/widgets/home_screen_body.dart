@@ -17,7 +17,7 @@ import 'app_home_screen_app_bar.dart';
 
 // ignore: must_be_immutable
 class HomeScreenBody extends StatefulWidget {
-  HomeScreenBody({super.key});
+  const HomeScreenBody({super.key});
 
   @override
   State<HomeScreenBody> createState() => _HomeScreenBodyState();
@@ -180,7 +180,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         Padding(
           padding: EdgeInsets.only(
               left: SizeConfig.screenWidth! * 0.29,
-              top: 57.h,
+              top: 70.h,
               right: SizeConfig.screenWidth! * 0.29),
           child: const HomeAppToggleButton(),
         ),

@@ -34,7 +34,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
           height: 50,
         ),
         Padding(
-          padding: EdgeInsets.only(right: 0.0, left: 0),
+          padding: const EdgeInsets.only(right: 0.0, left: 0),
           child: CustomLoginTextField(
             stringInTextField: locale.translate('phone')!,
             obscureText: true,
