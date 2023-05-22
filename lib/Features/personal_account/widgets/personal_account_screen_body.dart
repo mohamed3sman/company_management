@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/personal_account/widgets/personal_account_container.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,8 @@ class PersonalAccountScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 23, vertical: 15),
       child: SizedBox(
@@ -45,7 +48,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'أهلا وسهلا',
+                            locale.translate("welcome")!,
                             style: TextStyle(
                               color: const Color(0xff8b8989),
                               fontSize: 16.sp,
@@ -87,15 +90,15 @@ class PersonalAccountScreenBody extends StatelessWidget {
                 height: SizeConfig.screenHeight! * 0.05,
               ),
                Row(
-                children: const [
+                children:  [
                   PersonalAccountContainer(
-                    text: 'البيانات الشخصية',
+                    text: locale.translate('personal_data')!,
                   ),
                   PersonalAccountContainer(
-                    text: 'ملفاتي',
+                    text: locale.translate('my_files')!,
                   ),
                   PersonalAccountContainer(
-                    text: 'الحساب البنكي',
+                    text: locale.translate('bank_account')!,
                   ),
                 ],
               ),
@@ -103,7 +106,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                 height: SizeConfig.screenHeight! * 0.05,
               ),
               Text(
-                'الإعدادات',
+                locale.translate('setting')!,
                 style: Styles.textStyle20.copyWith(
                   color: Colors.black,
                   fontSize: 21.sp,
@@ -111,37 +114,37 @@ class PersonalAccountScreenBody extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               CustomSettingRow(
-                  text: 'اللغة',
+                  text:locale.translate('language')!,
                   path: 'assets/icons/language_icon.png',
                   function: () {
                     Navigator.pushNamed(context, kLanguageScreen);
                   }),
               CustomSettingRow(
-                  text: 'الإشعارات',
+                  text: locale.translate('notifications')!,
                   path: 'assets/icons/notification_icon.png',
                   function: () {
                     Navigator.pushNamed(context, kBottomNav);
                   }),
               CustomSettingRow(
-                  text: 'الشروط والأحكام',
+                  text: locale.translate('terms_and_conditions')!,
                   path: 'assets/icons/list_icon.png',
                   function: () {
                     Navigator.pushNamed(context, kBottomNav);
                   }),
               CustomSettingRow(
-                  text: 'سياسة الخصوصية',
+                  text: locale.translate('privacy_policy')!,
                   path: 'assets/icons/secure_icon.png',
                   function: () {
                     Navigator.pushNamed(context, kBottomNav);
                   }),
               CustomSettingRow(
-                  text: 'تواصل معنا',
+                  text: locale.translate('contact_with_us')!,
                   path: 'assets/icons/contact_us_icon.png',
                   function: () {
                     Navigator.pushNamed(context, kContactUsScreen);
                   }),
               CustomSettingRow(
-                  text: 'حذف الحساب',
+                  text: locale.translate('delete_account')!,
                   deleteAccountColor: 0xfff16056,
                   path: 'assets/icons/delete_account_icon.png',
                   function: () {
@@ -154,7 +157,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                   child: Padding(
                 padding: EdgeInsets.only(bottom: 12.h),
                 child: CustomButton(
-                  buttonText: 'تسجيل الخروج',
+                  buttonText: locale.translate('logout')!,
                   buttonTapHandler: () {
                     Navigator.pushNamed(context, kLoginScreen);
                   },

@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/out_put_container.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
@@ -9,6 +10,8 @@ class NewMessegeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: MediaQuery.of(context).size * .1,
@@ -21,7 +24,7 @@ class NewMessegeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("من"),
+                 Text(locale.translate('to')!,),
                 Gaps.vGap10,
                 OutPutContainer(
                   containerIconPath: "assets/icons/calender_icon.png",
@@ -30,21 +33,21 @@ class NewMessegeScreen extends StatelessWidget {
                   containerText: "alatheer123@gmail.com",
                 ),
                 Gaps.vGap10,
-                const Text("إلى"),
+                 Text(locale.translate('from')!,),
                 const CustomLoginTextField(
                     stringInTextField: "alatheer123@gmail.com",
                     obscureText: false,
                     textInputType: TextInputType.text,
                     width: double.infinity),
-                const Text("عنوان الرسالة"),
-                const CustomLoginTextField(
-                    stringInTextField: "رسالة لطلب إجازة",
+                 Text(locale.translate('title_of_message')!,),
+                 CustomLoginTextField(
+                    stringInTextField: locale.translate('leave_request_message')!,
                     obscureText: false,
                     textInputType: TextInputType.text,
                     width: double.infinity),
-                const Text("نص الرسالة"),
-                const CustomLoginTextField(
-                  stringInTextField: "رسالة لطلب إجازة",
+                Text(locale.translate('message_text')!,),
+                 CustomLoginTextField(
+                  stringInTextField: locale.translate('leave_request_message')!,
                   textInputType: TextInputType.text,
                   obscureText: false,
                   height: 100,

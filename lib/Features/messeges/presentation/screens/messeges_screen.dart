@@ -1,4 +1,5 @@
 
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,6 +12,8 @@ class MessegesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
@@ -25,8 +28,8 @@ class MessegesScreen extends StatelessWidget {
                 color: Colors.black,
               ))
         ],
-        title:const Text(
-          "الرسائل",
+        title: Text(
+         locale.translate('message')!,
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.normal,
@@ -64,7 +67,7 @@ class MessegesScreen extends StatelessWidget {
                         .updateBottomNavIndex(12);
                     //IMPLEMENT NAVIGATION TO A NEW MESSEGE
                   },
-                  buttonText: "رسالة جديدة"),
+                  buttonText: locale.translate('new_message')!),
             )
           ],
         ),

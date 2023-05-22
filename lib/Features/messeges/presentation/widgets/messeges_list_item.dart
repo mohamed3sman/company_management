@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class MessegesListItem extends StatelessWidget {
@@ -5,6 +6,8 @@ class MessegesListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Dismissible(
       key: UniqueKey(),
       direction: DismissDirection.startToEnd,
@@ -22,13 +25,13 @@ class MessegesListItem extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            subtitle:const Text(
-              "تهنئكم الشركة بحلول شهر رمضان الكريم أعادة الله علينا وعليكم بالخير و اليمن و البركات",
+            subtitle: Text(
+             locale.translate('company_congratulates')!,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 12),
             ),
-            title: const Text(
-              "تهنئة بحلول شهر رمضان الكريم",
+            title:  Text(
+            locale.translate('congratulations_on_the_occasion')!,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 17),
             ),

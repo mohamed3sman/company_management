@@ -51,8 +51,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Gaps.vGap12,
-                   Text(
-                    locale.translate('fingerprint_system')!,
+                   Text("locale.translate('finger_print_system')!",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   SizedBox(
@@ -111,7 +110,7 @@ class _IntroScreenState extends State<IntroScreen> {
         getIntroPages(
             imagePath: "assets/images/intro2.png",
             screenSize: screenSize,
-            title:  locale.translate('provides_you_with_detailed_reports_on_all_your_employees')!),
+            title: locale.translate('provides_you_with_detailed_reports_on_all_your_employees')!),
         getIntroPages(
             imagePath: "assets/images/intro3.png",
             screenSize: screenSize,
