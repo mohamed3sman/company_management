@@ -9,7 +9,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Commons {
   static Widget chuckyLoader() {
-    return Center(child: SpinKitFoldingCube(
+    return Center(child: 
+    SpinKitFoldingCube(
       itemBuilder: (BuildContext context, int index) {
         return DecoratedBox(
           decoration: BoxDecoration(

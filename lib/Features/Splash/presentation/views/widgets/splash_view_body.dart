@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:animate_do/animate_do.dart';
 import '../../../../../core/utils/constants.dart';
 import '../../../../auth/login/presentation/login_screen.dart';
 
@@ -46,9 +46,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           ),
         ),
         Center(
-          child: Image.asset(
-            'assets/images/splash_image.png',
-            width: 180.w,
+          child: Dance(
+            child: Image.asset(
+              'assets/images/splash_image.png',
+              width: 180.w,
+            ),
           ),
         ),
       ],
