@@ -1,19 +1,19 @@
 import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/contact_us/presentation/screens/contact_us_screen.dart';
-import 'package:fingerPrint/Features/dept_request/presentation/screens/dept_request_screen.dart';
+import 'package:fingerPrint/Features/request_dept/presentation/screens/request_dept_screen.dart';
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/screens/language_screen.dart';
 import 'package:fingerPrint/Features/personal_account/personal_account_screen.dart';
 import 'package:fingerPrint/Features/auth/register/register_screen.dart';
-import 'package:fingerPrint/Features/request_status/request_status_screen.dart';
-import 'package:fingerPrint/Features/request_status/widgets/current_tap.dart';
-import 'package:fingerPrint/Features/request_status/widgets/rejected_tap.dart';
-import 'package:fingerPrint/Features/request_status/widgets/accepted_tap.dart';
+import 'package:fingerPrint/Features/status_request/status_request_screen.dart';
+import 'package:fingerPrint/Features/status_request/widgets/current_tap.dart';
+import 'package:fingerPrint/Features/status_request/widgets/rejected_tap.dart';
+import 'package:fingerPrint/Features/status_request/widgets/accepted_tap.dart';
 import 'package:fingerPrint/Features/auth/verification/verification_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
-import 'package:fingerPrint/Features/permission_request/presentation/screens/permission_request_screen.dart';
-import 'package:fingerPrint/Features/vacation_request/presentation/screens/vacation_request_screen.dart';
+import 'package:fingerPrint/Features/permission_request/presentation/screens/request_permission_screen.dart';
+import 'package:fingerPrint/Features/request_vacation/presentation/screens/request_vacation_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
@@ -52,7 +52,7 @@ class AppRoutes {
       case kVerificationScreen:
         return MaterialPageRoute(builder: (_) => const VerificationScreen());
       case kTapBarScreen:
-        return MaterialPageRoute(builder: (_) => const RequestStatus());
+        return MaterialPageRoute(builder: (_) => const StatusRequest());
       case kCurrentTapScreen:
         return MaterialPageRoute(builder: (_) => const CurrentTap());
       case kUpComingTapScreen:
@@ -97,7 +97,7 @@ class AppRoutes {
         );
       case kRequestStatusScreen:
         return MaterialPageRoute(
-          builder: (_) => const RequestStatus(),
+          builder: (_) => const StatusRequest(),
         );
 
       case kDeptRequestScreen:
@@ -127,11 +127,11 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => const EmployeeProfileFormScreenStep2(),
         );
-          case kChangeBankAccountScreenStep2:
+      case kChangeBankAccountScreenStep2:
         return MaterialPageRoute(
           builder: (_) => const ChangeBankAccountScreenStep2(),
         );
-        
+
       default:
         return null;
     }

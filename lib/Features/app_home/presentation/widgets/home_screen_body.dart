@@ -7,6 +7,7 @@ import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_purble_
 import 'package:fingerPrint/Features/app_home/presentation/widgets/stack_time_text.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -180,7 +181,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         Padding(
           padding: EdgeInsets.only(
               left: SizeConfig.screenWidth! * 0.29,
-              top: 57.h,
+              top: 70.h,
               right: SizeConfig.screenWidth! * 0.29),
           child: const HomeAppToggleButton(),
         ),

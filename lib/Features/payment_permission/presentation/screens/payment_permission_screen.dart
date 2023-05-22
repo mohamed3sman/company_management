@@ -1,4 +1,4 @@
-import 'package:fingerPrint/Features/dept_request/presentation/widgets/out_put_container.dart';
+import 'package:fingerPrint/Features/request_dept/presentation/widgets/out_put_container.dart';
 import 'package:fingerPrint/Features/auth/register/widgets/custom_text_field.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
@@ -48,14 +48,14 @@ class PaymentPermissionScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     OutPutContainer(
-                      containerIconPath: "assets/icons/calender_icon.png",
-                      containerTitle: "",
+                        containerIconPath: "assets/icons/calender_icon.png",
+                        containerTitle: "",
                         containerWidth: screenSize.width * .4,
                         containerText: "125"),
                     const Spacer(),
                     OutPutContainer(
-                      containerIconPath: "assets/icons/calender_icon.png",
-                      containerTitle: "",
+                        containerIconPath: "assets/icons/calender_icon.png",
+                        containerTitle: "",
                         containerWidth: screenSize.width * .4,
                         containerText: "25/9/2023"),
                   ],

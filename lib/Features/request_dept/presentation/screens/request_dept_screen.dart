@@ -1,9 +1,11 @@
-import 'package:fingerPrint/Features/vacation_request/presentation/widgets/custom_date_picker.dart';
+import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_date_picker.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:fingerPrint/core/widgets/custom_orders_raw_icon.dart';
 import 'package:flutter/material.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/orders_text_field.dart';
-import '../../../vacation_request/presentation/widgets/custom_drop_down_list.dart';
+import '../../../example/presentation/views/widgets/custom_app_bar_example.dart';
+import '../../../request_vacation/presentation/widgets/custom_drop_down_list.dart';
 import '../widgets/out_put_container.dart';
 
 class RequestDeptScreen extends StatelessWidget {
@@ -11,7 +13,11 @@ class RequestDeptScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
+      appBar: PreferredSize(
+          preferredSize: screenSize * .1, child: const CustomAppBar()),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
@@ -25,32 +31,32 @@ class RequestDeptScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           "طلب سلفة",
                           style: TextStyle(
                             fontSize: 20,
                           ),
                         ),
-                        CustomOrdersRawIcon(
+                        const CustomOrdersRawIcon(
                             rawText: "قيمة السلفة",
                             iconImagePath: "assets/icons/money_icon.png"),
                         OrdersTextField(
                           height: MediaQuery.of(context).size.height * .06,
                           hintText: "قيمة السلفة",
                         ),
-                        CustomOrdersRawIcon(
+                        const CustomOrdersRawIcon(
                             rawText: "طريقة سداد السلفة",
                             iconImagePath: "assets/icons/vacation_icon.png"),
                         CustomDropDownList(hintText: "اختر.."),
                         Row(
                           children: [
-                            CustomOrdersRawIcon(
+                            const CustomOrdersRawIcon(
                                 rawText: "عدد الأقساط",
                                 iconImagePath: "assets/icons/hashtag_icon.png"),
                             SizedBox(
                               width: MediaQuery.of(context).size.width * .2,
                             ),
-                            CustomOrdersRawIcon(
+                            const CustomOrdersRawIcon(
                                 rawText: "قيمة القسط",
                                 iconImagePath: "assets/icons/money_icon.png")
                           ],
@@ -58,7 +64,8 @@ class RequestDeptScreen extends StatelessWidget {
                         Row(
                           children: [
                             OutPutContainer(
-                              containerIconPath:"assets/icons/calender_icon.png" ,
+                              containerIconPath:
+                                  "assets/icons/calender_icon.png",
                               containerTitle: "",
                               containerText: "",
                               containerWidth:
@@ -66,7 +73,8 @@ class RequestDeptScreen extends StatelessWidget {
                             ),
                             Spacer(),
                             OutPutContainer(
-                              containerIconPath: "assets/icons/calender_icon.png",
+                              containerIconPath:
+                                  "assets/icons/calender_icon.png",
                               containerTitle: "",
                               containerText: "",
                               containerWidth:
@@ -74,13 +82,13 @@ class RequestDeptScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        CustomOrdersRawIcon(
+                        const CustomOrdersRawIcon(
                           rawText: "تاريخ بداية الخصم",
                           iconImagePath: "assets/icons/calender_icon.png",
                         ),
-                        CustomDatePicker(customDatePickerText: ""),
+                        const CustomDatePicker(customDatePickerText: ""),
                         Row(
-                          children: [
+                          children: const [
                             CustomOrdersRawIcon(
                                 rawText: "حد السلفة",
                                 iconImagePath: "assets/icons/money_icon.png"),
@@ -93,7 +101,8 @@ class RequestDeptScreen extends StatelessWidget {
                         Row(
                           children: [
                             OutPutContainer(
-                              containerIconPath: "assets/icons/calender_icon.png",
+                              containerIconPath:
+                                  "assets/icons/calender_icon.png",
                               containerTitle: "",
                               containerText: "500 جنية",
                               containerWidth:
@@ -101,7 +110,8 @@ class RequestDeptScreen extends StatelessWidget {
                             ),
                             Spacer(),
                             OutPutContainer(
-                                  containerIconPath: "assets/icons/calender_icon.png",
+                              containerIconPath:
+                                  "assets/icons/calender_icon.png",
                               containerTitle: "",
                               containerText: "5",
                               containerWidth:
@@ -114,8 +124,8 @@ class RequestDeptScreen extends StatelessWidget {
                           iconImagePath: "assets/icons/calender_icon.png",
                         ),
                         OutPutContainer(
-                              containerIconPath: "assets/icons/calender_icon.png",
-                              containerTitle: "",
+                          containerIconPath: "assets/icons/calender_icon.png",
+                          containerTitle: "",
                           containerWidth: double.infinity,
                           containerText: "05/15/2023",
                         ),

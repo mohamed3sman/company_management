@@ -1,7 +1,7 @@
-import 'package:fingerPrint/Features/request_status/widgets/accepted_tap.dart';
-import 'package:fingerPrint/Features/request_status/widgets/current_tap.dart';
-import 'package:fingerPrint/Features/request_status/widgets/rejected_tap.dart';
-import 'package:fingerPrint/Features/request_status/widgets/tap_bar_app_bar.dart';
+import 'package:fingerPrint/Features/status_request/widgets/accepted_tap.dart';
+import 'package:fingerPrint/Features/status_request/widgets/current_tap.dart';
+import 'package:fingerPrint/Features/status_request/widgets/rejected_tap.dart';
+import 'package:fingerPrint/Features/status_request/widgets/tap_bar_app_bar.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';

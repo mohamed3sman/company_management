@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
 import '../../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
-import '../../../dept_request/presentation/widgets/out_put_container.dart';
+import '../../../request_dept/presentation/widgets/out_put_container.dart';
 import '../../../auth/register/widgets/custom_text_field.dart';
-import '../../../vacation_request/presentation/widgets/custom_drop_down_list.dart';
+import '../../../request_vacation/presentation/widgets/custom_drop_down_list.dart';
 
 class EmployeeProfileStep1 extends StatelessWidget {
   const EmployeeProfileStep1({
@@ -35,14 +35,14 @@ class EmployeeProfileStep1 extends StatelessWidget {
         Row(
           children: [
             OutPutContainer(
-
-              containerTitle: "رقم الخطاب",
-              containerIconPath: "assets/icons/hashtag_icon.png",
-                containerWidth: screenSize.width * .41, containerText: "125"),
+                containerTitle: "رقم الخطاب",
+                containerIconPath: "assets/icons/hashtag_icon.png",
+                containerWidth: screenSize.width * .41,
+                containerText: "125"),
             const Spacer(),
             OutPutContainer(
-              containerIconPath: "assets/icons/calender_icon.png",
-              containerTitle:  "التاريخ",
+                containerIconPath: "assets/icons/calender_icon.png",
+                containerTitle: "التاريخ",
                 containerWidth: screenSize.width * .41,
                 containerText: "25/9/2023"),
           ],

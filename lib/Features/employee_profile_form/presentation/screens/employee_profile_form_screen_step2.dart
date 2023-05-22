@@ -18,7 +18,7 @@ class EmployeeProfileFormScreenStep2 extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Column(children: [
                 const Text(
                   "نموذج تعريف موظف",

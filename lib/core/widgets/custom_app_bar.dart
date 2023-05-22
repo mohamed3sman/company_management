@@ -10,11 +10,14 @@ class CustomAppBar extends StatelessWidget {
     return AppBar(
         elevation: 0.0,
         backgroundColor: Colors.white,
-        actions: const [
-          Icon(
-            Icons.notifications_none_sharp,
-            color: Colors.grey,
-            size: 30,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(
+              Icons.notifications_none_sharp,
+              color: Colors.grey[700],
+              size: 30,
+            ),
           )
         ],
         leading: Padding(

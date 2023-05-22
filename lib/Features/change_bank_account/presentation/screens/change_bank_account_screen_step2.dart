@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:fingerPrint/Features/auth/register/widgets/custom_text_field.dart';
-import 'package:fingerPrint/Features/vacation_request/presentation/widgets/custom_drop_down_list.dart';
+import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:fingerPrint/core/widgets/custom_orders_raw_icon.dart';
 import 'package:flutter/material.dart';
@@ -10,18 +10,20 @@ import 'package:intl/intl.dart';
 
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
-import '../../../dept_request/presentation/widgets/out_put_container.dart';
+import '../../../request_dept/presentation/widgets/out_put_container.dart';
 import '../../../employee_profile_form/presentation/widgets/custom_dot_stepper.dart';
 
 class ChangeBankAccountScreenStep2 extends StatefulWidget {
   const ChangeBankAccountScreenStep2({super.key});
 
   @override
-  State<ChangeBankAccountScreenStep2> createState() => _ChangeBankAccountScreenStep2State();
+  State<ChangeBankAccountScreenStep2> createState() =>
+      _ChangeBankAccountScreenStep2State();
 }
 
-class _ChangeBankAccountScreenStep2State extends State<ChangeBankAccountScreenStep2> {
-    File? selectedFile;
+class _ChangeBankAccountScreenStep2State
+    extends State<ChangeBankAccountScreenStep2> {
+  File? selectedFile;
   String? fileName;
   @override
   Widget build(BuildContext context) {
@@ -73,7 +75,8 @@ class _ChangeBankAccountScreenStep2State extends State<ChangeBankAccountScreenSt
                         CustomDropDownList(hintText: "بنك الراجحي"),
                         Gaps.vGap15,
                         OutPutContainer(
-                            containerIconPath: "assets/icons/bank_code_icon.png",
+                            containerIconPath:
+                                "assets/icons/bank_code_icon.png",
                             containerTitle: "كود البنك الجديد",
                             containerWidth: screenSize.width,
                             containerText: "RHJI"),
@@ -86,45 +89,42 @@ class _ChangeBankAccountScreenStep2State extends State<ChangeBankAccountScreenSt
                           rawText: "صورة الحساب الجديد",
                           iconImagePath: "assets/icons/attach_icon.png",
                         ),
-                    
-                       GestureDetector(
-                    onTap: () async {
-                      await pickFileFromDevice();
-                    },
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Card(
-                          elevation: 4,
-                          child: SizedBox(
-                            height: screenSize.height * .12,
-                            width: screenSize.width ,
-                            child: SizedBox(
-                              child: fileName != null
-                                  ? Center(
-                                      child: Text(fileName!),
-                                    )
-                                  : Center(
-                                      child:
-                                          selectedFile == null && fileName == null
-                                              ? Image.asset(
-                                                  "assets/images/upload_cloud.png",
-                                                  alignment: Alignment.center,
-                                                  width: 50,
-                                                  height: 50,
-                                                  //  MediaQuery.of(context).size.width * 1
-                                                )
-                                              : Image.file(selectedFile!),
-                                    ),
-                            ),
+                        GestureDetector(
+                          onTap: () async {
+                            await pickFileFromDevice();
+                          },
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              Card(
+                                elevation: 4,
+                                child: SizedBox(
+                                  height: screenSize.height * .12,
+                                  width: screenSize.width,
+                                  child: SizedBox(
+                                    child: fileName != null
+                                        ? Center(
+                                            child: Text(fileName!),
+                                          )
+                                        : Center(
+                                            child: selectedFile == null &&
+                                                    fileName == null
+                                                ? Image.asset(
+                                                    "assets/images/upload_cloud.png",
+                                                    alignment: Alignment.center,
+                                                    width: 50,
+                                                    height: 50,
+                                                    //  MediaQuery.of(context).size.width * 1
+                                                  )
+                                                : Image.file(selectedFile!),
+                                          ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                 
-                    
-                    Gaps.vGap12,
+                        Gaps.vGap12,
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -135,7 +135,8 @@ class _ChangeBankAccountScreenStep2State extends State<ChangeBankAccountScreenSt
                                 buttonText: "تأكيد"),
                             CustomButton(
                               buttonBackGroundColor: Colors.white,
-                              screenWidth: MediaQuery.of(context).size.width * .3,
+                              screenWidth:
+                                  MediaQuery.of(context).size.width * .3,
                               buttonTapHandler: () {},
                               buttonText: "إلغاء",
                               haveBorder: true,
@@ -152,7 +153,7 @@ class _ChangeBankAccountScreenStep2State extends State<ChangeBankAccountScreenSt
     );
   }
 
-    Future<void> pickFileFromDevice() async {
+  Future<void> pickFileFromDevice() async {
     FilePickerResult? result = await FilePicker.platform
         .pickFiles(type: FileType.any, allowMultiple: false);
     if (result != null) {
