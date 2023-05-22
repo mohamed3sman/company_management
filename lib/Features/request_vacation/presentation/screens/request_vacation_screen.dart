@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_drop_down_list.dart';
+import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/locale/app_localizations.dart';
@@ -24,18 +25,19 @@ class _RequestVacationScreenState extends State<RequestVacationScreen> {
   Widget build(BuildContext context) {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        bottom: false,
-        child: Container(
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          height: MediaQuery.of(context).size.height * .87,
-          child: SingleChildScrollView(
+    final screenSize = MediaQuery.of(context).size;
+
+    return SafeArea(
+      child: Scaffold(
+        appBar: PreferredSize(
+            preferredSize: screenSize * .1, child: const CustomAppBar()),
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 30),
             child: Column(
               children: [
                 //  const CustomAppBar(),
-                Gaps.vGap8,
                 Text(
                   locale.translate('order_vacation')!,
                   style: const TextStyle(
