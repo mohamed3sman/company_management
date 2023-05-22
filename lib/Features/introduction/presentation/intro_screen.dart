@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -22,7 +23,7 @@ class _IntroScreenState extends State<IntroScreen> {
         alignment: Alignment.topCenter,
         children: [
           ClipPath(
-            clipper: RoundedClipper(screenSize.height - 140),
+            clipper: RoundedClipper(),
             child: AnimatedContainer(
               duration: const Duration(seconds: 3),
               height: screenSize.height - 80,
@@ -46,7 +47,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 textDirection: TextDirection.ltr,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Gaps.vGap50,
+                  Gaps.vGap12,
                   const Text(
                     "نظام بصمتك",
                     style: TextStyle(color: Colors.white, fontSize: 20),
@@ -70,6 +71,8 @@ class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return IntroductionScreen(
       dotsDecorator: DotsDecorator(
           // spacing: EdgeInsets.only(left: 2, right: 3),
@@ -79,22 +82,24 @@ class _IntroScreenState extends State<IntroScreen> {
       //  dotsContainerDecorator: BoxDecoration(color: Colors.red),
       rtl: true,
       // resizeToAvoidBottomInset: true,
-      next: const Text(
-        "تخطي",
-        style: TextStyle(color: Colors.white, fontSize: 20),
+      next: Text(
+        locale.translate("skip")!,
+        style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
-      done: const Text(
-        "تخطي",
-        style: TextStyle(color: Colors.white, fontSize: 20),
+      done: Text(
+        locale.translate("skip")!,
+        style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
-      nextFlex: (screenSize.width * .0111).toInt(),
+      // nextFlex: 1,
+      // dotsFlex:3,
       doneStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       nextStyle: TextButton.styleFrom(alignment: Alignment.bottomLeft),
       onDone: () {
-        Navigator.pushReplacementNamed(context, kBottomNav);
+        Navigator.pushReplacementNamed(context, kLoginScreen);
       },
+
       showDoneButton: true,
-      showNextButton: true,
+
       rawPages: [
         getIntroPages(
             imagePath: "assets/images/intro1.png",

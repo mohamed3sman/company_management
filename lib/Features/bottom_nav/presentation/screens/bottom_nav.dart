@@ -2,10 +2,8 @@ import 'dart:async';
 
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
-import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/hex_color.dart';
-import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/page_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,11 +23,16 @@ class _BottomNavState extends State<BottomNav>
   late CurvedAnimation _curve;
   final _iconPathList = <String>[
     'assets/images/group_1037.png',
-    'assets/images/icon_awesome_fingerprint.png',
+    'assets/images/mail_icon.png',
     'assets/images/icon_feather_info.png',
     'assets/images/icon_awesome_clipboard_list.png',
   ];
-
+  final iconToolTipMessege = <String>[
+    'المزيد',
+    'رسائل',
+    'استعلامات',
+    'طلباتي',
+  ];
   @override
   void initState() {
     final systemTheme = SystemUiOverlayStyle.light.copyWith(
@@ -82,45 +85,6 @@ class _BottomNavState extends State<BottomNav>
             return false;
           },
           child: Scaffold(
-            appBar: AppBar(
-                elevation: 0.0,
-                backgroundColor: Colors.white,
-                actions: const [
-                  Icon(
-                    Icons.notifications_none_sharp,
-                    color: Colors.grey,
-                    size: 30,
-                  )
-                ],
-                leading: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacementNamed(
-                          context, KPersonalAccountView);
-                    },
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(40.0),
-                      child: Image.network(
-                        "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
-                        height: 10.0,
-                        width: 10.0,
-                      ),
-                    ),
-                  ),
-                ),
-                title: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        AppLocalizations.of(context)!.translate("welcome")!,
-                        style: const TextStyle(
-                            color: Color(0xff9d9d9e), fontSize: 13),
-                      ),
-                      const Text("أحمد محمد عبدالرحمن",
-                          style: TextStyle(
-                              color: Color(0xff1d1d1d), fontSize: 15)),
-                    ])),
             extendBody: true,
             body: context.watch<BottomNavCubit>().selectedBottomNavScreen,
             floatingActionButton: ScaleTransition(
@@ -162,15 +126,18 @@ class _BottomNavState extends State<BottomNav>
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.asset(
-                                _iconPathList[index],
-                                height: orientation == Orientation.portrait
-                                    ? 24
-                                    : 35,
-                                width: orientation == Orientation.portrait
-                                    ? 24
-                                    : 35,
-                                color: color,
+                              Tooltip(
+                                message: iconToolTipMessege[index],
+                                child: Image.asset(
+                                  _iconPathList[index],
+                                  height: orientation == Orientation.portrait
+                                      ? 24
+                                      : 35,
+                                  width: orientation == Orientation.portrait
+                                      ? 24
+                                      : 35,
+                                  color: color,
+                                ),
                               ),
                               SizedBox(
                                   height: orientation == Orientation.portrait
