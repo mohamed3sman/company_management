@@ -32,7 +32,7 @@ class OutPutContainer extends StatelessWidget {
                 color: kPrimaryColor,
               ),
               Gaps.hGap10,
-              Text(containerTitle,style: TextStyle(color: kTextColor,
+              Text(containerTitle,style: const TextStyle(color: kTextColor,
               fontSize:12,
               overflow:TextOverflow.ellipsis,
               ),),
@@ -40,18 +40,18 @@ class OutPutContainer extends StatelessWidget {
           ),
          Gaps.vGap5,
           Container(
-            margin: EdgeInsets.only(bottom: 10),
-            padding: EdgeInsets.only(left: 10, right: 10),
+            margin:const EdgeInsets.only(bottom: 10),
+            padding:const EdgeInsets.only(left: 10, right: 10),
             alignment: Alignment.centerRight,
             width: containerWidth,
             height: MediaQuery.of(context).size.height * .06,
             decoration: BoxDecoration(
-              color: Color(0xfff6f6f6),
+              color:const Color(0xfff6f6f6),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Text(
               containerText,
-              style: TextStyle(
+              style:const TextStyle(
                 color: kOutPutContainerTextColor,
                 overflow: TextOverflow.ellipsis,
                 fontSize: 13,
