@@ -5,21 +5,15 @@ import 'package:introduction_screen/introduction_screen.dart';
 import '../../../core/utils/constants.dart';
 import '../../../core/widgets/custom_circle_clipper.dart';
 
-class IntroScreen extends StatefulWidget {
-  const IntroScreen({super.key});
+class IntroScreen extends StatelessWidget {
+  const  IntroScreen({super.key});
 
-  @override
-  State<IntroScreen> createState() => _IntroScreenState();
-}
-late AppLocalizations locale;
-
-class _IntroScreenState extends State<IntroScreen> {
 
   Widget getIntroPages(
-      {
-        required String imagePath,
-      required Size screenSize,
-      required String title}) {
+      {required String imagePath,
+        required String constText,
+        required Size screenSize,
+        required String title}) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: Stack(
@@ -34,7 +28,7 @@ class _IntroScreenState extends State<IntroScreen> {
             ),
           ),
           Padding(
-            padding:  EdgeInsets.only(top: 40),
+            padding: EdgeInsets.only(top: 40),
             child: Image.asset(
               imagePath,
               //fit: BoxFit.cover,
@@ -51,7 +45,8 @@ class _IntroScreenState extends State<IntroScreen> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Gaps.vGap12,
-                   Text(locale.translate('finger_print_system')!,// may be null check
+                  Text(
+                    constText,
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   SizedBox(
@@ -77,7 +72,7 @@ class _IntroScreenState extends State<IntroScreen> {
     locale = AppLocalizations.of(context)!;
     return IntroductionScreen(
       dotsDecorator: DotsDecorator(
-          // spacing: EdgeInsets.only(left: 2, right: 3),
+        // spacing: EdgeInsets.only(left: 2, right: 3),
           color: Colors.white,
           size: Size(screenSize.width * .025, screenSize.height * .025),
           activeColor: kSecondaryColor),
@@ -85,11 +80,11 @@ class _IntroScreenState extends State<IntroScreen> {
       rtl: true,
       // resizeToAvoidBottomInset: true,
       next: Text(
-        locale.translate("skip")!,
+        locale.translate('skip')!,
         style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
       done: Text(
-        locale.translate("skip")!,
+        locale.translate('skip')!,
         style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
       // nextFlex: 1,
@@ -104,18 +99,26 @@ class _IntroScreenState extends State<IntroScreen> {
 
       rawPages: [
         getIntroPages(
+            constText:     locale.translate('finger_print_system')!,
             imagePath: "assets/images/intro1.png",
             screenSize: screenSize,
-            title:  locale.translate('manage_human_resources_in_an_integrated_manner')!),
+            title:
+            locale.translate('manage_human_resources_in_an_integrated_manner')!),
         getIntroPages(
+            constText:      locale.translate('finger_print_system')!,
             imagePath: "assets/images/intro2.png",
             screenSize: screenSize,
-            title: locale.translate('provides_you_with_detailed_reports_on_all_your_employees')!),
+            title:
+            locale.translate('provides_you_with_detailed_reports_on_all_your_employees')!),
         getIntroPages(
+            constText:      locale.translate('finger_print_system')!,
             imagePath: "assets/images/intro3.png",
             screenSize: screenSize,
-            title: locale.translate('the_employee_can_view_his_accrued_leave_balance')!),
+            title:
+            locale.translate('the_employee_can_view_his_accrued_leave_balance')!),
       ],
     );
   }
 }
+
+late AppLocalizations locale;

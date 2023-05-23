@@ -29,14 +29,14 @@ class OutPutContainer extends StatelessWidget {
               Image.asset(
                 containerIconPath,
                 color: kPrimaryColor,
-                scale: 1.2,
+                scale: 1.3,
               ),
               Gaps.hGap10,
               Text(
                 containerTitle,
                 style: const TextStyle(
                   color: kTextColor,
-                  fontSize: 11,
+                  fontSize: 10,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
@@ -58,7 +58,7 @@ class OutPutContainer extends StatelessWidget {
               style: const TextStyle(
                 color: kOutPutContainerTextColor,
                 overflow: TextOverflow.ellipsis,
-                fontSize: 11,
+                fontSize: 10,
               ),
             ),
           ),

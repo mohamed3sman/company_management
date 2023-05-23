@@ -26,7 +26,7 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
     return Column(
       children: [
         Text(
-          'إنشاء حساب',
+          locale.translate('create_account')!,
           style: TextStyle(
               color: kPrimaryColor,
               fontSize: 17.sp,
@@ -36,26 +36,26 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const CustomLoginTextField(
+             CustomLoginTextField(
                 textInputType: TextInputType.text,
                 obscureText: false,
-                stringInTextField: 'الاسم'),
-            const CustomLoginTextField(
+                stringInTextField: locale.translate('name')!),
+             CustomLoginTextField(
                 textInputType: TextInputType.number,
                 obscureText: false,
-                stringInTextField: 'رقم الجوال'),
-            const CustomLoginTextField(
+                stringInTextField:locale.translate('phone')!),
+             CustomLoginTextField(
                 textInputType: TextInputType.number,
                 obscureText: false,
-                stringInTextField: 'رقم الهوية'),
-            const CustomLoginTextField(
+                stringInTextField: locale.translate('id_number')!),
+             CustomLoginTextField(
                 textInputType: TextInputType.emailAddress,
                 obscureText: false,
-                stringInTextField: 'البريد الالكتروني'),
+                stringInTextField: locale.translate('email')!),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Text(
-                'النوع',
+                locale.translate('the_kind')!,
                 style: Styles.textStyle20.copyWith(
                     fontWeight: FontWeight.w700,
                     fontSize: 15,
@@ -69,7 +69,7 @@ class _RegisterViewFormState extends State<RegisterViewForm> {
           height: SizeConfig.screenHeight! * 0.04,
         ),
         CustomButton(
-          buttonText: 'إنشاء حساب',
+          buttonText:  locale.translate('create_account')!,
           buttonTapHandler: () {
             Navigator.pushNamed(context, kVerificationScreen);
           },

@@ -30,23 +30,25 @@ class CustomSettingRow extends StatelessWidget {
               children: [
                 Image.asset(
                   path,
-                  width: 24.sp,
-                  height: 24.sp,
+                  width: 20.sp,
+                  height: 20.sp,
                 ),
                 Gaps.hGap20,
                 Text(
                   text,
                   style: TextStyle(
+                      fontWeight: FontWeight.w300,
                       color: deleteAccountColor == null
                           ? const Color(0xff707070)
                           : Color(deleteAccountColor!),
-                      fontSize: 14.sp),
+                      fontSize: 12.sp),
                 ),
               ],
             ),
           ),
           Divider(
-            color: const Color(0xff707070).withOpacity(0.4),
+            thickness: 1,
+            color: Colors.grey[300],
           ),
         ],
       ),

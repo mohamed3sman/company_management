@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class MyOrdersGridViewItem extends StatelessWidget {
@@ -24,7 +25,7 @@ class MyOrdersGridViewItem extends StatelessWidget {
         message: "icon messege",
         child: Container(
           decoration: BoxDecoration(
-              color: const Color(0x299a80d9),
+              color: kPrimaryColor.withOpacity(.2),
               borderRadius: BorderRadius.circular(12)),
           width: MediaQuery.of(context).size.width / 2.5,
           height: MediaQuery.of(context).size.height / 5.5,

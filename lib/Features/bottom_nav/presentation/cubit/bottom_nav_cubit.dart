@@ -3,7 +3,7 @@ import 'package:fingerPrint/Features/messeges/presentation/screens/new_messege_s
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
 import 'package:fingerPrint/Features/payment_permission/presentation/screens/payment_permission_screen.dart';
-import 'package:fingerPrint/Features/procedures/procedures/presentaion/procedures.dart';
+import 'package:fingerPrint/Features/order_details/procedures/presentaion/screens/order_details_screen.dart';
 import 'package:fingerPrint/Features/request_permission/presentation/screens/request_permission_screen.dart';
 import 'package:fingerPrint/Features/status_request/status_request_screen.dart';
 import 'package:fingerPrint/Features/table/table_screen.dart';
@@ -13,6 +13,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../change_bank_account/presentation/screens/change_bank_account_screen_step1.dart';
+import '../../../contact_us/presentation/screens/contact_us_screen.dart';
+import '../../../edit_profile/presentation/screens/edit_profile_screen.dart';
 import '../../../request_dept/presentation/screens/request_dept_screen.dart';
 import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen_step1.dart';
 import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen_step2.dart';
@@ -64,7 +66,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const DataTableView(),
     //14
 
-    const ButtonSheet(),
+    const OrderDetailsScreen(),
 
     //15
 
@@ -73,6 +75,13 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const ChangeBankAccountScreenStep1(),
     //17
     const ChangeBankAccountScreenStep2(),
+
+    //18
+    const EditProfileScreen(),
+
+    //19
+
+    const ContactUsScreen(),
   ];
 
   Widget get selectedBottomNavScreen => bottomNavScreens[bottomNavIndex];

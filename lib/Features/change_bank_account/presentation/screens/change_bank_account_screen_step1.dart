@@ -18,104 +18,94 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: PreferredSize(
           preferredSize: screenSize * .07, child: const CustomAppBar()),
-      body: Padding(
-        padding: const EdgeInsets.only(
-          left: 12,
-          right: 12,
-        ),
-        child: Column(
-          children: [
-            Gaps.vGap15,
-            const Text(
-              "تغيير حساب بنكي ",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            Gaps.vGap15,
-            CustomDotStepper(
-              isActive: false,
-              firstText: "حساب حالي",
-              secondText: "حساب جديد",
-            ),
-            SizedBox(
-              height: screenSize.height * .62,
-              child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Gaps.vGap15,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        OutPutContainer(
-                            containerIconPath: "assets/icons/user_icon.png",
-                            containerTitle: "اسم الموظف",
-                            containerWidth: screenSize.width * .45,
-                            containerText: "أحمد محمد عبدالرحمن"),
-                        OutPutContainer(
-                            containerIconPath: "assets/icons/user_id_icon.png",
-                            containerTitle: "كود الموظف",
-                            containerWidth: screenSize.width * .45,
-                            containerText: "10035"),
-                      ],
-                    ),
-                    OutPutContainer(
-                        containerIconPath: "assets/icons/subtitle_icon.png",
-                        containerTitle: "المسمى الوظيفي",
-                        containerWidth: screenSize.width,
-                        containerText: "مسؤول خدمات المستفيدين"),
-                    OutPutContainer(
-                        containerIconPath:
-                            "assets/icons/administration_icon.png",
-                        containerTitle: "الإدارة",
-                        containerWidth: screenSize.width,
-                        containerText: "إدارة الرعاية والبرامج التنموية"),
-                    OutPutContainer(
-                        containerIconPath: "assets/icons/department_icon.png",
-                        containerTitle: "القسم",
-                        containerWidth: screenSize.width,
-                        containerText: "قسم الرعاية الإجتماعية"),
-                    OutPutContainer(
-                        containerIconPath: "assets/icons/bank_name_icon.png",
-                        containerTitle: "اسم البنك الحالي",
-                        containerWidth: screenSize.width,
-                        containerText: "مصرف الراجحي"),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        OutPutContainer(
-                            containerIconPath:
-                                "assets/icons/bank_code_icon.png",
-                            containerTitle: "كود البنك الحالي",
-                            containerWidth: screenSize.width * .45,
-                            containerText: "RHJI"),
-                        OutPutContainer(
-                            containerIconPath: "assets/icons/hashtag_icon.png",
-                            containerTitle: "رقم الحساب الحالي",
-                            containerWidth: screenSize.width * .45,
-                            containerText: "RHJI"),
-                      ],
-                    ),
-                    CustomButton(
-                        screenWidth: screenSize.width * .33,
-                        buttonTapHandler: () {
-                          BlocProvider.of<BottomNavCubit>(context)
-                              .navigationQueue
-                              .addLast(BlocProvider.of<BottomNavCubit>(context)
-                                  .bottomNavIndex);
-                          BlocProvider.of<BottomNavCubit>(context)
-                              .updateBottomNavIndex(17);
-                        },
-                        buttonText: "التالي")
-                  ],
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 30, right: 30, bottom: 50),
+          child: Column(
+            children: [
+              Gaps.vGap15,
+              const Text(
+                "تغيير حساب بنكي ",
+                style: TextStyle(
+                  fontSize: 15,
                 ),
               ),
-            ),
-          ],
+              Gaps.vGap15,
+              CustomDotStepper(
+                isActive: false,
+                firstText: "حساب حالي",
+                secondText: "حساب جديد",
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Gaps.vGap30,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      OutPutContainer(
+                          containerIconPath: "assets/icons/user_icon.png",
+                          containerTitle: "اسم الموظف",
+                          containerWidth: screenSize.width * .40,
+                          containerText: "أحمد محمد عبدالرحمن"),
+                      OutPutContainer(
+                          containerIconPath: "assets/icons/user_id_icon.png",
+                          containerTitle: "كود الموظف",
+                          containerWidth: screenSize.width * .40,
+                          containerText: "10035"),
+                    ],
+                  ),
+                  OutPutContainer(
+                      containerIconPath: "assets/icons/subtitle_icon.png",
+                      containerTitle: "المسمى الوظيفي",
+                      containerWidth: screenSize.width,
+                      containerText: "مسؤول خدمات المستفيدين"),
+                  OutPutContainer(
+                      containerIconPath: "assets/icons/administration_icon.png",
+                      containerTitle: "الإدارة",
+                      containerWidth: screenSize.width,
+                      containerText: "إدارة الرعاية والبرامج التنموية"),
+                  OutPutContainer(
+                      containerIconPath: "assets/icons/department_icon.png",
+                      containerTitle: "القسم",
+                      containerWidth: screenSize.width,
+                      containerText: "قسم الرعاية الإجتماعية"),
+                  OutPutContainer(
+                      containerIconPath: "assets/icons/bank_name_icon.png",
+                      containerTitle: "اسم البنك الحالي",
+                      containerWidth: screenSize.width,
+                      containerText: "مصرف الراجحي"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      OutPutContainer(
+                          containerIconPath: "assets/icons/bank_code_icon.png",
+                          containerTitle: "كود البنك الحالي",
+                          containerWidth: screenSize.width * .40,
+                          containerText: "RHJI"),
+                      OutPutContainer(
+                          containerIconPath: "assets/icons/hashtag_icon.png",
+                          containerTitle: "رقم الحساب الحالي",
+                          containerWidth: screenSize.width * .40,
+                          containerText: "RHJI"),
+                    ],
+                  ),
+                  Gaps.vGap20,
+                ],
+              ),
+            ],
+          ),
         ),
       ),
+      floatingActionButton: CustomButton(
+          screenWidth: screenSize.width * .33,
+          buttonTapHandler: () {
+            BlocProvider.of<BottomNavCubit>(context).navigationQueue.addLast(
+                BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
+            BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(17);
+          },
+          buttonText: "التالي"),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:fingerPrint/Features/auth/register/widgets/register_form_decoration.dart';
 import 'package:fingerPrint/Features/auth/register/widgets/register_view_form.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,8 @@ class RegisterViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return SingleChildScrollView(
       child: Stack(
@@ -49,7 +52,7 @@ class RegisterViewBody extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ' لدي حساب بالفعل ! ',
+                        locale.translate('already_have_an_account')!,
                         style: Styles.textStyle20
                             .copyWith(color: kPrimaryColor, fontSize: 13.sp),
                       ),
@@ -61,7 +64,7 @@ class RegisterViewBody extends StatelessWidget {
                           }));
                         },
                         child: Text(
-                          'تسجيل الدخول',
+                          locale.translate('login')!,
                           style: Styles.textStyle20.copyWith(
                               color: kSecondaryColor,
                               decoration: TextDecoration.underline,
