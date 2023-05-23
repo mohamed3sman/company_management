@@ -3,7 +3,7 @@ import 'package:fingerPrint/Features/messeges/presentation/screens/new_messege_s
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
 import 'package:fingerPrint/Features/payment_permission/presentation/screens/payment_permission_screen.dart';
-import 'package:fingerPrint/Features/procedures/procedures/presentaion/procedures.dart';
+import 'package:fingerPrint/Features/order_details/procedures/presentaion/screens/order_details_screen.dart';
 import 'package:fingerPrint/Features/request_permission/presentation/screens/request_permission_screen.dart';
 import 'package:fingerPrint/Features/status_request/status_request_screen.dart';
 import 'package:fingerPrint/Features/table/table_screen.dart';
@@ -64,7 +64,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const DataTableView(),
     //14
 
-    const ButtonSheet(),
+    const OrderDetailsScreen(),
 
     //15
 
