@@ -149,6 +149,21 @@
   "templates": "النماذج",
   "god_delivered": "سلمها اللة",
   "choose": "اختر...",
-  "subject": "الموضوع"
+  "subject": "الموضوع",
+  "bank_account_change": "تغيير حساب بنكي",
+  "current_account": "حساب حالي",
+  "new_account": "حساب جديد",
+  "employee_name": "اسم الموظف",
+  "employee_id": "كود الموظف",
+  "jop_title": "المسمى الوظيفي",
+  "user_services_officer": "مسؤول خدمات المستفيدين",
+  "management": "الإدارة",
+  "department": "القسم",
+  "management_of_care_and_development_programs": "إدارة الرعاية والبرامج التنموية",
+  "Social_Care_Department": "قسم الرعاية الإجتماعية",
+  "the_name_of_the_current_bank": "اسم البنك الحالي",
+  "Rajhi_Bank": "مصرف الراجحي",
+  "current_bank_code": "كود البنك الحال",
+  "current_bank_number": "رقم الحساب الحالي"
 
 }

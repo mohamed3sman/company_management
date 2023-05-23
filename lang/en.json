@@ -149,6 +149,21 @@
   "templates": "templates",
   "god_delivered": "God delivered ",
   "choose": "choose...",
-  "subject": "subject"
+  "subject": "subject",
+  "bank_account_change":"Bank account change",
+  "current_account": "current account",
+  "new_account": "new account",
+  "employee_name": "employee name",
+  "employee_id": "employee id",
+  "jop_title": "jop title",
+  "user_services_officer": "User services officer",
+  "management": "Management",
+  "department": "Department",
+  "management_of_care_and_development_programs": "Management of care and development programs",
+  "Social_Care_Department": "Social Care Department",
+  "the_name_of_the_current_bank": "The name of the current bank",
+  "Rajhi_Bank": "Al-Rajhi Bank",
+  "current_bank_code": "Current bank code",
+  "current_bank_number": "Current bank number"
 
 }

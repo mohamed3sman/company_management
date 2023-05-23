@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,6 +14,8 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -25,8 +28,8 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
           child: Column(
             children: [
               Gaps.vGap15,
-              const Text(
-                "تغيير حساب بنكي ",
+               Text(
+              locale.translate('bank_account_change')!,
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -34,8 +37,8 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
               Gaps.vGap15,
               CustomDotStepper(
                 isActive: false,
-                firstText: "حساب حالي",
-                secondText: "حساب جديد",
+                firstText: locale.translate('current_account')!,
+                secondText:locale.translate('new_account')!,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -46,47 +49,47 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
                     children: [
                       OutPutContainer(
                           containerIconPath: "assets/icons/user_icon.png",
-                          containerTitle: "اسم الموظف",
+                          containerTitle: locale.translate('employee_name')!,
                           containerWidth: screenSize.width * .40,
                           containerText: "أحمد محمد عبدالرحمن"),
                       OutPutContainer(
                           containerIconPath: "assets/icons/user_id_icon.png",
-                          containerTitle: "كود الموظف",
+                          containerTitle: locale.translate('employee_id')!,
                           containerWidth: screenSize.width * .40,
                           containerText: "10035"),
                     ],
                   ),
                   OutPutContainer(
                       containerIconPath: "assets/icons/subtitle_icon.png",
-                      containerTitle: "المسمى الوظيفي",
+                      containerTitle: locale.translate('jop_title')!,
                       containerWidth: screenSize.width,
-                      containerText: "مسؤول خدمات المستفيدين"),
+                      containerText: locale.translate('user_services_officer')!),
                   OutPutContainer(
                       containerIconPath: "assets/icons/administration_icon.png",
-                      containerTitle: "الإدارة",
+                      containerTitle: locale.translate('management')!,
                       containerWidth: screenSize.width,
-                      containerText: "إدارة الرعاية والبرامج التنموية"),
+                      containerText: locale.translate('management_of_care_and_development_programs')!),
                   OutPutContainer(
                       containerIconPath: "assets/icons/department_icon.png",
-                      containerTitle: "القسم",
+                      containerTitle: locale.translate('department')!,
                       containerWidth: screenSize.width,
-                      containerText: "قسم الرعاية الإجتماعية"),
+                      containerText: locale.translate('Social_Care_Department')!),
                   OutPutContainer(
                       containerIconPath: "assets/icons/bank_name_icon.png",
-                      containerTitle: "اسم البنك الحالي",
+                      containerTitle: locale.translate('the_name_of_the_current_bank')!,
                       containerWidth: screenSize.width,
-                      containerText: "مصرف الراجحي"),
+                      containerText: locale.translate('Rajhi_Bank')!),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       OutPutContainer(
                           containerIconPath: "assets/icons/bank_code_icon.png",
-                          containerTitle: "كود البنك الحالي",
+                          containerTitle: locale.translate('current_bank_code')!,
                           containerWidth: screenSize.width * .40,
                           containerText: "RHJI"),
                       OutPutContainer(
                           containerIconPath: "assets/icons/hashtag_icon.png",
-                          containerTitle: "رقم الحساب الحالي",
+                          containerTitle: locale.translate('current_bank_number')!,
                           containerWidth: screenSize.width * .40,
                           containerText: "RHJI"),
                     ],
