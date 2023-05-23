@@ -164,6 +164,14 @@
   "the_name_of_the_current_bank": "اسم البنك الحالي",
   "Rajhi_Bank": "مصرف الراجحي",
   "current_bank_code": "كود البنك الحال",
-  "current_bank_number": "رقم الحساب الحالي"
+  "current_bank_number": "رقم الحساب الحالي",
+  "payment_permission": "إذن صرف",
+  "number_permission": "رقم الإذن",
+  "date_permission": "تاريخ الإذن",
+  "the amount": "المبلغ",
+  "project": "المشروع",
+  "initiative":"المبادرة",
+  "is_about": "عبارة عن",
+  "beneficiary": "المستفيد"
 
 }

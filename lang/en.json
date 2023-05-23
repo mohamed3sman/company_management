@@ -164,6 +164,14 @@
   "the_name_of_the_current_bank": "The name of the current bank",
   "Rajhi_Bank": "Al-Rajhi Bank",
   "current_bank_code": "Current bank code",
-  "current_bank_number": "Current bank number"
+  "current_bank_number": "Current bank number",
+  "payment_permission": "payment permission",
+  "number_permission": "number permission",
+  "date_permission": "date permission",
+  "the_amount": "the amount",
+  "project": "project",
+  "initiative": "the initiative",
+  "is_about": "Is about",
+  "beneficiary": "beneficiary"
 
 }

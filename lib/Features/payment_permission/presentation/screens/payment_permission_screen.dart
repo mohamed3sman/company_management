@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/out_put_container.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
@@ -10,6 +11,8 @@ class PaymentPermissionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -27,20 +30,20 @@ class PaymentPermissionScreen extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
-                const Text(
-                  "إذن صرف",
+                 Text(
+                locale.translate('payment_permission')!  ,
                   style: TextStyle(fontSize: 20),
                 ),
                 Row(
                   children: [
-                    const CustomOrdersRawIcon(
-                        rawText: "رقم الإذن",
+                     CustomOrdersRawIcon(
+                        rawText: locale.translate('number_permission')!,
                         iconImagePath: "assets/icons/hashtag_icon.png"),
                     SizedBox(
                       width: screenSize.width * .32,
                     ),
-                    const CustomOrdersRawIcon(
-                        rawText: "تاريخ الإذن",
+                     CustomOrdersRawIcon(
+                        rawText: locale.translate('date_permission')!,
                         iconImagePath: "assets/icons/calender_icon.png")
                   ],
                 ),
@@ -60,27 +63,27 @@ class PaymentPermissionScreen extends StatelessWidget {
                         containerText: "25/9/2023"),
                   ],
                 ),
-                const CustomOrdersRawIcon(
-                  rawText: "المبلغ",
+                 CustomOrdersRawIcon(
+                  rawText: locale.translate('the_amount')!,
                   iconImagePath: "assets/icons/money_icon.png",
                 ),
-                CustomRequestsTextField(hintTextField: "المبلغ"),
-                const CustomOrdersRawIcon(
-                  rawText: "الجهة / المستفيد",
+                CustomRequestsTextField(hintTextField: locale.translate('the_amount')!),
+                 CustomOrdersRawIcon(
+                  rawText: "${locale.translate('the_side')!}/${locale.translate('beneficiary')!}",
                   iconImagePath: "assets/icons/language_icon.png",
                 ),
-                CustomRequestsTextField(hintTextField: "إلى من يهمة الأمر"),
-                const CustomOrdersRawIcon(
-                  rawText: "الجوال",
+                CustomRequestsTextField(hintTextField:locale.translate('to_whom_does_it_matter')!),
+                 CustomOrdersRawIcon(
+                  rawText: locale.translate('phone')!,
                   iconImagePath: "assets/icons/phone_icon.png",
                 ),
                 CustomRequestsTextField(hintTextField: ""),
-                const CustomOrdersRawIcon(
-                    rawText: "عبارة عن",
+                 CustomOrdersRawIcon(
+                    rawText: locale.translate('is_about')!,
                     iconImagePath: "assets/icons/notes_icon.png"),
                 CustomRequestsTextField(hintTextField: ""),
-                const CustomOrdersRawIcon(
-                    rawText: "المبادرة / المشروع",
+                 CustomOrdersRawIcon(
+                    rawText: "${locale.translate('project')!}/${locale.translate('initiative')!}",
                     iconImagePath: "assets/icons/notes_icon.png"),
                 CustomRequestsTextField(hintTextField: ""),
                 Row(
@@ -88,13 +91,13 @@ class PaymentPermissionScreen extends StatelessWidget {
                     CustomButton(
                         screenWidth: screenSize.width * .31,
                         buttonTapHandler: () {},
-                        buttonText: "تأكيد"),
+                        buttonText: locale.translate('confirm')!),
                     const Spacer(),
                     CustomButton(
                         buttonBackGroundColor: Colors.white,
                         screenWidth: screenSize.width * .31,
                         buttonTapHandler: () {},
-                        buttonText: "إلغاء")
+                        buttonText: locale.translate('cancel')!)
                   ],
                 ),
               ],
