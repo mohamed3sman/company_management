@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +19,7 @@ class PersonalAccountContainer extends StatelessWidget {
         child: Container(
             height: SizeConfig.screenHeight! * 0.11,
             decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.15),
+                color: kPrimaryColor.withOpacity(0.15),
                 borderRadius: BorderRadius.circular(14)),
             child: Align(
               alignment: Alignment.bottomCenter,
