@@ -34,7 +34,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * .17,
                       height: MediaQuery.of(context).size.height * .07,
                       decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.2),
+                          color: kPrimaryColor.withOpacity(0.2),
                           borderRadius: BorderRadius.circular(12)),
                       child: Icon(
                         Icons.person_2_outlined,
@@ -69,7 +69,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                       width: 43,
                       height: 43,
                       decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.2),
+                          color: kPrimaryColor.withOpacity(0.2),
                           borderRadius: BorderRadius.circular(12)),
                       child: IconButton(
                         onPressed: () {
@@ -89,8 +89,8 @@ class PersonalAccountScreenBody extends StatelessWidget {
               SizedBox(
                 height: SizeConfig.screenHeight! * 0.05,
               ),
-               Row(
-                children:  [
+              Row(
+                children: [
                   PersonalAccountContainer(
                     text: locale.translate('personal_data')!,
                   ),
@@ -114,7 +114,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               CustomSettingRow(
-                  text:locale.translate('language')!,
+                  text: locale.translate('language')!,
                   path: 'assets/icons/language_icon.png',
                   function: () {
                     Navigator.pushNamed(context, kLanguageScreen);
