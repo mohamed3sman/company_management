@@ -19,6 +19,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: screenSize * .07,
@@ -34,6 +35,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                 ),
                 onTap: () {
                   showModalBottomSheet(
+                    isScrollControlled: true,
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(50),
@@ -42,7 +44,12 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                     ),
                     context: context,
                     builder: (context) {
-                      return const ShowModalBottomSheet();
+                      return AnimatedPadding(
+                        duration: Duration(seconds: 1),
+                        padding: EdgeInsets.only(bottom: 
+                        MediaQuery.of(context).viewInsets.bottom,
+                        ),
+                        child: const ShowModalBottomSheet());
                     },
                   );
                 },
@@ -68,38 +75,45 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: const [
             CustomOrderItem(
+                hasStatusIcon: false,
                 imgscr: "assets/icons/hashtag_icon.png",
                 titleText: "رقم الطلب",
                 subTitleText: "#123546"),
             CustomDivider(),
             CustomOrderItem(
+                hasStatusIcon: false,
                 imgscr: "assets/icons/calender_icon.png",
                 titleText: "تاريخ الطلب",
                 subTitleText: "5-7-2023"),
             CustomDivider(),
             CustomOrderItem(
+                hasStatusIcon: false,
                 imgscr: "assets/icons/vacation_icon.png",
                 titleText: "نوع الإجازة",
                 subTitleText: "إجازة مرضية"),
             CustomDivider(),
             CustomOrderItem(
+                hasStatusIcon: false,
                 imgscr: "assets/icons/hashtag_icon.png",
                 titleText: "رعدد الأيام",
                 subTitleText: "15 يوم"),
             CustomDivider(),
             CustomOrderItem(
+                hasStatusIcon: false,
                 imgscr: "assets/icons/calender_icon.png",
                 titleText: "من تاريخ",
                 subTitleText: "5-23-2023"),
             CustomDivider(),
             CustomOrderItem(
+                hasStatusIcon: false,
                 imgscr: "assets/icons/calender_icon.png",
                 titleText: "إلى تاريخ",
                 subTitleText: "5-23-2023"),
             CustomDivider(),
             CustomOrderItem(
+                hasStatusIcon: true,
                 imgscr: "assets/icons/status_icon.png",
                 titleText: " الحالة",
                 subTitleText: "جاري العمل على الطلب"),
