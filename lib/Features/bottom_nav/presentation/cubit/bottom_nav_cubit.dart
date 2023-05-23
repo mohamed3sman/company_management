@@ -13,6 +13,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../change_bank_account/presentation/screens/change_bank_account_screen_step1.dart';
+import '../../../edit_profile/presentation/screens/edit_profile_screen.dart';
 import '../../../request_dept/presentation/screens/request_dept_screen.dart';
 import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen_step1.dart';
 import '../../../employee_profile_form/presentation/screens/employee_profile_form_screen_step2.dart';
@@ -73,6 +74,9 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const ChangeBankAccountScreenStep1(),
     //17
     const ChangeBankAccountScreenStep2(),
+
+    //18
+    const EditProfileScreen(),
   ];
 
   Widget get selectedBottomNavScreen => bottomNavScreens[bottomNavIndex];

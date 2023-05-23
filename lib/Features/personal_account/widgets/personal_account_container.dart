@@ -15,7 +15,7 @@ class PersonalAccountContainer extends StatelessWidget {
     SizeConfig().init(context);
     return Expanded(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8.w),
+        padding: EdgeInsets.symmetric(horizontal: 10.w),
         child: Container(
             height: SizeConfig.screenHeight! * 0.11,
             decoration: BoxDecoration(
@@ -30,8 +30,8 @@ class PersonalAccountContainer extends StatelessWidget {
                   child: Text(
                     text,
                     style: Styles.textStyle18.copyWith(
-                      color: const Color(0xff828282),
-                      fontSize: 10.sp,
+                      color: Colors.grey[700],
+                      fontSize: 8.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

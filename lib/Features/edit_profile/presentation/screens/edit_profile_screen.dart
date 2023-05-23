@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/widgets/custom_button.dart';
+import '../../../../core/widgets/custom_simple_app_bar.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({Key? key}) : super(key: key);
@@ -18,23 +19,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   Widget build(BuildContext context) {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
+    final screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
-        leading: IconButton(
-            icon: const FaIcon(Icons.arrow_back),
-            color: Colors.black,
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-        backgroundColor: Colors.white,
-        title: Center(
-          child: Text(
-            locale.translate('modify_the_account')!,
-            style: const TextStyle(color: Colors.black, fontSize: 20),
-          ),
+      appBar: PreferredSize(
+        preferredSize: screenSize * .07,
+        child: CustomSimpleAppBar(
+          appBarTitle: locale.translate('modify_the_account')!,
         ),
       ),
       body: SizedBox(

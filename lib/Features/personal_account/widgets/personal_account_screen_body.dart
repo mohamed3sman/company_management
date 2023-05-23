@@ -3,10 +3,12 @@ import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/utils/styles.dart';
 import '../../../core/widgets/custom_button.dart';
+import '../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'custom_setting_row.dart';
 
 class PersonalAccountScreenBody extends StatelessWidget {
@@ -31,19 +33,20 @@ class PersonalAccountScreenBody extends StatelessWidget {
                   // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width * .17,
+                      width: MediaQuery.of(context).size.width * .15,
                       height: MediaQuery.of(context).size.height * .07,
                       decoration: BoxDecoration(
                           color: kPrimaryColor.withOpacity(0.2),
                           borderRadius: BorderRadius.circular(12)),
                       child: Icon(
                         Icons.person_2_outlined,
-                        color: const Color(0xff707070),
+                        color: Colors.grey[700],
                         size: 25.sp,
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -51,14 +54,14 @@ class PersonalAccountScreenBody extends StatelessWidget {
                             locale.translate("welcome")!,
                             style: TextStyle(
                               color: const Color(0xff8b8989),
-                              fontSize: 16.sp,
+                              fontSize: 11.sp,
                             ),
                           ),
                           Text(
                             'أحمد محمد عبدالرحمن',
                             style: TextStyle(
                                 color: const Color(0xff4e4d4d),
-                                fontSize: 14.sp,
+                                fontSize: 12.sp,
                                 fontWeight: FontWeight.w900),
                           )
                         ],
@@ -73,12 +76,16 @@ class PersonalAccountScreenBody extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12)),
                       child: IconButton(
                         onPressed: () {
-                          Navigator.pushReplacementNamed(
-                              context, kEditProfileScreen);
+                          BlocProvider.of<BottomNavCubit>(context)
+                              .navigationQueue
+                              .addLast(BlocProvider.of<BottomNavCubit>(context)
+                                  .bottomNavIndex);
+                          BlocProvider.of<BottomNavCubit>(context)
+                              .updateBottomNavIndex(18);
                         },
                         icon: Icon(
                           Icons.edit,
-                          color: const Color(0xff8f7abd),
+                          color: kSecondaryColor,
                           size: 22.sp,
                         ),
                       ),
@@ -109,7 +116,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                 locale.translate('setting')!,
                 style: Styles.textStyle20.copyWith(
                   color: Colors.black,
-                  fontSize: 21.sp,
+                  fontSize: 16.sp,
                 ),
               ),
               const SizedBox(height: 15),

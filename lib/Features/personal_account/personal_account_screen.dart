@@ -1,5 +1,6 @@
 import 'package:fingerPrint/Features/personal_account/widgets/personal_account_screen_body.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
+import 'package:fingerPrint/core/widgets/custom_simple_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -11,32 +12,14 @@ class PersonalAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
+    final screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        centerTitle: true,
-        elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: const Icon(
-                FontAwesomeIcons.arrowLeftLong,
-                color: Colors.black,
-              ),
-            ),
-          ),
-        ],
-        title: Text(
-          locale.translate('personal_account_view')!,
-          style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 12.sp),
+      appBar: PreferredSize(
+        preferredSize: screenSize * .07,
+        child: CustomSimpleAppBar(
+          appBarTitle: locale.translate('personal_account_view')!,
         ),
       ),
       body: const PersonalAccountScreenBody(),
