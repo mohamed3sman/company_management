@@ -32,7 +32,7 @@ class _ShowModalBottomSheetState extends State<ShowModalBottomSheet> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-               const Text(
+                const Text(
                   "الاجراءات",
                   style: TextStyle(
                     fontSize: 20,
@@ -42,7 +42,7 @@ class _ShowModalBottomSheetState extends State<ShowModalBottomSheet> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child:const Icon(Icons.cancel)),
+                    child: const Icon(Icons.cancel)),
               ],
             ),
             Column(
