@@ -135,6 +135,20 @@
   "male": "ذكر",
   "female": "أنثي",
   "already_have_an_account": " لدي حساب بالفعل",
-  "the_kind": "النوع"
+  "the_kind": "النوع",
+  "employee_identification_form": "نموذج تعريف موظف",
+  "employee_identification": "تعريف موظف",
+  "view_model": "عرض النموذج",
+  "letter_number": "رقم الخطاب",
+  "date": "التاريخ",
+  "surname": "اللقب",
+  "esquire": "المحترم",
+  "the_side": "الجهة",
+  " to_whom_does_it_matter": "إلى من يهمة الأمر",
+  "the_end_of_the_surname": "نهاية اللقب",
+  "templates": "النماذج",
+  "god_delivered": "سلمها اللة",
+  "choose": "اختر...",
+  "subject": "الموضوع"
 
 }

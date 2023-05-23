@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,8 @@ class EmployeeProfileFormScreenStep2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
@@ -21,8 +24,8 @@ class EmployeeProfileFormScreenStep2 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Column(children: [
-                const Text(
-                  "نموذج تعريف موظف",
+                 Text(
+                  locale.translate('employee_identification_form')!,
                   style: TextStyle(
                     fontSize: 15,
                   ),
@@ -30,8 +33,8 @@ class EmployeeProfileFormScreenStep2 extends StatelessWidget {
                 Gaps.vGap15,
                 CustomDotStepper(
                     isActive: true,
-                    firstText: "تعريف موظف",
-                    secondText: "عرض النموذج"),
+                    firstText: locale.translate('employee_identification')!,
+                    secondText: locale.translate('view_model')!),
                 SizedBox(
                   height: screenSize.height * .05,
                 ),

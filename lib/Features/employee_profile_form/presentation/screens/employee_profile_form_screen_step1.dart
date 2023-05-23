@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
@@ -14,6 +15,8 @@ class EmployeeProfileFormScreenStep1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
@@ -30,17 +33,17 @@ class EmployeeProfileFormScreenStep1 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(children: [
-                    const Text(
-                      "نموذج تعريف موظف",
-                      style: TextStyle(
+                     Text(
+                      locale.translate('employee_identification_form')!,
+                      style: const TextStyle(
                         fontSize: 15,
                       ),
                     ),
                     Gaps.vGap15,
                     CustomDotStepper(
                         isActive: false,
-                        firstText: "تعريف موظف",
-                        secondText: "عرض النموذج"),
+                        firstText: locale.translate('employee_identification')!,
+                        secondText: locale.translate('view_model')!),
                     //   SizedBox(height: screenSize.height*.1,),
                   ]),
                 ),
@@ -57,7 +60,7 @@ class EmployeeProfileFormScreenStep1 extends StatelessWidget {
                 BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
             BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(11);
           },
-          buttonText: "عرض النموذج",
+          buttonText: locale.translate('view_model')!,
         ),
       ),
     );

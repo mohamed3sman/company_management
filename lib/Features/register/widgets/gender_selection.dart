@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,8 @@ class _GenderSelectionState extends State<GenderSelection> {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -33,7 +36,7 @@ class _GenderSelectionState extends State<GenderSelection> {
                   }),
             ),
             Text(
-              'ذكر',
+              locale.translate('male')!,
               style: Styles.textStyle18.copyWith(
                 fontSize: 12.sp,
                 color: kTextColor,
@@ -59,7 +62,7 @@ class _GenderSelectionState extends State<GenderSelection> {
                   }),
             ),
             Text(
-              'أنثي',
+              locale.translate('female')!,
               style: Styles.textStyle18.copyWith(
                 fontSize: 12.sp,
                 color: kTextColor,

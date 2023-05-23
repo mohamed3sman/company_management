@@ -135,6 +135,20 @@
   "male": "male",
   "female": "female",
   "already_have_an_account": "I already have an account",
-  "the_kind": "The kind"
+  "the_kind": "The kind",
+  "employee_identification_form": "Employee identification form",
+  "employee_identification": "Employee identification",
+  "view_model": "Model view",
+  "letter_number": "letter number",
+  "date": "date",
+  "surname": "surname",
+  "esquire": "Esquire",
+  "the_side": "the side",
+  "to_whom_does_it_matter": "To whom does it matter",
+  "the_end_of_the_surname": "end of the surname",
+  "templates": "templates",
+  "god_delivered": "God delivered ",
+  "choose": "choose...",
+  "subject": "subject"
 
 }
