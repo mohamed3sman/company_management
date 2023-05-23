@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,8 @@ class MyOrdersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: MediaQuery.of(context).size * .1,
@@ -16,8 +19,8 @@ class MyOrdersScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
-          children: const [
-            Text("طلباتي",
+          children:  [
+            Text(locale.translate('my_orders')!,
                 style: TextStyle(
                   color: Color(0xff000000),
                   fontSize: 20,

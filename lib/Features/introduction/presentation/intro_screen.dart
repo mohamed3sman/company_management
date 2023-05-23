@@ -51,7 +51,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Gaps.vGap12,
-                   Text(locale.translate('finger_print_system')!,
+                   Text(locale.translate('finger_print_system')!,// may be null check
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   SizedBox(
