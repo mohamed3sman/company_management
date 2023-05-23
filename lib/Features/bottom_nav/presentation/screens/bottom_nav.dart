@@ -85,31 +85,33 @@ class _BottomNavState extends State<BottomNav>
             return false;
           },
           child: Scaffold(
-            extendBody: true,
+            extendBody: false,
             body: context.watch<BottomNavCubit>().selectedBottomNavScreen,
             floatingActionButton: ScaleTransition(
               scale: _animation,
               child: !BlocProvider.of<BottomNavCubit>(context).drawerIsOpen
-                  ? FloatingActionButton(
-                      elevation: 10,
-                      backgroundColor: Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Image.asset('assets/images/home.png',
-                            color: context
-                                        .watch<BottomNavCubit>()
-                                        .bottomNavIndex ==
-                                    4
-                                ? kPrimaryColor
-                                : Colors.black),
-                      ),
-                      onPressed: () {
-                        _animationController.reset();
-                        _animationController.forward();
-                        BlocProvider.of<BottomNavCubit>(context)
-                            .updateBottomNavIndex(4);
-                      },
-                    )
+                  ? MediaQuery.of(context).viewInsets.bottom != 0
+                      ? null
+                      : FloatingActionButton(
+                          elevation: 10,
+                          backgroundColor: Colors.white,
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Image.asset('assets/images/home.png',
+                                color: context
+                                            .watch<BottomNavCubit>()
+                                            .bottomNavIndex ==
+                                        4
+                                    ? kPrimaryColor
+                                    : Colors.black),
+                          ),
+                          onPressed: () {
+                            _animationController.reset();
+                            _animationController.forward();
+                            BlocProvider.of<BottomNavCubit>(context)
+                                .updateBottomNavIndex(4);
+                          },
+                        )
                   : const SizedBox(),
             ),
             floatingActionButtonLocation:

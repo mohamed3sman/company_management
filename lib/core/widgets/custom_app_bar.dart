@@ -39,10 +39,10 @@ class CustomAppBar extends StatelessWidget {
         title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
             AppLocalizations.of(context)!.translate("welcome")!,
-            style: const TextStyle(color: Color(0xff9d9d9e), fontSize: 13),
+            style: const TextStyle(color: Color(0xff9d9d9e), fontSize: 12),
           ),
           const Text("أحمد محمد عبدالرحمن",
-              style: TextStyle(color: Color(0xff1d1d1d), fontSize: 15)),
+              style: TextStyle(color: Color(0xff1d1d1d), fontSize: 13)),
         ]));
   }
 }

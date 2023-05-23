@@ -148,7 +148,12 @@ class PersonalAccountScreenBody extends StatelessWidget {
                   text: locale.translate('contact_with_us')!,
                   path: 'assets/icons/contact_us_icon.png',
                   function: () {
-                    Navigator.pushNamed(context, kContactUsScreen);
+                    BlocProvider.of<BottomNavCubit>(context)
+                        .navigationQueue
+                        .addLast(BlocProvider.of<BottomNavCubit>(context)
+                            .bottomNavIndex);
+                    BlocProvider.of<BottomNavCubit>(context)
+                        .updateBottomNavIndex(19);
                   }),
               CustomSettingRow(
                   text: locale.translate('delete_account')!,
