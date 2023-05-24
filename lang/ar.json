@@ -82,7 +82,6 @@
   "num_request": "رقم الطلب :",
   "date_request": " تاريخ الطلب :",
   "type_vacation": "نوع الأجازة :",
-  "num_days": "عدد الايام",
   "from_date": "من تاريخ :",
   "to_date": "الي تاريخ :",
   "status": "الحالة :",
@@ -93,7 +92,6 @@
   "work_is_underway": "جاري العمل",
   "the_details": "التفاصيل",
   "order_number": "رقم الطلب",
-  "sick_leave": "اجازة مرضية",
   "reject": "مرفوض",
   "accept": "تاكيد",
   "the_start_date_of_the_leave": "تاريخ بداية الإجازة",
@@ -189,10 +187,6 @@
   "pound": "جنية",
   "attendance": "الحضور",
   "leaving": "الانصراف",
-  "work_hours": "ساعات العمل",
-  "sunday": "الاحد",
-  "am":"صباحاً",
-  "pm": "مساءا",
   "january": "يناير",
   "february": "فبراير",
   "mars": "مارس",
@@ -208,7 +202,12 @@
   "follow_your_order": "تتبع طلبك",
   "address_of_the_notice": "يتم هنا كتابة عنوان الإشعار",
   "Terms_Conditions": "الشروط والأحكام",
-  "read_terms_conditions": "نرجو منكم قراءة جميع  الشروط والأحكام"
+  "read_terms_conditions": "نرجو منكم قراءة جميع  الشروط والأحكام",
+  "order_details": "تفاصيل الطلب",
+  "sick_leave": "إجازة مرضية",
+  "num_days": "عدد الأيام",
+  "day": "يوم",
+  "work_is_underway_on_the_request": "جاري العمل على الطلب"
 
 
 }

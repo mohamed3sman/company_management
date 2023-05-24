@@ -1,8 +1,4 @@
 {
-  "work_hours": "Work Hours",
-  "am": "AM",
-  "pm": "PM",
-  "sunday": "Sunday",
   "leaving_register": "Leaving Register",
   "attendance_register": "ِAttendance Register",
   "hours": "Hours",
@@ -115,7 +111,6 @@
   "Period": "Period",
   "from": "From",
   "create_account": "Create account",
-  "reason": "Reason",
   "notes": "Notes",
   "language": "language",
   "finger_print_system": "Finger print system",
@@ -206,5 +201,8 @@
   "follow_your_order": "follow your order",
   "address_of_the_notice": "Here is the address of the notice",
   "Terms_Conditions": "Terms and Conditions",
-  "read_terms_conditions": "Please read all terms and conditions"
+  "read_terms_conditions": "Please read all terms and conditions",
+  "order_details": "Order details",
+  "day": "day",
+  "work_is_underway_on_the_request": "Work is underway on the request"
 }
