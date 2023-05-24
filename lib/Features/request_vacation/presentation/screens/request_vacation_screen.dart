@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
+import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/locale/app_localizations.dart';
@@ -69,35 +70,27 @@ class _RequestVacationScreenState extends State<RequestVacationScreen> {
                   onTap: () async {
                     await pickFileFromDevice();
                   },
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Card(
-                        elevation: 6,
-                        child: SizedBox(
-                          height: MediaQuery.of(context).size.height * .12,
-                          width: MediaQuery.of(context).size.width * .87,
-                          child: SizedBox(
-                            child: fileName != null
-                                ? Center(
-                                    child: Text(fileName!),
-                                  )
-                                : Center(
-                                    child:
-                                        selectedFile == null && fileName == null
-                                            ? Image.asset(
-                                                "assets/images/upload_cloud.png",
-                                                alignment: Alignment.center,
-                                                width: 50,
-                                                height: 50,
-                                                //  MediaQuery.of(context).size.width * 1
-                                              )
-                                            : Image.file(selectedFile!),
-                                  ),
-                          ),
-                        ),
-                      ),
-                    ],
+                  child: CustomElevatedContainer(
+                    containerHeight: MediaQuery.of(context).size.height * .12,
+                    containerWidth: MediaQuery.of(context).size.width ,
+                    containerChild: SizedBox(
+                      child: fileName != null
+                          ? Center(
+                              child: Text(fileName!),
+                            )
+                          : Center(
+                              child:
+                                  selectedFile == null && fileName == null
+                                      ? Image.asset(
+                                          "assets/images/upload_cloud.png",
+                                          alignment: Alignment.center,
+                                          width: 50,
+                                          height: 50,
+                                          //  MediaQuery.of(context).size.width * 1
+                                        )
+                                      : Image.file(selectedFile!),
+                            ),
+                    ),
                   ),
                 ),
                 CustomOrdersRawIcon(
