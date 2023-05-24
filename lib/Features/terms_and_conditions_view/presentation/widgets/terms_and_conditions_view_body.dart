@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +10,8 @@ class TermsAndConditionsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,7 +28,7 @@ class TermsAndConditionsViewBody extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(
                   top: 13.h, bottom: SizeConfig.screenHeight! * 0.05),
-              child: Text("الشروط والأحكام",
+              child: Text(locale.translate('Terms_Conditions')!,
                   style: TextStyle(
                       color: const Color(0xff000000),
                       fontWeight: FontWeight.w900,
@@ -42,7 +45,7 @@ class TermsAndConditionsViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "نرجو منكم قراءة جميع  الشروط والأحكام",
+                locale.translate('read_terms_conditions')!,
                 style: TextStyle(
                     color: const Color(0xff282828),
                     fontWeight: FontWeight.w800,
