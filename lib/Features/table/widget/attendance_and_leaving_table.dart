@@ -30,28 +30,28 @@ class AttendanceAndLeavingTable extends StatelessWidget {
         TableRow(
           decoration: BoxDecoration(
               color: kPrimaryColor.withOpacity(.3),
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(16),
                   topRight: Radius.circular(16))),
           children: [
             
             TableColumnCell(
-              columnText: 'التاريخ',
+              columnText: locale.translate('date')!,
             ),
            
             TableColumnCell(
-              columnText: 'الحضور',
+              columnText:  locale.translate('attendance')!,
             ),
             TableColumnCell(
-              columnText: 'الانصراف',
+              columnText: locale.translate('leaving')!,
             ),
             TableColumnCell(
-              columnText: 'ساعات العمل',
+              columnText:  locale.translate('work_hours')!,
             ),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
@@ -59,186 +59,186 @@ class AttendanceAndLeavingTable extends StatelessWidget {
             
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName:  locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName:  locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName:  locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName: locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName:  locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName:  locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName:  locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName:  locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName: locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
         TableRow(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
             CustomTableDateColumnItem(
               dayNumber: '1',
-              dayName: 'الأحد',
+              dayName:  locale.translate('sunday')!,
             ),
-            CustomTableAttendanceColumn(
+            const CustomTableAttendanceColumn(
               timeText: '09.00',
             ),
-            CustomTableLeavingColumn(
+            const CustomTableLeavingColumn(
               timeText: '05:00',
             ),
-            CustomTableWorkHourColumn(),
+            const CustomTableWorkHourColumn(),
           ],
         ),
      

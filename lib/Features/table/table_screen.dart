@@ -1,5 +1,6 @@
 import 'package:fingerPrint/Features/table/widget/table_page_app_bar_actions.dart';
 import 'package:fingerPrint/Features/table/widget/table_view_body.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/widgets/custom_simple_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,8 @@ class DataTableView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     Size screenSize = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
@@ -16,7 +19,7 @@ class DataTableView extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: screenSize * .07,
           child: CustomSimpleAppBar(
-              appBarTitle: "الحضور والانصراف",
+              appBarTitle:  locale.translate('attendance_and_leaving')!,
               leadingWidget: TablePageAppBarActions()),
         ),
         body: const TableViewBody(),

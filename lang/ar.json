@@ -186,5 +186,25 @@
   "number_of_previous_advances": "عدد مرات السلف السابقة",
   "date_of_the_last_advance": "تاريخ آخر سلفة",
   "reason": "السبب",
-  "pound": "جنية"
+  "pound": "جنية",
+  "attendance": "الحضور",
+  "leaving": "الانصراف",
+  "work_hours": "ساعات العمل",
+  "sunday": "الاحد",
+  "am":"صباحاً",
+  "pm": "مساءا",
+  "january": "يناير",
+  "february": "فبراير",
+  "mars": "مارس",
+  "april": "ابريل",
+  "may": "مايو",
+  "june": "يونيو",
+  "july": "يوليو",
+  "augest": "اغسطس",
+  "september": "سبتمبر",
+  "october": "اكتوبر",
+  "november": "نوفمبر",
+  "december": "ديسمبر"
+
+
 }

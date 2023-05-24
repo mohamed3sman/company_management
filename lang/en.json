@@ -184,6 +184,23 @@
   "number_of_previous_advances": "The number of previous advances",
   "date_of_the_last_advance": "The date of the last advance",
   "reason": "the reason",
-  "pound": "pound"
-
+  "pound": "pound",
+  "attendance": "attendance",
+  "leaving": "leaving",
+  "work_hours": "work hours",
+  "sunday": "sunday",
+  "am": "am",
+  "pm": "pm",
+  "january": "January",
+  "february": "february",
+  "mars": "mars",
+  "april": "april",
+  "may": "may",
+  "june": "june",
+  "july": "july",
+  "augest": "augest",
+  "september": "september",
+  "october": "october",
+  "november": "november",
+  "december": "december"
 }
