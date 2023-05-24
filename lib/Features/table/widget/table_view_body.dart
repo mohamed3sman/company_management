@@ -27,17 +27,17 @@ class _TableViewBodyState extends State<TableViewBody> {
   ];
   List<Widget> body = const [
     AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
-    AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
+    // AttendanceAndLeavingTable(),
   ];
   int current = 0;
 
@@ -104,6 +104,7 @@ class _TableViewBodyState extends State<TableViewBody> {
                     );
                   }),
             ),
+
             Padding(
               padding: const EdgeInsets.only(top: 5),
               child: SizedBox(
@@ -111,11 +112,12 @@ class _TableViewBodyState extends State<TableViewBody> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    body[current],
+                    body[0],
                   ],
                 ),
               ),
             ),
+
           ],
         ),
       ),

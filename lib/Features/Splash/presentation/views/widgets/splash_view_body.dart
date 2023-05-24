@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,6 +17,25 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   late Timer _timer;
   @override
+  Future checkFirstSeen() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool seen = (prefs.getBool('seen') ?? false);
+    if (seen) {
+      // print("seen");
+     // Navigator.pushReplacementNamed(context, kLoginScreen);
+      // Navigator.of(context).pushReplacement(
+      //     new MaterialPageRoute(builder: (context) => new Home()));
+    } else {
+      await prefs.setBool('seen', true);
+      //  print("first time");
+      Future.delayed(const Duration(seconds: 2));
+      Navigator.pushReplacementNamed(context, kLanguageScreen);
+
+      // Navigator.of(context).pushReplacement(
+      //     new MaterialPageRoute(builder: (context) => new IntroScreen()));
+    }
+  }
+
   void initState() {
     super.initState();
     _timer = Timer(const Duration(seconds: 3), () {
@@ -24,11 +44,15 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         MaterialPageRoute(builder: (context) => const LoginScreen()),
       );
     });
+    Future.delayed(Duration(seconds: 3),() {
+      checkFirstSeen();
+    },);
   }
 
   @override
   void dispose() {
     _timer.cancel();
+
     super.dispose();
   }
 

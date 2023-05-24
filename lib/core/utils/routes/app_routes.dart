@@ -136,7 +136,7 @@ class AppRoutes {
         );
       case kChangeBankAccountScreenStep2:
         return MaterialPageRoute(
-          builder: (_) => const ChangeBankAccountScreenStep2(),
+          builder: (_) =>  ChangeBankAccountScreenStep2(),
         );
 
       default:
