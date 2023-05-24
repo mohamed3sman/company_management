@@ -10,33 +10,27 @@ class CustomTableDateColumnItem extends StatelessWidget {
   final String dayNumber;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+    return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: 5,
+        margin: const EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 30,
         ),
         decoration: BoxDecoration(
-          color: kPrimaryColor,
+          color: kPrimaryColor.withOpacity(.2),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
           children: [
             Text(dayNumber,
                 style: TextStyle(
-                  fontFamily: 'HacenTunisia',
-                  color: Colors.white,
-                  fontSize: 15.sp,
-                  fontWeight: FontWeight.w900,
-                  fontStyle: FontStyle.normal,
+                  color: kSecondaryColor,
+                  fontSize: 9.sp,
                 )),
             Text(dayName,
                 style: TextStyle(
-                  fontFamily: 'HacenTunisia',
-                  color: Colors.white,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w900,
-                  fontStyle: FontStyle.normal,
+                  color: kSecondaryColor,
+                  fontSize: 9.sp,
                 )),
           ],
         ),

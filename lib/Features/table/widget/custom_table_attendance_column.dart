@@ -12,11 +12,8 @@ class CustomTableAttendanceColumn extends StatelessWidget {
       child: Text("$timeText صباحاً",
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontFamily: 'HacenTunisia',
-            color: kPrimaryColor,
-            fontSize: 13.sp,
-            fontWeight: FontWeight.w900,
-            fontStyle: FontStyle.normal,
+            color: Colors.grey,
+            fontSize: 12.sp,
           )),
     );
   }

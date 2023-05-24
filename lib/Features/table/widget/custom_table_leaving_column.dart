@@ -13,10 +13,8 @@ class CustomTableLeavingColumn extends StatelessWidget {
       child: Text("$timeText مساءاً",
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontFamily: 'HacenTunisia',
-            color: kPrimaryColor,
-            fontSize: 13.sp,
-            fontWeight: FontWeight.w900,
+            color: Colors.grey,
+            fontSize: 12.sp,
             fontStyle: FontStyle.normal,
           )),
     );

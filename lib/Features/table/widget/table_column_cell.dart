@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,18 +9,14 @@ class TableColumnCell extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 391,
-      height: 44,
+      height: 55,
       child: TableCell(
-          child: Container(
-        padding: const EdgeInsets.only(top: 10),
+          child: Center(
         child: Text(columnText,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: 'HacenTunisia',
-              color: Colors.white,
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w900,
-              fontStyle: FontStyle.normal,
+              color: kPrimaryColor,
+              fontSize: 11.sp,
             )),
       )),
     );
