@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,6 +9,8 @@ class NotificationViewCustomWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Padding(
       padding: EdgeInsets.only(
         right: SizeConfig.screenWidth! * 0.03,
@@ -34,7 +37,7 @@ class NotificationViewCustomWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "يتم هنا كتابة عنوان الإشعار",
+                  locale.translate('address_of_the_notice')!,
                   style: TextStyle(
                       color: const Color(0xff282828),
                       fontWeight: FontWeight.w600,

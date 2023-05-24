@@ -1,3 +1,4 @@
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,8 @@ class NotificationViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     SizeConfig().init(context);
     return Column(
       children: [
@@ -22,7 +25,7 @@ class NotificationViewBody extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(
               top: 13.h, bottom: SizeConfig.screenHeight! * 0.025),
-          child: Text("الإشعارات",
+          child: Text(locale.translate('notifications')!,
               style: TextStyle(
                 color: const Color(0xff000000),
                 fontWeight: FontWeight.w700,
