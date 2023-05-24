@@ -74,7 +74,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     //16
     const ChangeBankAccountScreenStep1(),
     //17
-    const ChangeBankAccountScreenStep2(),
+     ChangeBankAccountScreenStep2(),
 
     //18
     const EditProfileScreen(),
