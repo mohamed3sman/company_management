@@ -1,6 +1,7 @@
 import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/screens/bottom_nav.dart';
 import 'package:fingerPrint/Features/contact_us/presentation/screens/contact_us_screen.dart';
+import 'package:fingerPrint/Features/notification_view/presentation/notification_view.dart';
 import 'package:fingerPrint/Features/request_dept/presentation/screens/request_dept_screen.dart';
 import 'package:fingerPrint/Features/edit_profile/presentation/screens/edit_profile_screen.dart';
 import 'package:fingerPrint/Features/langauge/presentation/screens/language_screen.dart';
@@ -14,6 +15,7 @@ import 'package:fingerPrint/Features/status_request/widgets/accepted_tap.dart';
 import 'package:fingerPrint/Features/auth/verification/verification_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/request_vacation/presentation/screens/request_vacation_screen.dart';
+import 'package:fingerPrint/Features/terms_and_conditions_view/presentation/terms_and_conditions_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Features/Splash/presentation/views/splash_view.dart';
@@ -59,6 +61,11 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const AcceptedTap());
       case kRejectedTapScreen:
         return MaterialPageRoute(builder: (_) => const RejectedTap());
+      case kNotificationScreen:
+        return MaterialPageRoute(builder: (_) => const NotificationView());
+      case kTermsAndConditionsScreen:
+        return MaterialPageRoute(
+            builder: (_) => const TermsAndConditionsView());
       case kLoginScreen:
         return MaterialPageRoute(
           builder: (_) => const LoginScreen(),

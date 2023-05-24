@@ -1,11 +1,9 @@
-import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/Features/status_request/widgets/accepted_tap.dart';
 import 'package:fingerPrint/Features/status_request/widgets/current_tap.dart';
 import 'package:fingerPrint/Features/status_request/widgets/rejected_tap.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TapBarViewBody extends StatefulWidget {

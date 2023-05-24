@@ -130,13 +130,23 @@ class PersonalAccountScreenBody extends StatelessWidget {
                   text: locale.translate('notifications')!,
                   path: 'assets/icons/notification_icon.png',
                   function: () {
-                    Navigator.pushNamed(context, kBottomNav);
+                    BlocProvider.of<BottomNavCubit>(context)
+                        .navigationQueue
+                        .addLast(BlocProvider.of<BottomNavCubit>(context)
+                            .bottomNavIndex);
+                    BlocProvider.of<BottomNavCubit>(context)
+                        .updateBottomNavIndex(20);
                   }),
               CustomSettingRow(
                   text: locale.translate('terms_and_conditions')!,
                   path: 'assets/icons/list_icon.png',
                   function: () {
-                    Navigator.pushNamed(context, kBottomNav);
+                    BlocProvider.of<BottomNavCubit>(context)
+                        .navigationQueue
+                        .addLast(BlocProvider.of<BottomNavCubit>(context)
+                            .bottomNavIndex);
+                    BlocProvider.of<BottomNavCubit>(context)
+                        .updateBottomNavIndex(21);
                   }),
               CustomSettingRow(
                   text: locale.translate('privacy_policy')!,

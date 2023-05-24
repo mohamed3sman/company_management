@@ -2,12 +2,14 @@ import 'package:fingerPrint/Features/change_bank_account/presentation/screens/ch
 import 'package:fingerPrint/Features/messeges/presentation/screens/new_messege_screen.dart';
 import 'package:fingerPrint/Features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:fingerPrint/Features/app_home/presentation/home_screen.dart';
+import 'package:fingerPrint/Features/notification_view/presentation/notification_view.dart';
 import 'package:fingerPrint/Features/payment_permission/presentation/screens/payment_permission_screen.dart';
 import 'package:fingerPrint/Features/order_details/procedures/presentaion/screens/order_details_screen.dart';
 import 'package:fingerPrint/Features/request_permission/presentation/screens/request_permission_screen.dart';
 import 'package:fingerPrint/Features/status_request/status_request_screen.dart';
 import 'package:fingerPrint/Features/table/table_screen.dart';
 import 'package:fingerPrint/Features/request_vacation/presentation/screens/request_vacation_screen.dart';
+import 'package:fingerPrint/Features/terms_and_conditions_view/presentation/terms_and_conditions_view.dart';
 import 'dart:collection';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -82,6 +84,14 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     //19
 
     const ContactUsScreen(),
+
+    //20
+
+    const NotificationView(),
+
+    //21
+
+    const TermsAndConditionsView(),
   ];
 
   Widget get selectedBottomNavScreen => bottomNavScreens[bottomNavIndex];

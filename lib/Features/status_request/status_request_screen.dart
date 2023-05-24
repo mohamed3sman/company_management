@@ -16,8 +16,8 @@ class StatusRequest extends StatelessWidget {
 
     SizeConfig().init(context);
     return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: screenSize * .1, child: const CustomAppBar()),
+      appBar:
+          PreferredSize(preferredSize: screenSize * .1, child: CustomAppBar()),
       backgroundColor: Colors.white,
       body: TapBarViewBody(),
       floatingActionButton: MaterialButton(
