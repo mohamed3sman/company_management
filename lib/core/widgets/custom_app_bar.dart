@@ -3,8 +3,13 @@ import '../locale/app_localizations.dart';
 import '../utils/constants.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar(
+      {super.key,
+      this.icon = const Icon(Icons.notifications_none_sharp),
+      this.function});
 
+  final Widget icon;
+  final Function()? function;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -13,10 +18,10 @@ class CustomAppBar extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Icon(
-              Icons.notifications_none_sharp,
+            child: IconButton(
+              onPressed: function,
+              icon: icon,
               color: Colors.grey[700],
-              size: 30,
             ),
           )
         ],

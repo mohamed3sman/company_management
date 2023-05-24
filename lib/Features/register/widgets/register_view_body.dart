@@ -2,6 +2,7 @@ import 'package:fingerPrint/Features/auth/login/presentation/login_screen.dart';
 import 'package:fingerPrint/Features/auth/register/widgets/register_form_decoration.dart';
 import 'package:fingerPrint/Features/auth/register/widgets/register_view_form.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
+import 'package:fingerPrint/core/utils/assets.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
@@ -60,8 +61,8 @@ class RegisterViewBody extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                                return const LoginScreen();
-                              }));
+                            return const LoginScreen();
+                          }));
                         },
                         child: Text(
                           locale.translate('login')!,
@@ -82,7 +83,7 @@ class RegisterViewBody extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 15.0),
               child: Image.asset(
-                "assets/images/logo.png",
+                AssetsData.logo,
                 height: 100,
                 width: 100,
               ),

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 
+// ignore: must_be_immutable
 class CustomSimpleAppBar extends StatelessWidget {
   CustomSimpleAppBar({
     super.key,

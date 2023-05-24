@@ -37,6 +37,8 @@ const String kPersonalAccountScreen = '/kPersonalAccountScreen';
 const String kDeptRequestScreen = '/kDeptRequestScreen';
 const String kMessegesScreen = '/kMessegesScreen';
 const String kNewMessegeScreen = '/kNewMessegeScreen';
+const String kNotificationScreen = '/kNotificationScreen';
+const String kTermsAndConditionsScreen = '/kTermsAndConditionsScreen';
 const String kEmployeeProfileFormScreenStep2 =
     '/kEmployeeProfileFormScreenStep2';
 const String kChangeBankAccountScreenStep2 = '/kChangeBankAccountScreenStep2';
