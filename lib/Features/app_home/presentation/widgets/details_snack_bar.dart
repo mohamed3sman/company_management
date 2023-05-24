@@ -18,7 +18,7 @@ class DetailsSnackBar extends StatelessWidget {
     SizeConfig().init(context);
     return Container(
       width: 260.w,
-      height: SizeConfig.screenHeight! * 0.1,
+      height: SizeConfig.screenHeight! * 0.09,
       margin: EdgeInsets.only(
         top: SizeConfig.screenHeight! * 0.47,
         right: SizeConfig.screenWidth! * 0.14,

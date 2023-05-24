@@ -144,7 +144,7 @@
   "surname": "اللقب",
   "esquire": "المحترم",
   "the_side": "الجهة",
-  " to_whom_does_it_matter": "إلى من يهمة الأمر",
+  "to_whom_does_it_matter": "إلى من يهمة الأمر",
   "the_end_of_the_surname": "نهاية اللقب",
   "templates": "النماذج",
   "god_delivered": "سلمها اللة",
@@ -170,8 +170,9 @@
   "date_permission": "تاريخ الإذن",
   "the amount": "المبلغ",
   "project": "المشروع",
-  "initiative":"المبادرة",
+  "initiative": "المبادرة",
   "is_about": "عبارة عن",
-  "beneficiary": "المستفيد"
-
+  "beneficiary": "المستفيد",
+  "my_orders": "طلباتي",
+  "the_amount": "المبلغ"
 }

@@ -156,7 +156,7 @@ class PersonalAccountScreenBody extends StatelessWidget {
                         .updateBottomNavIndex(19);
                   }),
               CustomSettingRow(
-                  text: "locale.translate('delete_account')!",
+                  text: locale.translate('delete_account')!,
                   deleteAccountColor: 0xfff16056,
                   path: 'assets/icons/delete_account_icon.png',
                   function: () {

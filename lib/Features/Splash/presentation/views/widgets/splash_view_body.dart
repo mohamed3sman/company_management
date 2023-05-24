@@ -46,7 +46,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           ),
         ),
         Center(
-          child: Dance(
+          child: Roulette(
             child: Image.asset(
               'assets/images/splash_image.png',
               width: 180.w,

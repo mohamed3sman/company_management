@@ -20,22 +20,20 @@ class StatusRequest extends StatelessWidget {
           preferredSize: screenSize * .1, child: const CustomAppBar()),
       backgroundColor: Colors.white,
       body: TapBarViewBody(),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(bottom: 50.0),
-        child: MaterialButton(
-          onPressed: () {
-            BlocProvider.of<BottomNavCubit>(context).navigationQueue.addLast(
-                BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
-            BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(5);
-          },
-          color: kPrimaryColor,
-          shape: const CircleBorder(),
-          padding: const EdgeInsets.all(20),
-          child: const Icon(
-            Icons.add,
-            color: Colors.white,
-            size: 27,
-          ),
+      floatingActionButton: MaterialButton(
+        onPressed: () {
+          BlocProvider.of<BottomNavCubit>(context)
+              .navigationQueue
+              .addLast(BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
+          BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(5);
+        },
+        color: kPrimaryColor,
+        shape: const CircleBorder(),
+        padding: const EdgeInsets.all(20),
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+          size: 27,
         ),
       ),
     );

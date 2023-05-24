@@ -1,4 +1,3 @@
-
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -23,13 +22,13 @@ class MessegesScreen extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {},
-              icon:const Icon(
+              icon: const Icon(
                 Icons.arrow_forward,
                 color: Colors.black,
               ))
         ],
         title: Text(
-         locale.translate('message')!,
+          locale.translate('message')!,
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.normal,

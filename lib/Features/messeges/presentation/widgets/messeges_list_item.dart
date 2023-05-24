@@ -12,10 +12,10 @@ class MessegesListItem extends StatelessWidget {
       key: UniqueKey(),
       direction: DismissDirection.startToEnd,
       background: Container(
-        padding:const EdgeInsets.only(left: 50, right: 50),
+        padding: const EdgeInsets.only(left: 50, right: 50),
         alignment: Alignment.centerRight,
-        color:const Color(0xffbb0202),
-        child:const Icon(
+        color: const Color(0xffbb0202),
+        child: const Icon(
           Icons.delete_outline_rounded,
           size: 30,
           color: Colors.white,
@@ -26,16 +26,19 @@ class MessegesListItem extends StatelessWidget {
         children: [
           ListTile(
             subtitle: Text(
-             locale.translate('company_congratulates')!,
+              locale.translate('company_congratulates')!,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontSize: 10),
+            ),
+            title: Text(
+              locale.translate('congratulations_on_the_occasion')!,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 12),
             ),
-            title:  Text(
-            locale.translate('congratulations_on_the_occasion')!,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 17),
+            trailing: const Text(
+              "03:00 PM",
+              style: TextStyle(fontSize: 12),
             ),
-            trailing:const Text("03:00 PM"),
             leading: ClipRRect(
               borderRadius: BorderRadius.circular(50),
               child: Image.network(
