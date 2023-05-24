@@ -31,7 +31,7 @@ class _LoginViewFormState extends State<LoginViewForm> {
           ),
         ),
         const SizedBox(
-          height: 30,
+          height: 50,
         ),
         Padding(
           padding: const EdgeInsets.only(right: 0.0, left: 0),
@@ -52,21 +52,30 @@ class _LoginViewFormState extends State<LoginViewForm> {
           screenWidth: MediaQuery.of(context).size.width * .45,
         ),
         const Spacer(),
-        Align(
-          alignment:
-              locale.isEnLocale ? Alignment.bottomRight : Alignment.bottomLeft,
-          child: TextButton(
-            child: Text(
-              locale.translate('skip')!,
-              style: const TextStyle(
-                fontSize: 15,
-                color: kPrimaryColor,
-                fontWeight: FontWeight.w700,
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 20.0,
+            top: 20,
+            bottom: 20,
+            right: 20,
+          ),
+          child: Align(
+            alignment: locale.isEnLocale
+                ? Alignment.bottomRight
+                : Alignment.bottomLeft,
+            child: TextButton(
+              child: Text(
+                locale.translate('skip')!,
+                style: const TextStyle(
+                  fontSize: 15,
+                  color: kPrimaryColor,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
+              onPressed: () {
+                Navigator.pushNamed(context, kBottomNav);
+              },
             ),
-            onPressed: () {
-              Navigator.pushNamed(context, kBottomNav);
-            },
           ),
         ),
       ],

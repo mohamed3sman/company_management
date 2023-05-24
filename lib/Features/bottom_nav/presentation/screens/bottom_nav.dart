@@ -85,7 +85,6 @@ class _BottomNavState extends State<BottomNav>
             return false;
           },
           child: Scaffold(
-            extendBody: false,
             body: context.watch<BottomNavCubit>().selectedBottomNavScreen,
             floatingActionButton: ScaleTransition(
               scale: _animation,

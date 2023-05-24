@@ -8,8 +8,8 @@ class TablePageAppBarActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(7),
-      padding: EdgeInsets.symmetric(horizontal: 10.w),
+      alignment: Alignment.center,
+     margin: EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         color: const Color(0xffffffff),
         borderRadius: BorderRadius.circular(25),
@@ -22,22 +22,19 @@ class TablePageAppBarActions extends StatelessWidget {
         ],
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("2023",
-              style: TextStyle(
-                  color: const Color(0xff5e5e5e),
-                  fontWeight: FontWeight.w700,
-                  fontFamily: "HacenTunisia",
-                  fontStyle: FontStyle.normal,
-                  fontSize: 15.sp),
-              textAlign: TextAlign.left),
           IconButton(
             onPressed: () {},
             icon: Icon(
               Icons.date_range,
               color: kPrimaryColor,
-              size: 22.sp,
+              size: 15.sp,
             ),
+          ),
+         Text(
+            "2023",
+            style: TextStyle(color: const Color(0xff5e5e5e), fontSize: 11.sp),
           ),
         ],
       ),

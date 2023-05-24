@@ -26,10 +26,10 @@ class AttendanceAndLeavingTable extends StatelessWidget {
         2: FlexColumnWidth(1),
         3: FlexColumnWidth(1),
       },
-      children: const [
+      children:  [
         TableRow(
           decoration: BoxDecoration(
-              color: kPrimaryColor,
+              color: kPrimaryColor.withOpacity(.3),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(16),
                   topRight: Radius.circular(16))),
@@ -56,6 +56,7 @@ class AttendanceAndLeavingTable extends StatelessWidget {
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
           children: [
+            
             CustomTableDateColumnItem(
               dayNumber: '1',
               dayName: 'الأحد',

@@ -1,6 +1,7 @@
-import 'package:fingerPrint/Features/table/widget/table_page_app_bar.dart';
 import 'package:fingerPrint/Features/table/widget/table_page_app_bar_actions.dart';
 import 'package:fingerPrint/Features/table/widget/table_view_body.dart';
+import 'package:fingerPrint/core/utils/constants.dart';
+import 'package:fingerPrint/core/widgets/custom_simple_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class DataTableView extends StatelessWidget {
@@ -8,26 +9,18 @@ class DataTableView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
+    Size screenSize = MediaQuery.of(context).size;
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: PreferredSize(
+          preferredSize: screenSize * .07,
+          child: CustomSimpleAppBar(
+              appBarTitle: "الحضور والانصراف",
+              leadingWidget: TablePageAppBarActions()),
         ),
-        title: const TablePageAppBarTitle(),
-        centerTitle: true,
-        actions: const [
-          TablePageAppBarActions(),
-        ],
+        body: const TableViewBody(),
       ),
-      body: const TableViewBody(),
     );
   }
 }
