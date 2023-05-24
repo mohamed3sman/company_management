@@ -172,6 +172,8 @@
   "project": "project",
   "initiative": "the initiative",
   "is_about": "Is about",
-  "beneficiary": "beneficiary"
+  "beneficiary": "beneficiary",
+  "Attendance_leaving": "Attendance/leaving has been registered successfully",
+  "time_of_checkout": "وقت تسجيل الانصراف هو 04:30 مساءاْ  هل تريد تسجيل الانصراف الآن"
 
 }

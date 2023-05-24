@@ -1,3 +1,5 @@
+import 'package:fingerPrint/Features/introduction/presentation/intro_screen.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +7,8 @@ import 'package:flutter/material.dart';
 import '../../../register/widgets/styles.dart';
 
 AlertDialog alertRegistration(context) {
+  late AppLocalizations locale;
+  locale = AppLocalizations.of(context)!;
   return AlertDialog(
     insetPadding: const EdgeInsets.symmetric(horizontal: 20),
     shape: const RoundedRectangleBorder(
@@ -22,8 +26,8 @@ AlertDialog alertRegistration(context) {
           Image.asset("assets/images/bank_account.png",
               height: 100, width: 100),
           Gaps.vGap20,
-          const Text(
-            "تم تسجيل الحضور / الانصراف بنجاح",
+           Text(
+            locale.translate('Attendance_leaving')!,
             style: TextStyle(fontSize: 15),
           ),
           Gaps.vGap20,
@@ -32,7 +36,7 @@ AlertDialog alertRegistration(context) {
               buttonTapHandler: () {
                 Navigator.pop(context);
               },
-              buttonText: "تاكيد")
+              buttonText: locale.translate('confirm')!)
         ],
       ),
     ),
@@ -54,10 +58,10 @@ AlertDialog alertLeaveRegistration(context) {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(
+           SizedBox(
             width: 250,
             child: Text(
-              "'وقت تسجيل الانصراف هو 04:30 مساءاْ  هل تريد تسجيل الانصراف الآن ؟'",
+              locale.translate('time_of_checkout')!,
               textAlign: TextAlign.center,
               style: Styles.textStyle14,
             ),
@@ -72,7 +76,7 @@ AlertDialog alertLeaveRegistration(context) {
                   buttonTapHandler: () {
                     Navigator.pop(context);
                   },
-                  buttonText: "تاكيد"),
+                  buttonText:locale.translate('confirm')!),
               CustomButton(
                   buttonBackGroundColor: Colors.white,
                   screenWidth: MediaQuery.of(context).size.width * 0.3,
@@ -80,7 +84,7 @@ AlertDialog alertLeaveRegistration(context) {
                     Navigator.pop(context);
                   },
                   haveBorder: true,
-                  buttonText: "إلغاء"),
+                  buttonText:locale.translate('cancel')!),
             ],
           )
         ],
