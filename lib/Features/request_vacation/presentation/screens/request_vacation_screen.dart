@@ -3,31 +3,30 @@ import 'dart:io';
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
+import 'package:fingerPrint/core/widgets/custom_elevated_container.dart';
 import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/locale/app_localizations.dart';
 import '../../../../core/utils/gaps.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
+import '../cubit/request_vacation_cubit.dart';
 import '../widgets/custom_date_picker.dart';
 import 'package:file_picker/file_picker.dart';
 
-class RequestVacationScreen extends StatefulWidget {
+class RequestVacationScreen extends StatelessWidget {
   const RequestVacationScreen({super.key});
 
-  @override
-  State<RequestVacationScreen> createState() => _RequestVacationScreenState();
-}
-
-class _RequestVacationScreenState extends State<RequestVacationScreen> {
-  File? selectedFile;
-  String? fileName;
   @override
   Widget build(BuildContext context) {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
 
-    return SafeArea(
+    return BlocProvider(
+      create: (context) =>RequestVacationCubit(),
+      child: BlocConsumer<RequestVacationCubit,RequestVacationState>(builder: (context, state) {
+        return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
             preferredSize: screenSize * .1, child: const CustomAppBar()),
@@ -67,39 +66,33 @@ class _RequestVacationScreenState extends State<RequestVacationScreen> {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    await pickFileFromDevice();
+                    await BlocProvider.of<RequestVacationCubit>(context).pickFileFromDevice();
                   },
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Card(
-                        elevation: 6,
-                        child: SizedBox(
-                          height: MediaQuery.of(context).size.height * .12,
-                          width: MediaQuery.of(context).size.width * .87,
-                          child: SizedBox(
-                            child: fileName != null
-                                ? Center(
-                                    child: Text(fileName!),
-                                  )
-                                : Center(
-                                    child:
-                                        selectedFile == null && fileName == null
-                                            ? Image.asset(
-                                                "assets/images/upload_cloud.png",
-                                                alignment: Alignment.center,
-                                                width: 50,
-                                                height: 50,
-                                                //  MediaQuery.of(context).size.width * 1
-                                              )
-                                            : Image.file(selectedFile!),
-                                  ),
-                          ),
-                        ),
-                      ),
-                    ],
+                  
+                  child: CustomElevatedContainer(
+                    containerHeight: MediaQuery.of(context).size.height * .12,
+                    containerWidth: MediaQuery.of(context).size.width,
+                    containerChild: SizedBox(
+                      child: BlocProvider.of<RequestVacationCubit>(context).fileName != null
+                          ? Center(
+                              child: Text(BlocProvider.of<RequestVacationCubit>(context).fileName!),
+                            )
+                          : Center(
+                              child: BlocProvider.of<RequestVacationCubit>(context).selectedFile == null && BlocProvider.of<RequestVacationCubit>(context).fileName == null
+                                  ? Image.asset(
+                                      "assets/images/upload_cloud.png",
+                                      alignment: Alignment.center,
+                                      width: 50,
+                                      height: 50,
+                                      //  MediaQuery.of(context).size.width * 1
+                                    )
+                                  : Image.file(BlocProvider.of<RequestVacationCubit>(context).selectedFile!),
+                            ),
+                    ),
                   ),
+              
                 ),
+              
                 CustomOrdersRawIcon(
                   rawText: locale.translate('notes')!,
                   iconImagePath: "assets/icons/notes_icon.png",
@@ -129,26 +122,13 @@ class _RequestVacationScreenState extends State<RequestVacationScreen> {
         ),
       ),
     );
-  }
-
-  Future<void> pickFileFromDevice() async {
-    FilePickerResult? result = await FilePicker.platform
-        .pickFiles(type: FileType.any, allowMultiple: false);
-    if (result != null) {
-      PlatformFile file = result.files.first;
-      if (file.extension == 'jpg' ||
-          file.extension == 'jpeg' ||
-          file.extension == 'png' ||
-          file.extension == 'gif') {
-        setState(() {
-          fileName = null;
-          selectedFile = selectedFile = File(result.files.single.path!);
-        });
-      } else if (file.extension == 'pdf') {
-        setState(() {
-          fileName = file.name;
-        });
-      }
-    } else {}
+ 
+      }, listener: (context, state) {
+        
+      },),
+    );
   }
 }
+
+
+
