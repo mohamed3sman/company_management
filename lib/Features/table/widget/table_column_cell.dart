@@ -6,22 +6,22 @@ class TableColumnCell extends StatelessWidget {
   final String columnText;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 391,
-      height: 44,
-      child: TableCell(
-          child: Container(
-        padding: const EdgeInsets.only(top: 10),
-        child: Text(columnText,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'HacenTunisia',
-              color: Colors.white,
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w900,
-              fontStyle: FontStyle.normal,
-            )),
-      )),
-    );
+    return TableCell(
+
+     // verticalAlignment:TableCellVerticalAlignment.baseline ,
+        child: Container(
+          width: 50,
+          height: 50,
+      padding: const EdgeInsets.only(top: 10),
+      child: Text(columnText,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+           
+            color: Colors.white,
+            fontSize: 14.sp,
+            fontWeight: FontWeight.w900,
+            fontStyle: FontStyle.normal,
+          )),
+    ));
   }
 }

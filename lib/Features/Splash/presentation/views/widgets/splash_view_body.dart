@@ -22,7 +22,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     bool seen = (prefs.getBool('seen') ?? false);
     if (seen) {
       // print("seen");
-      Navigator.pushReplacementNamed(context, kLoginScreen);
+     // Navigator.pushReplacementNamed(context, kLoginScreen);
       // Navigator.of(context).pushReplacement(
       //     new MaterialPageRoute(builder: (context) => new Home()));
     } else {
@@ -44,13 +44,15 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         MaterialPageRoute(builder: (context) => const LoginScreen()),
       );
     });
-    checkFirstSeen();
+    Future.delayed(Duration(seconds: 3),() {
+      checkFirstSeen();
+    },);
   }
 
   @override
   void dispose() {
     _timer.cancel();
-    
+
     super.dispose();
   }
 
