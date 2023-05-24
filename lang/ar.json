@@ -176,5 +176,15 @@
   "my_orders": "طلباتي",
   "the_amount": "المبلغ",
   "Attendance_leaving": "تم تسجيل الحضور / الانصراف بنجاح",
-  "time_of_checkout": "Check-out time is 04:30 pm. Do you want to check-out now?"
+  "time_of_checkout": "وقت تسجيل الانصراف هو 04:30 مساءاْ  هل تريد تسجيل الانصراف الآن",
+  "order_value": "قيمة السلفة",
+  "the_method_of_paying_the_cach": "طريقة سداد السلفة",
+  "number_of_installments": "عدد الأقساط",
+  "value_of_Installment": "قيمة القسط",
+  "discount_start_date": "تاريخ بداية الخصم",
+  "advance_limit": "حد السلفة",
+  "number_of_previous_advances": "عدد مرات السلف السابقة",
+  "date_of_the_last_advance": "تاريخ آخر سلفة",
+  "reason": "السبب",
+  "pound": "جنية"
 }

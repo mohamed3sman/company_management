@@ -174,6 +174,16 @@
   "is_about": "Is about",
   "beneficiary": "beneficiary",
   "Attendance_leaving": "Attendance/leaving has been registered successfully",
-  "time_of_checkout": "وقت تسجيل الانصراف هو 04:30 مساءاْ  هل تريد تسجيل الانصراف الآن"
+  "time_of_checkout": "Check-out time is 04:30 pm. Do you want to check-out now?",
+  "order_value": "order value",
+  "the_method_of_paying_the_cach": "The method of paying the advance",
+  "number_of_installments": "number of installments",
+  "value_of_Installment": "The value of Installment",
+  "discount_start_date": "Discount start date",
+  "advance_limit": "advance limit",
+  "number_of_previous_advances": "The number of previous advances",
+  "date_of_the_last_advance": "The date of the last advance",
+  "reason": "the reason",
+  "pound": "pound"
 
 }
