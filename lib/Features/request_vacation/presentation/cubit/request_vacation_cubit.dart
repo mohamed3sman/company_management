@@ -11,25 +11,21 @@ class RequestVacationCubit extends Cubit<RequestVacationState> {
   RequestVacationCubit() : super(RequestVacationInitial());
   File? selectedFile;
   String? fileName;
-  
+
   Future<void> pickFileFromDevice() async {
-    emit(PickFileState());
     FilePickerResult? result = await FilePicker.platform
         .pickFiles(type: FileType.any, allowMultiple: false);
     if (result != null) {
       PlatformFile file = result.files.first;
-      if (file.extension == 'jpg' ||
-          file.extension == 'jpeg' ||
-          file.extension == 'png' ||
-          file.extension == 'gif') {
-       
-          fileName = null;
-          selectedFile = selectedFile = File(result.files.single.path!);
-      
+      if (file.extension!.toLowerCase() == 'jpg' ||
+          file.extension!.toLowerCase() == 'jpeg' ||
+          file.extension!.toLowerCase() == 'png' ||
+          file.extension!.toLowerCase() == 'gif') {
+        selectedFile = File(result.files.single.path!);
+        emit(PickImageState(selectedFile!));
       } else if (file.extension == 'pdf') {
-       
-          fileName = file.name;
-       
+        fileName = file.name;
+        emit(PickFileState(fileName!));
       }
     } else {}
   }
