@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/following_request/widgets/following_request_custom_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -65,7 +66,7 @@ class FollowingRequestBody extends StatelessWidget {
             scrollDirection: Axis.vertical,
             itemCount: 5,
             itemBuilder: (context, index) {
-              return const FollowingRequestCustomWidget();
+              return FadeInLeft(child: const FollowingRequestCustomWidget());
             },
           ),
         ),

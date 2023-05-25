@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,9 +21,11 @@ class _FollowingRequestCustomWidgetState
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(50),
-            child: Image.network(
-              'https://sportsmatik.com/uploads/world-events/players/lionel-messi_1564492648.jpg',
-              width: 60.sp,
+            child: Bounce(
+              child: Image.network(
+                'https://sportsmatik.com/uploads/world-events/players/lionel-messi_1564492648.jpg',
+                width: 60.sp,
+              ),
             ),
           ),
           SizedBox(

@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
@@ -14,53 +15,55 @@ class IntroScreen extends StatelessWidget {
         required String constText,
         required Size screenSize,
         required String title}) {
-    return Scaffold(
-      backgroundColor: kPrimaryColor,
-      body: Stack(
-        alignment: Alignment.topCenter,
-        children: [
-          ClipPath(
-            clipper: RoundedClipper(),
-            child: AnimatedContainer(
-              duration: const Duration(seconds: 3),
-              height: screenSize.height - 80,
-              color: Colors.white,
+    return ZoomIn(
+      child: Scaffold(
+        backgroundColor: kPrimaryColor,
+        body: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            ClipPath(
+              clipper: RoundedClipper(),
+              child: AnimatedContainer(
+                duration: const Duration(seconds: 3),
+                height: screenSize.height - 80,
+                color: Colors.white,
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: 40),
-            child: Image.asset(
-              imagePath,
-              //fit: BoxFit.cover,
-              alignment: Alignment.center,
-              height: screenSize.height * .5,
-              width: screenSize.width * .8,
+            Padding(
+              padding: EdgeInsets.only(top: 40),
+              child: Image.asset(
+                imagePath,
+                //fit: BoxFit.cover,
+                alignment: Alignment.center,
+                height: screenSize.height * .5,
+                width: screenSize.width * .8,
+              ),
             ),
-          ),
-          Positioned(
-            top: screenSize.height * .65,
-            right: screenSize.width * .07,
-            child: Column(
-                textDirection: TextDirection.ltr,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Gaps.vGap12,
-                  Text(
-                    constText,
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                  SizedBox(
-                    width: screenSize.width - 25,
-                    child: Text(
-                      title,
-                      textAlign: TextAlign.right,
-                      softWrap: true,
-                      style: const TextStyle(color: Colors.white, fontSize: 20),
+            Positioned(
+              top: screenSize.height * .65,
+              right: screenSize.width * .07,
+              child: Column(
+                  textDirection: TextDirection.ltr,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Gaps.vGap12,
+                    Text(
+                      constText,
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
-                  ),
-                ]),
-          )
-        ],
+                    SizedBox(
+                      width: screenSize.width - 25,
+                      child: Text(
+                        title,
+                        textAlign: TextAlign.right,
+                        softWrap: true,
+                        style: const TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    ),
+                  ]),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -94,9 +97,9 @@ class IntroScreen extends StatelessWidget {
       onDone: () {
         Navigator.pushReplacementNamed(context, kLoginScreen);
       },
-
+    
       showDoneButton: true,
-
+    
       rawPages: [
         getIntroPages(
             constText:     locale.translate('finger_print_system')!,

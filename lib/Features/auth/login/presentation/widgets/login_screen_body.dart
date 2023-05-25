@@ -1,4 +1,3 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
@@ -80,12 +79,10 @@ class LoginScreenBody extends StatelessWidget {
           Center(
             child: Padding(
               padding: const EdgeInsets.only(top: 28.0),
-              child: Bounce(
-                child: Image.asset(
-                  "assets/images/logo.png",
-                  height: 130,
-                  width: 130,
-                ),
+              child: Image.asset(
+                "assets/images/logo.png",
+                height: 130,
+                width: 130,
               ),
             ),
           ),

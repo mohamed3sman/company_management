@@ -109,16 +109,14 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
             ),
           ),
         ),
-        floatingActionButton: Bounce(
-          child: CustomButton(
-              screenWidth: screenSize.width * .33,
-              buttonTapHandler: () {
-                BlocProvider.of<BottomNavCubit>(context).navigationQueue.addLast(
-                    BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
-                BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(17);
-              },
-              buttonText: "التالي"),
-        ),
+        floatingActionButton: CustomButton(
+            screenWidth: screenSize.width * .33,
+            buttonTapHandler: () {
+              BlocProvider.of<BottomNavCubit>(context).navigationQueue.addLast(
+                  BlocProvider.of<BottomNavCubit>(context).bottomNavIndex);
+              BlocProvider.of<BottomNavCubit>(context).updateBottomNavIndex(17);
+            },
+            buttonText: "التالي"),
       ),
     );
   }

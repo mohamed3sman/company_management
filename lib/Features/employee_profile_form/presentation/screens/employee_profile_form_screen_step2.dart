@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -14,34 +15,36 @@ class EmployeeProfileFormScreenStep2 extends StatelessWidget {
     late AppLocalizations locale;
     locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
-    return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: screenSize * .1, child: const CustomAppBar()),
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Column(children: [
-                 Text(
-                  locale.translate('employee_identification_form')!,
-                  style: TextStyle(
-                    fontSize: 15,
+    return ZoomIn(
+      child: Scaffold(
+        appBar: PreferredSize(
+            preferredSize: screenSize * .1, child: const CustomAppBar()),
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Column(children: [
+                   Text(
+                    locale.translate('employee_identification_form')!,
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
                   ),
-                ),
-                Gaps.vGap15,
-                CustomDotStepper(
-                    isActive: true,
-                    firstText: locale.translate('employee_identification')!,
-                    secondText: locale.translate('view_model')!),
-                SizedBox(
-                  height: screenSize.height * .05,
-                ),
-                const EmployeeProfileStep2(),
-              ]),
-            )
-          ],
+                  Gaps.vGap15,
+                  CustomDotStepper(
+                      isActive: true,
+                      firstText: locale.translate('employee_identification')!,
+                      secondText: locale.translate('view_model')!),
+                  SizedBox(
+                    height: screenSize.height * .05,
+                  ),
+                  const EmployeeProfileStep2(),
+                ]),
+              )
+            ],
+          ),
         ),
       ),
     );

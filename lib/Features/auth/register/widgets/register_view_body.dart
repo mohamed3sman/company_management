@@ -1,4 +1,3 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/auth/register/widgets/register_form_decoration.dart';
 import 'package:fingerPrint/Features/auth/register/widgets/register_view_form.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
@@ -83,12 +82,10 @@ class RegisterViewBody extends StatelessWidget {
           Center(
             child: Padding(
               padding: const EdgeInsets.only(top: 15.0),
-              child: Bounce(
-                child: Image.asset(
-                  AssetsData.logo,
-                  height: 100,
-                  width: 100,
-                ),
+              child: Image.asset(
+                AssetsData.logo,
+                height: 100,
+                width: 100,
               ),
             ),
           ),
