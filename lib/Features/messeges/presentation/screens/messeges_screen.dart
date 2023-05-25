@@ -59,7 +59,7 @@ class MessegesScreen extends StatelessWidget {
                 elevation: 6,
                 shape: const StadiumBorder(),
                 child: CustomButton(
-                    screenWidth: screenSize.width * .37,
+                    screenWidth: screenSize.width * .32,
                     buttonTapHandler: () {
                       BlocProvider.of<BottomNavCubit>(context)
                           .navigationQueue
