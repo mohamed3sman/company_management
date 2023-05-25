@@ -163,7 +163,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                           Expanded(
                             child: CustomGridContainer(
                               onTap: () {},
-                              imagePath: 'assets/images/bank_account.png',
+                              imagePath: 'assets/images/intro3.png',
                               orderText: locale.translate("bank_account")!,
                             ),
                           ),

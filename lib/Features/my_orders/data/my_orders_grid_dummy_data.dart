@@ -13,7 +13,7 @@ class MyOrdersGridDummtData {
       "gridText": "طلب إذن",
     },
     {
-      "imagePath": "assets/images/bank_account.png",
+      "imagePath": "assets/images/intro3.png",
       "gridText": "تغيير حساب بنكي",
     },
     {
