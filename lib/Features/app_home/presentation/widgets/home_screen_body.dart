@@ -56,14 +56,12 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                               padding: EdgeInsets.only(
                                 top: SizeConfig.screenHeight! * 0.05,
                               ),
-                              child: Bounce(
-                                child: Column(
-                                  children: [
-                                    const StackFingerPrintLogo(),
-                                    StackDayText(),
-                                    StackTimeText()
-                                  ],
-                                ),
+                              child: Column(
+                                children: [
+                                  const StackFingerPrintLogo(),
+                                  StackDayText(),
+                                  StackTimeText()
+                                ],
                               ),
                             ),
                           ),
