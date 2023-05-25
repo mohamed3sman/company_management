@@ -20,7 +20,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
     locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
 
-    return ZoomIn(
+    return FadeInUp(
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: PreferredSize(
@@ -34,12 +34,10 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
             padding: const EdgeInsets.only(bottom: 50.0),
             child: Column(
               children: [
-                Bounce(
-                  child: Image.asset(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * .3,
-                    'assets/images/contact_us.png',
-                  ),
+                Image.asset(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * .3,
+                  'assets/images/contact_us.png',
                 ),
                 CustomLoginTextField(
                   stringInTextField: locale.translate('name')!,

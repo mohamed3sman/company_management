@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/notification_view/presentation/widgets/notification_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -6,9 +7,9 @@ class NotificationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       backgroundColor: Colors.white,
-      body: NotificationViewBody(),
+      body: FadeInUp(child: NotificationViewBody()),
     );
   }
 }
