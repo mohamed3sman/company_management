@@ -55,23 +55,21 @@ class MessegesScreen extends StatelessWidget {
                   },
                 ),
               ),
-              FadeInRight(
-                child: Card(
-                  elevation: 6,
-                  shape: const StadiumBorder(),
-                  child: CustomButton(
-                      screenWidth: screenSize.width * .37,
-                      buttonTapHandler: () {
-                        BlocProvider.of<BottomNavCubit>(context)
-                            .navigationQueue
-                            .addLast(BlocProvider.of<BottomNavCubit>(context)
-                                .bottomNavIndex);
-                        BlocProvider.of<BottomNavCubit>(context)
-                            .updateBottomNavIndex(12);
-                        //IMPLEMENT NAVIGATION TO A NEW MESSEGE
-                      },
-                      buttonText: locale.translate('new_message')!),
-                ),
+              Card(
+                elevation: 6,
+                shape: const StadiumBorder(),
+                child: CustomButton(
+                    screenWidth: screenSize.width * .32,
+                    buttonTapHandler: () {
+                      BlocProvider.of<BottomNavCubit>(context)
+                          .navigationQueue
+                          .addLast(BlocProvider.of<BottomNavCubit>(context)
+                              .bottomNavIndex);
+                      BlocProvider.of<BottomNavCubit>(context)
+                          .updateBottomNavIndex(12);
+                      //IMPLEMENT NAVIGATION TO A NEW MESSEGE
+                    },
+                    buttonText: locale.translate('new_message')!),
               )
             ],
           ),

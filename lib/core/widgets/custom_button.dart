@@ -41,7 +41,7 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border:
                 haveBorder == true ? Border.all(color: kPrimaryColor) : null),
-        height: screenSize.height * .06,
+        height: screenSize.height * .05,
         width: screenWidth == 0.0 ? 150.0 : screenWidth,
         child: Text(
           buttonText,
