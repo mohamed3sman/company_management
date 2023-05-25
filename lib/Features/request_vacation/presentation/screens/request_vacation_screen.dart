@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_drop_down_list.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
@@ -31,92 +32,94 @@ class RequestVacationScreen extends StatelessWidget {
         appBar: PreferredSize(
             preferredSize: screenSize * .1, child: const CustomAppBar()),
         backgroundColor: Colors.white,
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 30),
-            child: Column(
-              children: [
-                //  const CustomAppBar(),
-                Text(
-                  locale.translate('order_vacation')!,
-                  style: const TextStyle(
-                    color: Color(0xff000000),
-                    fontSize: 25,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                CustomOrdersRawIcon(
-                    rawText: locale.translate('vacation_type')!,
-                    iconImagePath: "assets/icons/vacation_icon.png"),
-                CustomDropDownList(
-                    hintText: locale.translate('vacation_type')!),
-                CustomOrdersRawIcon(
-                    rawText: locale.translate('The_start_date_of_the_leave')!,
-                    iconImagePath: "assets/icons/calender_icon.png"),
-                CustomDatePicker(
-                    customDatePickerText: locale.translate('from_date')!),
-                CustomOrdersRawIcon(
-                    rawText: locale.translate('the_end_date_of_the_leave')!,
-                    iconImagePath: "assets/icons/calender_icon.png"),
-                CustomDatePicker(
-                    customDatePickerText: locale.translate('to_date')!),
-                CustomOrdersRawIcon(
-                  rawText: locale.translate('attachments')!,
-                  iconImagePath: "assets/icons/attach_icon.png",
-                ),
-                GestureDetector(
-                  onTap: () async {
-                    await BlocProvider.of<RequestVacationCubit>(context).pickFileFromDevice();
-                  },
-                  
-                  child: CustomElevatedContainer(
-                    containerHeight: MediaQuery.of(context).size.height * .12,
-                    containerWidth: MediaQuery.of(context).size.width,
-                    containerChild: SizedBox(
-                      child: BlocProvider.of<RequestVacationCubit>(context).fileName != null
-                          ? Center(
-                              child: Text(BlocProvider.of<RequestVacationCubit>(context).fileName!),
-                            )
-                          : Center(
-                              child: BlocProvider.of<RequestVacationCubit>(context).selectedFile == null && BlocProvider.of<RequestVacationCubit>(context).fileName == null
-                                  ? Image.asset(
-                                      "assets/images/upload_cloud.png",
-                                      alignment: Alignment.center,
-                                      width: 50,
-                                      height: 50,
-                                      //  MediaQuery.of(context).size.width * 1
-                                    )
-                                  : Image.file(BlocProvider.of<RequestVacationCubit>(context).selectedFile!),
-                            ),
+        body: FadeInUp(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 30),
+              child: Column(
+                children: [
+                  //  const CustomAppBar(),
+                  Text(
+                    locale.translate('order_vacation')!,
+                    style: const TextStyle(
+                      color: Color(0xff000000),
+                      fontSize: 25,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
-              
-                ),
-              
-                CustomOrdersRawIcon(
-                  rawText: locale.translate('notes')!,
-                  iconImagePath: "assets/icons/notes_icon.png",
-                ),
-                CustomRequestsTextField(
-                    containerHeight: MediaQuery.of(context).size.height * .1,
-                    hintTextField: ""),
-                Gaps.vGap15,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CustomButton(
-                        screenWidth: MediaQuery.of(context).size.width * .3,
-                        buttonTapHandler: () {},
-                        buttonText: locale.translate('accept')!),
-                    CustomButton(
-                        buttonBackGroundColor: Colors.white,
-                        screenWidth: MediaQuery.of(context).size.width * .3,
-                        buttonTapHandler: () {},
-                        buttonText: locale.translate('cancel')!)
-                  ],
-                ),
-                // BottomNav()
-              ],
+                  CustomOrdersRawIcon(
+                      rawText: locale.translate('vacation_type')!,
+                      iconImagePath: "assets/icons/vacation_icon.png"),
+                  CustomDropDownList(
+                      hintText: locale.translate('vacation_type')!),
+                  CustomOrdersRawIcon(
+                      rawText: locale.translate('The_start_date_of_the_leave')!,
+                      iconImagePath: "assets/icons/calender_icon.png"),
+                  CustomDatePicker(
+                      customDatePickerText: locale.translate('from_date')!),
+                  CustomOrdersRawIcon(
+                      rawText: locale.translate('the_end_date_of_the_leave')!,
+                      iconImagePath: "assets/icons/calender_icon.png"),
+                  CustomDatePicker(
+                      customDatePickerText: locale.translate('to_date')!),
+                  CustomOrdersRawIcon(
+                    rawText: locale.translate('attachments')!,
+                    iconImagePath: "assets/icons/attach_icon.png",
+                  ),
+                  GestureDetector(
+                    onTap: () async {
+                      await BlocProvider.of<RequestVacationCubit>(context).pickFileFromDevice();
+                    },
+                    
+                    child: CustomElevatedContainer(
+                      containerHeight: MediaQuery.of(context).size.height * .12,
+                      containerWidth: MediaQuery.of(context).size.width,
+                      containerChild: SizedBox(
+                        child: BlocProvider.of<RequestVacationCubit>(context).fileName != null
+                            ? Center(
+                                child: Text(BlocProvider.of<RequestVacationCubit>(context).fileName!),
+                              )
+                            : Center(
+                                child: BlocProvider.of<RequestVacationCubit>(context).selectedFile == null && BlocProvider.of<RequestVacationCubit>(context).fileName == null
+                                    ? Image.asset(
+                                        "assets/images/upload_cloud.png",
+                                        alignment: Alignment.center,
+                                        width: 50,
+                                        height: 50,
+                                        //  MediaQuery.of(context).size.width * 1
+                                      )
+                                    : Image.file(BlocProvider.of<RequestVacationCubit>(context).selectedFile!),
+                              ),
+                      ),
+                    ),
+                
+                  ),
+                
+                  CustomOrdersRawIcon(
+                    rawText: locale.translate('notes')!,
+                    iconImagePath: "assets/icons/notes_icon.png",
+                  ),
+                  CustomRequestsTextField(
+                      containerHeight: MediaQuery.of(context).size.height * .1,
+                      hintTextField: ""),
+                  Gaps.vGap15,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CustomButton(
+                          screenWidth: MediaQuery.of(context).size.width * .3,
+                          buttonTapHandler: () {},
+                          buttonText: locale.translate('accept')!),
+                      CustomButton(
+                          buttonBackGroundColor: Colors.white,
+                          screenWidth: MediaQuery.of(context).size.width * .3,
+                          buttonTapHandler: () {},
+                          buttonText: locale.translate('cancel')!)
+                    ],
+                  ),
+                  // BottomNav()
+                ],
+              ),
             ),
           ),
         ),

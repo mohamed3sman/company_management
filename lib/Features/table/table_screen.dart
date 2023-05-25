@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/table/widget/table_page_app_bar_actions.dart';
 import 'package:fingerPrint/Features/table/widget/table_view_body.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
@@ -22,7 +23,7 @@ class DataTableView extends StatelessWidget {
               appBarTitle: locale.translate('attendance_and_leaving')!,
               leadingWidget: TablePageAppBarActions()),
         ),
-        body: const TableViewBody(),
+        body: FadeIn(child: const TableViewBody()),
       ),
     );
   }

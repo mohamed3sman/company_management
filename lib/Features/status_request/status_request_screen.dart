@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/status_request/widgets/tap_bar_view_body.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_app_bar.dart';
@@ -19,7 +20,7 @@ class StatusRequest extends StatelessWidget {
       appBar:
           PreferredSize(preferredSize: screenSize * .1, child: CustomAppBar()),
       backgroundColor: Colors.white,
-      body: TapBarViewBody(),
+      body: FadeIn(child: TapBarViewBody()),
       floatingActionButton: MaterialButton(
         onPressed: () {
           BlocProvider.of<BottomNavCubit>(context)

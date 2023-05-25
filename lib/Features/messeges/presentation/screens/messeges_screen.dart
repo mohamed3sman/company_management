@@ -51,25 +51,27 @@ class MessegesScreen extends StatelessWidget {
                   physics: const BouncingScrollPhysics(),
                   itemCount: 17,
                   itemBuilder: (context, index) {
-                    return const MessegesListItem();
+                    return  MessegesListItem();
                   },
                 ),
               ),
-              Card(
-                elevation: 6,
-                shape: const StadiumBorder(),
-                child: CustomButton(
-                    screenWidth: screenSize.width * .37,
-                    buttonTapHandler: () {
-                      BlocProvider.of<BottomNavCubit>(context)
-                          .navigationQueue
-                          .addLast(BlocProvider.of<BottomNavCubit>(context)
-                              .bottomNavIndex);
-                      BlocProvider.of<BottomNavCubit>(context)
-                          .updateBottomNavIndex(12);
-                      //IMPLEMENT NAVIGATION TO A NEW MESSEGE
-                    },
-                    buttonText: locale.translate('new_message')!),
+              FadeInRight(
+                child: Card(
+                  elevation: 6,
+                  shape: const StadiumBorder(),
+                  child: CustomButton(
+                      screenWidth: screenSize.width * .37,
+                      buttonTapHandler: () {
+                        BlocProvider.of<BottomNavCubit>(context)
+                            .navigationQueue
+                            .addLast(BlocProvider.of<BottomNavCubit>(context)
+                                .bottomNavIndex);
+                        BlocProvider.of<BottomNavCubit>(context)
+                            .updateBottomNavIndex(12);
+                        //IMPLEMENT NAVIGATION TO A NEW MESSEGE
+                      },
+                      buttonText: locale.translate('new_message')!),
+                ),
               )
             ],
           ),
