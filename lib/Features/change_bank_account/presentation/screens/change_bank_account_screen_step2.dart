@@ -32,12 +32,13 @@ class ChangeBankAccountScreenStep2 extends StatelessWidget {
       create: (context) => RequestVacationCubit(),
       child: BlocConsumer<RequestVacationCubit,RequestVacationState>(
         builder: (context, state) {
-          return FadeInLeft(
+          return FadeInUp(
             child: Scaffold(
               backgroundColor: Colors.white,
               appBar: PreferredSize(
                   preferredSize: screenSize * .07, child: const CustomAppBar()),
               body: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
                 padding: const EdgeInsets.only(left: 20, right: 20, bottom: 40),
                 child: Column(
                   children: [
@@ -129,32 +130,30 @@ class ChangeBankAccountScreenStep2 extends StatelessWidget {
                           ),
                         ),
                         Gaps.vGap12,
-                        Bounce(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CustomButton(
-                                  screenWidth:
-                                      MediaQuery.of(context).size.width * .3,
-                                  buttonTapHandler: () {},
-                                  buttonText: "تأكيد"),
-                              CustomButton(
-                                buttonBackGroundColor: Colors.white,
-                                screenWidth: MediaQuery.of(context).size.width * .3,
-                                buttonTapHandler: () {
-                                  BlocProvider.of<BottomNavCubit>(context)
-                                      .navigationQueue
-                                      .addLast(
-                                          BlocProvider.of<BottomNavCubit>(context)
-                                              .bottomNavIndex);
-                                  BlocProvider.of<BottomNavCubit>(context)
-                                      .updateBottomNavIndex(16);
-                                },
-                                buttonText: "إلغاء",
-                                haveBorder: true,
-                              )
-                            ],
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CustomButton(
+                                screenWidth:
+                                    MediaQuery.of(context).size.width * .3,
+                                buttonTapHandler: () {},
+                                buttonText: "تأكيد"),
+                            CustomButton(
+                              buttonBackGroundColor: Colors.white,
+                              screenWidth: MediaQuery.of(context).size.width * .3,
+                              buttonTapHandler: () {
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .navigationQueue
+                                    .addLast(
+                                        BlocProvider.of<BottomNavCubit>(context)
+                                            .bottomNavIndex);
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .updateBottomNavIndex(16);
+                              },
+                              buttonText: "إلغاء",
+                              haveBorder: true,
+                            )
+                          ],
                         ),
                       ],
                     ),

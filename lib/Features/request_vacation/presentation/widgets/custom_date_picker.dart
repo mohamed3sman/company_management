@@ -31,7 +31,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
         });
       },
       child: CustomElevatedContainer(
-  
+  alignment: Alignment.bottomRight,
         // decoration: BoxDecoration(
         
         //   borderRadius: BorderRadius.circular(15)),
@@ -47,8 +47,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                 ? const TextStyle(
                     color: Color(0xffababac),
                     fontSize: 13,
-                    fontWeight: FontWeight.w400,
-                    fontStyle: FontStyle.normal,
+                    
                   )
                 : null,
           ),

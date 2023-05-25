@@ -41,9 +41,9 @@ class RequestVacationScreen extends StatelessWidget {
                   Text(
                     locale.translate('order_vacation')!,
                     style: const TextStyle(
-                      color: Color(0xff000000),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w400,
+                     
+                      fontSize: 20,
+                      
                     ),
                   ),
                   CustomOrdersRawIcon(

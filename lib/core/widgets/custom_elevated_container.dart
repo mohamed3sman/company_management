@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
 class CustomElevatedContainer extends StatelessWidget {
-  const CustomElevatedContainer(
+   CustomElevatedContainer(
       {super.key,
       required this.containerHeight,
+      this.alignment,
       required this.containerWidth,
       required this.containerChild});
   final double containerWidth;
   final double containerHeight;
   final Widget containerChild;
+  Alignment ?alignment; 
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.center,
+      alignment:alignment?? Alignment.center,
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
         color: Colors.white,

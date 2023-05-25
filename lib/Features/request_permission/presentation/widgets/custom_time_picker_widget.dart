@@ -28,6 +28,7 @@ class _CustomTimePickerState extends State<CustomTimePicker> {
         });
       },
       child: CustomElevatedContainer(
+        alignment: Alignment.centerRight,
           containerWidth: screenSize.width * .4,
     containerHeight: screenSize.height * .045,
     
