@@ -43,12 +43,10 @@ class MessegesListItem extends StatelessWidget {
               ),
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(50),
-                child: Bounce(
-                  child: Image.network(
-                    "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
-                    width: 50,
-                    height: 50,
-                  ),
+                child: Image.network(
+                  "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
+                  width: 50,
+                  height: 50,
                 ),
               ),
             ),

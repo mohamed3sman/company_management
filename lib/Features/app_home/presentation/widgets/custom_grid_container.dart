@@ -38,12 +38,10 @@ class CustomGridContainer extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Bounce(
-                child: Image.asset(
-                  imagePath,
-                  height: SizeConfig.screenHeight! * 0.08,
-                  width: 65,
-                ),
+              Image.asset(
+                imagePath,
+                height: SizeConfig.screenHeight! * 0.08,
+                width: 65,
               ),
               const SizedBox(
                 height: 5,

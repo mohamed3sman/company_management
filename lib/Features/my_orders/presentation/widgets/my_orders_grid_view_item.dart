@@ -34,11 +34,9 @@ class MyOrdersGridViewItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Bounce(
-                child: Image.asset(
-                  gridImagePath,
-                  height: MediaQuery.of(context).size.height * .12,
-                ),
+              Image.asset(
+                gridImagePath,
+                height: MediaQuery.of(context).size.height * .12,
               ),
               SizedBox(
                 //height: 40,
