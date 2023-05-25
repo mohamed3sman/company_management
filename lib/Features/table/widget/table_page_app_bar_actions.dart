@@ -9,7 +9,7 @@ class TablePageAppBarActions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-     margin: EdgeInsets.symmetric(vertical: 10),
+      margin: EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         color: const Color(0xffffffff),
         borderRadius: BorderRadius.circular(25),
@@ -32,11 +32,7 @@ class TablePageAppBarActions extends StatelessWidget {
               size: 15.sp,
             ),
           ),
-<<<<<<< HEAD
           Text(
-=======
-         Text(
->>>>>>> 13e7335a6930c5da672cac5391a9a2df5ac0398e
             "2023",
             style: TextStyle(color: const Color(0xff5e5e5e), fontSize: 11.sp),
           ),

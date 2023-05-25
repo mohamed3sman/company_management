@@ -80,7 +80,7 @@ class _TableViewBodyState extends State<TableViewBody> {
               }),
         ),
         Gaps.vGap20,
-        AttendanceAndLeavingTable(),
+        const AttendanceAndLeavingTable(),
       ],
     );
   }
