@@ -24,10 +24,7 @@ class RequestVacationScreen extends StatelessWidget {
     locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
 
-    return BlocProvider(
-      create: (context) =>RequestVacationCubit(),
-      child: BlocConsumer<RequestVacationCubit,RequestVacationState>(builder: (context, state) {
-        return SafeArea(
+    return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
             preferredSize: screenSize * .1, child: const CustomAppBar()),
@@ -35,7 +32,8 @@ class RequestVacationScreen extends StatelessWidget {
         body: FadeInUp(
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 30),
+              padding:
+                  const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 30),
               child: Column(
                 children: [
                   //  const CustomAppBar(),
@@ -68,33 +66,35 @@ class RequestVacationScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () async {
-                      await BlocProvider.of<RequestVacationCubit>(context).pickFileFromDevice();
+                      await BlocProvider.of<RequestVacationCubit>(context)
+                          .pickFileFromDevice();
                     },
-                    
                     child: CustomElevatedContainer(
                       containerHeight: MediaQuery.of(context).size.height * .12,
                       containerWidth: MediaQuery.of(context).size.width,
-                      containerChild: SizedBox(
-                        child: BlocProvider.of<RequestVacationCubit>(context).fileName != null
-                            ? Center(
-                                child: Text(BlocProvider.of<RequestVacationCubit>(context).fileName!),
-                              )
-                            : Center(
-                                child: BlocProvider.of<RequestVacationCubit>(context).selectedFile == null && BlocProvider.of<RequestVacationCubit>(context).fileName == null
-                                    ? Image.asset(
-                                        "assets/images/upload_cloud.png",
-                                        alignment: Alignment.center,
-                                        width: 50,
-                                        height: 50,
-                                        //  MediaQuery.of(context).size.width * 1
-                                      )
-                                    : Image.file(BlocProvider.of<RequestVacationCubit>(context).selectedFile!),
-                              ),
+                      containerChild: BlocBuilder<RequestVacationCubit,
+                          RequestVacationState>(
+                        builder: (context, state) {
+                          if (state is PickFileState) {
+                            return Center(
+                              child: Text(state.fileName),
+                            );
+                          } else if (state is PickImageState) {
+                            return Image.file(state.imagePath);
+                          } else {
+                            return Image.asset(
+                              "assets/images/upload_cloud.png",
+                              alignment: Alignment.center,
+                              width: 50,
+                              height: 50,
+                              //  MediaQuery.of(context).size.width * 1
+                            );
+                          }
+                        },
                       ),
                     ),
-                
                   ),
-                
+
                   CustomOrdersRawIcon(
                     rawText: locale.translate('notes')!,
                     iconImagePath: "assets/icons/notes_icon.png",
@@ -125,13 +125,5 @@ class RequestVacationScreen extends StatelessWidget {
         ),
       ),
     );
- 
-      }, listener: (context, state) {
-        
-      },),
-    );
   }
 }
-
-
-

@@ -6,6 +6,7 @@ import 'package:fingerPrint/Features/notification_view/presentation/notification
 import 'package:fingerPrint/Features/payment_permission/presentation/screens/payment_permission_screen.dart';
 import 'package:fingerPrint/Features/order_details/procedures/presentaion/screens/order_details_screen.dart';
 import 'package:fingerPrint/Features/request_permission/presentation/screens/request_permission_screen.dart';
+import 'package:fingerPrint/Features/request_vacation/presentation/cubit/request_vacation_cubit.dart';
 import 'package:fingerPrint/Features/status_request/status_request_screen.dart';
 import 'package:fingerPrint/Features/table/table_screen.dart';
 import 'package:fingerPrint/Features/request_vacation/presentation/screens/request_vacation_screen.dart';
@@ -46,7 +47,10 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     const HomeScreen(),
     //SIX DRID ITEMS
     //5
-    const RequestVacationScreen(),
+    BlocProvider(
+      create: (context) => RequestVacationCubit(),
+      child: RequestVacationScreen(),
+    ),
     //6
     const RequestDeptScreen(),
     //7
@@ -76,7 +80,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     //16
     const ChangeBankAccountScreenStep1(),
     //17
-     ChangeBankAccountScreenStep2(),
+    ChangeBankAccountScreenStep2(),
 
     //18
     const EditProfileScreen(),
