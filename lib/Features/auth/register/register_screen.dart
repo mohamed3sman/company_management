@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/auth/register/widgets/register_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -6,8 +7,8 @@ class RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: RegisterViewBody(),
+    return  Scaffold(
+      body: FadeInDown(child: RegisterViewBody()),
     );
   }
 }

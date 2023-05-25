@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/personal_account/widgets/personal_account_container.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
@@ -27,70 +28,72 @@ class PersonalAccountScreenBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * .15,
-                      height: MediaQuery.of(context).size.height * .07,
-                      decoration: BoxDecoration(
-                          color: kPrimaryColor.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(12)),
-                      child: Icon(
-                        Icons.person_2_outlined,
-                        color: Colors.grey[700],
-                        size: 25.sp,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            locale.translate("welcome")!,
-                            style: TextStyle(
-                              color: const Color(0xff8b8989),
-                              fontSize: 11.sp,
-                            ),
-                          ),
-                          Text(
-                            'أحمد محمد عبدالرحمن',
-                            style: TextStyle(
-                                color: const Color(0xff4e4d4d),
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w900),
-                          )
-                        ],
-                      ),
-                    ),
-                    const Spacer(),
-                    Container(
-                      width: 43,
-                      height: 43,
-                      decoration: BoxDecoration(
-                          color: kPrimaryColor.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(12)),
-                      child: IconButton(
-                        onPressed: () {
-                          BlocProvider.of<BottomNavCubit>(context)
-                              .navigationQueue
-                              .addLast(BlocProvider.of<BottomNavCubit>(context)
-                                  .bottomNavIndex);
-                          BlocProvider.of<BottomNavCubit>(context)
-                              .updateBottomNavIndex(18);
-                        },
-                        icon: Icon(
-                          Icons.edit,
-                          color: kSecondaryColor,
-                          size: 22.sp,
+              FadeInDown(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width * .15,
+                        height: MediaQuery.of(context).size.height * .07,
+                        decoration: BoxDecoration(
+                            color: kPrimaryColor.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(12)),
+                        child: Icon(
+                          Icons.person_2_outlined,
+                          color: Colors.grey[700],
+                          size: 25.sp,
                         ),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              locale.translate("welcome")!,
+                              style: TextStyle(
+                                color: const Color(0xff8b8989),
+                                fontSize: 11.sp,
+                              ),
+                            ),
+                            Text(
+                              'أحمد محمد عبدالرحمن',
+                              style: TextStyle(
+                                  color: const Color(0xff4e4d4d),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w900),
+                            )
+                          ],
+                        ),
+                      ),
+                      const Spacer(),
+                      Container(
+                        width: 43,
+                        height: 43,
+                        decoration: BoxDecoration(
+                            color: kPrimaryColor.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(12)),
+                        child: IconButton(
+                          onPressed: () {
+                            BlocProvider.of<BottomNavCubit>(context)
+                                .navigationQueue
+                                .addLast(BlocProvider.of<BottomNavCubit>(context)
+                                    .bottomNavIndex);
+                            BlocProvider.of<BottomNavCubit>(context)
+                                .updateBottomNavIndex(18);
+                          },
+                          icon: Icon(
+                            Icons.edit,
+                            color: kSecondaryColor,
+                            size: 22.sp,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(

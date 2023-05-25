@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -37,10 +38,12 @@ class CustomGridContainer extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Image.asset(
-                imagePath,
-                height: SizeConfig.screenHeight! * 0.08,
-                width: 65,
+              Bounce(
+                child: Image.asset(
+                  imagePath,
+                  height: SizeConfig.screenHeight! * 0.08,
+                  width: 65,
+                ),
               ),
               const SizedBox(
                 height: 5,

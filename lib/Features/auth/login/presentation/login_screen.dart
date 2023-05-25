@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/auth/login/presentation/widgets/login_screen_body.dart';
 import 'package:flutter/material.dart';
 
@@ -6,8 +7,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: LoginScreenBody(),
+    return  Scaffold(
+      body: FadeInDown(child: LoginScreenBody()),
     );
   }
 }

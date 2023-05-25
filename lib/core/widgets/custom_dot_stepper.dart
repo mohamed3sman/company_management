@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -14,55 +15,57 @@ class CustomDotStepper extends StatelessWidget {
   String secondText;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              alignment: Alignment.center,
-              width: 30,
-              height: 30,
-              decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(10)),
-              child: const Text(
-                "1",
-                style: TextStyle(color: Colors.white),
+    return JelloIn(
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                alignment: Alignment.center,
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                    color: kPrimaryColor,
+                    borderRadius: BorderRadius.circular(10)),
+                child: const Text(
+                  "1",
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * .4,
-              child: Divider(
-                  // height: 2,
-                  thickness: 1,
-                  color: isActive! ? kPrimaryColor : Colors.grey),
-            ),
-            Container(
-              alignment: Alignment.center,
-              width: 30,
-              height: 30,
-              decoration: BoxDecoration(
-                  color: isActive! ? kPrimaryColor : Colors.grey,
-                  borderRadius: BorderRadius.circular(10)),
-              child: const Text("2", style: TextStyle(color: Colors.white)),
-            )
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Text(
-              firstText,
-              style: const TextStyle(color: kTextColor, fontSize: 12),
-            ),
-            Text(
-              secondText,
-              style: const TextStyle(color: kTextColor, fontSize: 12),
-            )
-          ],
-        )
-      ],
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .4,
+                child: Divider(
+                    // height: 2,
+                    thickness: 1,
+                    color: isActive! ? kPrimaryColor : Colors.grey),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                    color: isActive! ? kPrimaryColor : Colors.grey,
+                    borderRadius: BorderRadius.circular(10)),
+                child: const Text("2", style: TextStyle(color: Colors.white)),
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                firstText,
+                style: const TextStyle(color: kTextColor, fontSize: 12),
+              ),
+              Text(
+                secondText,
+                style: const TextStyle(color: kTextColor, fontSize: 12),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

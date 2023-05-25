@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/widgets/custom_simple_app_bar.dart';
@@ -19,53 +20,55 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
     locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: PreferredSize(
-        preferredSize: screenSize * .07,
-        child: CustomSimpleAppBar(
-          appBarTitle: locale.translate('contact_with_us')!,
+    return ZoomIn(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: PreferredSize(
+          preferredSize: screenSize * .07,
+          child: CustomSimpleAppBar(
+            appBarTitle: locale.translate('contact_with_us')!,
+          ),
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 50.0),
-          child: Column(
-            children: [
-              Image.asset(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * .3,
-                'assets/images/contact_us.png',
-              ),
-              CustomLoginTextField(
-                stringInTextField: locale.translate('name')!,
-                textInputType: TextInputType.text,
-                obscureText: false,
-              ),
-              CustomLoginTextField(
-                stringInTextField: locale.translate('email')!,
-                textInputType: TextInputType.emailAddress,
-                obscureText: false,
-              ),
-              CustomLoginTextField(
-                stringInTextField: locale.translate('title_of_message')!,
-                textInputType: TextInputType.text,
-                obscureText: false,
-              ),
-              CustomLoginTextField(
-                stringInTextField: locale.translate('message')!,
-                textInputType: TextInputType.text,
-                obscureText: false,
-                height: 100,
-              ),
-              Gaps.vGap16,
-              CustomButton(
-                buttonText: "ارسال",
-                buttonTapHandler: () {},
-                screenWidth: MediaQuery.of(context).size.width * .6,
-              ),
-              Gaps.vGap40,
-            ],
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 50.0),
+            child: Column(
+              children: [
+                Image.asset(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * .3,
+                  'assets/images/contact_us.png',
+                ),
+                CustomLoginTextField(
+                  stringInTextField: locale.translate('name')!,
+                  textInputType: TextInputType.text,
+                  obscureText: false,
+                ),
+                CustomLoginTextField(
+                  stringInTextField: locale.translate('email')!,
+                  textInputType: TextInputType.emailAddress,
+                  obscureText: false,
+                ),
+                CustomLoginTextField(
+                  stringInTextField: locale.translate('title_of_message')!,
+                  textInputType: TextInputType.text,
+                  obscureText: false,
+                ),
+                CustomLoginTextField(
+                  stringInTextField: locale.translate('message')!,
+                  textInputType: TextInputType.text,
+                  obscureText: false,
+                  height: 100,
+                ),
+                Gaps.vGap16,
+                CustomButton(
+                  buttonText: "ارسال",
+                  buttonTapHandler: () {},
+                  screenWidth: MediaQuery.of(context).size.width * .6,
+                ),
+                Gaps.vGap40,
+              ],
+            ),
           ),
         ),
       ),

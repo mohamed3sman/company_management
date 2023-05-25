@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 
@@ -24,27 +25,31 @@ class MessegesListItem extends StatelessWidget {
       onDismissed: (direction) {},
       child: Column(
         children: [
-          ListTile(
-            subtitle: Text(
-              locale.translate('company_congratulates')!,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 10),
-            ),
-            title: Text(
-              locale.translate('congratulations_on_the_occasion')!,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 12),
-            ),
-            trailing: const Text(
-              "03:00 PM",
-              style: TextStyle(fontSize: 12),
-            ),
-            leading: ClipRRect(
-              borderRadius: BorderRadius.circular(50),
-              child: Image.network(
-                "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
-                width: 50,
-                height: 50,
+          FadeInLeft(
+            child: ListTile(
+              subtitle: Text(
+                locale.translate('company_congratulates')!,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 10),
+              ),
+              title: Text(
+                locale.translate('congratulations_on_the_occasion')!,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 12),
+              ),
+              trailing: const Text(
+                "03:00 PM",
+                style: TextStyle(fontSize: 12),
+              ),
+              leading: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: Bounce(
+                  child: Image.network(
+                    "https://www.mei.edu/sites/default/files/styles/profile_image_size/public/photos/Sultan%20Al%20Qassemi_square.png?itok=F-VxEcCA",
+                    width: 50,
+                    height: 50,
+                  ),
+                ),
               ),
             ),
           ),

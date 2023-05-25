@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -33,9 +34,11 @@ class MyOrdersGridViewItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Image.asset(
-                gridImagePath,
-                height: MediaQuery.of(context).size.height * .12,
+              Bounce(
+                child: Image.asset(
+                  gridImagePath,
+                  height: MediaQuery.of(context).size.height * .12,
+                ),
               ),
               SizedBox(
                 //height: 40,

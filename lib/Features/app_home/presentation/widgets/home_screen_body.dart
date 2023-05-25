@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/custom_grid_container.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/details_snack_bar.dart';
 import 'package:fingerPrint/Features/app_home/presentation/widgets/home_app_toggle_button.dart';
@@ -55,12 +56,14 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                               padding: EdgeInsets.only(
                                 top: SizeConfig.screenHeight! * 0.05,
                               ),
-                              child: Column(
-                                children: [
-                                  const StackFingerPrintLogo(),
-                                  StackDayText(),
-                                  StackTimeText()
-                                ],
+                              child: Bounce(
+                                child: Column(
+                                  children: [
+                                    const StackFingerPrintLogo(),
+                                    StackDayText(),
+                                    StackTimeText()
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -162,7 +165,15 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                           ),
                           Expanded(
                             child: CustomGridContainer(
-                              onTap: () {},
+                              onTap: () {
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .navigationQueue
+                                    .addLast(
+                                        BlocProvider.of<BottomNavCubit>(context)
+                                            .bottomNavIndex);
+                                BlocProvider.of<BottomNavCubit>(context)
+                                    .updateBottomNavIndex(16);
+                              },
                               imagePath: 'assets/images/intro3.png',
                               orderText: locale.translate("bank_account")!,
                             ),

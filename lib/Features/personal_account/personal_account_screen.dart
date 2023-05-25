@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/personal_account/widgets/personal_account_screen_body.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_simple_app_bar.dart';
@@ -12,15 +13,18 @@ class PersonalAccountScreen extends StatelessWidget {
     locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: PreferredSize(
-        preferredSize: screenSize * .07,
-        child: CustomSimpleAppBar(
-          appBarTitle: locale.translate('personal_account_view')!,
+    return FadeInUp(
+       duration: Duration(milliseconds: 300),
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: PreferredSize(
+          preferredSize: screenSize * .07,
+          child: CustomSimpleAppBar(
+            appBarTitle: locale.translate('personal_account_view')!,
+          ),
         ),
+        body: const PersonalAccountScreenBody(),
       ),
-      body: const PersonalAccountScreenBody(),
     );
   }
 }

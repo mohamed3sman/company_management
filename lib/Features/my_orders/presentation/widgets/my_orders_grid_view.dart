@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
@@ -22,38 +23,41 @@ class MyOrdersGridView extends StatelessWidget {
     return Column(
       children: [
         Gaps.vGap20,
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            MyOrdersGridViewItem(
-              navScreenIndex: 0,
-              gridImagePath: MyOrdersGridDummtData().DUMMYGRIDDATA[0]
-                  ["imagePath"],
-              gridItemTapHandler: () {
-                BlocProvider.of<BottomNavCubit>(context)
-                    .navigationQueue
-                    .addLast(BlocProvider.of<BottomNavCubit>(context)
-                        .bottomNavIndex);
-                BlocProvider.of<BottomNavCubit>(context)
-                    .updateBottomNavIndex(8);
-              },
-              gridText: MyOrdersGridDummtData().DUMMYGRIDDATA[0]["gridText"],
-            ),
-            MyOrdersGridViewItem(
-              navScreenIndex: 1,
-              gridImagePath: MyOrdersGridDummtData().DUMMYGRIDDATA[1]
-                  ["imagePath"],
-              gridItemTapHandler: () {
-                BlocProvider.of<BottomNavCubit>(context)
-                    .navigationQueue
-                    .addLast(BlocProvider.of<BottomNavCubit>(context)
-                        .bottomNavIndex);
-                BlocProvider.of<BottomNavCubit>(context)
-                    .updateBottomNavIndex(8);
-              },
-              gridText: MyOrdersGridDummtData().DUMMYGRIDDATA[1]["gridText"],
-            )
-          ],
+        FadeIn(
+         
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              MyOrdersGridViewItem(
+                navScreenIndex: 0,
+                gridImagePath: MyOrdersGridDummtData().DUMMYGRIDDATA[0]
+                    ["imagePath"],
+                gridItemTapHandler: () {
+                  BlocProvider.of<BottomNavCubit>(context)
+                      .navigationQueue
+                      .addLast(BlocProvider.of<BottomNavCubit>(context)
+                          .bottomNavIndex);
+                  BlocProvider.of<BottomNavCubit>(context)
+                      .updateBottomNavIndex(8);
+                },
+                gridText: MyOrdersGridDummtData().DUMMYGRIDDATA[0]["gridText"],
+              ),
+              MyOrdersGridViewItem(
+                navScreenIndex: 1,
+                gridImagePath: MyOrdersGridDummtData().DUMMYGRIDDATA[1]
+                    ["imagePath"],
+                gridItemTapHandler: () {
+                  BlocProvider.of<BottomNavCubit>(context)
+                      .navigationQueue
+                      .addLast(BlocProvider.of<BottomNavCubit>(context)
+                          .bottomNavIndex);
+                  BlocProvider.of<BottomNavCubit>(context)
+                      .updateBottomNavIndex(8);
+                },
+                gridText: MyOrdersGridDummtData().DUMMYGRIDDATA[1]["gridText"],
+              )
+            ],
+          ),
         ),
         Gaps.vGap20,
         Row(
