@@ -39,7 +39,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
     //1
     const MessegesScreen(),
     //2
-    const HomeScreen(),
+    const NotificationView(),
     //3
     const MyOrdersScreen(),
     //4

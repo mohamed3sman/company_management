@@ -99,12 +99,23 @@ class PersonalAccountScreenBody extends StatelessWidget {
               Row(
                 children: [
                   PersonalAccountContainer(
+                    tapHandler: (){},
                     text: locale.translate('personal_data')!,
                   ),
                   PersonalAccountContainer(
+                    tapHandler: (){},
                     text: locale.translate('my_files')!,
                   ),
                   PersonalAccountContainer(
+                    tapHandler: (){
+                              BlocProvider.of<BottomNavCubit>(context)
+                    .navigationQueue
+                    .addLast(BlocProvider.of<BottomNavCubit>(context)
+                        .bottomNavIndex);
+                BlocProvider.of<BottomNavCubit>(context)
+                    .updateBottomNavIndex(16);
+              
+                    },
                     text: locale.translate('bank_account')!,
                   ),
                 ],
