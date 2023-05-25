@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_date_picker.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:fingerPrint/core/widgets/custom_orders_raw_icon.dart';
 import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
@@ -12,7 +13,8 @@ class RequestDeptScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
 
     return SafeArea(
@@ -25,33 +27,33 @@ class RequestDeptScreen extends StatelessWidget {
             padding: const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 30),
             child: Column(
               children: [
-                const Text(
-                  "طلب سلفة",
+                 Text(
+                   locale.translate('order_cache')!,
                   style: TextStyle(
                     fontSize: 20,
                   ),
                 ),
-                const CustomOrdersRawIcon(
-                    rawText: "قيمة السلفة",
+                 CustomOrdersRawIcon(
+                    rawText: locale.translate('order_value')!,
                     iconImagePath: "assets/icons/money_icon.png"),
                 CustomRequestsTextField(
                   containerHeight: MediaQuery.of(context).size.height * .06,
-                  hintTextField: "قيمة السلفة",
+                  hintTextField:locale.translate('order_value')!,
                 ),
-                const CustomOrdersRawIcon(
-                    rawText: "طريقة سداد السلفة",
+                 CustomOrdersRawIcon(
+                    rawText: locale.translate('the_method_of_paying_the_cach')!,
                     iconImagePath: "assets/icons/vacation_icon.png"),
-                CustomDropDownList(hintText: "اختر.."),
+                CustomDropDownList(hintText:locale.translate('choose')!),
                 Row(
                   children: [
-                    const CustomOrdersRawIcon(
-                        rawText: "عدد الأقساط",
+                     CustomOrdersRawIcon(
+                        rawText: locale.translate('number_of_installments')!,
                         iconImagePath: "assets/icons/hashtag_icon.png"),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * .2,
                     ),
-                    const CustomOrdersRawIcon(
-                        rawText: "قيمة القسط",
+                     CustomOrdersRawIcon(
+                        rawText: locale.translate('value_of_Installment')!,
                         iconImagePath: "assets/icons/money_icon.png")
                   ],
                 ),
@@ -72,19 +74,19 @@ class RequestDeptScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const CustomOrdersRawIcon(
-                  rawText: "تاريخ بداية الخصم",
+                 CustomOrdersRawIcon(
+                  rawText: locale.translate('discount_start_date')!,
                   iconImagePath: "assets/icons/calender_icon.png",
                 ),
                 const CustomDatePicker(customDatePickerText: ""),
                 Row(
-                  children: const [
+                  children:  [
                     CustomOrdersRawIcon(
-                        rawText: "حد السلفة",
+                        rawText: locale.translate('advance_limit')!,
                         iconImagePath: "assets/icons/money_icon.png"),
                     Spacer(),
                     CustomOrdersRawIcon(
-                        rawText: "عدد مرات السلف السابقة",
+                        rawText: locale.translate('number_of_previous_advances')!,
                         iconImagePath: "assets/icons/hashtag_icon.png")
                   ],
                 ),
@@ -93,7 +95,7 @@ class RequestDeptScreen extends StatelessWidget {
                     OutPutContainer(
                       containerIconPath: "assets/icons/calender_icon.png",
                       containerTitle: "",
-                      containerText: "500 جنية",
+                      containerText: "500 ${ locale.translate('pound')!}",
                       containerWidth: MediaQuery.of(context).size.width * .4,
                     ),
                     const Spacer(),
@@ -105,8 +107,8 @@ class RequestDeptScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const CustomOrdersRawIcon(
-                  rawText: "تاريخ آخر سلفة",
+                 CustomOrdersRawIcon(
+                  rawText: locale.translate('date_of_the_last_advance')!,
                   iconImagePath: "assets/icons/calender_icon.png",
                 ),
                 OutPutContainer(
@@ -115,13 +117,13 @@ class RequestDeptScreen extends StatelessWidget {
                   containerWidth: double.infinity,
                   containerText: "05/15/2023",
                 ),
-                const CustomOrdersRawIcon(
-                  rawText: "السبب",
+                 CustomOrdersRawIcon(
+                  rawText:  locale.translate('reason')!,
                   iconImagePath: "assets/icons/notes_icon.png",
                 ),
                 CustomRequestsTextField(
                   containerHeight: 50,
-                  hintTextField: "السبب",
+                  hintTextField:  locale.translate('reason')!,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
@@ -130,13 +132,13 @@ class RequestDeptScreen extends StatelessWidget {
                       CustomButton(
                           screenWidth: MediaQuery.of(context).size.width * .3,
                           buttonTapHandler: () {},
-                          buttonText: "تأكيد"),
+                          buttonText: locale.translate('confirm')!),
                       const Spacer(),
                       CustomButton(
                           buttonBackGroundColor: Colors.white,
                           screenWidth: MediaQuery.of(context).size.width * .3,
                           buttonTapHandler: () {},
-                          buttonText: "إلغاء")
+                          buttonText:  locale.translate('cancel')!)
                     ],
                   ),
                 )

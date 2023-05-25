@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/auth/verification/widgets/verification_screen_form.dart';
+import 'package:fingerPrint/core/utils/assets.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_circle_clipper.dart';
@@ -43,7 +44,7 @@ class VerificationScreenBody extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 15.0),
               child: Image.asset(
-                "assets/images/logo.png",
+                AssetsData.logo,
                 height: 130,
                 width: 130,
               ),

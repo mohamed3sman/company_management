@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/table/widget/attendance_and_leaving_table.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:flutter/material.dart';
@@ -12,25 +13,26 @@ class TableViewBody extends StatefulWidget {
 }
 
 class _TableViewBodyState extends State<TableViewBody> {
-  final List<String> months = const [
-    'يناير',
-    'فبراير',
-    'مارس',
-    'ابريل',
-    'مايو',
-    'يونيو',
-    'يوليو',
-    'اغسطس',
-    'سبتمبر',
-    'اكتوبر',
-    'نوفمبر',
-    'ديسمبر',
-  ];
-
   int current = 0;
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
+    final List<String> months = [
+      locale.translate('january')!,
+      locale.translate('february')!,
+      locale.translate('mars')!,
+      locale.translate('april')!,
+      locale.translate('may')!,
+      locale.translate('june')!,
+      locale.translate('july')!,
+      locale.translate('augest')!,
+      locale.translate('september')!,
+      locale.translate('october')!,
+      locale.translate('november')!,
+      locale.translate('december')!,
+    ];
     return Column(
       children: [
         Gaps.vGap20,

@@ -2,8 +2,6 @@ import 'package:fingerPrint/Features/personal_account/widgets/personal_account_s
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_simple_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PersonalAccountScreen extends StatelessWidget {
   const PersonalAccountScreen({super.key});

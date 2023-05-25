@@ -7,18 +7,19 @@ class TableColumnCell extends StatelessWidget {
   final String columnText;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 391,
-      height: 55,
-      child: TableCell(
-          child: Center(
-        child: Text(columnText,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: kPrimaryColor,
-              fontSize: 11.sp,
-            )),
-      )),
-    );
+    return TableCell(
+
+        // verticalAlignment:TableCellVerticalAlignment.baseline ,
+        child: Container(
+      width: 50,
+      height: 50,
+      padding: const EdgeInsets.only(top: 10),
+      child: Text(columnText,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: kPrimaryColor,
+            fontSize: 11.sp,
+          )),
+    ));
   }
 }

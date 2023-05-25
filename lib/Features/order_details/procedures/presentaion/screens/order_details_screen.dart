@@ -1,5 +1,6 @@
 import 'package:fingerPrint/Features/bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import 'package:fingerPrint/Features/order_details/procedures/presentaion/widgets/showing_bottom_sheet.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/constants.dart';
@@ -17,6 +18,8 @@ class OrderDetailsScreen extends StatefulWidget {
 class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: true,
@@ -24,7 +27,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
       appBar: PreferredSize(
         preferredSize: screenSize * .07,
         child: CustomSimpleAppBar(
-          appBarTitle: "تفاصيل الطلب",
+          appBarTitle:locale.translate('order_details')!,
           leadingWidget: Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
             child: Row(children: [
@@ -45,7 +48,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                     context: context,
                     builder: (context) {
                       return AnimatedPadding(
-                        duration: Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
                         padding: EdgeInsets.only(bottom: 
                         MediaQuery.of(context).viewInsets.bottom,
                         ),
@@ -75,48 +78,48 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: const [
+          children:  [
             CustomOrderItem(
                 hasStatusIcon: false,
                 imgscr: "assets/icons/hashtag_icon.png",
-                titleText: "رقم الطلب",
+                titleText: locale.translate('num_request')!,
                 subTitleText: "#123546"),
-            CustomDivider(),
+            const CustomDivider(),
             CustomOrderItem(
                 hasStatusIcon: false,
                 imgscr: "assets/icons/calender_icon.png",
-                titleText: "تاريخ الطلب",
+                titleText:locale.translate('date_request')!,
                 subTitleText: "5-7-2023"),
-            CustomDivider(),
+            const CustomDivider(),
             CustomOrderItem(
                 hasStatusIcon: false,
                 imgscr: "assets/icons/vacation_icon.png",
-                titleText: "نوع الإجازة",
-                subTitleText: "إجازة مرضية"),
-            CustomDivider(),
+                titleText: locale.translate('vacation_type')!,
+                subTitleText: locale.translate('sick_leave')!),
+            const CustomDivider(),
             CustomOrderItem(
                 hasStatusIcon: false,
                 imgscr: "assets/icons/hashtag_icon.png",
-                titleText: "رعدد الأيام",
-                subTitleText: "15 يوم"),
-            CustomDivider(),
+                titleText: locale.translate('num_days')!,
+                subTitleText: "15${locale.translate('day')!}"),
+            const CustomDivider(),
             CustomOrderItem(
                 hasStatusIcon: false,
                 imgscr: "assets/icons/calender_icon.png",
-                titleText: "من تاريخ",
+                titleText:locale.translate('from_date')!,
                 subTitleText: "5-23-2023"),
-            CustomDivider(),
+            const CustomDivider(),
             CustomOrderItem(
                 hasStatusIcon: false,
                 imgscr: "assets/icons/calender_icon.png",
-                titleText: "إلى تاريخ",
+                titleText: locale.translate('to_date')!,
                 subTitleText: "5-23-2023"),
-            CustomDivider(),
+            const CustomDivider(),
             CustomOrderItem(
                 hasStatusIcon: true,
                 imgscr: "assets/icons/status_icon.png",
-                titleText: " الحالة",
-                subTitleText: "جاري العمل على الطلب"),
+                titleText:locale.translate('status')!,
+                subTitleText: locale.translate('work_is_underway_on_the_request')!),
           ],
         ),
       ),

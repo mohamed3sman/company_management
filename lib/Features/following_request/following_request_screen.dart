@@ -1,4 +1,5 @@
 import 'package:fingerPrint/Features/following_request/widgets/following_request_screen_body.dart';
+import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,6 +8,8 @@ class FollowingRequestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations locale;
+    locale = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -22,7 +25,7 @@ class FollowingRequestScreen extends StatelessWidget {
           ),
         ],
         title: Text(
-          'تتبع طلبك',
+          locale.translate('follow_your_order')!,
           style: TextStyle(
               color: Colors.black,
               fontSize: 17.sp,

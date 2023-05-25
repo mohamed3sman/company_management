@@ -28,8 +28,8 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
           child: Column(
             children: [
               Gaps.vGap15,
-               Text(
-              locale.translate('bank_account_change')!,
+              Text(
+                locale.translate('bank_account_change')!,
                 style: TextStyle(
                   fontSize: 15,
                 ),
@@ -38,7 +38,7 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
               CustomDotStepper(
                 isActive: false,
                 firstText: locale.translate('current_account')!,
-                secondText:locale.translate('new_account')!,
+                secondText: locale.translate('new_account')!,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -63,20 +63,24 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
                       containerIconPath: "assets/icons/subtitle_icon.png",
                       containerTitle: locale.translate('jop_title')!,
                       containerWidth: screenSize.width,
-                      containerText: locale.translate('user_services_officer')!),
+                      containerText:
+                          locale.translate('user_services_officer')!),
                   OutPutContainer(
                       containerIconPath: "assets/icons/administration_icon.png",
                       containerTitle: locale.translate('management')!,
                       containerWidth: screenSize.width,
-                      containerText: locale.translate('management_of_care_and_development_programs')!),
+                      containerText: locale.translate(
+                          'management_of_care_and_development_programs')!),
                   OutPutContainer(
                       containerIconPath: "assets/icons/department_icon.png",
                       containerTitle: locale.translate('department')!,
                       containerWidth: screenSize.width,
-                      containerText: locale.translate('Social_Care_Department')!),
+                      containerText:
+                          locale.translate('Social_Care_Department')!),
                   OutPutContainer(
                       containerIconPath: "assets/icons/bank_name_icon.png",
-                      containerTitle: locale.translate('the_name_of_the_current_bank')!,
+                      containerTitle:
+                          locale.translate('the_name_of_the_current_bank')!,
                       containerWidth: screenSize.width,
                       containerText: locale.translate('Rajhi_Bank')!),
                   Row(
@@ -84,12 +88,14 @@ class ChangeBankAccountScreenStep1 extends StatelessWidget {
                     children: [
                       OutPutContainer(
                           containerIconPath: "assets/icons/bank_code_icon.png",
-                          containerTitle: locale.translate('current_bank_code')!,
+                          containerTitle:
+                              locale.translate('current_bank_code')!,
                           containerWidth: screenSize.width * .40,
                           containerText: "RHJI"),
                       OutPutContainer(
                           containerIconPath: "assets/icons/hashtag_icon.png",
-                          containerTitle: locale.translate('current_bank_number')!,
+                          containerTitle:
+                              locale.translate('current_bank_number')!,
                           containerWidth: screenSize.width * .40,
                           containerText: "RHJI"),
                     ],

@@ -1,10 +1,7 @@
 import 'package:fingerPrint/core/locale/app_localizations.dart';
 import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_orders_raw_icon.dart';
-import '../../../bottom_nav/presentation/cubit/bottom_nav_cubit.dart';
 import '../../../../core/widgets/out_put_container.dart';
 import '../../../request_vacation/presentation/widgets/custom_drop_down_list.dart';
 
@@ -40,7 +37,7 @@ class EmployeeProfileStep1 extends StatelessWidget {
           Row(
             children: [
               OutPutContainer(
-                  containerTitle:locale.translate('letter_number')! ,
+                  containerTitle: locale.translate('letter_number')!,
                   containerIconPath: "assets/icons/hashtag_icon.png",
                   containerWidth: screenSize.width * .35,
                   containerText: "125"),
@@ -52,30 +49,31 @@ class EmployeeProfileStep1 extends StatelessWidget {
                   containerText: "25/9/2023"),
             ],
           ),
-           CustomOrdersRawIcon(
+          CustomOrdersRawIcon(
             rawText: locale.translate('surname')!,
             iconImagePath: "assets/icons/subtitle_icon.png",
           ),
-          CustomDropDownList(hintText:locale.translate('esquire')!),
-           CustomOrdersRawIcon(rawText: locale.translate('the_side')!),
-          CustomRequestsTextField(hintTextField: locale.translate('to_whom_does_it_matter')!),
+          CustomDropDownList(hintText: locale.translate('esquire')!),
+          CustomOrdersRawIcon(rawText: locale.translate('the_side')!),
+          CustomRequestsTextField(
+              hintTextField: locale.translate('to_whom_does_it_matter')!),
           Row(
             children: [
-               CustomOrdersRawIcon(
+              CustomOrdersRawIcon(
                   rawText: locale.translate('the_end_of_the_surname')!,
                   iconImagePath: "assets/icons/subtitle_icon.png"),
               SizedBox(
                 width: screenSize.width * .25,
               ),
-               CustomOrdersRawIcon(
-                  rawText:locale.translate('templates')!,
+              CustomOrdersRawIcon(
+                  rawText: locale.translate('templates')!,
                   iconImagePath: "assets/icons/diamond_icon.png"),
             ],
           ),
           Row(
             children: [
               CustomDropDownList(
-                hintText:locale.translate('god_delivered')!,
+                hintText: locale.translate('god_delivered')!,
                 width: screenSize.width * .41,
               ),
               const Spacer(),
@@ -85,7 +83,7 @@ class EmployeeProfileStep1 extends StatelessWidget {
               ),
             ],
           ),
-           CustomOrdersRawIcon(
+          CustomOrdersRawIcon(
             rawText: locale.translate('subject')!,
             iconImagePath: "assets/icons/notes_icon.png",
           ),
