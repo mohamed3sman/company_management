@@ -34,6 +34,7 @@ class RequestVacationScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         body: FadeInUp(
           child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
             child: Padding(
               padding: const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 30),
               child: Column(

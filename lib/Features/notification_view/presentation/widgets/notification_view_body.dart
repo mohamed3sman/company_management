@@ -28,9 +28,7 @@ class NotificationViewBody extends StatelessWidget {
           child: Text(locale.translate('notifications')!,
               style: TextStyle(
                 color: const Color(0xff000000),
-                fontWeight: FontWeight.w700,
-                fontFamily: 'HacenTunisia',
-                fontStyle: FontStyle.normal,
+                
                 fontSize: 18.sp,
               ),
               textAlign: TextAlign.right),

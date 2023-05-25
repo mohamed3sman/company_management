@@ -1,4 +1,7 @@
+import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/custom_elevated_container.dart';
 
 class CustomTimePicker extends StatefulWidget {
   const CustomTimePicker({super.key, required this.timePickerText});
@@ -15,31 +18,31 @@ class _CustomTimePickerState extends State<CustomTimePicker> {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
 
-    return SizedBox(
-      width: screenSize.width * .4,
-      height: screenSize.height * .07,
-      child: InkWell(
-        onTap: () {
-          showTimePicker(context: context, initialTime: TimeOfDay.now())
-              .then((value) {
-            setState(() {
-              pickedTime = value!.format(context);
-            });
+    return InkWell(
+      onTap: () {
+        showTimePicker(context: context, initialTime: TimeOfDay.now())
+            .then((value) {
+          setState(() {
+            pickedTime = value!.format(context);
           });
-        },
-        child: Card(
-          elevation: 6,
-          child: Container(
-              padding: const EdgeInsets.only(left: 4, right: 4),
-              alignment: Alignment.centerRight,
-              child: Text(
-                pickedTime == null
-                    ? widget.timePickerText
-                    : pickedTime.toString(),
-                textAlign: TextAlign.left,
-              )),
-        ),
-      ),
+        });
+      },
+      child: CustomElevatedContainer(
+          containerWidth: screenSize.width * .4,
+    containerHeight: screenSize.height * .045,
+    
+          containerChild: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              pickedTime == null
+                  ? widget.timePickerText
+                  : pickedTime.toString(),
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                color: kTextColor
+              ),
+            ),
+          )),
     );
   }
 }

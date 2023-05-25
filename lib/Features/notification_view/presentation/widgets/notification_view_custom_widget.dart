@@ -40,9 +40,7 @@ class NotificationViewCustomWidget extends StatelessWidget {
                   locale.translate('address_of_the_notice')!,
                   style: TextStyle(
                       color: const Color(0xff282828),
-                      fontWeight: FontWeight.w600,
-                      fontFamily: "HacenTunisia",
-                      fontStyle: FontStyle.normal,
+                    
                       fontSize: 13.sp),
                   textAlign: TextAlign.right,
                 ),
@@ -50,9 +48,7 @@ class NotificationViewCustomWidget extends StatelessWidget {
                   "03:00 PM",
                   style: TextStyle(
                       color: const Color(0xff5d5d5d),
-                      fontWeight: FontWeight.w600,
-                      fontFamily: "HacenTunisia",
-                      fontStyle: FontStyle.normal,
+                     
                       fontSize: 13.sp),
                   textAlign: TextAlign.left,
                 ),
@@ -66,9 +62,7 @@ class NotificationViewCustomWidget extends StatelessWidget {
                   "يتم هنا كتابة موضوع الإشعار يتم هنا كتابة",
                   style: TextStyle(
                       color: const Color(0xffa4a4a4),
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "HacenTunisia",
-                      fontStyle: FontStyle.normal,
+                      
                       fontSize: 9.sp),
                   textAlign: TextAlign.right),
             )

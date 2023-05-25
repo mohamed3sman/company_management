@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:fingerPrint/Features/request_vacation/presentation/widgets/custom_date_picker.dart';
 import 'package:fingerPrint/core/locale/app_localizations.dart';
+import 'package:fingerPrint/core/utils/gaps.dart';
 import 'package:fingerPrint/core/widgets/custom_button.dart';
 import 'package:fingerPrint/core/widgets/custom_orders_raw_icon.dart';
 import 'package:fingerPrint/core/widgets/custom_request_text_field.dart';
@@ -46,32 +47,33 @@ class RequestDeptScreen extends StatelessWidget {
                       rawText: locale.translate('the_method_of_paying_the_cach')!,
                       iconImagePath: "assets/icons/vacation_icon.png"),
                   CustomDropDownList(hintText:locale.translate('choose')!),
-                  Row(
-                    children: [
-                       CustomOrdersRawIcon(
-                          rawText: locale.translate('number_of_installments')!,
-                          iconImagePath: "assets/icons/hashtag_icon.png"),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * .2,
-                      ),
-                       CustomOrdersRawIcon(
-                          rawText: locale.translate('value_of_Installment')!,
-                          iconImagePath: "assets/icons/money_icon.png")
-                    ],
-                  ),
+                  // Row(
+                  //   children: [
+                  //      CustomOrdersRawIcon(
+                  //         rawText: locale.translate('number_of_installments')!,
+                  //         iconImagePath: "assets/icons/hashtag_icon.png"),
+                  //     SizedBox(
+                  //       width: MediaQuery.of(context).size.width * .2,
+                  //     ),
+                  //      CustomOrdersRawIcon(
+                  //         rawText: locale.translate('value_of_Installment')!,
+                  //         iconImagePath: "assets/icons/money_icon.png")
+                  //   ],
+                  // ),
+              Gaps.vGap12,
                   Row(
                     children: [
                       OutPutContainer(
-                        containerIconPath: "assets/icons/calender_icon.png",
-                        containerTitle: "",
-                        containerText: "",
+                        containerIconPath: "assets/icons/hashtag_icon.png",
+                        containerTitle: locale.translate('number_of_installments')!,
+                        containerText: locale.translate('number_of_installments')!,
                         containerWidth: MediaQuery.of(context).size.width * .4,
                       ),
                       const Spacer(),
                       OutPutContainer(
-                        containerIconPath: "assets/icons/calender_icon.png",
-                        containerTitle: "",
-                        containerText: "",
+                        containerIconPath: "assets/icons/money_icon.png",
+                        containerTitle:locale.translate('value_of_Installment')!,
+                        containerText:locale.translate('value_of_Installment')!,
                         containerWidth: MediaQuery.of(context).size.width * .4,
                       ),
                     ],
@@ -81,29 +83,29 @@ class RequestDeptScreen extends StatelessWidget {
                     iconImagePath: "assets/icons/calender_icon.png",
                   ),
                   const CustomDatePicker(customDatePickerText: ""),
-                  Row(
-                    children:  [
-                      CustomOrdersRawIcon(
-                          rawText: locale.translate('advance_limit')!,
-                          iconImagePath: "assets/icons/money_icon.png"),
-                      Spacer(),
-                      CustomOrdersRawIcon(
-                          rawText: locale.translate('number_of_previous_advances')!,
-                          iconImagePath: "assets/icons/hashtag_icon.png")
-                    ],
-                  ),
+                  // Row(
+                  //   children:  [
+                  //     CustomOrdersRawIcon(
+                  //         rawText: locale.translate('advance_limit')!,
+                  //         iconImagePath: "assets/icons/money_icon.png"),
+                  //     Spacer(),
+                  //     CustomOrdersRawIcon(
+                  //         rawText: locale.translate('number_of_previous_advances')!,
+                  //         iconImagePath: "assets/icons/hashtag_icon.png")
+                  //   ],
+                  // ),
                   Row(
                     children: [
                       OutPutContainer(
-                        containerIconPath: "assets/icons/calender_icon.png",
-                        containerTitle: "",
+                        containerIconPath: "assets/icons/money_icon.png",
+                        containerTitle: locale.translate('advance_limit')!,
                         containerText: "500 ${ locale.translate('pound')!}",
                         containerWidth: MediaQuery.of(context).size.width * .4,
                       ),
                       const Spacer(),
                       OutPutContainer(
-                        containerIconPath: "assets/icons/calender_icon.png",
-                        containerTitle: "",
+                        containerIconPath: "assets/icons/hashtag_icon.png",
+                        containerTitle: locale.translate('number_of_previous_advances')!,
                         containerText: "5",
                         containerWidth: MediaQuery.of(context).size.width * .4,
                       ),
