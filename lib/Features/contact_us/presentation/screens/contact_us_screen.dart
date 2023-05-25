@@ -35,7 +35,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
               Image.asset(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * .3,
-                'assets/images/mention_bro.png',
+                'assets/images/contact_us.png',
               ),
               CustomLoginTextField(
                 stringInTextField: locale.translate('name')!,

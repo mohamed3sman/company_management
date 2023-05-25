@@ -23,7 +23,7 @@ AlertDialog alertRegistration(context) {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset("assets/images/bank_account.png",
+          Image.asset("assets/images/Ok-amico.png",
               height: 100, width: 100),
           Gaps.vGap20,
            Text(
