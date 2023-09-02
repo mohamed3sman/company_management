@@ -1,4 +1,5 @@
 import 'package:fingerPrint/core/locale/app_localizations.dart';
+import 'package:fingerPrint/core/utils/assets.dart';
 import 'package:fingerPrint/core/utils/constants.dart';
 import 'package:fingerPrint/core/utils/mediaquery_sizes.dart';
 import 'package:fingerPrint/core/widgets/custom_circle_clipper.dart';
@@ -80,7 +81,7 @@ class LoginScreenBody extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 28.0),
               child: Image.asset(
-                "assets/images/logo.png",
+                AssetsData.logo,
                 height: 130,
                 width: 130,
               ),

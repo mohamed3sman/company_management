@@ -30,19 +30,19 @@ class PaymentPermissionScreen extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
-                 Text(
-                locale.translate('payment_permission')!  ,
-                  style: TextStyle(fontSize: 20),
+                Text(
+                  locale.translate('payment_permission')!,
+                  style: const TextStyle(fontSize: 20),
                 ),
                 Row(
                   children: [
-                     CustomOrdersRawIcon(
+                    CustomOrdersRawIcon(
                         rawText: locale.translate('number_permission')!,
                         iconImagePath: "assets/icons/hashtag_icon.png"),
                     SizedBox(
-                      width: screenSize.width * .32,
+                      width: screenSize.width * .10,
                     ),
-                     CustomOrdersRawIcon(
+                    CustomOrdersRawIcon(
                         rawText: locale.translate('date_permission')!,
                         iconImagePath: "assets/icons/calender_icon.png")
                   ],
@@ -63,27 +63,31 @@ class PaymentPermissionScreen extends StatelessWidget {
                         containerText: "25/9/2023"),
                   ],
                 ),
-                 CustomOrdersRawIcon(
+                CustomOrdersRawIcon(
                   rawText: locale.translate('the_amount')!,
                   iconImagePath: "assets/icons/money_icon.png",
                 ),
-                CustomRequestsTextField(hintTextField: locale.translate('the_amount')!),
-                 CustomOrdersRawIcon(
-                  rawText: "${locale.translate('the_side')!}/${locale.translate('beneficiary')!}",
+                CustomRequestsTextField(
+                    hintTextField: locale.translate('the_amount')!),
+                CustomOrdersRawIcon(
+                  rawText:
+                      "${locale.translate('the_side')!}/${locale.translate('beneficiary')!}",
                   iconImagePath: "assets/icons/language_icon.png",
                 ),
-                CustomRequestsTextField(hintTextField:locale.translate('to_whom_does_it_matter')!),
-                 CustomOrdersRawIcon(
+                CustomRequestsTextField(
+                    hintTextField: locale.translate('to_whom_does_it_matter')!),
+                CustomOrdersRawIcon(
                   rawText: locale.translate('phone')!,
                   iconImagePath: "assets/icons/phone_icon.png",
                 ),
                 CustomRequestsTextField(hintTextField: ""),
-                 CustomOrdersRawIcon(
+                CustomOrdersRawIcon(
                     rawText: locale.translate('is_about')!,
                     iconImagePath: "assets/icons/notes_icon.png"),
                 CustomRequestsTextField(hintTextField: ""),
-                 CustomOrdersRawIcon(
-                    rawText: "${locale.translate('project')!}/${locale.translate('initiative')!}",
+                CustomOrdersRawIcon(
+                    rawText:
+                        "${locale.translate('project')!}/${locale.translate('initiative')!}",
                     iconImagePath: "assets/icons/notes_icon.png"),
                 CustomRequestsTextField(hintTextField: ""),
                 Row(
